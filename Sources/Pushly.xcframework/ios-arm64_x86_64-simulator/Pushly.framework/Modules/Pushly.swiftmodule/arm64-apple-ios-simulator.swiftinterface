@@ -1,0 +1,832 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)
+// swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Pushly
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Combine
+import CommonCrypto
+import Foundation
+import NotificationCenter
+@_exported import Pushly
+import Swift
+import UIKit.UIApplication
+import UIKit
+import UserNotifications
+import WebKit
+import _Concurrency
+import _StringProcessing
+import os.log
+import os
+@objc public enum PNAppMessageStyle : Swift.Int {
+  case fullscreen
+  case modal
+  case banner
+  case native
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Pushly.PNAppMessageStyle {
+  public var stringValue: Swift.String {
+    get
+  }
+  public init(stringValue value: Swift.String) throws
+}
+extension Pushly.PNAppMessageStyle : Swift.Codable {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+public enum HTTPMethod : Swift.String {
+  case GET
+  case POST
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension UserNotifications.UNAuthorizationOptions : Swift.Codable {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+@objc public class ActionVariation : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var title: Swift.String
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc final public class PNAppMessageViewMessage : ObjectiveC.NSObject {
+  final public let type: Pushly.PNAppMessageViewMessageType
+  @objc final public let raw: Foundation.NSDictionary
+  final public func get<T>(_ type: T.Type, forKeyPath keyPath: Swift.String) -> T?
+  public init(fromData data: Foundation.Data)
+  @objc deinit
+}
+@objc @objcMembers public class PNAppMessageDisplayConditions : ObjectiveC.NSObject, Swift.Codable {
+  final public let phone: Pushly.DisplayCondition
+  final public let tablet: Pushly.DisplayCondition
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers @objcMembers public class PNAppMessageDismissGestures : Swift.Codable {
+  public var onSlide: Swift.Bool?
+  public var onTapOutside: Swift.Bool?
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc public enum PNNotificationActionType : Swift.Int {
+  case openURL
+  case dismiss
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Pushly.PNNotificationActionType {
+  public var stringValue: Swift.String {
+    get
+  }
+  public init(stringValue: Swift.String)
+}
+extension Pushly.PNNotificationActionType : Swift.Codable {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+extension Pushly.PushSDK {
+  @_inheritsConvenienceInitializers @objc(PushSDKEComm) @objcMembers public class EComm : ObjectiveC.NSObject {
+    @objc public static func addToCart(items: [Pushly.PNECommItem])
+    @objc public static func updateCart(withItems items: [Pushly.PNECommItem])
+    @objc public static func clearCart()
+    @objc public static func trackPurchase()
+    @objc public static func trackPurchase(of items: [Pushly.PNECommItem]? = nil, withPurchaseId purchaseId: Swift.String? = nil, withPriceValue priceValue: Swift.String? = nil)
+    @objc override dynamic public init()
+    @objc deinit
+  }
+}
+public struct PNBadgeConfig : Swift.Codable {
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers public class PNNotificationCategory : Swift.Codable {
+  @objc final public let id: Swift.UInt32
+  @objc final public let actions: [Pushly.PNNotificationAction]
+  public var identifier: Swift.String {
+    get
+  }
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+extension Pushly.PNNotificationCategory {
+  public static var `default`: Pushly.PNNotificationCategory {
+    get
+  }
+  public func toUNNotificationCategory() -> UserNotifications.UNNotificationCategory
+}
+@objc @objcMembers public class FrequencyCapWithOccurrenceLimit : ObjectiveC.NSObject, Pushly.RelativeDateable, Swift.Codable {
+  @objc final public let occurrences: Swift.Int
+  @objc final public let intervalSeconds: Swift.Double
+  final public let displayMetric: Pushly.RelativeDateDisplayMetric
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) final public class PushSDK : UIKit.UIResponder, UIKit.UIApplicationDelegate {
+  @objc(setConfigurationAppKey:withLaunchOptions:) @_Concurrency.MainActor(unsafe) public static func setConfiguration(appKey: Swift.String, withLaunchOptions launchOptions: [UIKit.UIApplication.LaunchOptionsKey : Any]?)
+  @objc(setConfigurationWithLaunchOptions:) @_Concurrency.MainActor(unsafe) public static func setConfiguration(withLaunchOptions launchOptions: [UIKit.UIApplication.LaunchOptionsKey : Any]?)
+  @objc @_Concurrency.MainActor(unsafe) public static func setSDKLifecycleDelegate(_ delegate: Pushly.PNPushSDKLifecycleDelegate)
+  @objc @_Concurrency.MainActor(unsafe) public static func setPermissionsLifecycleDelegate(_ delegate: Pushly.PNPermissionsLifecycleDelegate)
+  @objc @_Concurrency.MainActor(unsafe) public static func setNotificationLifecycleDelegate(_ delegate: Pushly.PNNotificationLifecycleDelegate)
+  @objc @_Concurrency.MainActor(unsafe) public static func setAppMessageLifecycleDelegate(_ delegate: Pushly.PNAppMessageLifecycleDelegate)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init()
+  @objc deinit
+}
+extension Pushly.PushSDK {
+  @objc @_Concurrency.MainActor(unsafe) public static var logLevel: Pushly.PNLogLevel {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) public static var appKey: Swift.String {
+    @objc get
+  }
+  @objc @_Concurrency.MainActor(unsafe) public static func getConfiguration(_ completion: @escaping (Pushly.PNApplicationConfig?, Swift.Error?) -> Swift.Void)
+  @objc @_Concurrency.MainActor(unsafe) public static func getNotificationPermissionStatus(_ completion: @escaping (Swift.Bool, UserNotifications.UNNotificationSettings) -> Swift.Void)
+  @objc @_Concurrency.MainActor(unsafe) public static func showNativeNotificationPermissionPrompt(_ completion: @escaping (Swift.Bool, UserNotifications.UNNotificationSettings, Swift.Error?) -> Swift.Void)
+  @objc @_Concurrency.MainActor(unsafe) public static func showNativeNotificationPermissionPrompt(_ completion: @escaping (Swift.Bool, UserNotifications.UNNotificationSettings, Swift.Error?) -> Swift.Void, skipConditionsEvaluation skipConditions: Swift.Bool = false, skipFrequencyCapEvaluation skipFcap: Swift.Bool = false)
+}
+extension Pushly.PushSDK : UserNotifications.UNUserNotificationCenterDelegate {
+  @_Concurrency.MainActor(unsafe) @objc final public func application(_ application: UIKit.UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Foundation.Data)
+  @_Concurrency.MainActor(unsafe) @objc final public func application(_ application: UIKit.UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Swift.Error)
+  @_Concurrency.MainActor(unsafe) @objc final public func application(_ application: UIKit.UIApplication, didReceiveRemoteNotification userInfo: [Swift.AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIKit.UIBackgroundFetchResult) -> Swift.Void)
+  @_Concurrency.MainActor(unsafe) @objc final public func userNotificationCenter(_ center: UserNotifications.UNUserNotificationCenter, willPresent notification: UserNotifications.UNNotification, withCompletionHandler completionHandler: @escaping (UserNotifications.UNNotificationPresentationOptions) -> Swift.Void)
+  @_Concurrency.MainActor(unsafe) @objc final public func userNotificationCenter(_ center: UserNotifications.UNUserNotificationCenter, didReceive response: UserNotifications.UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Swift.Void)
+}
+@objc @_inheritsConvenienceInitializers open class PNNotificationServiceExtension : UserNotifications.UNNotificationServiceExtension {
+  @objc override dynamic public func didReceive(_ request: UserNotifications.UNNotificationRequest, withContentHandler contentHandler: @escaping (UserNotifications.UNNotificationContent) -> Swift.Void)
+  @objc override dynamic public func serviceExtensionTimeWillExpire()
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @objcMembers public class RelativeDate : ObjectiveC.NSObject, Pushly.RelativeDateable, Swift.Codable {
+  @objc final public let intervalSeconds: Swift.Double
+  final public let displayMetric: Pushly.RelativeDateDisplayMetric
+  public init(intervalSeconds: Swift.Double, displayMetric: Pushly.RelativeDateDisplayMetric)
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objcMembers public class PNAppMessageBehavior : Swift.Codable {
+  public var redisplay: Pushly.PNAppMessageRedisplayBehavior
+  @objc public var maxDisplayTime: Pushly.RelativeDate?
+  public var dismissGestures: Pushly.PNAppMessageDismissGestures?
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+public enum PNNotificationBadgeBehavior : Swift.String, Swift.Codable {
+  case set
+  case increment
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc public enum PNLogLevel : Swift.Int {
+  case verbose
+  case debug
+  case info
+  case warn
+  case error
+  case critical
+  case none
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Pushly.PNLogLevel {
+  public var name: Swift.String {
+    get
+  }
+}
+@objc public protocol PNAppMessageLifecycleDelegate {
+  @objc(pushSDKWillPresentAppMessage:) optional func pushSDK(willPresentAppMessage appMessage: Pushly.PNAppMessage) -> Swift.Bool
+  @objc(pushSDKDidReceivePrePermissionResponse:fromAppMessage:) optional func pushSDK(didReceivePrePermissionResponse response: Pushly.PNPrePermissionResponse, fromAppMessage appMessage: Pushly.PNAppMessage)
+  @objc(pushSDKDidReceiveMessage:fromAppMessage:) optional func pushSDK(didReceiveMessage message: Pushly.PNAppMessageViewMessage, fromAppMessage appMessage: Pushly.PNAppMessage) -> Swift.Bool
+  @objc(pushSDKDidFailToProcessMessage:fromAppMessage:) optional func pushSDK(didFailToProcessMessage message: WebKit.WKScriptMessage, fromAppMessage appMessage: Pushly.PNAppMessage)
+}
+@objcMembers public class PNAppMessageConfig : Swift.Codable {
+  public var behavior: Pushly.PNAppMessageBehavior
+  public var theme: Pushly.PNAppMessageTheme?
+  @objc public var templateHTML: Swift.String?
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+public enum PNSessionScope : Swift.String, Swift.Codable {
+  case lifetime
+  case session
+  case none
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc @objcMembers public class PNECommItem : ObjectiveC.NSObject {
+  @objc final public let id: Swift.String
+  public var quantity: Swift.Int?
+  @objc public init(id: Swift.String, quantity: Swift.Int)
+  @objc public init(id: Swift.String)
+  @objc deinit
+}
+extension Swift.Double {
+  public func toFixed(length: Swift.Int) -> Swift.String
+}
+@objc public protocol PNPushSDKLifecycleDelegate {
+  @objc(pushSDKDidFinishLoading:withNotificationSettings:) optional func pushSDK(didFinishLoading configuration: Pushly.PNApplicationConfig, withNotificationSettings settings: UserNotifications.UNNotificationSettings)
+  @objc(pushSDKDidExitWithSubscriberStatus:withDeletedState:) optional func pushSDK(didExitWithSubscriberStatus status: Pushly.PNSubscriberStatus, withDeletedState deleted: Swift.Bool)
+}
+public enum PNError : Swift.Error {
+  case runtimeError(Swift.String)
+  case noResultError
+  case invalidRequestURLError(Swift.String)
+  case failedRequest(Swift.Int, Swift.String, Swift.String?)
+  case appConfigurationLoadError(Swift.Error?, Swift.String?)
+  case invalidEnumValue(Any, Swift.String)
+  case globalFreqeuncyCapHasBeenMet
+  case appMessageFcapConditionsNotMet(Swift.Int)
+  case appMessageIneligibleToDisplay(Swift.Int)
+}
+extension Pushly.PNError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+public enum RelativeDateDisplayMetric : Swift.Int {
+  case seconds
+  case minutes
+  case hours
+  case days
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Pushly.RelativeDateDisplayMetric {
+  public var stringValue: Swift.String {
+    get
+  }
+  public init(stringValue value: Swift.String)
+}
+extension Pushly.RelativeDateDisplayMetric : Swift.Codable {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+@objc @_inheritsConvenienceInitializers final public class PNNotificationServiceExtensionHandler : ObjectiveC.NSObject {
+  @objc final public class func didReceiveExtensionRequest(_ request: UserNotifications.UNNotificationRequest, content bestAttemptContent: UserNotifications.UNMutableNotificationContent, withContentHandler contentHandler: @escaping (UserNotifications.UNNotificationContent) -> Swift.Void)
+  @objc final public class func didRecieveExtensionTimeWillExpire(_ bestAttemptContent: UserNotifications.UNMutableNotificationContent, withContentHandler contentHandler: @escaping (UserNotifications.UNNotificationContent) -> Swift.Void)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class PNAppMessageGroupConditions : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var display: Pushly.PNAppMessageDisplayConditions?
+  @objc public var pageUrls: [Swift.String]?
+  @objc public var excludedPageUrls: [Swift.String]?
+  @objc override dynamic public init()
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+public enum PNAppMessageViewMessageType : Swift.String {
+  case pageLoadCompleted
+  case promptAccepted
+  case promptDismissed
+  case unknown
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc public protocol PNNotificationLifecycleDelegate {
+  @objc(pushSDKDidReceiveNotification:) optional func pushSDK(didReceiveNotification notification: Pushly.PNNotification)
+  @objc(pushSDKDidReceiveNotificationDestination:withInteraction:) optional func pushSDK(didReceiveNotificationDestination destination: Swift.String, withInteraction interaction: Pushly.PNNotificationInteraction) -> Swift.Bool
+}
+public enum PNNotificationInteractionType {
+  case defaultAction
+  case dismissAction
+  case customAction
+  public static func == (a: Pushly.PNNotificationInteractionType, b: Pushly.PNNotificationInteractionType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension Pushly.PNNotificationInteractionType {
+  public var name: Swift.String {
+    get
+  }
+}
+@objc @objcMembers public class PNAppMessage : ObjectiveC.NSObject, Swift.Codable {
+  @objc final public let id: Swift.Int
+  @objc public var name: Swift.String?
+  final public let type: Pushly.PNAppMessageType
+  @objc final public let style: Pushly.PNAppMessageStyle
+  @objc final public let isAutoShow: Swift.Bool
+  @objc final public let weight: Swift.Double
+  final public let config: Pushly.PNAppMessageConfig
+  @objc final public let conditions: Pushly.PNAppMessageConditions?
+  @objc public var hasDisplayed: Swift.Bool
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+extension Pushly.PNAppMessage {
+  public var scope: Pushly.PNSessionScope {
+    get
+  }
+}
+extension Pushly.PNAppMessage {
+  @objc dynamic public var templateHTML: Swift.String? {
+    @objc get
+  }
+  @objc dynamic public var isPrePermissionPrompt: Swift.Bool {
+    @objc get
+  }
+  @objc dynamic public var isNative: Swift.Bool {
+    @objc get
+  }
+  @objc dynamic public var isFullscreen: Swift.Bool {
+    @objc get
+  }
+  @objc dynamic public var isModal: Swift.Bool {
+    @objc get
+  }
+  @objc dynamic public var isBanner: Swift.Bool {
+    @objc get
+  }
+  @objc dynamic public var isTopBanner: Swift.Bool {
+    @objc get
+  }
+  @objc dynamic public var isBottomBanner: Swift.Bool {
+    @objc get
+  }
+  public var position: Pushly.PNAppMessagePosition {
+    get
+  }
+  @objc dynamic public var redisplayEnabled: Swift.Bool {
+    @objc get
+  }
+  @objc dynamic public var maxDisplayTime: Pushly.RelativeDate {
+    @objc get
+  }
+  @objc dynamic public var canDismissOnSlide: Swift.Bool {
+    @objc get
+  }
+  @objc dynamic public var canDismissOnTapOutside: Swift.Bool {
+    @objc get
+  }
+  @objc dynamic public func isEligibleToDisplay(skipConditionsEvaluation skipConditions: Swift.Bool = false, skipFcapEvaluation skipFcap: Swift.Bool = false) -> Swift.Bool
+}
+extension Pushly.PNAppMessage {
+  @objc dynamic public var conditionKeys: [Swift.String] {
+    @objc get
+  }
+  @objc dynamic public func hasConditionKey(_ key: Swift.String) -> Swift.Bool
+  @objc dynamic public func getConditions(forKey key: Swift.String) -> [Pushly.PNAppMessageCondition]
+  @objc dynamic public var conditionsMet: Swift.Bool {
+    @objc get
+  }
+  @objc dynamic public func meetsConditions(_ checkConditions: [Swift.String : Swift.String]) -> Swift.Bool
+}
+@objc public protocol PNPermissionsLifecycleDelegate {
+  @objc(pushSDKDidReceivePermissionResponse:withSettings:) optional func pushSDK(didReceivePermissionResponse granted: Swift.Bool, withSettings settings: UserNotifications.UNNotificationSettings)
+  @objc(pushSDKDidReceivePermissionResponse:withSettings:withError:) optional func pushSDK(didReceivePermissionResponse granted: Swift.Bool, withSettings settings: UserNotifications.UNNotificationSettings, withError: Swift.Error)
+  @objc(pushSDKDidReceivePermissionStatusChange:withSettings:) optional func pushSDK(didReceivePermissionStatusChange status: UserNotifications.UNAuthorizationStatus, withSettings settings: UserNotifications.UNNotificationSettings)
+  @objc(pushSDKDidRegisterForRemoteNotificationsWithDeviceToken:) optional func pushSDK(didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Swift.String)
+  @objc(pushSDKDidFailToRegisterForRemoteNotificationsWithError:) optional func pushSDK(didFailToRegisterForRemoteNotificationsWithError error: Swift.Error)
+}
+@objc @objcMembers public class PNAppFrequencyCaps : ObjectiveC.NSObject, Swift.Codable {
+  @objc final public let prompts: Pushly.FrequencyCapWithOccurrenceLimit?
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers public class PNAppMessagePositionConfig : Swift.Codable {
+  public var mobile: Pushly.PNAppMessagePosition?
+  public var tablet: Pushly.PNAppMessagePosition?
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc public class PNNotificationInteraction : ObjectiveC.NSObject {
+  final public let receivedState: Swift.String
+  final public let type: Pushly.PNNotificationInteractionType
+  final public let actionIdentifier: Swift.String
+  public var notification: Pushly.PNNotification
+  public init(from response: UserNotifications.UNNotificationResponse, inApplicationState state: UIKit.UIApplication.State)
+  public var action: Pushly.PNNotificationAction? {
+    get
+  }
+  @objc deinit
+}
+@objc public class PNAppMessageConditions : ObjectiveC.NSObject, Swift.Codable {
+  final public let scope: Pushly.PNSessionScope
+  final public let timeInScope: Pushly.RelativeDate?
+  public var triggers: [[Pushly.PNAppMessageCondition]]?
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+extension Pushly.PNAppMessageConditions {
+  public var triggerKeys: [Swift.String] {
+    get
+  }
+  public var matched: Swift.Bool {
+    get
+  }
+  @discardableResult
+  public func check(key: Swift.String, value: Swift.String) -> Swift.Bool
+}
+public enum PNAppMessageType : Swift.String, Swift.Codable {
+  case message
+  case prompt
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class PNAppMessageTheme : Swift.Codable {
+  public var position: Pushly.PNAppMessagePositionConfig?
+  public var removeMargins: Swift.Bool?
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case position
+    case removeMargins
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+extension Pushly.PushSDK {
+  @_inheritsConvenienceInitializers @objc(PushSDKUserProfile) @objcMembers public class UserProfile : ObjectiveC.NSObject {
+    @objc public static var anonymousId: Swift.String {
+      @objc get
+    }
+    @objc public static var deviceToken: Swift.String? {
+      @objc get
+    }
+    @objc public static var externalId: Swift.String? {
+      @objc get
+      @objc set
+    }
+    @objc public static var subcriberStatus: Pushly.PNSubscriberStatus {
+      @objc get
+    }
+    @objc public static var isSubscribed: Swift.Bool {
+      @objc get
+    }
+    @objc public static var isDeleted: Swift.Bool {
+      @objc get
+    }
+    @objc public static var isEligibleToPrompt: Swift.Bool {
+      @objc get
+    }
+    @objc public static func requestUserDeletion()
+    @objc public static func revertUserDeletion()
+    @objc public static func set(_ value: Any, forKey key: Swift.String)
+    @objc public static func set(_ data: [Swift.String : Any])
+    @objc public static func append(_ values: [Any], to key: Swift.String)
+    @objc public static func remove(_ values: [Any], from key: Swift.String)
+    @objc public static func trackActivity(name: Swift.String)
+    @objc public static func trackActivity(name: Swift.String, withTags tags: [Swift.String])
+    @objc override dynamic public init()
+    @objc deinit
+  }
+}
+public enum PNConditionTriggerQualifier : Swift.String, Swift.Codable {
+  case gt
+  case gte
+  case lt
+  case lte
+  case eq
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension Foundation.URLRequest {
+  public func cURL(pretty: Swift.Bool = false) -> Swift.String
+}
+@objc public class PNNotification : ObjectiveC.NSObject, Swift.Codable {
+  public var title: Swift.String?
+  public var titleLocKey: Swift.String?
+  public var titleLocArgs: [Swift.String]?
+  public var subtitle: Swift.String?
+  public var subtitleLocKey: Swift.String?
+  public var subtitleLocArgs: [Swift.String]?
+  public var body: Swift.String?
+  public var locKey: Swift.String?
+  public var locArgs: [Swift.String]?
+  public var launchImage: Swift.String?
+  public var category: Swift.String?
+  public var badge: Swift.Int?
+  public var sound: Swift.String?
+  public var threadId: Swift.String?
+  public var contentAvailable: Swift.Bool
+  public var mutableContent: Swift.Bool
+  public var targetContentId: Swift.String?
+  public var interruptionLevel: Swift.String?
+  public var relevanceScore: Swift.Int?
+  public var filterCriteria: Swift.String?
+  final public let id: Swift.Int
+  final public let piid: Swift.String
+  final public let landingURL: Swift.String
+  public var imageURL: Swift.String?
+  public var contentWebhookURL: Swift.String?
+  public var actions: [Pushly.PNNotificationAction]
+  public var actionDestinations: [Swift.String : Swift.String]
+  public var badgeBehavior: Pushly.PNNotificationBadgeBehavior?
+  public var badgeConfig: Pushly.PNBadgeConfig?
+  public var impressionType: Swift.String
+  public var receivedState: Swift.String
+  public var viaServiceExtension: Swift.Bool
+  public var hasRequiredKeys: Swift.Bool
+  convenience public init(from notification: UserNotifications.UNNotification, inApplicationState state: UIKit.UIApplication.State)
+  public init(from userInfo: [Swift.AnyHashable : Any], inApplicationState state: UIKit.UIApplication.State)
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+extension Pushly.PNNotification {
+  public static func isPNNotificationPayload(_ payload: UserNotifications.UNNotification) -> Swift.Bool
+  public static func isPNNotificationPayload(_ payload: [Swift.AnyHashable : Any]) -> Swift.Bool
+}
+@objc public class PNNotificationAction : ObjectiveC.NSObject, Swift.Codable {
+  @objc final public let action: Swift.UInt32
+  @objc final public let ordinal: Swift.Int
+  @objc final public let title: Swift.String
+  @objc final public let type: Pushly.PNNotificationActionType
+  @objc final public let landingURL: Swift.String?
+  required public init(from decoder: Swift.Decoder) throws
+  public var identifier: Swift.String {
+    get
+  }
+  public init(from userInfo: [Swift.AnyHashable : Any]) throws
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+}
+extension Pushly.PNNotificationAction {
+  public var actionString: Swift.String {
+    get
+  }
+  public func toUNNotificationAction() -> UserNotifications.UNNotificationAction
+}
+public enum PNAppMessagePosition : Swift.String, Swift.Codable {
+  case top
+  case bottom
+  case center
+  case fullscreen
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol RelativeDateable {
+  var intervalSeconds: Swift.Double { get }
+  var displayMetric: Pushly.RelativeDateDisplayMetric { get }
+}
+@objc @objcMembers public class PNAppMessageCondition : ObjectiveC.NSObject, Swift.Codable {
+  @objc final public let id: Swift.Int
+  @objc final public let key: Swift.String
+  @objc final public let value: Swift.String
+  public var qualifier: Pushly.PNConditionTriggerQualifier?
+  @objc public var matched: Swift.Bool
+  @objc @discardableResult
+  public func check(key: Swift.String, value: Swift.String) -> Swift.Bool
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objcMembers public class PNAppMessageRedisplayBehavior : Swift.Codable {
+  @objc final public let enabled: Swift.Bool
+  @objc public var fcap: Pushly.RelativeDate?
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+}
+@objc public enum PNSubscriberStatus : Swift.Int {
+  case subscribed
+  case dismissed
+  case denied
+  case notDetermined
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Pushly.PNSubscriberStatus {
+  public var stringValue: Swift.String {
+    get
+  }
+  public init(stringValue value: Swift.String)
+}
+extension Pushly.PNSubscriberStatus : Swift.Codable {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+@objc public class PNAppMessageGroup : ObjectiveC.NSObject, Swift.Codable {
+  public var id: Swift.Int
+  public var name: Swift.String
+  public var isActive: Swift.Bool
+  public var isAbTest: Swift.Bool
+  public var displayToPct: Swift.Int
+  public var priority: Swift.Int
+  public var conditions: Pushly.PNAppMessageGroupConditions
+  public var messages: [Pushly.PNAppMessage]
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+}
+extension Pushly.PNAppMessageGroup {
+  public func canShowOnDeviceIdiom(_ idiom: UIKit.UIUserInterfaceIdiom) -> Swift.Bool
+  public func canShowOnScreen(_ name: Swift.String?) -> Swift.Bool
+  public var hasDisplayed: Swift.Bool {
+    get
+  }
+  public var hasTimeSensitiveMessage: Swift.Bool {
+    get
+  }
+  public var meetsDisplayPctCondition: Swift.Bool {
+    get
+  }
+  public func containsAppMessage(_ id: Swift.Int) -> Swift.Bool
+  public func getMessage(_ id: Swift.Int) -> Pushly.PNAppMessage?
+  public func hasStyle(_ style: Pushly.PNAppMessageStyle) -> Swift.Bool
+  public func firstMessageWithStyle(_ style: Pushly.PNAppMessageStyle) -> Pushly.PNAppMessage?
+}
+@objc public enum PNECommItemType : Swift.Int {
+  case event
+  case product
+  case unknown
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Pushly.PNECommItemType {
+  public var eventKey: Swift.String {
+    get
+  }
+}
+extension Pushly.PNECommItemType {
+  public var stringValue: Swift.String {
+    get
+  }
+  public init(stringValue value: Swift.String)
+}
+extension Pushly.PNECommItemType : Swift.Codable {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+extension Pushly.PushSDK {
+  @_inheritsConvenienceInitializers @objc(PushSDKAppMessages) @objcMembers public class AppMessages : ObjectiveC.NSObject {
+    @objc public static func show(_ id: Swift.Int, skipConditionsEvaluation skipConditions: Swift.Bool = false, skipFrequencyCapEvaluation skipFcap: Swift.Bool = false)
+    @objc public static func trigger(condition: Swift.String, withValue value: Swift.String)
+    @objc public static func trigger(conditions: [Swift.String : Swift.String])
+    @objc override dynamic public init()
+    @objc deinit
+  }
+}
+@objc public enum PNPrePermissionResponse : Swift.Int {
+  case accepted
+  case dismissed
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Pushly.PNPrePermissionResponse {
+  public var stringValue: Swift.String {
+    get
+  }
+  public init(stringValue: Swift.String) throws
+}
+@objc @objcMembers final public class PNApplicationConfig : ObjectiveC.NSObject, Swift.Codable {
+  @objc final public var fetchedAt: Foundation.Date
+  @objc final public var originVersion: Swift.String?
+  @objc final public let appId: Swift.UInt32
+  @objc final public let name: Swift.String
+  @objc final public let appKey: Swift.String
+  @objc final public let flags: [Swift.String]
+  final public let categories: [Pushly.PNNotificationCategory]
+  @objc final public let authorizationOptions: UserNotifications.UNAuthorizationOptions
+  @objc final public let frequencyCaps: Pushly.PNAppFrequencyCaps?
+  @objc final public let ecommConfig: Pushly.PNECommConfig?
+  public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+  final public func encode(to encoder: Swift.Encoder) throws
+}
+public enum DisplayCondition : Swift.Int {
+  case enabled
+  case pass
+  case disabled
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Pushly.DisplayCondition {
+  public var stringValue: Swift.String {
+    get
+  }
+  public init(stringValue value: Swift.String)
+}
+extension Pushly.DisplayCondition : Swift.Codable {
+  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+@objc @objcMembers public class PNECommConfig : ObjectiveC.NSObject, Swift.Codable {
+  @objc final public let itemType: Pushly.PNECommItemType
+  @objc final public let itemTypeRawValue: Swift.String
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+  public func encode(to encoder: Swift.Encoder) throws
+}
+extension Pushly.PNAppMessageStyle : Swift.Equatable {}
+extension Pushly.PNAppMessageStyle : Swift.Hashable {}
+extension Pushly.PNAppMessageStyle : Swift.RawRepresentable {}
+extension Pushly.HTTPMethod : Swift.Equatable {}
+extension Pushly.HTTPMethod : Swift.Hashable {}
+extension Pushly.HTTPMethod : Swift.RawRepresentable {}
+extension Pushly.PNNotificationActionType : Swift.Equatable {}
+extension Pushly.PNNotificationActionType : Swift.Hashable {}
+extension Pushly.PNNotificationActionType : Swift.RawRepresentable {}
+extension Pushly.PNNotificationBadgeBehavior : Swift.Equatable {}
+extension Pushly.PNNotificationBadgeBehavior : Swift.Hashable {}
+extension Pushly.PNNotificationBadgeBehavior : Swift.RawRepresentable {}
+extension Pushly.PNLogLevel : Swift.Equatable {}
+extension Pushly.PNLogLevel : Swift.Hashable {}
+extension Pushly.PNLogLevel : Swift.RawRepresentable {}
+extension Pushly.PNSessionScope : Swift.Equatable {}
+extension Pushly.PNSessionScope : Swift.Hashable {}
+extension Pushly.PNSessionScope : Swift.RawRepresentable {}
+extension Pushly.RelativeDateDisplayMetric : Swift.Equatable {}
+extension Pushly.RelativeDateDisplayMetric : Swift.Hashable {}
+extension Pushly.RelativeDateDisplayMetric : Swift.RawRepresentable {}
+extension Pushly.PNAppMessageViewMessageType : Swift.Equatable {}
+extension Pushly.PNAppMessageViewMessageType : Swift.Hashable {}
+extension Pushly.PNAppMessageViewMessageType : Swift.RawRepresentable {}
+extension Pushly.PNNotificationInteractionType : Swift.Equatable {}
+extension Pushly.PNNotificationInteractionType : Swift.Hashable {}
+extension Pushly.PNAppMessageType : Swift.Equatable {}
+extension Pushly.PNAppMessageType : Swift.Hashable {}
+extension Pushly.PNAppMessageType : Swift.RawRepresentable {}
+extension Pushly.PNAppMessageTheme.CodingKeys : Swift.Equatable {}
+extension Pushly.PNAppMessageTheme.CodingKeys : Swift.Hashable {}
+extension Pushly.PNAppMessageTheme.CodingKeys : Swift.RawRepresentable {}
+extension Pushly.PNConditionTriggerQualifier : Swift.Equatable {}
+extension Pushly.PNConditionTriggerQualifier : Swift.Hashable {}
+extension Pushly.PNConditionTriggerQualifier : Swift.RawRepresentable {}
+extension Pushly.PNAppMessagePosition : Swift.Equatable {}
+extension Pushly.PNAppMessagePosition : Swift.Hashable {}
+extension Pushly.PNAppMessagePosition : Swift.RawRepresentable {}
+extension Pushly.PNSubscriberStatus : Swift.Equatable {}
+extension Pushly.PNSubscriberStatus : Swift.Hashable {}
+extension Pushly.PNSubscriberStatus : Swift.RawRepresentable {}
+extension Pushly.PNECommItemType : Swift.Equatable {}
+extension Pushly.PNECommItemType : Swift.Hashable {}
+extension Pushly.PNECommItemType : Swift.RawRepresentable {}
+extension Pushly.PNPrePermissionResponse : Swift.Equatable {}
+extension Pushly.PNPrePermissionResponse : Swift.Hashable {}
+extension Pushly.PNPrePermissionResponse : Swift.RawRepresentable {}
+extension Pushly.DisplayCondition : Swift.Equatable {}
+extension Pushly.DisplayCondition : Swift.Hashable {}
+extension Pushly.DisplayCondition : Swift.RawRepresentable {}
