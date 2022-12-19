@@ -10,15 +10,15 @@
 		</data>
 		<key>Headers/Pushly.h</key>
 		<data>
-		bB7l/8AFen4GoZ1BaZ27Ik3GkS0=
+		efOsr7khsROdMMkq3Sx1/BgiQTA=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		JDeeeXz2QQOBjsj47/f0Q+PyvH0=
+		JhGXVPjdm7IDH8Btk5M5oq5Pls0=
 		</data>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		3oYhHQhPDX1YRq5wKBx1UEPGEQQ=
+		FSz7zYyxK+/oxcFU3LtFV9viwPc=
 		</data>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		4MHc1rwTCrJ1YunmVk3ZVK4OThA=
+		fZ2q1QNXte7v/V4KVKLYZAe1STE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -54,14 +54,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tnse4Qmax+F/x6vLnqggsfLcf/dxYs2xy08GEtJcLEE=
+			Vh3gCMsodwIeU+wwh3OHlEECoPde7v/GsZz+Om2osCc=
 			</data>
 		</dict>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WDxi5G18NSfPIld6I3rduv7k0pdkInUqSynjyE5iLII=
+			KpNyDYIOP6tGbhQppqnNRtt/IZ429HlmvFfnRn/2P84=
 			</data>
 		</dict>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -89,7 +89,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ut3qOqgNjqM/zK9MMUcut7TCuA0IDrtFiqBmCgKDYTU=
+			++50R8q1cxiUq+IHl8BvFdj8L0bupejMSKUpDhwO95s=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
