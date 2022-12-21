@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.summary                 = "The official PushSDK Framework for iOS native app notifications"
 
   s.homepage                = "https://pushly.com"
-  s.license                 = { :type => "MIT", :file => "FILE_LICENSE" }
+  s.license                 = { :type => "MIT", :file => "LICENSE" }
   s.author                  = { "Pushly" => "support@pushly.com" }
 
   s.platform                = :ios
