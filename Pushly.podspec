@@ -10,6 +10,6 @@ Pod::Spec.new do |s|
   s.platform                = :ios
   s.swift_version           = "5.7"
   s.source                  = { :git => "https://github.com/pushly/push-sdk-ios.git", :tag => "#{s.version}" }
-  s.source_files            = "Sources/Pushly.xcframework"
+  s.source_files            = "Sources/Pushly.xcframework/**/*.{h,m,swift}"
   s.ios.deployment_target   = "11.0"
 end
