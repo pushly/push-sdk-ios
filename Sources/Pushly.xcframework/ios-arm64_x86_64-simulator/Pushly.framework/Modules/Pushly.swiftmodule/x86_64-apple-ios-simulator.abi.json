@@ -8182,6 +8182,13 @@
       },
       {
         "kind": "Import",
+        "name": "SystemConfiguration",
+        "printedName": "SystemConfiguration",
+        "declKind": "Import",
+        "moduleName": "Pushly"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -12586,6 +12593,20 @@
             "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Pushly"
+      },
+      {
+        "kind": "Import",
+        "name": "Network",
+        "printedName": "Network",
+        "declKind": "Import",
+        "moduleName": "Pushly"
       },
       {
         "kind": "Import",
@@ -27705,7 +27726,7 @@
     {
       "filePath": "\/Users\/adamhay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 1276,
+      "offset": 1333,
       "length": 4,
       "value": "true"
     },
@@ -27743,6 +27764,20 @@
       "offset": 3044,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/adamhay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Networking\/ConnectionService.swift",
+      "kind": "StringLiteral",
+      "offset": 68,
+      "length": 21,
+      "value": "\"PNConnectionMonitor\""
+    },
+    {
+      "filePath": "\/Users\/adamhay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Networking\/ConnectionService.swift",
+      "kind": "BooleanLiteral",
+      "offset": 147,
+      "length": 4,
+      "value": "true"
     },
     {
       "filePath": "\/Users\/adamhay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNNotificationInteraction.swift",

@@ -5,9 +5,11 @@
 import Combine
 import CommonCrypto
 import Foundation
+import Network
 import NotificationCenter
 @_exported import Pushly
 import Swift
+import SystemConfiguration
 import UIKit.UIApplication
 import UIKit
 import UserNotifications
