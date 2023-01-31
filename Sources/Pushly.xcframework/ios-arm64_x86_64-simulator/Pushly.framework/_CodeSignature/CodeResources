@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		9bV8gbbFlngFkwFcqZrTeygK73c=
+		qEnD1Nw/ewBLOzUv7sUGj/HFBgc=
 		</data>
 		<key>Modules/Pushly.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/Pushly.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		BZCtIpK+pcd396ywZKr1WFA5TUc=
+		iklzxVB7vNUfLihmgeWJ7AmpGVA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -109,7 +109,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			KoLaIRFub6ouLs5gVPxaxcDb42qxVnj6CX/PbE0Jft8=
+			37iWc8YXyPMjYBLCA6kcaFqjODAv4FWpnp6OLAari20=
 			</data>
 		</dict>
 		<key>Modules/Pushly.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -144,7 +144,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			DPkKDn8tn53M3QKuLQceWzqbBqodERJ8O+7P0FJEaNQ=
+			+iO7AhB/1UK1gEogqWQFd01W+CBQGJXfdyzLjCoCUJs=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
