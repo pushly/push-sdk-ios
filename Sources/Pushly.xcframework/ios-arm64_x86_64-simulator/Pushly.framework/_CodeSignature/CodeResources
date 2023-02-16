@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/Pushly-Swift.h</key>
 		<data>
-		/yOJd09uWbkefeYHGRYfGfJiJhQ=
+		Zujs+zc7w+ZbKGec5vtLea4IGPA=
 		</data>
 		<key>Headers/Pushly.h</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		osWtofCpT3bRy/C+ibB3bsFD/dc=
+		09xHhF6RncQg9WUF2ecfbIjFRVI=
 		</data>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -22,19 +22,19 @@
 		</data>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		Sytec8Gzg0SlkOVh52Zn3IsOoZs=
+		UxCVfYsTKemEgwqwzHe36V+7ir8=
 		</data>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		LCJu04YPK6s4QNar7ru/lUc4eb8=
+		QNFH+Mgo4ix9ckSs+F/jNgXPTqs=
 		</data>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		Sytec8Gzg0SlkOVh52Zn3IsOoZs=
+		UxCVfYsTKemEgwqwzHe36V+7ir8=
 		</data>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		qEnD1Nw/ewBLOzUv7sUGj/HFBgc=
+		qENlM3fvUx2WXBy+WdnbcUpCgTE=
 		</data>
 		<key>Modules/Pushly.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -42,19 +42,19 @@
 		</data>
 		<key>Modules/Pushly.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		Rm+K0k8DxXAwBJ4+iuaAjkCvhIM=
+		TF98EwknSeNql8DejT6fOaw/tAc=
 		</data>
 		<key>Modules/Pushly.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		+e2sZRwsz9GUwUnRYqIu0/FABlQ=
+		5f/pfvJ5p+++CghpDXKD7eERt+0=
 		</data>
 		<key>Modules/Pushly.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		Rm+K0k8DxXAwBJ4+iuaAjkCvhIM=
+		TF98EwknSeNql8DejT6fOaw/tAc=
 		</data>
 		<key>Modules/Pushly.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		iklzxVB7vNUfLihmgeWJ7AmpGVA=
+		15OinJueTWGlgFMGsnu+TjezU+Q=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -67,7 +67,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			MhFzceX9SGlGqNBotESOweDGFDRBVe6CnisFb1fGBRc=
+			20JqdxQ+tnVj4Ie7G/ZKH8xO5dI+TBfIl83Pc6A6f9A=
 			</data>
 		</dict>
 		<key>Headers/Pushly.h</key>
@@ -88,28 +88,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			iEuHyTSp6jWxob/ZRZVClVrNARGSXrfLpkBnZnRxliI=
+			BAQpfJh3zZt8pbO2SscEhQf1bRmXlcL3QLPcxRKvqvc=
 			</data>
 		</dict>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			TpNGYImdCHk764YCNoJMOGEi2sAKgfOPxo/mqIaee2Q=
+			FL1DsikWyU/eqriaik+r/vVT6FYHOth//tZJwEPiHFM=
 			</data>
 		</dict>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iEuHyTSp6jWxob/ZRZVClVrNARGSXrfLpkBnZnRxliI=
+			BAQpfJh3zZt8pbO2SscEhQf1bRmXlcL3QLPcxRKvqvc=
 			</data>
 		</dict>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			37iWc8YXyPMjYBLCA6kcaFqjODAv4FWpnp6OLAari20=
+			QGEd+E7PBguF4Dt1BFK9Pcg/KOdSc1RCIO2q++EtxBY=
 			</data>
 		</dict>
 		<key>Modules/Pushly.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -123,28 +123,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ejYvc34Pva/Y0j5n8SG7FOKcCVFSsGzfX1DnYSUUXHQ=
+			hl16lEE7mWNNkzuCY2+AT6Jcw6DWMPBYmiNjMsCt7Vw=
 			</data>
 		</dict>
 		<key>Modules/Pushly.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RoXaeSMESl+Unw5PdCSpzMML0Q+W48rQvCvcyu+q+dY=
+			eyp2VujYt64TH+PdTGaXq2ID+IUhW2vFTFjVoY/iLso=
 			</data>
 		</dict>
 		<key>Modules/Pushly.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ejYvc34Pva/Y0j5n8SG7FOKcCVFSsGzfX1DnYSUUXHQ=
+			hl16lEE7mWNNkzuCY2+AT6Jcw6DWMPBYmiNjMsCt7Vw=
 			</data>
 		</dict>
 		<key>Modules/Pushly.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+iO7AhB/1UK1gEogqWQFd01W+CBQGJXfdyzLjCoCUJs=
+			xgm+A4srxnCghO0RBePudQEUuqGNnGmOW3DZ9ubJ6gw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
