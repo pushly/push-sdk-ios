@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/Pushly-Swift.h</key>
 		<data>
-		CUql/oFLS5VaSW3z9jWeGfbK8tc=
+		pb++ZMKCmpwodyrPa7ZxcdZa1q4=
 		</data>
 		<key>Headers/Pushly.h</key>
 		<data>
@@ -14,27 +14,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		dFJKF/jKOqa+FYPkrOHjkHlmbcw=
+		jGxyQU0pK8wQfYtf7LjfkexhI+s=
 		</data>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		dtklZrk68NTjGM8+CetRuszxfzI=
+		MbD1wqDdhnsH4DR03maw0uOGUBA=
 		</data>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		yZ7h3qU6oI4/IcfzVp2IgW9pn1w=
+		A6ifr7Gl/YVKCnDoQ45b/h3e+uQ=
 		</data>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		rC0k+dkMH/Msm5fPtuXBNU+4+14=
+		7WQ7gDIE9F/CNJHtcEZSKIhmS5A=
 		</data>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		yZ7h3qU6oI4/IcfzVp2IgW9pn1w=
+		A6ifr7Gl/YVKCnDoQ45b/h3e+uQ=
 		</data>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		z5jkRDkcRKv1mIJ4D5hxi4aYuTg=
+		+oheKUsEv3TcljyZ7J5dSA2Nv2s=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -47,7 +47,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9Qyv5CXj/wqIx8uMaAku/9B6M7PF/RiSrzBSIDUO2WM=
+			zw3e6HTra4MI+oPnd9PFTiHTJ9SIWVV1jVFnJirk3yM=
 			</data>
 		</dict>
 		<key>Headers/Pushly.h</key>
@@ -61,35 +61,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			dgnWfpMp2qDErPGbn/augUKAdKmiUThgY9EKyCq+0RY=
+			doLV3izYXlXL5BV3YEfirrYTMSOpoQR29GOujHjckwc=
 			</data>
 		</dict>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CgCuHYI75ieom5Ti+iLeErQYNJCkMueQxcrC1tqco9c=
+			0NVuxY42mJgxmAHBFn+BhHRoink7OUNW/fEqNrrj168=
 			</data>
 		</dict>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			BNDxhhuAntVOfc2VDYunufVN0iss2z1PGyjkLkzgDHM=
+			zXS6ypvhh9Pe7j3sJBdZXzwLFP/hl1gr6GHNF+6M8Ss=
 			</data>
 		</dict>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CgCuHYI75ieom5Ti+iLeErQYNJCkMueQxcrC1tqco9c=
+			0NVuxY42mJgxmAHBFn+BhHRoink7OUNW/fEqNrrj168=
 			</data>
 		</dict>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CnlyKeAOLCD3A2YlZ9qypzn0tkEnOWGji3YO297FCi0=
+			MsLfKxa0GhCU4NCIMmIwj4H7KXYUJTR/o7Sd1drZQ9s=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
