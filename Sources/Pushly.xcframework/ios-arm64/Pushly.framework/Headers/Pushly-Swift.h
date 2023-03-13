@@ -260,10 +260,12 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import CoreFoundation;
 @import Foundation;
 @import ObjectiveC;
 @import UIKit;
 @import UserNotifications;
+@import WebKit;
 #endif
 
 #endif
@@ -351,6 +353,8 @@ SWIFT_CLASS("_TtC6Pushly12PNAppMessage")
 @property (nonatomic, readonly) BOOL canDismissOnSlide;
 @property (nonatomic, readonly) BOOL canDismissOnTapOutside;
 - (BOOL)isEligibleToDisplayWithSkipConditionsEvaluation:(BOOL)skipConditions skipFcapEvaluation:(BOOL)skipFcap SWIFT_WARN_UNUSED_RESULT;
+@property (nonatomic, readonly) BOOL hasMetSessionFrequencyCap;
+@property (nonatomic, readonly) BOOL hasMetTimeInScopeCondition;
 @end
 
 
@@ -370,6 +374,32 @@ SWIFT_CLASS("_TtC6Pushly22PNAppMessageConditions")
 @end
 
 
+
+@class NSCoder;
+@protocol UIViewControllerTransitionCoordinator;
+@class UIPanGestureRecognizer;
+@class UITapGestureRecognizer;
+@class NSBundle;
+
+SWIFT_CLASS("_TtC6Pushly22PNAppMessageController") SWIFT_AVAILABILITY(ios_app_extension,unavailable)
+@interface PNAppMessageController : UIViewController
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+- (void)timeInSessionTimerAdvanced;
+- (void)maxDisplayTimeTimerFinished;
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator> _Nonnull)coordinator;
+- (void)panGestureRecognizerDidMove:(UIPanGestureRecognizer * _Nonnull)sender;
+- (void)tapGestureRecognizerDidTap:(UITapGestureRecognizer * _Nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+@end
+
+
+@class WKUserContentController;
+@class WKScriptMessage;
+
+SWIFT_AVAILABILITY(ios_app_extension,unavailable)
+@interface PNAppMessageController (SWIFT_EXTENSION(Pushly)) <WKScriptMessageHandler>
+- (void)userContentController:(WKUserContentController * _Nonnull)userContentController didReceiveScriptMessage:(WKScriptMessage * _Nonnull)message;
+@end
 
 
 SWIFT_CLASS("_TtC6Pushly29PNAppMessageDisplayConditions")
@@ -398,7 +428,6 @@ SWIFT_CLASS("_TtC6Pushly27PNAppMessageGroupConditions")
 
 enum PNPrePermissionResponse : NSInteger;
 @class PNAppMessageViewMessage;
-@class WKScriptMessage;
 
 SWIFT_PROTOCOL("_TtP6Pushly29PNAppMessageLifecycleDelegate_")
 @protocol PNAppMessageLifecycleDelegate
@@ -415,6 +444,16 @@ typedef SWIFT_ENUM(NSInteger, PNAppMessageStyle, open) {
   PNAppMessageStyleBanner = 2,
   PNAppMessageStyleNative = 3,
 };
+
+@class WKWebView;
+@class WKNavigation;
+
+SWIFT_CLASS("_TtC6Pushly16PNAppMessageView")
+@interface PNAppMessageView : UIView <UIScrollViewDelegate, WKNavigationDelegate, WKUIDelegate>
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+- (void)webView:(WKWebView * _Nonnull)webView didFinishNavigation:(WKNavigation * _Nonnull)navigation;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
 
 
 SWIFT_CLASS("_TtC6Pushly23PNAppMessageViewMessage")
@@ -443,6 +482,12 @@ SWIFT_CLASS("_TtC6Pushly19PNApplicationConfig")
 @end
 
 
+
+@interface PNApplicationConfig (SWIFT_EXTENSION(Pushly))
+@property (nonatomic, readonly) BOOL disableBadgeClearing;
+@property (nonatomic, readonly) BOOL isStale;
+@property (nonatomic, readonly) BOOL shouldDisplayNotificationsInForeground;
+@end
 
 enum PNECommItemType : NSInteger;
 
@@ -556,7 +601,7 @@ SWIFT_PROTOCOL("_TtP6Pushly31PNNotificationLifecycleDelegate_")
 @end
 
 
-SWIFT_CLASS("_TtC6Pushly29PNNotificationOpenedProcessor")
+SWIFT_CLASS("_TtC6Pushly29PNNotificationOpenedProcessor") SWIFT_AVAILABILITY(ios_app_extension,unavailable)
 @interface PNNotificationOpenedProcessor : NSObject
 + (void)processInteraction:(PNNotificationInteraction * _Nonnull)pnInteraction withDestination:(NSString * _Nonnull)destination;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -587,7 +632,7 @@ SWIFT_PROTOCOL("_TtP6Pushly30PNPermissionsLifecycleDelegate_")
 @protocol PNPermissionsLifecycleDelegate
 @optional
 - (void)pushSDKDidReceivePermissionResponse:(BOOL)granted withSettings:(UNNotificationSettings * _Nonnull)settings;
-- (void)pushSDKDidReceivePermissionResponse:(BOOL)granted withSettings:(UNNotificationSettings * _Nonnull)settings withError:(NSError * _Nonnull)withError;
+- (void)pushSDKDidReceivePermissionResponse:(BOOL)granted withSettings:(UNNotificationSettings * _Nonnull)settings withError:(NSError * _Nonnull)error;
 - (void)pushSDKDidReceivePermissionStatusChange:(UNAuthorizationStatus)status withSettings:(UNNotificationSettings * _Nonnull)settings;
 - (void)pushSDKDidRegisterForRemoteNotificationsWithDeviceToken:(NSString * _Nonnull)deviceToken;
 - (void)pushSDKDidFailToRegisterForRemoteNotificationsWithError:(NSError * _Nonnull)error;
@@ -617,16 +662,11 @@ typedef SWIFT_ENUM(NSInteger, PNSubscriberStatus, open) {
 
 SWIFT_CLASS("_TtC6Pushly7PushSDK")
 @interface PushSDK : UIResponder <UIApplicationDelegate>
-+ (void)setConfigurationAppKey:(NSString * _Nonnull)appKey withLaunchOptions:(NSDictionary<UIApplicationLaunchOptionsKey, id> * _Nullable)launchOptions;
-+ (void)setConfigurationWithLaunchOptions:(NSDictionary<UIApplicationLaunchOptionsKey, id> * _Nullable)launchOptions;
-+ (void)setSDKLifecycleDelegate:(id <PNPushSDKLifecycleDelegate> _Nonnull)delegate;
-+ (void)setPermissionsLifecycleDelegate:(id <PNPermissionsLifecycleDelegate> _Nonnull)delegate;
-+ (void)setNotificationLifecycleDelegate:(id <PNNotificationLifecycleDelegate> _Nonnull)delegate;
-+ (void)setAppMessageLifecycleDelegate:(id <PNAppMessageLifecycleDelegate> _Nonnull)delegate;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
+SWIFT_AVAILABILITY(ios_app_extension,unavailable)
 @interface PushSDK (SWIFT_EXTENSION(Pushly))
 @end
 
@@ -648,6 +688,24 @@ SWIFT_CLASS_NAMED("AppMessages")
 @end
 
 
+SWIFT_AVAILABILITY(ios_app_extension,unavailable)
+@interface PushSDK (SWIFT_EXTENSION(Pushly))
+@end
+
+
+SWIFT_CLASS_NAMED("EComm")
+@interface PushSDKEComm : NSObject
++ (void)addToCartWithItems:(NSArray<PNECommItem *> * _Nonnull)items;
++ (void)updateCartWithItems:(NSArray<PNECommItem *> * _Nonnull)items;
++ (void)clearCart;
++ (void)trackPurchase;
++ (void)trackPurchaseOf:(NSArray<PNECommItem *> * _Nonnull)items withPurchaseId:(NSString * _Nullable)purchaseId withPriceValue:(NSString * _Nullable)priceValue;
++ (void)withECommConfig:(void (^ _Nonnull)(PNECommConfig * _Nonnull))block caller:(NSString * _Nonnull)caller;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_AVAILABILITY(ios_app_extension,unavailable)
 @interface PushSDK (SWIFT_EXTENSION(Pushly))
 @end
 
@@ -695,17 +753,9 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isEligibleToPro
 
 
 @interface PushSDK (SWIFT_EXTENSION(Pushly))
-@end
-
-
-SWIFT_CLASS_NAMED("EComm")
-@interface PushSDKEComm : NSObject
-+ (void)addToCartWithItems:(NSArray<PNECommItem *> * _Nonnull)items;
-+ (void)updateCartWithItems:(NSArray<PNECommItem *> * _Nonnull)items;
-+ (void)clearCart;
-+ (void)trackPurchase;
-+ (void)trackPurchaseOf:(NSArray<PNECommItem *> * _Nonnull)items withPurchaseId:(NSString * _Nullable)purchaseId withPriceValue:(NSString * _Nullable)priceValue;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class) enum PNLogLevel logLevel;)
++ (enum PNLogLevel)logLevel SWIFT_WARN_UNUSED_RESULT;
++ (void)setLogLevel:(enum PNLogLevel)newValue;
 @end
 
 
@@ -715,6 +765,7 @@ SWIFT_CLASS_NAMED("EComm")
 @class UNNotification;
 @class UNNotificationResponse;
 
+SWIFT_AVAILABILITY(ios_app_extension,unavailable)
 @interface PushSDK (SWIFT_EXTENSION(Pushly)) <UNUserNotificationCenterDelegate>
 - (void)application:(UIApplication * _Nonnull)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData * _Nonnull)deviceToken;
 - (void)application:(UIApplication * _Nonnull)application didFailToRegisterForRemoteNotificationsWithError:(NSError * _Nonnull)error;
@@ -725,10 +776,8 @@ SWIFT_CLASS_NAMED("EComm")
 @end
 
 
+SWIFT_AVAILABILITY(ios_app_extension,unavailable)
 @interface PushSDK (SWIFT_EXTENSION(Pushly))
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class) enum PNLogLevel logLevel;)
-+ (enum PNLogLevel)logLevel SWIFT_WARN_UNUSED_RESULT;
-+ (void)setLogLevel:(enum PNLogLevel)newValue;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull appKey;)
 + (NSString * _Nonnull)appKey SWIFT_WARN_UNUSED_RESULT;
 + (void)getConfiguration:(void (^ _Nonnull)(PNApplicationConfig * _Nullable, NSError * _Nullable))completion;
@@ -736,6 +785,18 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 + (void)showNativeNotificationPermissionPrompt:(void (^ _Nonnull)(BOOL, UNNotificationSettings * _Nonnull, NSError * _Nullable))completion;
 + (void)showNativeNotificationPermissionPrompt:(void (^ _Nonnull)(BOOL, UNNotificationSettings * _Nonnull, NSError * _Nullable))completion skipConditionsEvaluation:(BOOL)skipConditions skipFrequencyCapEvaluation:(BOOL)skipFcap;
 + (void)setEventSourceApplication:(PNEventSourceApplication * _Nonnull)application;
+@end
+
+
+SWIFT_AVAILABILITY(ios_app_extension,unavailable)
+@interface PushSDK (SWIFT_EXTENSION(Pushly))
++ (void)setConfigurationAppKey:(NSString * _Nonnull)appKey withLaunchOptions:(NSDictionary<UIApplicationLaunchOptionsKey, id> * _Nullable)launchOptions;
++ (void)setConfigurationWithLaunchOptions:(NSDictionary<UIApplicationLaunchOptionsKey, id> * _Nullable)launchOptions;
++ (void)setSDKLifecycleDelegate:(id <PNPushSDKLifecycleDelegate> _Nonnull)delegate;
++ (void)setPermissionsLifecycleDelegate:(id <PNPermissionsLifecycleDelegate> _Nonnull)delegate;
++ (void)setNotificationLifecycleDelegate:(id <PNNotificationLifecycleDelegate> _Nonnull)delegate;
++ (void)setAppMessageLifecycleDelegate:(id <PNAppMessageLifecycleDelegate> _Nonnull)delegate;
+- (void)subscriberStateEvaluationTimerDidAdvance;
 @end
 
 

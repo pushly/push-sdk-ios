@@ -1,0 +1,2 @@
+See the Releases section for a full change log.
+https://github.com/pushly/pushly-sdk-ios/releases

@@ -107,6 +107,7 @@ extension Pushly.PNNotificationActionType : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
 }
+@available(iOSApplicationExtension, unavailable)
 extension Pushly.PushSDK {
   @_inheritsConvenienceInitializers @objc(PushSDKEComm) @objcMembers public class EComm : ObjectiveC.NSObject {
     @objc public static func addToCart(items: [Pushly.PNECommItem])
@@ -154,20 +155,26 @@ extension Pushly.FrequencyCapWithOccurrenceLimit {
   public func toSimpleObject() -> [Swift.String : Any?]
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) final public class PushSDK : UIKit.UIResponder, UIKit.UIApplicationDelegate {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init()
+  @objc deinit
+}
+@available(iOSApplicationExtension, unavailable)
+extension Pushly.PushSDK {
   @objc(setConfigurationAppKey:withLaunchOptions:) @_Concurrency.MainActor(unsafe) public static func setConfiguration(appKey: Swift.String, withLaunchOptions launchOptions: [UIKit.UIApplication.LaunchOptionsKey : Any]?)
   @objc(setConfigurationWithLaunchOptions:) @_Concurrency.MainActor(unsafe) public static func setConfiguration(withLaunchOptions launchOptions: [UIKit.UIApplication.LaunchOptionsKey : Any]?)
   @objc @_Concurrency.MainActor(unsafe) public static func setSDKLifecycleDelegate(_ delegate: any Pushly.PNPushSDKLifecycleDelegate)
   @objc @_Concurrency.MainActor(unsafe) public static func setPermissionsLifecycleDelegate(_ delegate: any Pushly.PNPermissionsLifecycleDelegate)
   @objc @_Concurrency.MainActor(unsafe) public static func setNotificationLifecycleDelegate(_ delegate: any Pushly.PNNotificationLifecycleDelegate)
   @objc @_Concurrency.MainActor(unsafe) public static func setAppMessageLifecycleDelegate(_ delegate: any Pushly.PNAppMessageLifecycleDelegate)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init()
-  @objc deinit
 }
 extension Pushly.PushSDK {
   @objc @_Concurrency.MainActor(unsafe) public static var logLevel: Pushly.PNLogLevel {
     @objc get
     @objc set
   }
+}
+@available(iOSApplicationExtension, unavailable)
+extension Pushly.PushSDK {
   @objc @_Concurrency.MainActor(unsafe) public static var appKey: Swift.String {
     @objc get
   }
@@ -177,6 +184,7 @@ extension Pushly.PushSDK {
   @objc @_Concurrency.MainActor(unsafe) public static func showNativeNotificationPermissionPrompt(_ completion: @escaping (Swift.Bool, UserNotifications.UNNotificationSettings, (any Swift.Error)?) -> Swift.Void, skipConditionsEvaluation skipConditions: Swift.Bool = false, skipFrequencyCapEvaluation skipFcap: Swift.Bool = false)
   @objc(setEventSourceApplication:) @_Concurrency.MainActor(unsafe) public static func setEventSourceApplication(_ application: Pushly.PNEventSourceApplication)
 }
+@available(iOSApplicationExtension, unavailable)
 extension Pushly.PushSDK : UserNotifications.UNUserNotificationCenterDelegate {
   @_Concurrency.MainActor(unsafe) @objc final public func application(_ application: UIKit.UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Foundation.Data)
   @_Concurrency.MainActor(unsafe) @objc final public func application(_ application: UIKit.UIApplication, didFailToRegisterForRemoteNotificationsWithError error: any Swift.Error)
@@ -458,7 +466,7 @@ extension Pushly.PNAppMessage {
 }
 @objc public protocol PNPermissionsLifecycleDelegate {
   @objc(pushSDKDidReceivePermissionResponse:withSettings:) optional func pushSDK(didReceivePermissionResponse granted: Swift.Bool, withSettings settings: UserNotifications.UNNotificationSettings)
-  @objc(pushSDKDidReceivePermissionResponse:withSettings:withError:) optional func pushSDK(didReceivePermissionResponse granted: Swift.Bool, withSettings settings: UserNotifications.UNNotificationSettings, withError: any Swift.Error)
+  @objc(pushSDKDidReceivePermissionResponse:withSettings:withError:) optional func pushSDK(didReceivePermissionResponse granted: Swift.Bool, withSettings settings: UserNotifications.UNNotificationSettings, withError error: any Swift.Error)
   @objc(pushSDKDidReceivePermissionStatusChange:withSettings:) optional func pushSDK(didReceivePermissionStatusChange status: UserNotifications.UNAuthorizationStatus, withSettings settings: UserNotifications.UNNotificationSettings)
   @objc(pushSDKDidRegisterForRemoteNotificationsWithDeviceToken:) optional func pushSDK(didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Swift.String)
   @objc(pushSDKDidFailToRegisterForRemoteNotificationsWithError:) optional func pushSDK(didFailToRegisterForRemoteNotificationsWithError error: any Swift.Error)
@@ -483,11 +491,10 @@ extension Pushly.PNAppMessagePositionConfig {
   public func toSimpleObject() -> [Swift.String : Any?]
 }
 @objc public class PNNotificationInteraction : ObjectiveC.NSObject {
-  final public let receivedState: Swift.String
   final public let type: Pushly.PNNotificationInteractionType
   final public let actionIdentifier: Swift.String
   public var notification: Pushly.PNNotification
-  public init(from response: UserNotifications.UNNotificationResponse, inApplicationState state: UIKit.UIApplication.State)
+  public init(from response: UserNotifications.UNNotificationResponse)
   public var action: Pushly.PNNotificationAction? {
     get
   }
@@ -553,6 +560,7 @@ public enum PNAppMessageType : Swift.String, Swift.Codable {
 extension Pushly.PNAppMessageTheme {
   public func toSimpleObject() -> [Swift.String : Any?]
 }
+@available(iOSApplicationExtension, unavailable)
 extension Pushly.PushSDK {
   @_inheritsConvenienceInitializers @objc(PushSDKUserProfile) @objcMembers public class UserProfile : ObjectiveC.NSObject {
     @objc public static var anonymousId: Swift.String {
@@ -634,11 +642,10 @@ extension Foundation.URLRequest {
   public var badgeBehavior: Pushly.PNNotificationBadgeBehavior?
   public var badgeConfig: Pushly.PNBadgeConfig?
   public var impressionType: Swift.String
-  public var receivedState: Swift.String
   public var viaServiceExtension: Swift.Bool
   public var hasRequiredKeys: Swift.Bool
-  convenience public init(from notification: UserNotifications.UNNotification, inApplicationState state: UIKit.UIApplication.State)
-  public init(from userInfo: [Swift.AnyHashable : Any], inApplicationState state: UIKit.UIApplication.State)
+  convenience public init(from notification: UserNotifications.UNNotification)
+  public init(from userInfo: [Swift.AnyHashable : Any])
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
@@ -744,7 +751,8 @@ extension Pushly.PNSubscriberStatus : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
 }
-@_inheritsConvenienceInitializers @objc public class PNNotificationOpenedProcessor : ObjectiveC.NSObject {
+@_inheritsConvenienceInitializers @available(iOSApplicationExtension, unavailable)
+@objc public class PNNotificationOpenedProcessor : ObjectiveC.NSObject {
   @objc(processInteraction:withDestination:) public static func processInteractionDestination(_ pnInteraction: Pushly.PNNotificationInteraction, destination: Swift.String)
   @objc override dynamic public init()
   @objc deinit
@@ -807,6 +815,7 @@ extension Pushly.PNECommItemType : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
 }
+@available(iOSApplicationExtension, unavailable)
 extension Pushly.PushSDK {
   @_inheritsConvenienceInitializers @objc(PushSDKAppMessages) @objcMembers public class AppMessages : ObjectiveC.NSObject {
     @objc public static func show(_ id: Swift.Int, skipConditionsEvaluation skipConditions: Swift.Bool = false, skipFrequencyCapEvaluation skipFcap: Swift.Bool = false)
