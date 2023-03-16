@@ -27439,9 +27439,9 @@
     {
       "filePath": "\/Users\/adamhay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "BooleanLiteral",
-      "offset": 188,
-      "length": 5,
-      "value": "false"
+      "offset": 142,
+      "length": 4,
+      "value": "true"
     },
     {
       "filePath": "\/Users\/adamhay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
