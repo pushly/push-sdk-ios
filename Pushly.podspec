@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                    = "Pushly"
-  s.version                 = "1.0.9"
+  s.version                 = "1.0.10"
   s.summary                 = "The official PushSDK Framework for iOS native app notifications"
 
   s.homepage                = "https://pushly.com"
@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.swift_version           = "5.7"
   s.requires_arc            = true
 
-  s.vendored_frameworks     = 'Sources/Pushly.xcframework'
+  s.vendored_frameworks     = "Sources/Pushly.xcframework"
 
-  s.documentation_url       = 'https://documentation.pushly.com/integration/implementation-steps/apple-ios'
+  s.documentation_url       = "https://documentation.pushly.com/integration/implementation-steps/apple-ios"
 end
