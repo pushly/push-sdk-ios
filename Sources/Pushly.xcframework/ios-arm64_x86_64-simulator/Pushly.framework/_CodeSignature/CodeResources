@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/Pushly-Swift.h</key>
 		<data>
-		ycqd44JEDQrC69JEjaf7szzU6Pc=
+		oS/i7byqL1p75V3E5I9E8Gc2GN8=
 		</data>
 		<key>Headers/Pushly.h</key>
 		<data>
@@ -14,47 +14,47 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		spHlyUWJta+WTiiSOmpsdZgJTXo=
+		Mu0OZb7xqYEawHVbYTjK40p+I3k=
 		</data>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		1nFTLmiiGqmqf19AFdeS8jM9Wpk=
+		BK1++er3YgRsVek+heIAMZeARd0=
 		</data>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		G+Mu57NaKSj5fIEOECdlLFQ+N58=
+		8ht7yv3WFe1adYCE/Ll64DLpkmM=
 		</data>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		MGATbjKk1PDGhCz6XAxM7oiLk2o=
+		raE7ngLchpOeA4NCwitplMQvL5E=
 		</data>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		G+Mu57NaKSj5fIEOECdlLFQ+N58=
+		8ht7yv3WFe1adYCE/Ll64DLpkmM=
 		</data>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		jXwnrfDE9YwdkU448CxggYDNWRY=
+		6yKtj1oy82cYxQYBSxi9TxXUoDU=
 		</data>
 		<key>Modules/Pushly.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		1nFTLmiiGqmqf19AFdeS8jM9Wpk=
+		BK1++er3YgRsVek+heIAMZeARd0=
 		</data>
 		<key>Modules/Pushly.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		AC38UwltgnoRQuyOqyVZTTA69DQ=
+		KMiFYtg2Ne7MrFrmmhARKJ9U9W0=
 		</data>
 		<key>Modules/Pushly.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		xL+UkfuVwUcUOp6tbIPu3M5Gfks=
+		5+L2mSLxJ5FPnSjGtMkseucUgCs=
 		</data>
 		<key>Modules/Pushly.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		AC38UwltgnoRQuyOqyVZTTA69DQ=
+		KMiFYtg2Ne7MrFrmmhARKJ9U9W0=
 		</data>
 		<key>Modules/Pushly.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		c5erw1GAnFB+FHF8ksLNLQTDUu8=
+		jAiaggCjS963fJ6+PntmC7wK/2A=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -67,7 +67,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hQ7v3OpyZyeN+IQPLkLw+IYSJnaqYb1dxHBkYr24lhc=
+			A+wIOI2Ofld4Wbyl3irvzPds1nFBqiS0rf/2VE/gE+w=
 			</data>
 		</dict>
 		<key>Headers/Pushly.h</key>
@@ -81,70 +81,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vZmHACCwNY2a/xnasbZ4UnDB87S4Qzb01OoAxqsvxrs=
+			zI24l8UkTNU2nesCbzzg/s1HviOzKbue83Y7QGjHkVY=
 			</data>
 		</dict>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			G4j/Zl7tN7xuCGq5yRBWlfoe7O4Z1EXiZklLXX8DaK4=
+			VGUjhdv5DIyZXOPY9x6sePK9e0I2USa8vlVtqIREchc=
 			</data>
 		</dict>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xgmmPd965SK8wUi+udk18Fz1ZrDk0xxhKgAcl76UECg=
+			UX9Jkon//a+Pn/Ghjs/3kncOmU3o2F6A/0s1rI/Tut0=
 			</data>
 		</dict>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			G4j/Zl7tN7xuCGq5yRBWlfoe7O4Z1EXiZklLXX8DaK4=
+			VGUjhdv5DIyZXOPY9x6sePK9e0I2USa8vlVtqIREchc=
 			</data>
 		</dict>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			T0U4sxxplmeVrKGwR++K/Zv9kYnVclnM20ovmi5aqR4=
+			JoFa7HpaYeCxlWs4TzLWW6I45xFwjoeZhYrYg6sIdlU=
 			</data>
 		</dict>
 		<key>Modules/Pushly.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vZmHACCwNY2a/xnasbZ4UnDB87S4Qzb01OoAxqsvxrs=
+			zI24l8UkTNU2nesCbzzg/s1HviOzKbue83Y7QGjHkVY=
 			</data>
 		</dict>
 		<key>Modules/Pushly.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mKI4hrzpJdoCl2buNOzfK45IrQ7Da2osI1L1aLHNiEA=
+			3gDji2O8MYrHtIUTM/uhE4h5pvGJErfAQlht8c9Inm4=
 			</data>
 		</dict>
 		<key>Modules/Pushly.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			x7X+lb9Y+2P7G9Ky9OGcvtM6rcaz5hWps4uTFkPsTog=
+			pFFatJl4yDZfBKtOV5NrRUN5KqwSSQMeyp3YetBXuK0=
 			</data>
 		</dict>
 		<key>Modules/Pushly.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mKI4hrzpJdoCl2buNOzfK45IrQ7Da2osI1L1aLHNiEA=
+			3gDji2O8MYrHtIUTM/uhE4h5pvGJErfAQlht8c9Inm4=
 			</data>
 		</dict>
 		<key>Modules/Pushly.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xwTI3SqORbVZLtxyGIDyqkxPw56YX/KNpzAaNLyGWcU=
+			5SSOqnC+DKFxVQgJdNm06FlD4lAe04RDpqn4r50JmYY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
