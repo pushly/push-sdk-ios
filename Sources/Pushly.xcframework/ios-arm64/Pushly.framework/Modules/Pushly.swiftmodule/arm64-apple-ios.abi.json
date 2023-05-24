@@ -27397,6 +27397,20 @@
       "value": "\"notification_close\""
     },
     {
+      "filePath": "\/Users\/adamhay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNTrackedEventAction.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2045,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/adamhay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNTrackedEventAction.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2333,
+      "length": 4,
+      "value": "true"
+    },
+    {
       "filePath": "\/Users\/adamhay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Networking\/Reachability.swift",
       "kind": "IntegerLiteral",
       "offset": 144,
@@ -29611,217 +29625,217 @@
     {
       "filePath": "\/Users\/adamhay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 3375,
+      "offset": 3382,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/adamhay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 3682,
+      "offset": 3689,
       "length": 30,
       "value": "\"[\""
     },
     {
       "filePath": "\/Users\/adamhay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 3695,
+      "offset": 3702,
       "length": 1,
       "value": "\"] Cache is empty\""
     },
     {
       "filePath": "\/Users\/adamhay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 3978,
+      "offset": 3985,
       "length": 101,
       "value": "\"[\""
     },
     {
       "filePath": "\/Users\/adamhay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 3991,
+      "offset": 3998,
       "length": 1,
       "value": "\"] Rehydrated \""
     },
     {
       "filePath": "\/Users\/adamhay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 4023,
+      "offset": 4030,
       "length": 6,
       "value": "\" events from cache \""
     },
     {
       "filePath": "\/Users\/adamhay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 4078,
+      "offset": 4085,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/adamhay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 4207,
+      "offset": 4214,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/adamhay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 4248,
+      "offset": 4255,
       "length": 47,
       "value": "\"[\""
     },
     {
       "filePath": "\/Users\/adamhay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 4261,
+      "offset": 4268,
       "length": 1,
       "value": "\"] Queue timer already initialized\""
     },
     {
       "filePath": "\/Users\/adamhay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 4543,
+      "offset": 4550,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/adamhay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 5220,
+      "offset": 5227,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/adamhay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 5344,
+      "offset": 5351,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/adamhay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 5404,
+      "offset": 5411,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/adamhay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 6431,
+      "offset": 6438,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/adamhay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 6722,
+      "offset": 6729,
       "length": 106,
       "value": "\"[\""
     },
     {
       "filePath": "\/Users\/adamhay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 6735,
+      "offset": 6742,
       "length": 1,
       "value": "\"] Sending \""
     },
     {
       "filePath": "\/Users\/adamhay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 6760,
+      "offset": 6767,
       "length": 6,
       "value": "\" events: \""
     },
     {
       "filePath": "\/Users\/adamhay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 6827,
+      "offset": 6834,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/adamhay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 6881,
+      "offset": 6888,
       "length": 70,
       "value": "\"[\""
     },
     {
       "filePath": "\/Users\/adamhay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 6894,
+      "offset": 6901,
       "length": 1,
       "value": "\"] Unable to prepare events: \""
     },
     {
       "filePath": "\/Users\/adamhay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 6950,
+      "offset": 6957,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/adamhay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 7171,
+      "offset": 7178,
       "length": 31,
       "value": "\"[\""
     },
     {
       "filePath": "\/Users\/adamhay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 7184,
+      "offset": 7191,
       "length": 1,
       "value": "\"] Send successful\""
     },
     {
       "filePath": "\/Users\/adamhay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 7250,
+      "offset": 7257,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/adamhay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 7357,
+      "offset": 7364,
       "length": 57,
       "value": "\"[\""
     },
     {
       "filePath": "\/Users\/adamhay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 7370,
+      "offset": 7377,
       "length": 1,
       "value": "\"] Send failed; \""
     },
     {
       "filePath": "\/Users\/adamhay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 7413,
+      "offset": 7420,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/adamhay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 8003,
+      "offset": 8010,
       "length": 39,
       "value": "\"[\""
     },
     {
       "filePath": "\/Users\/adamhay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 8016,
+      "offset": 8023,
       "length": 1,
       "value": "\"] Purging event: \""
     },
     {
       "filePath": "\/Users\/adamhay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 8041,
+      "offset": 8048,
       "length": 2,
       "value": "\"\""
     },
@@ -30661,14 +30675,14 @@
     {
       "filePath": "\/Users\/adamhay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNTrackedEvent.swift",
       "kind": "IntegerLiteral",
-      "offset": 3664,
+      "offset": 2929,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/adamhay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNTrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 4402,
+      "offset": 3675,
       "length": 11,
       "value": "\"bundle_id\""
     },
