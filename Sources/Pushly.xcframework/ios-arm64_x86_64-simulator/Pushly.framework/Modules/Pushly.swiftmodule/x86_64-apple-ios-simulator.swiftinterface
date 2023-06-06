@@ -183,15 +183,8 @@ extension Pushly.PushSDK {
   @objc @_Concurrency.MainActor(unsafe) public static func showNativeNotificationPermissionPrompt(_ completion: @escaping (Swift.Bool, UserNotifications.UNNotificationSettings, (any Swift.Error)?) -> Swift.Void)
   @objc @_Concurrency.MainActor(unsafe) public static func showNativeNotificationPermissionPrompt(_ completion: @escaping (Swift.Bool, UserNotifications.UNNotificationSettings, (any Swift.Error)?) -> Swift.Void, skipConditionsEvaluation skipConditions: Swift.Bool = false, skipFrequencyCapEvaluation skipFcap: Swift.Bool = false)
   @objc(setEventSourceApplication:) @_Concurrency.MainActor(unsafe) public static func setEventSourceApplication(_ application: Pushly.PNEventSourceApplication)
-}
-@available(iOSApplicationExtension, unavailable)
-extension Pushly.PushSDK : UserNotifications.UNUserNotificationCenterDelegate {
-  @_Concurrency.MainActor(unsafe) @objc final public func application(_ application: UIKit.UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Foundation.Data)
-  @_Concurrency.MainActor(unsafe) @objc final public func application(_ application: UIKit.UIApplication, didFailToRegisterForRemoteNotificationsWithError error: any Swift.Error)
-  @_Concurrency.MainActor(unsafe) @objc final public func application(_ application: UIKit.UIApplication, didReceiveRemoteNotification userInfo: [Swift.AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIKit.UIBackgroundFetchResult) -> Swift.Void)
-  @_Concurrency.MainActor(unsafe) @objc final public func application(_ application: UIKit.UIApplication, didReceiveRemoteNotification userInfo: [Swift.AnyHashable : Any])
-  @_Concurrency.MainActor(unsafe) @objc final public func userNotificationCenter(_ center: UserNotifications.UNUserNotificationCenter, willPresent notification: UserNotifications.UNNotification, withCompletionHandler completionHandler: @escaping (UserNotifications.UNNotificationPresentationOptions) -> Swift.Void)
-  @_Concurrency.MainActor(unsafe) @objc final public func userNotificationCenter(_ center: UserNotifications.UNUserNotificationCenter, didReceive response: UserNotifications.UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Swift.Void)
+  @objc(resetBadgeCount) @_Concurrency.MainActor(unsafe) public static func resetBadgeCount()
+  @objc(clearNotifications) @_Concurrency.MainActor(unsafe) public static func clearNotifications()
 }
 @objc @_inheritsConvenienceInitializers open class PNNotificationServiceExtension : UserNotifications.UNNotificationServiceExtension {
   @objc override dynamic public func didReceive(_ request: UserNotifications.UNNotificationRequest, withContentHandler contentHandler: @escaping (UserNotifications.UNNotificationContent) -> Swift.Void)
