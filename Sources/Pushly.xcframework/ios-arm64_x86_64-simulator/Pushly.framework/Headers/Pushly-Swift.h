@@ -487,6 +487,7 @@ SWIFT_CLASS("_TtC6Pushly19PNApplicationConfig")
 @property (nonatomic, readonly) BOOL disableBadgeClearing;
 @property (nonatomic, readonly) BOOL isStale;
 @property (nonatomic, readonly) BOOL shouldDisplayNotificationsInForeground;
+@property (nonatomic, readonly) BOOL forceDebugLogsEnabled;
 @end
 
 enum PNECommItemType : NSInteger;
@@ -1305,6 +1306,7 @@ SWIFT_CLASS("_TtC6Pushly19PNApplicationConfig")
 @property (nonatomic, readonly) BOOL disableBadgeClearing;
 @property (nonatomic, readonly) BOOL isStale;
 @property (nonatomic, readonly) BOOL shouldDisplayNotificationsInForeground;
+@property (nonatomic, readonly) BOOL forceDebugLogsEnabled;
 @end
 
 enum PNECommItemType : NSInteger;

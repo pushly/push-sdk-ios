@@ -296,6 +296,7 @@ public enum PNError : Swift.Error {
   case invalidRequestURLError(Swift.String)
   case failedRequest(Swift.Int, Swift.String, Swift.String?)
   case appConfigurationLoadError((any Swift.Error)?, Swift.String?)
+  case appMessagesLoadError((any Swift.Error)?, Swift.String?)
   case invalidEnumValue(Any, Swift.String)
   case globalFreqeuncyCapHasBeenMet
   case appMessageFcapConditionsNotMet(Swift.Int)
