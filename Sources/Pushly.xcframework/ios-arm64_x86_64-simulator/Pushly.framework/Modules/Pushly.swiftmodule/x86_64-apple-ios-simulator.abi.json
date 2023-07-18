@@ -6972,6 +6972,85 @@
           },
           {
             "kind": "Var",
+            "name": "appMessagesLoadError",
+            "printedName": "appMessagesLoadError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Pushly.PNError.Type) -> (Swift.Error?, Swift.String?) -> Pushly.PNError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Error?, Swift.String?) -> Pushly.PNError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PNError",
+                        "printedName": "Pushly.PNError",
+                        "usr": "s:6Pushly7PNErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(Swift.Error?, Swift.String?)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "Swift.Error?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Error",
+                                "printedName": "Swift.Error",
+                                "usr": "s:s5ErrorP"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "Swift.String?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "Pushly.PNError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PNError",
+                        "printedName": "Pushly.PNError",
+                        "usr": "s:6Pushly7PNErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:6Pushly7PNErrorO20appMessagesLoadErroryACs0F0_pSg_SSSgtcACmF",
+            "mangledName": "$s6Pushly7PNErrorO20appMessagesLoadErroryACs0F0_pSg_SSSgtcACmF",
+            "moduleName": "Pushly"
+          },
+          {
+            "kind": "Var",
             "name": "invalidEnumValue",
             "printedName": "invalidEnumValue",
             "children": [
@@ -18374,6 +18453,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Pushly",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "NotificationCenter",
         "printedName": "NotificationCenter",
         "declKind": "Import",
@@ -19501,6 +19590,16 @@
         "moduleName": "Pushly",
         "declAttributes": [
           "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Pushly",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -25739,91 +25838,98 @@
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNSettingsKey.swift",
       "kind": "StringLiteral",
-      "offset": 204,
+      "offset": 210,
+      "length": 16,
+      "value": "\"_pnAppMessages\""
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNSettingsKey.swift",
+      "kind": "StringLiteral",
+      "offset": 244,
       "length": 10,
       "value": "\"_pnAppId\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNSettingsKey.swift",
       "kind": "StringLiteral",
-      "offset": 246,
+      "offset": 286,
       "length": 24,
       "value": "\"_pnAuthorizationStatus\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNSettingsKey.swift",
       "kind": "StringLiteral",
-      "offset": 301,
+      "offset": 341,
       "length": 23,
       "value": "\"_pnBackgroundActivity\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNSettingsKey.swift",
       "kind": "StringLiteral",
-      "offset": 347,
+      "offset": 387,
       "length": 18,
       "value": "\"_pnAppBadgeCount\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNSettingsKey.swift",
       "kind": "StringLiteral",
-      "offset": 386,
+      "offset": 426,
       "length": 13,
       "value": "\"_pnDomainId\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNSettingsKey.swift",
       "kind": "StringLiteral",
-      "offset": 422,
+      "offset": 462,
       "length": 15,
       "value": "\"_pnExternalId\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNSettingsKey.swift",
       "kind": "StringLiteral",
-      "offset": 458,
+      "offset": 498,
       "length": 13,
       "value": "\"_pnLogLevel\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNSettingsKey.swift",
       "kind": "StringLiteral",
-      "offset": 500,
+      "offset": 540,
       "length": 21,
       "value": "\"_pnSubscriberLocale\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNSettingsKey.swift",
       "kind": "StringLiteral",
-      "offset": 545,
+      "offset": 585,
       "length": 16,
       "value": "\"_pnIsDismissed\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNSettingsKey.swift",
       "kind": "StringLiteral",
-      "offset": 586,
+      "offset": 626,
       "length": 17,
       "value": "\"_pnSubscriberTZ\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNSettingsKey.swift",
       "kind": "StringLiteral",
-      "offset": 621,
+      "offset": 661,
       "length": 10,
       "value": "\"_pnToken\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNSettingsKey.swift",
       "kind": "StringLiteral",
-      "offset": 661,
+      "offset": 701,
       "length": 22,
       "value": "\"_pnTrackedEventQueue\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNSettingsKey.swift",
       "kind": "StringLiteral",
-      "offset": 705,
+      "offset": 745,
       "length": 8,
       "value": "\"_pnUDR\""
     },
@@ -25844,91 +25950,98 @@
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNSettingsKey.swift",
       "kind": "StringLiteral",
-      "offset": 204,
+      "offset": 210,
+      "length": 16,
+      "value": "\"_pnAppMessages\""
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNSettingsKey.swift",
+      "kind": "StringLiteral",
+      "offset": 244,
       "length": 10,
       "value": "\"_pnAppId\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNSettingsKey.swift",
       "kind": "StringLiteral",
-      "offset": 246,
+      "offset": 286,
       "length": 24,
       "value": "\"_pnAuthorizationStatus\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNSettingsKey.swift",
       "kind": "StringLiteral",
-      "offset": 301,
+      "offset": 341,
       "length": 23,
       "value": "\"_pnBackgroundActivity\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNSettingsKey.swift",
       "kind": "StringLiteral",
-      "offset": 347,
+      "offset": 387,
       "length": 18,
       "value": "\"_pnAppBadgeCount\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNSettingsKey.swift",
       "kind": "StringLiteral",
-      "offset": 386,
+      "offset": 426,
       "length": 13,
       "value": "\"_pnDomainId\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNSettingsKey.swift",
       "kind": "StringLiteral",
-      "offset": 422,
+      "offset": 462,
       "length": 15,
       "value": "\"_pnExternalId\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNSettingsKey.swift",
       "kind": "StringLiteral",
-      "offset": 458,
+      "offset": 498,
       "length": 13,
       "value": "\"_pnLogLevel\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNSettingsKey.swift",
       "kind": "StringLiteral",
-      "offset": 500,
+      "offset": 540,
       "length": 21,
       "value": "\"_pnSubscriberLocale\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNSettingsKey.swift",
       "kind": "StringLiteral",
-      "offset": 545,
+      "offset": 585,
       "length": 16,
       "value": "\"_pnIsDismissed\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNSettingsKey.swift",
       "kind": "StringLiteral",
-      "offset": 586,
+      "offset": 626,
       "length": 17,
       "value": "\"_pnSubscriberTZ\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNSettingsKey.swift",
       "kind": "StringLiteral",
-      "offset": 621,
+      "offset": 661,
       "length": 10,
       "value": "\"_pnToken\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNSettingsKey.swift",
       "kind": "StringLiteral",
-      "offset": 661,
+      "offset": 701,
       "length": 22,
       "value": "\"_pnTrackedEventQueue\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNSettingsKey.swift",
       "kind": "StringLiteral",
-      "offset": 705,
+      "offset": 745,
       "length": 8,
       "value": "\"_pnUDR\""
     },
@@ -26068,364 +26181,385 @@
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "StringLiteral",
-      "offset": 6756,
+      "offset": 5385,
+      "length": 46,
+      "value": "\"Remote enforced debug logs have been enabled\""
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
+      "kind": "StringLiteral",
+      "offset": 6769,
       "length": 9,
       "value": "\"Unknown\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "StringLiteral",
-      "offset": 6971,
+      "offset": 6984,
       "length": 30,
       "value": "\"SDK Exited Reason: \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "StringLiteral",
-      "offset": 7000,
+      "offset": 7013,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 7024,
+      "offset": 7037,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 7917,
+      "offset": 7930,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 7981,
+      "offset": 7994,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 8013,
+      "offset": 8026,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 8121,
+      "offset": 8134,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 8239,
+      "offset": 8252,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 8364,
+      "offset": 8377,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 8490,
+      "offset": 8503,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "StringLiteral",
-      "offset": 8612,
+      "offset": 8625,
       "length": 29,
       "value": "\"Initializing Key: \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "StringLiteral",
-      "offset": 8640,
+      "offset": 8653,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "StringLiteral",
-      "offset": 8663,
+      "offset": 8676,
       "length": 48,
       "value": "\"Anonymous ID: \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "StringLiteral",
-      "offset": 8710,
+      "offset": 8723,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "StringLiteral",
-      "offset": 8797,
+      "offset": 8810,
       "length": 28,
       "value": "\"External ID: \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "StringLiteral",
-      "offset": 8824,
+      "offset": 8837,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "StringLiteral",
-      "offset": 8859,
+      "offset": 8872,
       "length": 70,
       "value": "\"SDK lifetime age: \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "StringLiteral",
-      "offset": 8928,
+      "offset": 8941,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "StringLiteral",
-      "offset": 8952,
+      "offset": 8965,
       "length": 74,
       "value": "\"Current session age: \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "StringLiteral",
-      "offset": 9025,
+      "offset": 9038,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "StringLiteral",
-      "offset": 9163,
+      "offset": 9176,
       "length": 9,
       "value": "\"Deleted\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "StringLiteral",
-      "offset": 9236,
+      "offset": 9249,
       "length": 12,
       "value": "\"Subscribed\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "StringLiteral",
-      "offset": 9267,
+      "offset": 9280,
       "length": 16,
       "value": "\"Not determined\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "StringLiteral",
-      "offset": 9305,
+      "offset": 9318,
       "length": 43,
       "value": "\"Current subscription status: \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "StringLiteral",
-      "offset": 9347,
+      "offset": 9360,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "IntegerLiteral",
-      "offset": 9561,
+      "offset": 9574,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "StringLiteral",
-      "offset": 9590,
+      "offset": 9603,
       "length": 94,
       "value": "\"Global Pre-Permission Prompt Frequency Cap: \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "StringLiteral",
-      "offset": 9683,
+      "offset": 9696,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "StringLiteral",
-      "offset": 9728,
+      "offset": 9741,
       "length": 50,
       "value": "\"Global Pre-Permission Prompt Frequency Cap: None\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "StringLiteral",
-      "offset": 9865,
+      "offset": 9878,
       "length": 58,
       "value": "\"Current locale: \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "StringLiteral",
-      "offset": 9912,
+      "offset": 9925,
       "length": 9,
       "value": "\"unknown\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "StringLiteral",
-      "offset": 9922,
+      "offset": 9935,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "StringLiteral",
-      "offset": 9946,
+      "offset": 9959,
       "length": 63,
       "value": "\"Current time zone: \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "StringLiteral",
-      "offset": 9998,
+      "offset": 10011,
       "length": 9,
       "value": "\"unknown\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "StringLiteral",
-      "offset": 10008,
+      "offset": 10021,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 10362,
+      "offset": 10375,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "StringLiteral",
-      "offset": 10451,
+      "offset": 10464,
       "length": 20,
       "value": "\"SDK Load Completed\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 10835,
+      "offset": 10848,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
+      "kind": "BooleanLiteral",
+      "offset": 11120,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "StringLiteral",
-      "offset": 11290,
+      "offset": 11156,
+      "length": 67,
+      "value": "\"Attempt to set logLevel ignored due to remote enforced debug logs\""
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
+      "kind": "StringLiteral",
+      "offset": 11553,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 12346,
+      "offset": 12609,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 12381,
+      "offset": 12644,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 12587,
+      "offset": 12850,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 12638,
+      "offset": 12901,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "IntegerLiteral",
-      "offset": 15615,
+      "offset": 15878,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "IntegerLiteral",
-      "offset": 15679,
+      "offset": 15942,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "IntegerLiteral",
-      "offset": 15871,
+      "offset": 16134,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "IntegerLiteral",
-      "offset": 15935,
+      "offset": 16198,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "IntegerLiteral",
-      "offset": 15999,
+      "offset": 16262,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 16239,
+      "offset": 16502,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 16368,
+      "offset": 16631,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 16498,
+      "offset": 16761,
       "length": 4,
       "value": "true"
     },
@@ -26907,15 +27041,29 @@
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNSettingsManager.swift",
+      "kind": "StringLiteral",
+      "offset": 927,
+      "length": 17,
+      "value": "\"nse_notif_\""
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNSettingsManager.swift",
+      "kind": "StringLiteral",
+      "offset": 943,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNSettingsManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 1197,
+      "offset": 1204,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNSettingsManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 1342,
+      "offset": 1349,
       "length": 5,
       "value": "false"
     },
@@ -27580,301 +27728,322 @@
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 701,
+      "offset": 708,
+      "length": 34,
+      "value": "\"FEAT_NATIVE_IOS_FORCE_DEBUG_LOGS\""
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
+      "kind": "StringLiteral",
+      "offset": 784,
       "length": 18,
       "value": "\"[Tracked Events]\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "IntegerLiteral",
-      "offset": 754,
+      "offset": 837,
       "length": 3,
       "value": "100"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "IntegerLiteral",
-      "offset": 802,
+      "offset": 885,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "IntegerLiteral",
-      "offset": 853,
+      "offset": 936,
       "length": 2,
       "value": "15"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "IntegerLiteral",
-      "offset": 893,
+      "offset": 976,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 923,
+      "offset": 1006,
       "length": 12,
       "value": "\"NATIVE_IOS\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 964,
+      "offset": 1047,
       "length": 6,
       "value": "\"APNS\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 1014,
+      "offset": 1097,
       "length": 19,
       "value": "\"error_description\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 1073,
+      "offset": 1156,
       "length": 15,
       "value": "\"error_message\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 1125,
+      "offset": 1208,
       "length": 12,
-      "value": "\"error_type\""
+      "value": "\"error_code\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 1177,
+      "offset": 1258,
+      "length": 13,
+      "value": "\"error_stack\""
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
+      "kind": "StringLiteral",
+      "offset": 1311,
       "length": 9,
       "value": "\"context\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 1228,
+      "offset": 1362,
       "length": 17,
       "value": "\"notification_id\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 1289,
+      "offset": 1423,
       "length": 19,
       "value": "\"application_state\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 1363,
+      "offset": 1497,
       "length": 17,
       "value": "\"impression_type\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 1416,
+      "offset": 1550,
       "length": 11,
       "value": "\"action_id\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 1472,
+      "offset": 1606,
       "length": 20,
       "value": "\"category_action_id\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 1533,
+      "offset": 1667,
       "length": 11,
       "value": "\"prompt_id\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 1578,
+      "offset": 1712,
       "length": 5,
       "value": "\"nse\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 1631,
+      "offset": 1765,
       "length": 19,
       "value": "\"pn_iev_sdk_loaded\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 1691,
+      "offset": 1825,
       "length": 29,
       "value": "\"pn_iev_permissions_response\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 1760,
+      "offset": 1894,
       "length": 28,
       "value": "\"pn_iev_permissions_granted\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 1830,
+      "offset": 1964,
       "length": 30,
       "value": "\"pn_iev_permissions_dismissed\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 1899,
+      "offset": 2033,
       "length": 27,
       "value": "\"pn_iev_permissions_denied\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "IntegerLiteral",
-      "offset": 1990,
-      "length": 3,
-      "value": "900"
+      "offset": 2124,
+      "length": 2,
+      "value": "60"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "IntegerLiteral",
-      "offset": 2034,
+      "offset": 2173,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2216,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "FloatLiteral",
-      "offset": 2099,
+      "offset": 2281,
       "length": 8,
       "value": "604800.0"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 2172,
+      "offset": 2354,
       "length": 18,
       "value": "\"PushSdkMessenger\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 2239,
+      "offset": 2421,
       "length": 22,
       "value": "\"getMessageMetaData()\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "FloatLiteral",
-      "offset": 2296,
+      "offset": 2478,
       "length": 4,
       "value": "10.0"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 2344,
+      "offset": 2526,
       "length": 19,
       "value": "\"[Push SDK: %@] %@\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 2409,
+      "offset": 2591,
       "length": 55,
       "value": "\"https:\/\/\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 2463,
+      "offset": 2645,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 2496,
+      "offset": 2678,
       "length": 31,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 2513,
+      "offset": 2695,
       "length": 1,
       "value": "\"\/event-stream\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 2558,
+      "offset": 2740,
       "length": 24,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 2575,
+      "offset": 2757,
       "length": 1,
       "value": "\"\/allow\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 2611,
+      "offset": 2793,
       "length": 54,
       "value": "\"https:\/\/\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 2664,
+      "offset": 2846,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 2705,
+      "offset": 2887,
       "length": 33,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 2721,
+      "offset": 2903,
       "length": 1,
       "value": "\"\/domain-settings\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "FloatLiteral",
-      "offset": 2796,
+      "offset": 2978,
       "length": 3,
       "value": "0.1"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "FloatLiteral",
-      "offset": 2856,
+      "offset": 3038,
       "length": 3,
       "value": "0.3"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "FloatLiteral",
-      "offset": 2910,
+      "offset": 3092,
       "length": 3,
       "value": "0.2"
     },
@@ -28308,245 +28477,259 @@
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNError.swift",
       "kind": "StringLiteral",
-      "offset": 760,
+      "offset": 807,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNError.swift",
       "kind": "StringLiteral",
-      "offset": 838,
+      "offset": 885,
       "length": 17,
       "value": "\"No result found\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNError.swift",
       "kind": "StringLiteral",
-      "offset": 866,
+      "offset": 913,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNError.swift",
       "kind": "StringLiteral",
-      "offset": 962,
+      "offset": 1009,
       "length": 25,
       "value": "\"URL (\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNError.swift",
       "kind": "StringLiteral",
-      "offset": 974,
+      "offset": 1021,
       "length": 1,
       "value": "\") is invalid\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNError.swift",
       "kind": "StringLiteral",
-      "offset": 998,
+      "offset": 1045,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNError.swift",
       "kind": "IntegerLiteral",
-      "offset": 1134,
+      "offset": 1181,
       "length": 3,
       "value": "404"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNError.swift",
       "kind": "StringLiteral",
-      "offset": 1164,
+      "offset": 1211,
       "length": 57,
       "value": "\"[ERR 404] Requested resource could not be found. \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNError.swift",
       "kind": "StringLiteral",
-      "offset": 1220,
+      "offset": 1267,
       "length": 13,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNError.swift",
       "kind": "StringLiteral",
-      "offset": 1232,
+      "offset": 1279,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNError.swift",
       "kind": "StringLiteral",
-      "offset": 1290,
+      "offset": 1337,
       "length": 60,
       "value": "\"[ERR \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNError.swift",
       "kind": "StringLiteral",
-      "offset": 1309,
+      "offset": 1356,
       "length": 1,
       "value": "\"] \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNError.swift",
       "kind": "StringLiteral",
-      "offset": 1324,
+      "offset": 1371,
       "length": 16,
       "value": "\"Request failed\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNError.swift",
       "kind": "StringLiteral",
-      "offset": 1341,
+      "offset": 1388,
       "length": 1,
       "value": "\". \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNError.swift",
       "kind": "StringLiteral",
-      "offset": 1349,
+      "offset": 1396,
       "length": 13,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNError.swift",
       "kind": "StringLiteral",
-      "offset": 1361,
+      "offset": 1408,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNError.swift",
       "kind": "StringLiteral",
-      "offset": 1527,
+      "offset": 1574,
       "length": 15,
       "value": "\"Unknown error\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNError.swift",
       "kind": "StringLiteral",
-      "offset": 1553,
+      "offset": 1600,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNError.swift",
       "kind": "StringLiteral",
-      "offset": 1662,
+      "offset": 1743,
+      "length": 15,
+      "value": "\"Unknown error\""
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNError.swift",
+      "kind": "StringLiteral",
+      "offset": 1769,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNError.swift",
+      "kind": "StringLiteral",
+      "offset": 1878,
       "length": 52,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNError.swift",
       "kind": "StringLiteral",
-      "offset": 1677,
+      "offset": 1893,
       "length": 1,
       "value": "\": Invalid value encountered \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNError.swift",
       "kind": "StringLiteral",
-      "offset": 1713,
+      "offset": 1929,
       "length": 13,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNError.swift",
       "kind": "StringLiteral",
-      "offset": 1725,
+      "offset": 1941,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNError.swift",
       "kind": "StringLiteral",
-      "offset": 1818,
+      "offset": 2034,
       "length": 58,
       "value": "\"Permission prompt app message frequency cap has been met\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNError.swift",
       "kind": "StringLiteral",
-      "offset": 1887,
+      "offset": 2103,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNError.swift",
       "kind": "StringLiteral",
-      "offset": 1991,
+      "offset": 2207,
       "length": 59,
       "value": "\"AppMessage \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNError.swift",
       "kind": "StringLiteral",
-      "offset": 2008,
+      "offset": 2224,
       "length": 9,
       "value": "\" frequency cap condition has not been met\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNError.swift",
       "kind": "StringLiteral",
-      "offset": 2061,
+      "offset": 2277,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNError.swift",
       "kind": "StringLiteral",
-      "offset": 2163,
+      "offset": 2379,
       "length": 43,
       "value": "\"AppMessage \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNError.swift",
       "kind": "StringLiteral",
-      "offset": 2180,
+      "offset": 2396,
       "length": 2,
       "value": "\" is ineligible to display\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNError.swift",
       "kind": "StringLiteral",
-      "offset": 2217,
+      "offset": 2433,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNError.swift",
       "kind": "StringLiteral",
-      "offset": 2375,
+      "offset": 2591,
       "length": 149,
       "value": "\"An interaction on notification \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNError.swift",
       "kind": "StringLiteral",
-      "offset": 2417,
+      "offset": 2633,
       "length": 5,
       "value": "\" using category \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNError.swift",
       "kind": "StringLiteral",
-      "offset": 2487,
+      "offset": 2703,
       "length": 8,
       "value": "\" occurred with action id \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNError.swift",
       "kind": "StringLiteral",
-      "offset": 2523,
+      "offset": 2739,
       "length": 13,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNError.swift",
       "kind": "StringLiteral",
-      "offset": 2535,
+      "offset": 2751,
       "length": 2,
       "value": "\"\""
     },
@@ -29226,7 +29409,7 @@
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/ServiceExtensions\/PNNotificationServiceExtensionHandler.swift",
       "kind": "StringLiteral",
       "offset": 4040,
-      "length": 56,
+      "length": 76,
       "value": "\"[\""
     },
     {
@@ -29239,84 +29422,84 @@
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/ServiceExtensions\/PNNotificationServiceExtensionHandler.swift",
       "kind": "StringLiteral",
-      "offset": 4095,
+      "offset": 4115,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/ServiceExtensions\/PNNotificationServiceExtensionHandler.swift",
       "kind": "IntegerLiteral",
-      "offset": 4654,
+      "offset": 4674,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/ServiceExtensions\/PNNotificationServiceExtensionHandler.swift",
       "kind": "IntegerLiteral",
-      "offset": 4682,
+      "offset": 4702,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/ServiceExtensions\/PNNotificationServiceExtensionHandler.swift",
       "kind": "StringLiteral",
-      "offset": 5041,
+      "offset": 5061,
       "length": 34,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/ServiceExtensions\/PNNotificationServiceExtensionHandler.swift",
       "kind": "StringLiteral",
-      "offset": 5070,
+      "offset": 5090,
       "length": 1,
       "value": "\".png\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/ServiceExtensions\/PNNotificationServiceExtensionHandler.swift",
       "kind": "BooleanLiteral",
-      "offset": 5316,
+      "offset": 5336,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/ServiceExtensions\/PNNotificationServiceExtensionHandler.swift",
       "kind": "BooleanLiteral",
-      "offset": 5575,
+      "offset": 5595,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/ServiceExtensions\/PNNotificationServiceExtensionHandler.swift",
       "kind": "Array",
-      "offset": 5701,
+      "offset": 5721,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/ServiceExtensions\/PNNotificationServiceExtensionHandler.swift",
       "kind": "StringLiteral",
-      "offset": 5864,
+      "offset": 5884,
       "length": 94,
       "value": "\"[\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/ServiceExtensions\/PNNotificationServiceExtensionHandler.swift",
       "kind": "StringLiteral",
-      "offset": 5877,
+      "offset": 5897,
       "length": 1,
       "value": "\"] Attachment error: \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/ServiceExtensions\/PNNotificationServiceExtensionHandler.swift",
       "kind": "StringLiteral",
-      "offset": 5926,
+      "offset": 5946,
       "length": 1,
       "value": "\" - \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/ServiceExtensions\/PNNotificationServiceExtensionHandler.swift",
       "kind": "StringLiteral",
-      "offset": 5957,
+      "offset": 5977,
       "length": 2,
       "value": "\"\""
     },
@@ -29680,238 +29863,238 @@
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 2873,
+      "offset": 3010,
       "length": 83,
       "value": "\"[\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 2886,
+      "offset": 3023,
       "length": 1,
       "value": "\"] Event \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 2910,
+      "offset": 3047,
       "length": 3,
       "value": "\" has already been added to the tracking queue\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 3492,
+      "offset": 3629,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 3799,
+      "offset": 3936,
       "length": 30,
       "value": "\"[\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 3812,
+      "offset": 3949,
       "length": 1,
       "value": "\"] Cache is empty\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 4095,
+      "offset": 4232,
       "length": 101,
       "value": "\"[\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 4108,
+      "offset": 4245,
       "length": 1,
       "value": "\"] Rehydrated \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 4140,
+      "offset": 4277,
       "length": 6,
       "value": "\" events from cache \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 4195,
+      "offset": 4332,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 4324,
+      "offset": 4461,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 4365,
+      "offset": 4502,
       "length": 47,
       "value": "\"[\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 4378,
+      "offset": 4515,
       "length": 1,
       "value": "\"] Queue timer already initialized\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 4660,
+      "offset": 4797,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 5337,
+      "offset": 5474,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 5461,
+      "offset": 5598,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 5521,
+      "offset": 5658,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 6548,
+      "offset": 6685,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 6839,
+      "offset": 6976,
       "length": 106,
       "value": "\"[\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 6852,
+      "offset": 6989,
       "length": 1,
       "value": "\"] Sending \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 6877,
+      "offset": 7014,
       "length": 6,
       "value": "\" events: \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 6944,
+      "offset": 7081,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 6998,
+      "offset": 7135,
       "length": 70,
       "value": "\"[\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 7011,
+      "offset": 7148,
       "length": 1,
       "value": "\"] Unable to prepare events: \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 7067,
+      "offset": 7204,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 7288,
+      "offset": 7425,
       "length": 31,
       "value": "\"[\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 7301,
+      "offset": 7438,
       "length": 1,
       "value": "\"] Send successful\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 7367,
+      "offset": 7504,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 7474,
+      "offset": 7611,
       "length": 57,
       "value": "\"[\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 7487,
+      "offset": 7624,
       "length": 1,
       "value": "\"] Send failed; \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 7530,
+      "offset": 7667,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 8120,
+      "offset": 8257,
       "length": 39,
       "value": "\"[\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 8133,
+      "offset": 8270,
       "length": 1,
       "value": "\"] Purging event: \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "StringLiteral",
-      "offset": 8158,
+      "offset": 8295,
       "length": 2,
       "value": "\"\""
     },
@@ -30514,7 +30697,7 @@
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Providers\/PNApplicationConfigProvider.swift",
       "kind": "StringLiteral",
       "offset": 535,
-      "length": 73,
+      "length": 93,
       "value": "\"[\""
     },
     {
@@ -30534,56 +30717,56 @@
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Providers\/PNApplicationConfigProvider.swift",
       "kind": "StringLiteral",
-      "offset": 607,
+      "offset": 627,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Providers\/PNApplicationConfigProvider.swift",
       "kind": "StringLiteral",
-      "offset": 1118,
+      "offset": 1138,
       "length": 50,
       "value": "\"[\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Providers\/PNApplicationConfigProvider.swift",
       "kind": "StringLiteral",
-      "offset": 1131,
+      "offset": 1151,
       "length": 1,
       "value": "\"] Cached Application Config is stale\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Providers\/PNApplicationConfigProvider.swift",
       "kind": "StringLiteral",
-      "offset": 2248,
+      "offset": 2268,
       "length": 39,
       "value": "\"appKey is nil or request build failed\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Providers\/PNApplicationConfigProvider.swift",
       "kind": "StringLiteral",
-      "offset": 2461,
+      "offset": 2481,
       "length": 15,
       "value": "\"If-None-Match\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Providers\/PNApplicationConfigProvider.swift",
       "kind": "StringLiteral",
-      "offset": 2846,
+      "offset": 2866,
       "length": 56,
       "value": "\"[\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Providers\/PNApplicationConfigProvider.swift",
       "kind": "StringLiteral",
-      "offset": 2859,
+      "offset": 2879,
       "length": 1,
       "value": "\"] Hydrated PNApplicationConfig from remote\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Providers\/PNApplicationConfigProvider.swift",
       "kind": "StringLiteral",
-      "offset": 3045,
+      "offset": 3065,
       "length": 6,
       "value": "\"Etag\""
     },
@@ -30758,7 +30941,7 @@
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNTrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 3675,
+      "offset": 3695,
       "length": 11,
       "value": "\"bundle_id\""
     },
@@ -30869,330 +31052,351 @@
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 4761,
+      "length": 86,
+      "value": "\"[\""
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 4790,
+      "length": 1,
+      "value": "\"] Unable to decode response: \""
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 4846,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "Array",
-      "offset": 5280,
+      "offset": 5393,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "StringLiteral",
-      "offset": 5522,
+      "offset": 5635,
       "length": 63,
       "value": "\"[\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "StringLiteral",
-      "offset": 5546,
+      "offset": 5659,
       "length": 1,
       "value": "\"] Opening \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "StringLiteral",
-      "offset": 5584,
+      "offset": 5697,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "StringLiteral",
-      "offset": 5701,
+      "offset": 5814,
       "length": 123,
       "value": "\"[\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "StringLiteral",
-      "offset": 5725,
+      "offset": 5838,
       "length": 1,
       "value": "\"] Closed (\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "IntegerLiteral",
-      "offset": 5789,
+      "offset": 5902,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "StringLiteral",
-      "offset": 5792,
+      "offset": 5905,
       "length": 1,
       "value": "\"s) \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "StringLiteral",
-      "offset": 5823,
+      "offset": 5936,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "StringLiteral",
-      "offset": 5887,
+      "offset": 6000,
       "length": 39,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "StringLiteral",
-      "offset": 5899,
+      "offset": 6012,
       "length": 1,
       "value": "\" \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "StringLiteral",
-      "offset": 5905,
+      "offset": 6018,
       "length": 1,
       "value": "\"-\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "IntegerLiteral",
-      "offset": 5923,
+      "offset": 6036,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "StringLiteral",
-      "offset": 5925,
+      "offset": 6038,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "IntegerLiteral",
-      "offset": 6175,
+      "offset": 6288,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "FloatLiteral",
-      "offset": 6261,
+      "offset": 6374,
       "length": 3,
       "value": "0.2"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "BooleanLiteral",
-      "offset": 6443,
+      "offset": 6556,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "StringLiteral",
-      "offset": 6493,
+      "offset": 6606,
       "length": 6,
       "value": "\"\\\n\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "StringLiteral",
-      "offset": 6502,
+      "offset": 6615,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "StringLiteral",
-      "offset": 6536,
+      "offset": 6649,
       "length": 12,
       "value": "\"--request \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "StringLiteral",
-      "offset": 6551,
+      "offset": 6664,
       "length": 5,
       "value": "\"-X \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "StringLiteral",
-      "offset": 6560,
+      "offset": 6673,
       "length": 40,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "StringLiteral",
-      "offset": 6582,
+      "offset": 6695,
       "length": 5,
       "value": "\"GET\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "StringLiteral",
-      "offset": 6588,
+      "offset": 6701,
       "length": 1,
       "value": "\" \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "StringLiteral",
-      "offset": 6599,
+      "offset": 6712,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "StringLiteral",
-      "offset": 6637,
+      "offset": 6750,
       "length": 8,
       "value": "\"--url \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "StringLiteral",
-      "offset": 6648,
+      "offset": 6761,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "StringLiteral",
-      "offset": 6654,
+      "offset": 6767,
       "length": 50,
       "value": "\"'\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "StringLiteral",
-      "offset": 6687,
+      "offset": 6800,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "StringLiteral",
-      "offset": 6690,
+      "offset": 6803,
       "length": 1,
       "value": "\"' \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "StringLiteral",
-      "offset": 6703,
+      "offset": 6816,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "StringLiteral",
-      "offset": 6725,
+      "offset": 6838,
       "length": 7,
       "value": "\"curl \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "StringLiteral",
-      "offset": 6754,
+      "offset": 6867,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "StringLiteral",
-      "offset": 6784,
+      "offset": 6897,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "IntegerLiteral",
-      "offset": 6868,
+      "offset": 6981,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "StringLiteral",
-      "offset": 6953,
+      "offset": 7066,
       "length": 11,
       "value": "\"--header \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "StringLiteral",
-      "offset": 6967,
+      "offset": 7080,
       "length": 5,
       "value": "\"-H \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "StringLiteral",
-      "offset": 6976,
+      "offset": 7089,
       "length": 33,
       "value": "\"'\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "StringLiteral",
-      "offset": 6985,
+      "offset": 7098,
       "length": 1,
       "value": "\": \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "StringLiteral",
-      "offset": 6995,
+      "offset": 7108,
       "length": 1,
       "value": "\"' \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "StringLiteral",
-      "offset": 7008,
+      "offset": 7121,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "StringLiteral",
-      "offset": 7176,
+      "offset": 7289,
       "length": 24,
       "value": "\"--data '\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "StringLiteral",
-      "offset": 7198,
+      "offset": 7311,
       "length": 2,
       "value": "\"'\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "BooleanLiteral",
-      "offset": 7476,
+      "offset": 7589,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "BooleanLiteral",
-      "offset": 7519,
+      "offset": 7632,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "IntegerLiteral",
-      "offset": 7567,
+      "offset": 7680,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "IntegerLiteral",
-      "offset": 7613,
+      "offset": 7726,
       "length": 1,
       "value": "5"
     },
@@ -31743,6 +31947,132 @@
       "value": "\"filterCriteria\""
     },
     {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Providers\/PNAppMessagesProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 217,
+      "length": 32,
+      "value": "\"pn-app-messages-provider-fetch\""
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Providers\/PNAppMessagesProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 351,
+      "length": 57,
+      "value": "\"[\""
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Providers\/PNAppMessagesProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 364,
+      "length": 1,
+      "value": "\"] [\""
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Providers\/PNAppMessagesProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 378,
+      "length": 1,
+      "value": "\"] Unable to load App Messages\""
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Providers\/PNAppMessagesProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 525,
+      "length": 67,
+      "value": "\"[\""
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Providers\/PNAppMessagesProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 538,
+      "length": 1,
+      "value": "\"] [\""
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Providers\/PNAppMessagesProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 552,
+      "length": 1,
+      "value": "\"] Unable to load App Messages. \""
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Providers\/PNAppMessagesProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 591,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Providers\/PNAppMessagesProvider.swift",
+      "kind": "Array",
+      "offset": 707,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Providers\/PNAppMessagesProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 1118,
+      "length": 45,
+      "value": "\"[\""
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Providers\/PNAppMessagesProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 1131,
+      "length": 1,
+      "value": "\"] Cached App Messages are stale\""
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Providers\/PNAppMessagesProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 1455,
+      "length": 49,
+      "value": "\"[\""
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Providers\/PNAppMessagesProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 1468,
+      "length": 1,
+      "value": "\"] Hydrated PNAppMessages from cache\""
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Providers\/PNAppMessagesProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 2318,
+      "length": 39,
+      "value": "\"appKey is nil or request build failed\""
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Providers\/PNAppMessagesProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 2531,
+      "length": 15,
+      "value": "\"If-None-Match\""
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Providers\/PNAppMessagesProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 2987,
+      "length": 55,
+      "value": "\"[\""
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Providers\/PNAppMessagesProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 3000,
+      "length": 1,
+      "value": "\"] Hydrated PNAppMessagesCache from remote\""
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Providers\/PNAppMessagesProvider.swift",
+      "kind": "StringLiteral",
+      "offset": 3184,
+      "length": 6,
+      "value": "\"Etag\""
+    },
+    {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNNotificationAction.swift",
       "kind": "StringLiteral",
       "offset": 755,
@@ -31939,6 +32269,13 @@
       "value": "\"variations\""
     },
     {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNAppMessagesCache.swift",
+      "kind": "Array",
+      "offset": 807,
+      "length": 2,
+      "value": "[]"
+    },
+    {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNAppMessageCondition.swift",
       "kind": "BooleanLiteral",
       "offset": 362,
@@ -31984,7 +32321,7 @@
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNUserDefaults.swift",
       "kind": "StringLiteral",
       "offset": 2360,
-      "length": 68,
+      "length": 88,
       "value": "\"[\""
     },
     {
@@ -32004,49 +32341,49 @@
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNUserDefaults.swift",
       "kind": "StringLiteral",
-      "offset": 2427,
+      "offset": 2447,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNUserDefaults.swift",
       "kind": "BooleanLiteral",
-      "offset": 2449,
+      "offset": 2469,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNUserDefaults.swift",
       "kind": "BooleanLiteral",
-      "offset": 2481,
+      "offset": 2501,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNUserDefaults.swift",
       "kind": "StringLiteral",
-      "offset": 2787,
-      "length": 68,
+      "offset": 2807,
+      "length": 88,
       "value": "\"[\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNUserDefaults.swift",
       "kind": "StringLiteral",
-      "offset": 2800,
+      "offset": 2820,
       "length": 1,
       "value": "\"] Could not decode requested object [\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNUserDefaults.swift",
       "kind": "StringLiteral",
-      "offset": 2843,
+      "offset": 2863,
       "length": 1,
       "value": "\"]: \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNUserDefaults.swift",
       "kind": "StringLiteral",
-      "offset": 2854,
+      "offset": 2894,
       "length": 2,
       "value": "\"\""
     },
@@ -32304,372 +32641,400 @@
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3900,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4026,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
+      "kind": "Array",
+      "offset": 4042,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
+      "kind": "Array",
+      "offset": 4174,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 3983,
+      "offset": 4727,
       "length": 57,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 4010,
+      "offset": 4754,
       "length": 1,
       "value": "\"\/\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 4020,
+      "offset": 4764,
       "length": 1,
       "value": "\"\/native\/ios\/\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 4039,
+      "offset": 4783,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 4193,
+      "offset": 4937,
       "length": 8,
       "value": "\"config\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 4349,
+      "offset": 5093,
       "length": 10,
       "value": "\"messages\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 4574,
+      "offset": 5318,
       "length": 8,
       "value": "\"denied\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 4620,
+      "offset": 5364,
       "length": 12,
       "value": "\"authorized\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 4673,
+      "offset": 5417,
       "length": 16,
       "value": "\"not_determined\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 4726,
+      "offset": 5470,
       "length": 11,
       "value": "\"ephemeral\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 4776,
+      "offset": 5520,
       "length": 13,
       "value": "\"provisional\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 4818,
+      "offset": 5562,
       "length": 9,
       "value": "\"unknown\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 5045,
+      "offset": 5789,
       "length": 12,
       "value": "\"background\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 5093,
+      "offset": 5837,
       "length": 10,
       "value": "\"inactive\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 5137,
+      "offset": 5881,
       "length": 8,
       "value": "\"active\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 5174,
+      "offset": 5918,
       "length": 9,
       "value": "\"unknown\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "IntegerLiteral",
-      "offset": 5343,
+      "offset": 6087,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 5347,
+      "offset": 6091,
       "length": 6,
       "value": "\"time\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 5356,
+      "offset": 6100,
       "length": 7,
       "value": "\"times\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "IntegerLiteral",
-      "offset": 5534,
+      "offset": 6278,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "IntegerLiteral",
-      "offset": 5571,
+      "offset": 6315,
       "length": 4,
       "value": "3600"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "IntegerLiteral",
-      "offset": 5609,
+      "offset": 6353,
       "length": 5,
       "value": "86400"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "IntegerLiteral",
-      "offset": 5673,
+      "offset": 6417,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 5758,
+      "offset": 6502,
       "length": 68,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 5778,
+      "offset": 6522,
       "length": 1,
       "value": "\" \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 5797,
+      "offset": 6541,
       "length": 4,
       "value": "\" over \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 5811,
+      "offset": 6555,
       "length": 1,
       "value": "\" \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 5825,
+      "offset": 6569,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 6015,
+      "offset": 6759,
       "length": 17,
       "value": "\"aps-environment\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 6365,
+      "offset": 7109,
       "length": 14,
       "value": "\"Entitlements\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 6618,
+      "offset": 7362,
       "length": 10,
       "value": "\"embedded\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 6638,
+      "offset": 7382,
       "length": 17,
       "value": "\"mobileprovision\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 6689,
+      "offset": 7433,
       "length": 46,
       "value": "\"Unable to determine path for mobileprovision\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 7010,
+      "offset": 7754,
       "length": 8,
       "value": "\"<plist\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 7063,
+      "offset": 7807,
       "length": 36,
       "value": "\"Unable to determine start of plist\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 7166,
+      "offset": 7910,
       "length": 10,
       "value": "\"<\/plist>\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 7241,
+      "offset": 7985,
       "length": 34,
       "value": "\"Unable to determine end of plist\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 7341,
+      "offset": 8085,
       "length": 21,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 7353,
+      "offset": 8097,
       "length": 2,
       "value": "\"<\/plist>\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 7640,
+      "offset": 8384,
       "length": 28,
       "value": "\"Unable to parse plist data\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "BooleanLiteral",
-      "offset": 8273,
+      "offset": 9017,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 8874,
+      "offset": 9618,
       "length": 82,
       "value": "\"[Swizzler] \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 8896,
+      "offset": 9640,
       "length": 7,
       "value": "\"Added\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 8906,
+      "offset": 9650,
       "length": 15,
       "value": "\"Unable to add\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 8922,
+      "offset": 9666,
       "length": 6,
       "value": "\" method \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 8955,
+      "offset": 9699,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 9267,
+      "offset": 10011,
       "length": 89,
       "value": "\"[Swizzler] \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 9289,
+      "offset": 10033,
       "length": 10,
       "value": "\"Swizzled\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 9302,
+      "offset": 10046,
       "length": 19,
       "value": "\"Unable to swizzle\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 9322,
+      "offset": 10066,
       "length": 6,
       "value": "\" method \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 9355,
+      "offset": 10099,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "BooleanLiteral",
-      "offset": 9377,
+      "offset": 10121,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "BooleanLiteral",
-      "offset": 9408,
+      "offset": 10152,
       "length": 5,
       "value": "false"
     },
@@ -33642,56 +34007,56 @@
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNApplicationConfig.swift",
       "kind": "StringLiteral",
-      "offset": 2737,
+      "offset": 2848,
       "length": 7,
       "value": "\"appId\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNApplicationConfig.swift",
       "kind": "StringLiteral",
-      "offset": 2765,
+      "offset": 2876,
       "length": 8,
       "value": "\"appKey\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNApplicationConfig.swift",
       "kind": "StringLiteral",
-      "offset": 2795,
+      "offset": 2906,
       "length": 6,
       "value": "\"name\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNApplicationConfig.swift",
       "kind": "StringLiteral",
-      "offset": 2821,
+      "offset": 2932,
       "length": 7,
       "value": "\"flags\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNApplicationConfig.swift",
       "kind": "StringLiteral",
-      "offset": 2849,
+      "offset": 2960,
       "length": 15,
       "value": "\"frequencyCaps\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNApplicationConfig.swift",
       "kind": "StringLiteral",
-      "offset": 2911,
+      "offset": 3022,
       "length": 13,
       "value": "\"ecommConfig\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNApplicationConfig.swift",
       "kind": "StringLiteral",
-      "offset": 3002,
+      "offset": 3113,
       "length": 12,
       "value": "\"categories\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNApplicationConfig.swift",
       "kind": "StringLiteral",
-      "offset": 3068,
+      "offset": 3179,
       "length": 22,
       "value": "\"authorizationOptions\""
     },
@@ -33943,959 +34308,952 @@
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "BooleanLiteral",
-      "offset": 2759,
+      "offset": 2714,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "IntegerLiteral",
-      "offset": 2932,
+      "offset": 2887,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3133,
+      "offset": 3088,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 3532,
+      "offset": 3487,
       "length": 57,
       "value": "\"Global Pre-Permission Prompt Frequency Cap has been met\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3610,
+      "offset": 3565,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3641,
+      "offset": 3596,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 3704,
+      "offset": 3659,
       "length": 71,
       "value": "\"[\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 3717,
+      "offset": 3672,
       "length": 1,
       "value": "\"] App Messages enabled. Restarting Time-in-Session timer.\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "BooleanLiteral",
-      "offset": 3806,
+      "offset": 3761,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 3903,
+      "offset": 3858,
       "length": 70,
       "value": "\"[\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 3916,
+      "offset": 3871,
       "length": 1,
       "value": "\"] App Messages disabled. Stopping Time-in-Session timer.\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "BooleanLiteral",
-      "offset": 4004,
+      "offset": 3959,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 5310,
+      "offset": 5265,
       "length": 53,
       "value": "\"[\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 5323,
+      "offset": 5278,
       "length": 1,
       "value": "\"] Permissions have already been granted\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "BooleanLiteral",
-      "offset": 5852,
+      "offset": 5807,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "BooleanLiteral",
-      "offset": 5903,
+      "offset": 5858,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 6101,
+      "offset": 6056,
       "length": 59,
       "value": "\"[\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 6114,
+      "offset": 6069,
       "length": 1,
       "value": "\"] App message \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 6133,
+      "offset": 6088,
       "length": 3,
       "value": "\" not available for display\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "BooleanLiteral",
-      "offset": 6782,
+      "offset": 6737,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "FloatLiteral",
-      "offset": 7694,
+      "offset": 7649,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "BooleanLiteral",
-      "offset": 8002,
+      "offset": 7957,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "IntegerLiteral",
-      "offset": 8428,
+      "offset": 8383,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "BooleanLiteral",
-      "offset": 8566,
+      "offset": 8521,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 9630,
+      "offset": 9585,
       "length": 215,
       "value": "\"[\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 9643,
+      "offset": 9598,
       "length": 1,
       "value": "\"] Time-in-Session auto display triggered for \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 9699,
+      "offset": 9654,
       "length": 1,
       "value": "\" \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 9723,
+      "offset": 9678,
       "length": 1,
       "value": "\" \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 9793,
+      "offset": 9748,
       "length": 5,
       "value": "\" after \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 9836,
+      "offset": 9791,
       "length": 7,
       "value": "\" seconds\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "BooleanLiteral",
-      "offset": 10141,
+      "offset": 10096,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 10457,
+      "offset": 10412,
       "length": 101,
       "value": "\"[\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 10470,
+      "offset": 10425,
       "length": 1,
       "value": "\"] Pre-Permission response received with no active PNAppMessage. \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 10557,
+      "offset": 10512,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 10933,
+      "offset": 10888,
       "length": 83,
       "value": "\"Permission response received with no active PNAppMessage. \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 11015,
+      "offset": 10970,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 11524,
+      "offset": 11479,
       "length": 40,
       "value": "\"[\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 11537,
+      "offset": 11492,
       "length": 1,
       "value": "\"] Prompt has been accepted\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 11997,
+      "offset": 11952,
       "length": 41,
       "value": "\"[\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 12010,
+      "offset": 11965,
       "length": 1,
       "value": "\"] Prompt has been dismissed\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "BooleanLiteral",
-      "offset": 12396,
+      "offset": 12351,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "BooleanLiteral",
-      "offset": 13948,
+      "offset": 13903,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 14015,
+      "offset": 13970,
       "length": 18,
       "value": "\"data.rect.height\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 14734,
+      "offset": 14685,
       "length": 43,
       "value": "\"[\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 14747,
+      "offset": 14698,
       "length": 1,
       "value": "\"] Loading prompt app messages\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 14984,
-      "length": 36,
-      "value": "\"Unable to load prompt app messages\""
-    },
-    {
-      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
-      "kind": "StringLiteral",
-      "offset": 15336,
-      "length": 62,
+      "offset": 14973,
+      "length": 83,
       "value": "\"[\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 15349,
+      "offset": 14986,
       "length": 1,
-      "value": "\"] Push app messages could not be loaded \""
+      "value": "\"] Push app messages could not be loaded. \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 15397,
+      "offset": 15055,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "BooleanLiteral",
-      "offset": 15909,
+      "offset": 15604,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "BooleanLiteral",
-      "offset": 16544,
+      "offset": 16239,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 17075,
+      "offset": 16770,
       "length": 48,
       "value": "\"Present was called with no active PNAppMessage\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "FloatLiteral",
-      "offset": 17413,
+      "offset": 17108,
       "length": 3,
       "value": "0.5"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "BooleanLiteral",
-      "offset": 17512,
+      "offset": 17207,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "BooleanLiteral",
-      "offset": 17608,
+      "offset": 17303,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "BooleanLiteral",
-      "offset": 17685,
+      "offset": 17380,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "BooleanLiteral",
-      "offset": 17910,
+      "offset": 17605,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "BooleanLiteral",
-      "offset": 18306,
+      "offset": 18001,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "Array",
-      "offset": 19575,
+      "offset": 19270,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "IntegerLiteral",
-      "offset": 20293,
+      "offset": 19988,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "BooleanLiteral",
-      "offset": 21221,
+      "offset": 20916,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "BooleanLiteral",
-      "offset": 21347,
+      "offset": 21042,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "FloatLiteral",
-      "offset": 21377,
+      "offset": 21072,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "FloatLiteral",
-      "offset": 21483,
+      "offset": 21178,
       "length": 3,
       "value": "8.0"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "FloatLiteral",
-      "offset": 21570,
+      "offset": 21265,
       "length": 4,
       "value": "-8.0"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "BooleanLiteral",
-      "offset": 21587,
+      "offset": 21282,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "FloatLiteral",
-      "offset": 21686,
+      "offset": 21381,
       "length": 3,
       "value": "8.0"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "FloatLiteral",
-      "offset": 21773,
+      "offset": 21468,
       "length": 3,
       "value": "8.0"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "BooleanLiteral",
-      "offset": 21789,
+      "offset": 21484,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "FloatLiteral",
-      "offset": 21856,
+      "offset": 21551,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "FloatLiteral",
-      "offset": 22566,
+      "offset": 22261,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "FloatLiteral",
-      "offset": 22688,
+      "offset": 22383,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "BooleanLiteral",
-      "offset": 23381,
+      "offset": 23076,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 23901,
+      "offset": 23596,
       "length": 58,
       "value": "\"Setting up constraints for PNAppMessage \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 23958,
+      "offset": 23653,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 24047,
+      "offset": 23742,
       "length": 31,
       "value": "\" \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 24077,
+      "offset": 23772,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 24114,
+      "offset": 23809,
       "length": 66,
       "value": "\" \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 24147,
+      "offset": 23842,
       "length": 1,
       "value": "\" \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 24179,
+      "offset": 23874,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 24214,
+      "offset": 23909,
       "length": 29,
       "value": "\"[\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 24227,
+      "offset": 23922,
       "length": 1,
       "value": "\"] \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 24242,
+      "offset": 23937,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 24386,
+      "offset": 24081,
       "length": 98,
       "value": "\"[\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 24394,
+      "offset": 24089,
       "length": 1,
       "value": "\": \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 24408,
+      "offset": 24103,
       "length": 1,
       "value": "\"] PNAppMessageView is not a subview of PNAppMessageController. Attaching...\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "BooleanLiteral",
-      "offset": 25239,
+      "offset": 24934,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 25720,
+      "offset": 25415,
       "length": 59,
       "value": "\"[\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 25733,
+      "offset": 25428,
       "length": 1,
       "value": "\"] Screen Bounds Height: \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 25778,
+      "offset": 25473,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 25804,
+      "offset": 25499,
       "length": 57,
       "value": "\"[\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 25817,
+      "offset": 25512,
       "length": 1,
       "value": "\"] Screen Bounds Width: \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 25860,
+      "offset": 25555,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 25886,
+      "offset": 25581,
       "length": 45,
       "value": "\"[\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 25899,
+      "offset": 25594,
       "length": 1,
       "value": "\"] Screen Bounds Scale: \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 25930,
+      "offset": 25625,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 25956,
+      "offset": 25651,
       "length": 70,
       "value": "\"[\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 25969,
+      "offset": 25664,
       "length": 1,
       "value": "\"] PNAppMessage Height: \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "IntegerLiteral",
-      "offset": 26023,
+      "offset": 25718,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 26025,
+      "offset": 25720,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "IntegerLiteral",
-      "offset": 26966,
+      "offset": 26661,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "IntegerLiteral",
-      "offset": 26991,
+      "offset": 26686,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "IntegerLiteral",
-      "offset": 26995,
+      "offset": 26690,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "IntegerLiteral",
-      "offset": 27173,
+      "offset": 26868,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "IntegerLiteral",
-      "offset": 27340,
+      "offset": 27035,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "IntegerLiteral",
-      "offset": 27684,
+      "offset": 27379,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "IntegerLiteral",
-      "offset": 27872,
+      "offset": 27567,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "IntegerLiteral",
-      "offset": 28095,
+      "offset": 27790,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "IntegerLiteral",
-      "offset": 28290,
+      "offset": 27985,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "FloatLiteral",
-      "offset": 28517,
+      "offset": 28212,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "FloatLiteral",
-      "offset": 28694,
+      "offset": 28389,
       "length": 3,
       "value": "0.0"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "BooleanLiteral",
-      "offset": 29143,
+      "offset": 28838,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "BooleanLiteral",
-      "offset": 29180,
+      "offset": 28875,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 29343,
+      "offset": 29038,
       "length": 98,
       "value": "\"[\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 29356,
+      "offset": 29051,
       "length": 1,
       "value": "\"] Orientation change in progress. Removing all previous PNAppMessageView constraints\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "BooleanLiteral",
-      "offset": 29750,
+      "offset": 29445,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 30052,
+      "offset": 29747,
       "length": 129,
       "value": "\"[\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 30065,
+      "offset": 29760,
       "length": 1,
       "value": "\"] Received updated PNAppMessageView height after transition: \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 30166,
+      "offset": 29861,
       "length": 1,
       "value": "\", \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 30180,
+      "offset": 29875,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "IntegerLiteral",
-      "offset": 30989,
+      "offset": 30684,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "IntegerLiteral",
-      "offset": 31046,
+      "offset": 30741,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "IntegerLiteral",
-      "offset": 31349,
+      "offset": 31044,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 31735,
+      "offset": 31430,
       "length": 42,
       "value": "\"Gesture requirements cannot be satisfied\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "BooleanLiteral",
-      "offset": 32945,
+      "offset": 32640,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "IntegerLiteral",
-      "offset": 33563,
+      "offset": 33258,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "FloatLiteral",
-      "offset": 33809,
+      "offset": 33504,
       "length": 3,
       "value": "0.3"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "BooleanLiteral",
-      "offset": 35628,
+      "offset": 35323,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "IntegerLiteral",
-      "offset": 35911,
+      "offset": 35606,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "IntegerLiteral",
-      "offset": 35928,
+      "offset": 35623,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "IntegerLiteral",
-      "offset": 35944,
+      "offset": 35639,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "IntegerLiteral",
-      "offset": 35961,
+      "offset": 35656,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "FloatLiteral",
-      "offset": 36064,
+      "offset": 35759,
       "length": 3,
       "value": "2.0"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "IntegerLiteral",
-      "offset": 36088,
+      "offset": 35783,
       "length": 3,
       "value": "100"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "FloatLiteral",
-      "offset": 36323,
+      "offset": 36018,
       "length": 3,
       "value": "2.0"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "FloatLiteral",
-      "offset": 36437,
+      "offset": 36132,
       "length": 3,
       "value": "2.0"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "IntegerLiteral",
-      "offset": 36454,
+      "offset": 36149,
       "length": 1,
       "value": "0"
     },
@@ -34909,63 +35267,63 @@
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 37221,
+      "offset": 36916,
       "length": 63,
       "value": "\"App Message view unable to load: \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 37283,
+      "offset": 36978,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 37683,
+      "offset": 37378,
       "length": 34,
       "value": "\"No current app message listeners\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 37879,
+      "offset": 37574,
       "length": 47,
       "value": "\"App message view message could not be decoded\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 38282,
+      "offset": 37977,
       "length": 34,
       "value": "\"No current app message listeners\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "BooleanLiteral",
-      "offset": 38881,
+      "offset": 38576,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 38918,
+      "offset": 38613,
       "length": 57,
       "value": "\"[\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 38931,
+      "offset": 38626,
       "length": 1,
       "value": "\"] External message received: \""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNAppMessageController.swift",
       "kind": "StringLiteral",
-      "offset": 38974,
+      "offset": 38669,
       "length": 2,
       "value": "\"\""
     },
