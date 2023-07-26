@@ -488,6 +488,7 @@ SWIFT_CLASS("_TtC6Pushly19PNApplicationConfig")
 @property (nonatomic, readonly) BOOL isStale;
 @property (nonatomic, readonly) BOOL shouldDisplayNotificationsInForeground;
 @property (nonatomic, readonly) BOOL forceDebugLogsEnabled;
+@property (nonatomic, readonly) BOOL debugIdCopyDisabled;
 @end
 
 enum PNECommItemType : NSInteger;
@@ -1307,6 +1308,7 @@ SWIFT_CLASS("_TtC6Pushly19PNApplicationConfig")
 @property (nonatomic, readonly) BOOL isStale;
 @property (nonatomic, readonly) BOOL shouldDisplayNotificationsInForeground;
 @property (nonatomic, readonly) BOOL forceDebugLogsEnabled;
+@property (nonatomic, readonly) BOOL debugIdCopyDisabled;
 @end
 
 enum PNECommItemType : NSInteger;
