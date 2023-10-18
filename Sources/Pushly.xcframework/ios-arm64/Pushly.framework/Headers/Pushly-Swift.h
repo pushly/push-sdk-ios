@@ -679,14 +679,53 @@ typedef SWIFT_ENUM(NSInteger, PNSubscriberStatus, open) {
 
 SWIFT_CLASS("_TtC6Pushly24PNUserNotificationCenter") SWIFT_AVAILABILITY(ios_app_extension,unavailable)
 @interface PNUserNotificationCenter : NSObject <UNUserNotificationCenterDelegate>
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (void)pnUserNotificationCenter:(UNUserNotificationCenter * _Nonnull)center willPresent:(UNNotification * _Nonnull)notification withCompletionHandler:(void (^ _Nonnull)(UNNotificationPresentationOptions))completionHandler;
 - (void)pnUserNotificationCenter:(UNUserNotificationCenter * _Nonnull)center didReceive:(UNNotificationResponse * _Nonnull)response withCompletionHandler:(void (^ _Nonnull)(void))completionHandler;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
 SWIFT_CLASS("_TtC6Pushly7PushSDK")
 @interface PushSDK : UIResponder <UIApplicationDelegate>
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_AVAILABILITY(ios_app_extension,unavailable)
+@interface PushSDK (SWIFT_EXTENSION(Pushly))
+@end
+
+
+SWIFT_CLASS_NAMED("AppMessages")
+@interface PushSDKAppMessages : NSObject
+/// Attempts to show a specified app message by id.
+/// By default the app message conditions and frequency cap will be evaluated.
++ (void)show:(NSInteger)id skipConditionsEvaluation:(BOOL)skipConditions skipFrequencyCapEvaluation:(BOOL)skipFcap;
+/// Applies triggered condition to all applicable app messages.
+/// If applied trigger completes all conditions in an app message’s scope
+/// and the app message is set to auto show it will be displayed.
++ (void)triggerWithCondition:(NSString * _Nonnull)condition withValue:(NSString * _Nonnull)value;
+/// Applies triggered conditions to all applicable app messages.
+/// If applied triggers complete all conditions in an app message’s scope
+/// and the app message is set to auto show it will be displayed.
++ (void)triggerWithConditions:(NSDictionary<NSString *, NSString *> * _Nonnull)conditions;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_AVAILABILITY(ios_app_extension,unavailable)
+@interface PushSDK (SWIFT_EXTENSION(Pushly))
+@end
+
+
+SWIFT_CLASS_NAMED("EComm")
+@interface PushSDKEComm : NSObject
++ (void)addToCartWithItems:(NSArray<PNECommItem *> * _Nonnull)items;
++ (void)updateCartWithItems:(NSArray<PNECommItem *> * _Nonnull)items;
++ (void)clearCart;
++ (void)trackPurchase;
++ (void)trackPurchaseOf:(NSArray<PNECommItem *> * _Nonnull)items withPurchaseId:(NSString * _Nullable)purchaseId withPriceValue:(NSString * _Nullable)priceValue;
++ (void)withECommConfig:(void (^ _Nonnull)(PNECommConfig * _Nonnull))block caller:(NSString * _Nonnull)caller;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -738,51 +777,23 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isEligibleToPro
 @end
 
 
-SWIFT_AVAILABILITY(ios_app_extension,unavailable)
-@interface PushSDK (SWIFT_EXTENSION(Pushly))
-@end
-
-
-SWIFT_CLASS_NAMED("AppMessages")
-@interface PushSDKAppMessages : NSObject
-/// Attempts to show a specified app message by id.
-/// By default the app message conditions and frequency cap will be evaluated.
-+ (void)show:(NSInteger)id skipConditionsEvaluation:(BOOL)skipConditions skipFrequencyCapEvaluation:(BOOL)skipFcap;
-/// Applies triggered condition to all applicable app messages.
-/// If applied trigger completes all conditions in an app message’s scope
-/// and the app message is set to auto show it will be displayed.
-+ (void)triggerWithCondition:(NSString * _Nonnull)condition withValue:(NSString * _Nonnull)value;
-/// Applies triggered conditions to all applicable app messages.
-/// If applied triggers complete all conditions in an app message’s scope
-/// and the app message is set to auto show it will be displayed.
-+ (void)triggerWithConditions:(NSDictionary<NSString *, NSString *> * _Nonnull)conditions;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_AVAILABILITY(ios_app_extension,unavailable)
-@interface PushSDK (SWIFT_EXTENSION(Pushly))
-@end
-
-
-SWIFT_CLASS_NAMED("EComm")
-@interface PushSDKEComm : NSObject
-+ (void)addToCartWithItems:(NSArray<PNECommItem *> * _Nonnull)items;
-+ (void)updateCartWithItems:(NSArray<PNECommItem *> * _Nonnull)items;
-+ (void)clearCart;
-+ (void)trackPurchase;
-+ (void)trackPurchaseOf:(NSArray<PNECommItem *> * _Nonnull)items withPurchaseId:(NSString * _Nullable)purchaseId withPriceValue:(NSString * _Nullable)priceValue;
-+ (void)withECommConfig:(void (^ _Nonnull)(PNECommConfig * _Nonnull))block caller:(NSString * _Nonnull)caller;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
 @interface PushSDK (SWIFT_EXTENSION(Pushly))
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) enum PNLogLevel logLevel;)
 + (enum PNLogLevel)logLevel SWIFT_WARN_UNUSED_RESULT;
 + (void)setLogLevel:(enum PNLogLevel)newValue;
 @end
 
+
+
+SWIFT_AVAILABILITY(ios_app_extension,unavailable)
+@interface PushSDK (SWIFT_EXTENSION(Pushly))
++ (void)application:(UIApplication * _Nonnull)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData * _Nonnull)deviceToken;
++ (void)application:(UIApplication * _Nonnull)application didFailToRegisterForRemoteNotificationsWithError:(NSError * _Nonnull)error;
++ (void)application:(UIApplication * _Nonnull)application didReceiveRemoteNotification:(NSDictionary * _Nonnull)userInfo fetchCompletionHandler:(void (^ _Nonnull)(UIBackgroundFetchResult))completionHandler;
++ (void)application:(UIApplication * _Nonnull)application didReceiveRemoteNotification:(NSDictionary * _Nonnull)userInfo;
++ (void)userNotificationCenter:(UNUserNotificationCenter * _Nonnull)center willPresent:(UNNotification * _Nonnull)notification withCompletionHandler:(void (^ _Nonnull)(UNNotificationPresentationOptions))completionHandler;
++ (void)userNotificationCenter:(UNUserNotificationCenter * _Nonnull)center didReceive:(UNNotificationResponse * _Nonnull)response withCompletionHandler:(void (^ _Nonnull)(void))completionHandler;
+@end
 
 
 SWIFT_AVAILABILITY(ios_app_extension,unavailable)
@@ -803,6 +814,7 @@ SWIFT_AVAILABILITY(ios_app_extension,unavailable)
 @interface PushSDK (SWIFT_EXTENSION(Pushly))
 + (void)setConfigurationAppKey:(NSString * _Nonnull)appKey withLaunchOptions:(NSDictionary<UIApplicationLaunchOptionsKey, id> * _Nullable)launchOptions;
 + (void)setConfigurationWithLaunchOptions:(NSDictionary<UIApplicationLaunchOptionsKey, id> * _Nullable)launchOptions;
++ (void)disableMethodSwizzling;
 + (void)setSDKLifecycleDelegate:(id <PNPushSDKLifecycleDelegate> _Nonnull)delegate;
 + (void)setPermissionsLifecycleDelegate:(id <PNPermissionsLifecycleDelegate> _Nonnull)delegate;
 + (void)setNotificationLifecycleDelegate:(id <PNNotificationLifecycleDelegate> _Nonnull)delegate;

@@ -162,10 +162,20 @@ extension Pushly.FrequencyCapWithOccurrenceLimit {
 extension Pushly.PushSDK {
   @objc(setConfigurationAppKey:withLaunchOptions:) @_Concurrency.MainActor(unsafe) public static func setConfiguration(appKey: Swift.String, withLaunchOptions launchOptions: [UIKit.UIApplication.LaunchOptionsKey : Any]?)
   @objc(setConfigurationWithLaunchOptions:) @_Concurrency.MainActor(unsafe) public static func setConfiguration(withLaunchOptions launchOptions: [UIKit.UIApplication.LaunchOptionsKey : Any]?)
+  @objc @_Concurrency.MainActor(unsafe) public static func disableMethodSwizzling()
   @objc @_Concurrency.MainActor(unsafe) public static func setSDKLifecycleDelegate(_ delegate: any Pushly.PNPushSDKLifecycleDelegate)
   @objc @_Concurrency.MainActor(unsafe) public static func setPermissionsLifecycleDelegate(_ delegate: any Pushly.PNPermissionsLifecycleDelegate)
   @objc @_Concurrency.MainActor(unsafe) public static func setNotificationLifecycleDelegate(_ delegate: any Pushly.PNNotificationLifecycleDelegate)
   @objc @_Concurrency.MainActor(unsafe) public static func setAppMessageLifecycleDelegate(_ delegate: any Pushly.PNAppMessageLifecycleDelegate)
+}
+@available(iOSApplicationExtension, unavailable)
+extension Pushly.PushSDK {
+  @objc @_Concurrency.MainActor(unsafe) public static func application(_ application: UIKit.UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Foundation.Data)
+  @objc @_Concurrency.MainActor(unsafe) public static func application(_ application: UIKit.UIApplication, didFailToRegisterForRemoteNotificationsWithError error: any Swift.Error)
+  @objc @_Concurrency.MainActor(unsafe) public static func application(_ application: UIKit.UIApplication, didReceiveRemoteNotification userInfo: [Swift.AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIKit.UIBackgroundFetchResult) -> Swift.Void)
+  @objc @_Concurrency.MainActor(unsafe) public static func application(_ application: UIKit.UIApplication, didReceiveRemoteNotification userInfo: [Swift.AnyHashable : Any])
+  @objc @_Concurrency.MainActor(unsafe) public static func userNotificationCenter(_ center: UserNotifications.UNUserNotificationCenter, willPresent notification: UserNotifications.UNNotification, withCompletionHandler completionHandler: @escaping (UserNotifications.UNNotificationPresentationOptions) -> Swift.Void)
+  @objc @_Concurrency.MainActor(unsafe) public static func userNotificationCenter(_ center: UserNotifications.UNUserNotificationCenter, didReceive response: UserNotifications.UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Swift.Void)
 }
 extension Pushly.PushSDK {
   @objc @_Concurrency.MainActor(unsafe) public static var logLevel: Pushly.PNLogLevel {
