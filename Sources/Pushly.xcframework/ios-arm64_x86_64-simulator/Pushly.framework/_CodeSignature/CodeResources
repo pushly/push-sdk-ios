@@ -14,11 +14,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		k6LIVPKSN6xE2Mf1Sp+35cCDJrE=
+		d0lPQEH8Iwsbezm3ahLI9kVd3s8=
 		</data>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		1BaeeTpQ2jKFVdgv+/amn6ml/9I=
+		MlUzdmQc1ewIPM+sNh4LatZH58o=
 		</data>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/Pushly.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		1BaeeTpQ2jKFVdgv+/amn6ml/9I=
+		MlUzdmQc1ewIPM+sNh4LatZH58o=
 		</data>
 		<key>Modules/Pushly.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -81,7 +81,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			DSTSES67xUAYQq0oT1nn+wwfgUdgdjAt8Jh8Ihi9Ak8=
+			lsvYV2tV0jQ4eCzEHooazU7hrx1aHEdiQnYLy7RECiY=
 			</data>
 		</dict>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -116,7 +116,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			DSTSES67xUAYQq0oT1nn+wwfgUdgdjAt8Jh8Ihi9Ak8=
+			lsvYV2tV0jQ4eCzEHooazU7hrx1aHEdiQnYLy7RECiY=
 			</data>
 		</dict>
 		<key>Modules/Pushly.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
