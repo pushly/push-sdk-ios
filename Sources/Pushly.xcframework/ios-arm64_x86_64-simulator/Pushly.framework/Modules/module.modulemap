@@ -1,7 +1,7 @@
 framework module Pushly {
   umbrella header "Pushly.h"
-
   export *
+
   module * { export * }
 }
 
