@@ -717,6 +717,58 @@ SWIFT_AVAILABILITY(ios_app_extension,unavailable)
 @end
 
 
+SWIFT_CLASS_NAMED("PushNotifications")
+@interface PushSDKPushNotifications : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isSubscribed;)
++ (BOOL)isSubscribed SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isEligibleToPrompt;)
++ (BOOL)isEligibleToPrompt SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isPaused;)
++ (BOOL)isPaused SWIFT_WARN_UNUSED_RESULT;
++ (void)pause;
++ (void)resume;
++ (void)showPermissionPrompt:(void (^ _Nonnull)(BOOL, UNNotificationSettings * _Nonnull, NSError * _Nullable))completion;
++ (void)showPermissionPrompt:(void (^ _Nonnull)(BOOL, UNNotificationSettings * _Nonnull, NSError * _Nullable))completion skipConditionsEvaluation:(BOOL)skipConditions skipFrequencyCapEvaluation:(BOOL)skipFcap;
++ (void)executeIfSubscribed:(void (^ _Nonnull)(void))action;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_AVAILABILITY(ios_app_extension,unavailable)
+@interface PushSDK (SWIFT_EXTENSION(Pushly))
+@end
+
+
+SWIFT_CLASS_NAMED("EComm")
+@interface PushSDKEComm : NSObject
++ (void)addToCartWithItems:(NSArray<PNECommItem *> * _Nonnull)items;
++ (void)updateCartWithItems:(NSArray<PNECommItem *> * _Nonnull)items;
++ (void)clearCart;
++ (void)trackPurchase;
++ (void)trackPurchaseOf:(NSArray<PNECommItem *> * _Nonnull)items withPurchaseId:(NSString * _Nullable)purchaseId withPriceValue:(NSString * _Nullable)priceValue;
++ (void)withECommConfig:(void (^ _Nonnull)(PNECommConfig * _Nonnull))block caller:(NSString * _Nonnull)caller;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_AVAILABILITY(ios_app_extension,introduced=16.1)
+@interface PushSDK (SWIFT_EXTENSION(Pushly))
+@end
+
+
+SWIFT_CLASS_NAMED("LiveActivities")
+@interface PushSDKLiveActivities : NSObject
++ (void)registerWithToken:(NSString * _Nonnull)token forActivity:(NSString * _Nonnull)activity;
++ (void)track:(enum PNLiveActivityEvent)activityEvent forActivity:(NSString * _Nonnull)activity;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_AVAILABILITY(ios_app_extension,unavailable)
+@interface PushSDK (SWIFT_EXTENSION(Pushly))
+@end
+
+
 SWIFT_CLASS_NAMED("UserProfile")
 @interface PushSDKUserProfile : NSObject
 /// The current user SDK identifier
@@ -731,16 +783,15 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable ext
 + (void)setExternalId:(NSString * _Nullable)newValue;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) enum PNSubscriberStatus subscriberStatus;)
 + (enum PNSubscriberStatus)subscriberStatus SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isSubscribed;)
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isSubscribed SWIFT_DEPRECATED_MSG("Use `PushSDK.PushNotifications.isSubscribed` instead.");)
 + (BOOL)isSubscribed SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isDeleted;)
 + (BOOL)isDeleted SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isEligibleToPrompt;)
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isEligibleToPrompt SWIFT_DEPRECATED_MSG("Use `PushSDK.PushNotifications.isEligibleToPrompt` instead.");)
 + (BOOL)isEligibleToPrompt SWIFT_WARN_UNUSED_RESULT;
 /// Sends a request to remove the user from eligibility to send
 + (void)requestUserDeletion;
-/// Removes a previous request to remove the user from eligibility to send
-+ (void)revertUserDeletion;
++ (void)revertUserDeletion SWIFT_DEPRECATED_MSG("This method will be removed in a future release.");
 /// Perform single key/value update the user profile
 /// eg: set(true, forKey: “is_paying_subscriber”)
 + (void)set:(id _Nonnull)value forKey:(NSString * _Nonnull)key;
@@ -781,42 +832,12 @@ SWIFT_CLASS_NAMED("AppMessages")
 @end
 
 
-SWIFT_AVAILABILITY(ios_app_extension,unavailable)
-@interface PushSDK (SWIFT_EXTENSION(Pushly))
-@end
-
-
-SWIFT_CLASS_NAMED("EComm")
-@interface PushSDKEComm : NSObject
-+ (void)addToCartWithItems:(NSArray<PNECommItem *> * _Nonnull)items;
-+ (void)updateCartWithItems:(NSArray<PNECommItem *> * _Nonnull)items;
-+ (void)clearCart;
-+ (void)trackPurchase;
-+ (void)trackPurchaseOf:(NSArray<PNECommItem *> * _Nonnull)items withPurchaseId:(NSString * _Nullable)purchaseId withPriceValue:(NSString * _Nullable)priceValue;
-+ (void)withECommConfig:(void (^ _Nonnull)(PNECommConfig * _Nonnull))block caller:(NSString * _Nonnull)caller;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_AVAILABILITY(ios_app_extension,introduced=16.1)
-@interface PushSDK (SWIFT_EXTENSION(Pushly))
-@end
-
-
-SWIFT_CLASS_NAMED("LiveActivities")
-@interface PushSDKLiveActivities : NSObject
-+ (void)registerWithToken:(NSString * _Nonnull)token forActivity:(NSString * _Nonnull)activity;
-+ (void)track:(enum PNLiveActivityEvent)activityEvent forActivity:(NSString * _Nonnull)activity;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-
 @interface PushSDK (SWIFT_EXTENSION(Pushly))
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) enum PNLogLevel logLevel;)
 + (enum PNLogLevel)logLevel SWIFT_WARN_UNUSED_RESULT;
 + (void)setLogLevel:(enum PNLogLevel)newValue;
 @end
+
 
 
 
@@ -1593,6 +1614,58 @@ SWIFT_AVAILABILITY(ios_app_extension,unavailable)
 @end
 
 
+SWIFT_CLASS_NAMED("PushNotifications")
+@interface PushSDKPushNotifications : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isSubscribed;)
++ (BOOL)isSubscribed SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isEligibleToPrompt;)
++ (BOOL)isEligibleToPrompt SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isPaused;)
++ (BOOL)isPaused SWIFT_WARN_UNUSED_RESULT;
++ (void)pause;
++ (void)resume;
++ (void)showPermissionPrompt:(void (^ _Nonnull)(BOOL, UNNotificationSettings * _Nonnull, NSError * _Nullable))completion;
++ (void)showPermissionPrompt:(void (^ _Nonnull)(BOOL, UNNotificationSettings * _Nonnull, NSError * _Nullable))completion skipConditionsEvaluation:(BOOL)skipConditions skipFrequencyCapEvaluation:(BOOL)skipFcap;
++ (void)executeIfSubscribed:(void (^ _Nonnull)(void))action;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_AVAILABILITY(ios_app_extension,unavailable)
+@interface PushSDK (SWIFT_EXTENSION(Pushly))
+@end
+
+
+SWIFT_CLASS_NAMED("EComm")
+@interface PushSDKEComm : NSObject
++ (void)addToCartWithItems:(NSArray<PNECommItem *> * _Nonnull)items;
++ (void)updateCartWithItems:(NSArray<PNECommItem *> * _Nonnull)items;
++ (void)clearCart;
++ (void)trackPurchase;
++ (void)trackPurchaseOf:(NSArray<PNECommItem *> * _Nonnull)items withPurchaseId:(NSString * _Nullable)purchaseId withPriceValue:(NSString * _Nullable)priceValue;
++ (void)withECommConfig:(void (^ _Nonnull)(PNECommConfig * _Nonnull))block caller:(NSString * _Nonnull)caller;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_AVAILABILITY(ios_app_extension,introduced=16.1)
+@interface PushSDK (SWIFT_EXTENSION(Pushly))
+@end
+
+
+SWIFT_CLASS_NAMED("LiveActivities")
+@interface PushSDKLiveActivities : NSObject
++ (void)registerWithToken:(NSString * _Nonnull)token forActivity:(NSString * _Nonnull)activity;
++ (void)track:(enum PNLiveActivityEvent)activityEvent forActivity:(NSString * _Nonnull)activity;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_AVAILABILITY(ios_app_extension,unavailable)
+@interface PushSDK (SWIFT_EXTENSION(Pushly))
+@end
+
+
 SWIFT_CLASS_NAMED("UserProfile")
 @interface PushSDKUserProfile : NSObject
 /// The current user SDK identifier
@@ -1607,16 +1680,15 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, copy) NSString * _Nullable ext
 + (void)setExternalId:(NSString * _Nullable)newValue;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) enum PNSubscriberStatus subscriberStatus;)
 + (enum PNSubscriberStatus)subscriberStatus SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isSubscribed;)
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isSubscribed SWIFT_DEPRECATED_MSG("Use `PushSDK.PushNotifications.isSubscribed` instead.");)
 + (BOOL)isSubscribed SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isDeleted;)
 + (BOOL)isDeleted SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isEligibleToPrompt;)
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isEligibleToPrompt SWIFT_DEPRECATED_MSG("Use `PushSDK.PushNotifications.isEligibleToPrompt` instead.");)
 + (BOOL)isEligibleToPrompt SWIFT_WARN_UNUSED_RESULT;
 /// Sends a request to remove the user from eligibility to send
 + (void)requestUserDeletion;
-/// Removes a previous request to remove the user from eligibility to send
-+ (void)revertUserDeletion;
++ (void)revertUserDeletion SWIFT_DEPRECATED_MSG("This method will be removed in a future release.");
 /// Perform single key/value update the user profile
 /// eg: set(true, forKey: “is_paying_subscriber”)
 + (void)set:(id _Nonnull)value forKey:(NSString * _Nonnull)key;
@@ -1657,42 +1729,12 @@ SWIFT_CLASS_NAMED("AppMessages")
 @end
 
 
-SWIFT_AVAILABILITY(ios_app_extension,unavailable)
-@interface PushSDK (SWIFT_EXTENSION(Pushly))
-@end
-
-
-SWIFT_CLASS_NAMED("EComm")
-@interface PushSDKEComm : NSObject
-+ (void)addToCartWithItems:(NSArray<PNECommItem *> * _Nonnull)items;
-+ (void)updateCartWithItems:(NSArray<PNECommItem *> * _Nonnull)items;
-+ (void)clearCart;
-+ (void)trackPurchase;
-+ (void)trackPurchaseOf:(NSArray<PNECommItem *> * _Nonnull)items withPurchaseId:(NSString * _Nullable)purchaseId withPriceValue:(NSString * _Nullable)priceValue;
-+ (void)withECommConfig:(void (^ _Nonnull)(PNECommConfig * _Nonnull))block caller:(NSString * _Nonnull)caller;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_AVAILABILITY(ios_app_extension,introduced=16.1)
-@interface PushSDK (SWIFT_EXTENSION(Pushly))
-@end
-
-
-SWIFT_CLASS_NAMED("LiveActivities")
-@interface PushSDKLiveActivities : NSObject
-+ (void)registerWithToken:(NSString * _Nonnull)token forActivity:(NSString * _Nonnull)activity;
-+ (void)track:(enum PNLiveActivityEvent)activityEvent forActivity:(NSString * _Nonnull)activity;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-
 @interface PushSDK (SWIFT_EXTENSION(Pushly))
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class) enum PNLogLevel logLevel;)
 + (enum PNLogLevel)logLevel SWIFT_WARN_UNUSED_RESULT;
 + (void)setLogLevel:(enum PNLogLevel)newValue;
 @end
+
 
 
 

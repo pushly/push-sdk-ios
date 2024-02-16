@@ -341,6 +341,26 @@ extension Pushly.RelativeDateDisplayMetric : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
 }
+@available(iOSApplicationExtension, unavailable)
+extension Pushly.PushSDK {
+  @_inheritsConvenienceInitializers @objc(PushSDKPushNotifications) @objcMembers public class PushNotifications : ObjectiveC.NSObject {
+    @objc public static var isSubscribed: Swift.Bool {
+      @objc get
+    }
+    @objc public static var isEligibleToPrompt: Swift.Bool {
+      @objc get
+    }
+    @objc public static var isPaused: Swift.Bool {
+      @objc get
+    }
+    @objc public static func pause()
+    @objc public static func resume()
+    @objc public static func showPermissionPrompt(_ completion: @escaping (Swift.Bool, UserNotifications.UNNotificationSettings, (any Swift.Error)?) -> Swift.Void)
+    @objc public static func showPermissionPrompt(_ completion: @escaping (Swift.Bool, UserNotifications.UNNotificationSettings, (any Swift.Error)?) -> Swift.Void, skipConditionsEvaluation skipConditions: Swift.Bool = false, skipFrequencyCapEvaluation skipFcap: Swift.Bool = false)
+    @objc override dynamic public init()
+    @objc deinit
+  }
+}
 @objc @_inheritsConvenienceInitializers final public class PNNotificationServiceExtensionHandler : ObjectiveC.NSObject {
   @objc final public class func didReceiveExtensionRequest(_ request: UserNotifications.UNNotificationRequest, content bestAttemptContent: UserNotifications.UNMutableNotificationContent, withContentHandler contentHandler: @escaping (UserNotifications.UNNotificationContent) -> Swift.Void)
   @objc final public class func didRecieveExtensionTimeWillExpire(_ bestAttemptContent: UserNotifications.UNMutableNotificationContent, withContentHandler contentHandler: @escaping (UserNotifications.UNNotificationContent) -> Swift.Void)
@@ -598,17 +618,20 @@ extension Pushly.PushSDK {
     @objc public static var subscriberStatus: Pushly.PNSubscriberStatus {
       @objc get
     }
-    @objc public static var isSubscribed: Swift.Bool {
+    @objc @available(*, deprecated, message: "Use `PushSDK.PushNotifications.isSubscribed` instead.")
+    public static var isSubscribed: Swift.Bool {
       @objc get
     }
     @objc public static var isDeleted: Swift.Bool {
       @objc get
     }
-    @objc public static var isEligibleToPrompt: Swift.Bool {
+    @objc @available(*, deprecated, message: "Use `PushSDK.PushNotifications.isEligibleToPrompt` instead.")
+    public static var isEligibleToPrompt: Swift.Bool {
       @objc get
     }
     @objc public static func requestUserDeletion()
-    @objc public static func revertUserDeletion()
+    @objc @available(*, deprecated, message: "This method will be removed in a future release.")
+    public static func revertUserDeletion()
     @objc public static func set(_ value: Any, forKey key: Swift.String)
     @objc public static func set(_ data: [Swift.String : Any])
     @objc public static func append(_ values: [Any], to key: Swift.String)
