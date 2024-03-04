@@ -311,12 +311,23 @@ SWIFT_CLASS("_TtC6Pushly15ActionVariation")
 @end
 
 
+@class WKUserContentController;
+@class WKScriptMessage;
+
+SWIFT_CLASS("_TtC6Pushly14ECommWkHandler") SWIFT_AVAILABILITY(ios_app_extension,unavailable)
+@interface ECommWkHandler : NSObject <WKScriptMessageHandler>
+- (void)userContentController:(WKUserContentController * _Nonnull)userContentController didReceiveScriptMessage:(WKScriptMessage * _Nonnull)message;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 
 SWIFT_CLASS("_TtC6Pushly31FrequencyCapWithOccurrenceLimit")
 @interface FrequencyCapWithOccurrenceLimit : NSObject
 @property (nonatomic, readonly) NSInteger occurrences;
 @property (nonatomic, readonly) double intervalSeconds;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
@@ -325,112 +336,77 @@ SWIFT_CLASS("_TtC6Pushly31FrequencyCapWithOccurrenceLimit")
 SWIFT_CLASS("_TtC6Pushly18PNAppFrequencyCaps")
 @interface PNAppFrequencyCaps : NSObject
 @property (nonatomic, readonly, strong) FrequencyCapWithOccurrenceLimit * _Nullable prompts;
+@property (nonatomic, readonly, strong) FrequencyCapWithOccurrenceLimit * _Nullable appMessages;
 @end
 
 
 enum PNAppMessageStyle : NSInteger;
-@class PNAppMessageConditions;
+@class PNSchedule;
 
 SWIFT_CLASS("_TtC6Pushly12PNAppMessage")
 @interface PNAppMessage : NSObject
 @property (nonatomic, readonly) NSInteger id;
 @property (nonatomic, copy) NSString * _Nullable name;
+@property (nonatomic) NSInteger priority;
 @property (nonatomic, readonly) enum PNAppMessageStyle style;
-@property (nonatomic, readonly) BOOL isAutoShow;
-@property (nonatomic, readonly) double weight;
-@property (nonatomic, readonly, strong) PNAppMessageConditions * _Nullable conditions;
+@property (nonatomic, readonly, copy) NSArray<PNSchedule *> * _Nonnull schedules;
+@property (nonatomic, copy) NSString * _Nullable templateHTML;
+@property (nonatomic, copy) NSString * _Nullable templateUrl;
 @property (nonatomic) BOOL hasDisplayed;
+- (nonnull instancetype)initWithId:(NSInteger)id name:(NSString * _Nullable)name style:(enum PNAppMessageStyle)style OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
 
-@class PNAppMessageCondition;
 
 @interface PNAppMessage (SWIFT_EXTENSION(Pushly))
 @property (nonatomic, readonly, copy) NSArray<NSString *> * _Nonnull conditionKeys;
 - (BOOL)hasConditionKey:(NSString * _Nonnull)key SWIFT_WARN_UNUSED_RESULT;
-- (NSArray<PNAppMessageCondition *> * _Nonnull)getConditionsForKey:(NSString * _Nonnull)key SWIFT_WARN_UNUSED_RESULT;
-@property (nonatomic, readonly) BOOL conditionsMet;
 - (BOOL)meetsConditions:(NSDictionary<NSString *, NSString *> * _Nonnull)checkConditions SWIFT_WARN_UNUSED_RESULT;
 @end
 
 @class RelativeDate;
 
 @interface PNAppMessage (SWIFT_EXTENSION(Pushly))
-@property (nonatomic, readonly, copy) NSString * _Nullable templateHTML;
-@property (nonatomic, readonly) BOOL isPrePermissionPrompt;
-@property (nonatomic, readonly) BOOL isNative;
 @property (nonatomic, readonly) BOOL isFullscreen;
 @property (nonatomic, readonly) BOOL isModal;
 @property (nonatomic, readonly) BOOL isBanner;
 @property (nonatomic, readonly) BOOL isTopBanner;
 @property (nonatomic, readonly) BOOL isBottomBanner;
 @property (nonatomic, readonly) BOOL redisplayEnabled;
+@property (nonatomic, readonly) double redisplayFcap;
 @property (nonatomic, readonly, strong) RelativeDate * _Nonnull maxDisplayTime;
+@property (nonatomic, readonly) BOOL gesturesDisabled;
 @property (nonatomic, readonly) BOOL canDismissOnSlide;
 @property (nonatomic, readonly) BOOL canDismissOnTapOutside;
+@property (nonatomic, readonly) BOOL closeButtonVisible;
 - (BOOL)isEligibleToDisplayWithSkipConditionsEvaluation:(BOOL)skipConditions skipFcapEvaluation:(BOOL)skipFcap SWIFT_WARN_UNUSED_RESULT;
 @property (nonatomic, readonly) BOOL hasMetSessionFrequencyCap;
 @property (nonatomic, readonly) BOOL hasMetTimeInScopeCondition;
 @end
 
+typedef SWIFT_ENUM(NSInteger, PNAppMessageActionIdentifier, open) {
+  PNAppMessageActionIdentifierPageLoadCompleted = 0,
+  PNAppMessageActionIdentifierPrimary = 1,
+  PNAppMessageActionIdentifierSecondary = 2,
+  PNAppMessageActionIdentifierNone = 3,
+};
 
-SWIFT_CLASS("_TtC6Pushly21PNAppMessageCondition")
-@interface PNAppMessageCondition : NSObject
-@property (nonatomic, readonly) NSInteger id;
-@property (nonatomic, readonly, copy) NSString * _Nonnull key;
-@property (nonatomic, readonly, copy) NSString * _Nonnull value;
-@property (nonatomic) BOOL matched;
-- (BOOL)checkWithKey:(NSString * _Nonnull)key value:(NSString * _Nonnull)value;
+
+SWIFT_CLASS("_TtC6Pushly18PNAppMessageConfig")
+@interface PNAppMessageConfig : NSObject
+@property (nonatomic, readonly, copy) NSArray<NSString *> * _Nullable scripts;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-
-
-SWIFT_CLASS("_TtC6Pushly22PNAppMessageConditions")
-@interface PNAppMessageConditions : NSObject
-@end
-
-
-
-@class NSCoder;
-@protocol UIViewControllerTransitionCoordinator;
-@class UIPanGestureRecognizer;
-@class UITapGestureRecognizer;
-@class NSBundle;
-
-SWIFT_CLASS("_TtC6Pushly22PNAppMessageController") SWIFT_AVAILABILITY(ios_app_extension,unavailable)
-@interface PNAppMessageController : UIViewController
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-- (void)timeInSessionTimerAdvanced;
-- (void)maxDisplayTimeTimerFinished;
-- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator> _Nonnull)coordinator;
-- (void)panGestureRecognizerDidMove:(UIPanGestureRecognizer * _Nonnull)sender;
-- (void)tapGestureRecognizerDidTap:(UITapGestureRecognizer * _Nonnull)sender;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
-@end
-
-
-@class WKUserContentController;
-@class WKScriptMessage;
-
-SWIFT_AVAILABILITY(ios_app_extension,unavailable)
-@interface PNAppMessageController (SWIFT_EXTENSION(Pushly)) <WKScriptMessageHandler>
-- (void)userContentController:(WKUserContentController * _Nonnull)userContentController didReceiveScriptMessage:(WKScriptMessage * _Nonnull)message;
-@end
 
 
 SWIFT_CLASS("_TtC6Pushly29PNAppMessageDisplayConditions")
 @interface PNAppMessageDisplayConditions : NSObject
 @end
-
-
-
-SWIFT_CLASS("_TtC6Pushly17PNAppMessageGroup")
-@interface PNAppMessageGroup : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
 
 
 
@@ -443,15 +419,34 @@ SWIFT_CLASS("_TtC6Pushly27PNAppMessageGroupConditions")
 @end
 
 
-enum PNPrePermissionResponse : NSInteger;
-@class PNAppMessageViewMessage;
+
+SWIFT_CLASS("_TtC6Pushly23PNAppMessageInteraction")
+@interface PNAppMessageInteraction : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+typedef SWIFT_ENUM(NSInteger, PNAppMessageInteractionType, open) {
+  PNAppMessageInteractionTypeOpenUrl = 0,
+  PNAppMessageInteractionTypeClose = 1,
+  PNAppMessageInteractionTypePromptForNotificationPermissions = 2,
+  PNAppMessageInteractionTypeNone = 3,
+};
+
+
+SWIFT_CLASS("_TtC6Pushly28PNAppMessageInternalResponse")
+@interface PNAppMessageInternalResponse : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 
 SWIFT_PROTOCOL("_TtP6Pushly29PNAppMessageLifecycleDelegate_")
 @protocol PNAppMessageLifecycleDelegate
 @optional
-- (BOOL)pushSDKWillPresentAppMessage:(PNAppMessage * _Nonnull)appMessage SWIFT_WARN_UNUSED_RESULT;
-- (void)pushSDKDidReceivePrePermissionResponse:(enum PNPrePermissionResponse)response fromAppMessage:(PNAppMessage * _Nonnull)appMessage;
-- (BOOL)pushSDKDidReceiveMessage:(PNAppMessageViewMessage * _Nonnull)message fromAppMessage:(PNAppMessage * _Nonnull)appMessage SWIFT_WARN_UNUSED_RESULT;
+- (void)pushSDKWillPresentAppMessage:(PNAppMessage * _Nonnull)appMessage;
+- (BOOL)pushSDKDidReceiveAppMessageInteraction:(PNAppMessageInteraction * _Nonnull)message fromAppMessage:(PNAppMessage * _Nonnull)appMessage SWIFT_WARN_UNUSED_RESULT;
 - (void)pushSDKDidFailToProcessMessage:(WKScriptMessage * _Nonnull)message fromAppMessage:(PNAppMessage * _Nonnull)appMessage;
 @end
 
@@ -459,25 +454,50 @@ typedef SWIFT_ENUM(NSInteger, PNAppMessageStyle, open) {
   PNAppMessageStyleFullscreen = 0,
   PNAppMessageStyleModal = 1,
   PNAppMessageStyleBanner = 2,
-  PNAppMessageStyleNative = 3,
 };
 
-@class WKWebView;
-@class WKNavigation;
+@class NSCoder;
 
-SWIFT_CLASS("_TtC6Pushly16PNAppMessageView")
-@interface PNAppMessageView : UIView <UIScrollViewDelegate, WKNavigationDelegate, WKUIDelegate>
+SWIFT_CLASS("_TtC6Pushly16PNAppMessageView") SWIFT_AVAILABILITY(ios_app_extension,unavailable)
+@interface PNAppMessageView : UIView <UIScrollViewDelegate, WKUIDelegate>
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-- (void)webView:(WKWebView * _Nonnull)webView didFinishNavigation:(WKNavigation * _Nonnull)navigation;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
+@class WKWebView;
+@class WKNavigation;
+@class WKNavigationAction;
+@class WKNavigationResponse;
 
-SWIFT_CLASS("_TtC6Pushly23PNAppMessageViewMessage")
-@interface PNAppMessageViewMessage : NSObject
-@property (nonatomic, readonly, strong) NSDictionary * _Nonnull raw;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+SWIFT_AVAILABILITY(ios_app_extension,unavailable)
+@interface PNAppMessageView (SWIFT_EXTENSION(Pushly)) <WKNavigationDelegate>
+- (void)webView:(WKWebView * _Nonnull)webView didFinishNavigation:(WKNavigation * _Nonnull)navigation;
+- (void)webView:(WKWebView * _Nonnull)webView didFailNavigation:(WKNavigation * _Null_unspecified)navigation withError:(NSError * _Nonnull)error;
+- (void)webView:(WKWebView * _Nonnull)webView didCommitNavigation:(WKNavigation * _Null_unspecified)navigation;
+- (void)webView:(WKWebView * _Nonnull)webView decidePolicyForNavigationAction:(WKNavigationAction * _Nonnull)navigationAction decisionHandler:(void (^ _Nonnull)(WKNavigationActionPolicy))decisionHandler;
+- (void)webView:(WKWebView * _Nonnull)webView decidePolicyForNavigationResponse:(WKNavigationResponse * _Nonnull)navigationResponse decisionHandler:(void (^ _Nonnull)(WKNavigationResponsePolicy))decisionHandler;
+@end
+
+@protocol UIViewControllerTransitionCoordinator;
+@class UIPanGestureRecognizer;
+@class UITapGestureRecognizer;
+@class NSBundle;
+
+SWIFT_CLASS("_TtC6Pushly26PNAppMessageViewController") SWIFT_AVAILABILITY(ios_app_extension,unavailable)
+@interface PNAppMessageViewController : UIViewController
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+- (void)viewDidLayoutSubviews;
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator> _Nonnull)coordinator;
+- (void)panGestureRecognizerDidMove:(UIPanGestureRecognizer * _Nonnull)sender;
+- (void)tapGestureRecognizerDidTap:(UITapGestureRecognizer * _Nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+@end
+
+
+
+SWIFT_AVAILABILITY(ios_app_extension,unavailable)
+@interface PNAppMessageViewController (SWIFT_EXTENSION(Pushly)) <WKScriptMessageHandler>
+- (void)userContentController:(WKUserContentController * _Nonnull)userContentController didReceiveScriptMessage:(WKScriptMessage * _Nonnull)message;
 @end
 
 @class UIApplication;
@@ -494,6 +514,7 @@ SWIFT_CLASS("_TtC6Pushly13PNApplication") SWIFT_AVAILABILITY(ios_app_extension,u
 
 @class NSDate;
 @class PNECommConfig;
+@class PNPrompt;
 
 SWIFT_CLASS("_TtC6Pushly19PNApplicationConfig")
 @interface PNApplicationConfig : NSObject
@@ -506,6 +527,8 @@ SWIFT_CLASS("_TtC6Pushly19PNApplicationConfig")
 @property (nonatomic, readonly) UNAuthorizationOptions authorizationOptions;
 @property (nonatomic, readonly, strong) PNAppFrequencyCaps * _Nullable frequencyCaps;
 @property (nonatomic, readonly, strong) PNECommConfig * _Nullable ecommConfig;
+@property (nonatomic, readonly, copy) NSArray<PNPrompt *> * _Nullable prompts;
+@property (nonatomic, readonly, strong) PNAppMessageConfig * _Nullable appMessages;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -518,6 +541,11 @@ SWIFT_CLASS("_TtC6Pushly19PNApplicationConfig")
 @property (nonatomic, readonly) BOOL shouldDisplayNotificationsInForeground;
 @property (nonatomic, readonly) BOOL forceDebugLogsEnabled;
 @property (nonatomic, readonly) BOOL debugIdCopyDisabled;
+@property (nonatomic, readonly) BOOL appMessagesEnabled;
+@property (nonatomic, readonly) BOOL sdkDebugEventsEnabled;
+@property (nonatomic, readonly) BOOL sdkIamCloseEventEnabled;
+@property (nonatomic, readonly, strong) FrequencyCapWithOccurrenceLimit * _Nonnull appMessageFrequencyCap;
+@property (nonatomic, readonly, strong) PNPrompt * _Nullable notificationPermissionPrompt;
 @end
 
 enum PNECommItemType : NSInteger;
@@ -538,6 +566,7 @@ SWIFT_CLASS("_TtC6Pushly11PNECommItem")
 @property (nonatomic) NSInteger quantity;
 - (nonnull instancetype)initWithId:(NSString * _Nonnull)id quantity:(NSInteger)quantity OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithId:(NSString * _Nonnull)id OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, readonly, copy) NSString * _Nonnull description;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -678,6 +707,21 @@ typedef SWIFT_ENUM(NSInteger, PNPrePermissionResponse, open) {
   PNPrePermissionResponseDismissed = 1,
 };
 
+enum PNPromptType : NSInteger;
+
+SWIFT_CLASS("_TtC6Pushly8PNPrompt")
+@interface PNPrompt : NSObject
+@property (nonatomic, readonly) NSInteger id;
+@property (nonatomic, readonly) enum PNPromptType type;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+typedef SWIFT_ENUM(NSInteger, PNPromptType, open) {
+  PNPromptTypeNotification = 0,
+  PNPromptTypeUnknown = 1,
+};
+
 enum PNSubscriberStatus : NSInteger;
 
 SWIFT_PROTOCOL("_TtP6Pushly26PNPushSDKLifecycleDelegate_")
@@ -686,6 +730,19 @@ SWIFT_PROTOCOL("_TtP6Pushly26PNPushSDKLifecycleDelegate_")
 - (void)pushSDKDidFinishLoading:(PNApplicationConfig * _Nonnull)configuration withNotificationSettings:(UNNotificationSettings * _Nonnull)settings;
 - (void)pushSDKDidExitWithSubscriberStatus:(enum PNSubscriberStatus)status withDeletedState:(BOOL)deleted;
 @end
+
+
+SWIFT_CLASS("_TtC6Pushly10PNSchedule")
+@interface PNSchedule : NSObject
+@property (nonatomic, readonly) NSInteger id;
+@property (nonatomic, copy) NSString * _Nonnull runTimezone;
+@property (nonatomic, readonly, copy) NSString * _Nonnull runWindow;
+@property (nonatomic, readonly, copy) NSDate * _Nonnull runStart;
+@property (nonatomic, readonly, copy) NSDate * _Nullable runEnd;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 
 typedef SWIFT_ENUM(NSInteger, PNSubscriberStatus, open) {
   PNSubscriberStatusSubscribed = 0,
@@ -706,47 +763,15 @@ SWIFT_CLASS("_TtC6Pushly24PNUserNotificationCenter") SWIFT_AVAILABILITY(ios_app_
 @end
 
 
+SWIFT_CLASS("_TtC6Pushly26PushNotificationsWkHandler") SWIFT_AVAILABILITY(ios_app_extension,unavailable)
+@interface PushNotificationsWkHandler : NSObject <WKScriptMessageHandler>
+- (void)userContentController:(WKUserContentController * _Nonnull)userContentController didReceiveScriptMessage:(WKScriptMessage * _Nonnull)message;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC6Pushly7PushSDK")
 @interface PushSDK : UIResponder <UIApplicationDelegate>
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_AVAILABILITY(ios_app_extension,unavailable)
-@interface PushSDK (SWIFT_EXTENSION(Pushly))
-@end
-
-
-SWIFT_CLASS_NAMED("PushNotifications")
-@interface PushSDKPushNotifications : NSObject
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isSubscribed;)
-+ (BOOL)isSubscribed SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isEligibleToPrompt;)
-+ (BOOL)isEligibleToPrompt SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isPaused;)
-+ (BOOL)isPaused SWIFT_WARN_UNUSED_RESULT;
-+ (void)pause;
-+ (void)resume;
-+ (void)showPermissionPrompt:(void (^ _Nonnull)(BOOL, UNNotificationSettings * _Nonnull, NSError * _Nullable))completion;
-+ (void)showPermissionPrompt:(void (^ _Nonnull)(BOOL, UNNotificationSettings * _Nonnull, NSError * _Nullable))completion skipConditionsEvaluation:(BOOL)skipConditions skipFrequencyCapEvaluation:(BOOL)skipFcap;
-+ (void)executeIfSubscribed:(void (^ _Nonnull)(void))action;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_AVAILABILITY(ios_app_extension,unavailable)
-@interface PushSDK (SWIFT_EXTENSION(Pushly))
-@end
-
-
-SWIFT_CLASS_NAMED("EComm")
-@interface PushSDKEComm : NSObject
-+ (void)addToCartWithItems:(NSArray<PNECommItem *> * _Nonnull)items;
-+ (void)updateCartWithItems:(NSArray<PNECommItem *> * _Nonnull)items;
-+ (void)clearCart;
-+ (void)trackPurchase;
-+ (void)trackPurchaseOf:(NSArray<PNECommItem *> * _Nonnull)items withPurchaseId:(NSString * _Nullable)purchaseId withPriceValue:(NSString * _Nullable)priceValue;
-+ (void)withECommConfig:(void (^ _Nonnull)(PNECommConfig * _Nonnull))block caller:(NSString * _Nonnull)caller;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -815,11 +840,29 @@ SWIFT_AVAILABILITY(ios_app_extension,unavailable)
 @end
 
 
+SWIFT_CLASS_NAMED("PushNotifications")
+@interface PushSDKPushNotifications : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isSubscribed;)
++ (BOOL)isSubscribed SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isEligibleToPrompt;)
++ (BOOL)isEligibleToPrompt SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isPaused;)
++ (BOOL)isPaused SWIFT_WARN_UNUSED_RESULT;
++ (void)pause;
++ (void)resume;
++ (void)showPermissionPrompt:(void (^ _Nonnull)(BOOL, UNNotificationSettings * _Nonnull, NSError * _Nullable))completion;
++ (void)executeIfSubscribed:(void (^ _Nonnull)(void))action;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_AVAILABILITY(ios_app_extension,unavailable)
+@interface PushSDK (SWIFT_EXTENSION(Pushly))
+@end
+
+
 SWIFT_CLASS_NAMED("AppMessages")
 @interface PushSDKAppMessages : NSObject
-/// Attempts to show a specified app message by id.
-/// By default the app message conditions and frequency cap will be evaluated.
-+ (void)show:(NSInteger)id skipConditionsEvaluation:(BOOL)skipConditions skipFrequencyCapEvaluation:(BOOL)skipFcap;
 /// Applies triggered condition to all applicable app messages.
 /// If applied trigger completes all conditions in an app message’s scope
 /// and the app message is set to auto show it will be displayed.
@@ -828,6 +871,24 @@ SWIFT_CLASS_NAMED("AppMessages")
 /// If applied triggers complete all conditions in an app message’s scope
 /// and the app message is set to auto show it will be displayed.
 + (void)triggerWithConditions:(NSDictionary<NSString *, NSString *> * _Nonnull)conditions;
++ (void)_platformBridgeProcessInteraction:(PNAppMessageInteraction * _Nonnull)interaction for:(PNAppMessage * _Nonnull)appMessage;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_AVAILABILITY(ios_app_extension,unavailable)
+@interface PushSDK (SWIFT_EXTENSION(Pushly))
+@end
+
+
+SWIFT_CLASS_NAMED("EComm")
+@interface PushSDKEComm : NSObject
++ (void)addToCartWithItems:(NSArray<PNECommItem *> * _Nonnull)items;
++ (void)updateCartWithItems:(NSArray<PNECommItem *> * _Nonnull)items;
++ (void)clearCart;
++ (void)trackPurchase;
++ (void)trackPurchaseOf:(NSArray<PNECommItem *> * _Nonnull)items withPurchaseId:(NSString * _Nullable)purchaseId withPriceValue:(NSString * _Nullable)priceValue;
++ (void)withECommConfig:(void (^ _Nonnull)(PNECommConfig * _Nonnull))block caller:(NSString * _Nonnull)caller;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -859,7 +920,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 + (void)getConfiguration:(void (^ _Nonnull)(PNApplicationConfig * _Nullable, NSError * _Nullable))completion;
 + (void)getNotificationPermissionStatus:(void (^ _Nonnull)(BOOL, UNNotificationSettings * _Nonnull))completion;
 + (void)showNativeNotificationPermissionPrompt:(void (^ _Nonnull)(BOOL, UNNotificationSettings * _Nonnull, NSError * _Nullable))completion;
-+ (void)showNativeNotificationPermissionPrompt:(void (^ _Nonnull)(BOOL, UNNotificationSettings * _Nonnull, NSError * _Nullable))completion skipConditionsEvaluation:(BOOL)skipConditions skipFrequencyCapEvaluation:(BOOL)skipFcap;
 + (void)setEventSourceApplication:(PNEventSourceApplication * _Nonnull)application;
 + (void)resetBadgeCount;
 + (void)clearNotifications;
@@ -886,6 +946,15 @@ SWIFT_CLASS("_TtC6Pushly12RelativeDate")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+
+
+
+
+SWIFT_CLASS("_TtC6Pushly20UserProfileWkHandler") SWIFT_AVAILABILITY(ios_app_extension,unavailable)
+@interface UserProfileWkHandler : NSObject <WKScriptMessageHandler>
+- (void)userContentController:(WKUserContentController * _Nonnull)userContentController didReceiveScriptMessage:(WKScriptMessage * _Nonnull)message;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
 
 #endif
 #if __has_attribute(external_source_symbol)
@@ -1208,12 +1277,23 @@ SWIFT_CLASS("_TtC6Pushly15ActionVariation")
 @end
 
 
+@class WKUserContentController;
+@class WKScriptMessage;
+
+SWIFT_CLASS("_TtC6Pushly14ECommWkHandler") SWIFT_AVAILABILITY(ios_app_extension,unavailable)
+@interface ECommWkHandler : NSObject <WKScriptMessageHandler>
+- (void)userContentController:(WKUserContentController * _Nonnull)userContentController didReceiveScriptMessage:(WKScriptMessage * _Nonnull)message;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 
 SWIFT_CLASS("_TtC6Pushly31FrequencyCapWithOccurrenceLimit")
 @interface FrequencyCapWithOccurrenceLimit : NSObject
 @property (nonatomic, readonly) NSInteger occurrences;
 @property (nonatomic, readonly) double intervalSeconds;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
@@ -1222,112 +1302,77 @@ SWIFT_CLASS("_TtC6Pushly31FrequencyCapWithOccurrenceLimit")
 SWIFT_CLASS("_TtC6Pushly18PNAppFrequencyCaps")
 @interface PNAppFrequencyCaps : NSObject
 @property (nonatomic, readonly, strong) FrequencyCapWithOccurrenceLimit * _Nullable prompts;
+@property (nonatomic, readonly, strong) FrequencyCapWithOccurrenceLimit * _Nullable appMessages;
 @end
 
 
 enum PNAppMessageStyle : NSInteger;
-@class PNAppMessageConditions;
+@class PNSchedule;
 
 SWIFT_CLASS("_TtC6Pushly12PNAppMessage")
 @interface PNAppMessage : NSObject
 @property (nonatomic, readonly) NSInteger id;
 @property (nonatomic, copy) NSString * _Nullable name;
+@property (nonatomic) NSInteger priority;
 @property (nonatomic, readonly) enum PNAppMessageStyle style;
-@property (nonatomic, readonly) BOOL isAutoShow;
-@property (nonatomic, readonly) double weight;
-@property (nonatomic, readonly, strong) PNAppMessageConditions * _Nullable conditions;
+@property (nonatomic, readonly, copy) NSArray<PNSchedule *> * _Nonnull schedules;
+@property (nonatomic, copy) NSString * _Nullable templateHTML;
+@property (nonatomic, copy) NSString * _Nullable templateUrl;
 @property (nonatomic) BOOL hasDisplayed;
+- (nonnull instancetype)initWithId:(NSInteger)id name:(NSString * _Nullable)name style:(enum PNAppMessageStyle)style OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
 
-@class PNAppMessageCondition;
 
 @interface PNAppMessage (SWIFT_EXTENSION(Pushly))
 @property (nonatomic, readonly, copy) NSArray<NSString *> * _Nonnull conditionKeys;
 - (BOOL)hasConditionKey:(NSString * _Nonnull)key SWIFT_WARN_UNUSED_RESULT;
-- (NSArray<PNAppMessageCondition *> * _Nonnull)getConditionsForKey:(NSString * _Nonnull)key SWIFT_WARN_UNUSED_RESULT;
-@property (nonatomic, readonly) BOOL conditionsMet;
 - (BOOL)meetsConditions:(NSDictionary<NSString *, NSString *> * _Nonnull)checkConditions SWIFT_WARN_UNUSED_RESULT;
 @end
 
 @class RelativeDate;
 
 @interface PNAppMessage (SWIFT_EXTENSION(Pushly))
-@property (nonatomic, readonly, copy) NSString * _Nullable templateHTML;
-@property (nonatomic, readonly) BOOL isPrePermissionPrompt;
-@property (nonatomic, readonly) BOOL isNative;
 @property (nonatomic, readonly) BOOL isFullscreen;
 @property (nonatomic, readonly) BOOL isModal;
 @property (nonatomic, readonly) BOOL isBanner;
 @property (nonatomic, readonly) BOOL isTopBanner;
 @property (nonatomic, readonly) BOOL isBottomBanner;
 @property (nonatomic, readonly) BOOL redisplayEnabled;
+@property (nonatomic, readonly) double redisplayFcap;
 @property (nonatomic, readonly, strong) RelativeDate * _Nonnull maxDisplayTime;
+@property (nonatomic, readonly) BOOL gesturesDisabled;
 @property (nonatomic, readonly) BOOL canDismissOnSlide;
 @property (nonatomic, readonly) BOOL canDismissOnTapOutside;
+@property (nonatomic, readonly) BOOL closeButtonVisible;
 - (BOOL)isEligibleToDisplayWithSkipConditionsEvaluation:(BOOL)skipConditions skipFcapEvaluation:(BOOL)skipFcap SWIFT_WARN_UNUSED_RESULT;
 @property (nonatomic, readonly) BOOL hasMetSessionFrequencyCap;
 @property (nonatomic, readonly) BOOL hasMetTimeInScopeCondition;
 @end
 
+typedef SWIFT_ENUM(NSInteger, PNAppMessageActionIdentifier, open) {
+  PNAppMessageActionIdentifierPageLoadCompleted = 0,
+  PNAppMessageActionIdentifierPrimary = 1,
+  PNAppMessageActionIdentifierSecondary = 2,
+  PNAppMessageActionIdentifierNone = 3,
+};
 
-SWIFT_CLASS("_TtC6Pushly21PNAppMessageCondition")
-@interface PNAppMessageCondition : NSObject
-@property (nonatomic, readonly) NSInteger id;
-@property (nonatomic, readonly, copy) NSString * _Nonnull key;
-@property (nonatomic, readonly, copy) NSString * _Nonnull value;
-@property (nonatomic) BOOL matched;
-- (BOOL)checkWithKey:(NSString * _Nonnull)key value:(NSString * _Nonnull)value;
+
+SWIFT_CLASS("_TtC6Pushly18PNAppMessageConfig")
+@interface PNAppMessageConfig : NSObject
+@property (nonatomic, readonly, copy) NSArray<NSString *> * _Nullable scripts;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-
-
-SWIFT_CLASS("_TtC6Pushly22PNAppMessageConditions")
-@interface PNAppMessageConditions : NSObject
-@end
-
-
-
-@class NSCoder;
-@protocol UIViewControllerTransitionCoordinator;
-@class UIPanGestureRecognizer;
-@class UITapGestureRecognizer;
-@class NSBundle;
-
-SWIFT_CLASS("_TtC6Pushly22PNAppMessageController") SWIFT_AVAILABILITY(ios_app_extension,unavailable)
-@interface PNAppMessageController : UIViewController
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-- (void)timeInSessionTimerAdvanced;
-- (void)maxDisplayTimeTimerFinished;
-- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator> _Nonnull)coordinator;
-- (void)panGestureRecognizerDidMove:(UIPanGestureRecognizer * _Nonnull)sender;
-- (void)tapGestureRecognizerDidTap:(UITapGestureRecognizer * _Nonnull)sender;
-- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
-@end
-
-
-@class WKUserContentController;
-@class WKScriptMessage;
-
-SWIFT_AVAILABILITY(ios_app_extension,unavailable)
-@interface PNAppMessageController (SWIFT_EXTENSION(Pushly)) <WKScriptMessageHandler>
-- (void)userContentController:(WKUserContentController * _Nonnull)userContentController didReceiveScriptMessage:(WKScriptMessage * _Nonnull)message;
-@end
 
 
 SWIFT_CLASS("_TtC6Pushly29PNAppMessageDisplayConditions")
 @interface PNAppMessageDisplayConditions : NSObject
 @end
-
-
-
-SWIFT_CLASS("_TtC6Pushly17PNAppMessageGroup")
-@interface PNAppMessageGroup : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
 
 
 
@@ -1340,15 +1385,34 @@ SWIFT_CLASS("_TtC6Pushly27PNAppMessageGroupConditions")
 @end
 
 
-enum PNPrePermissionResponse : NSInteger;
-@class PNAppMessageViewMessage;
+
+SWIFT_CLASS("_TtC6Pushly23PNAppMessageInteraction")
+@interface PNAppMessageInteraction : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+typedef SWIFT_ENUM(NSInteger, PNAppMessageInteractionType, open) {
+  PNAppMessageInteractionTypeOpenUrl = 0,
+  PNAppMessageInteractionTypeClose = 1,
+  PNAppMessageInteractionTypePromptForNotificationPermissions = 2,
+  PNAppMessageInteractionTypeNone = 3,
+};
+
+
+SWIFT_CLASS("_TtC6Pushly28PNAppMessageInternalResponse")
+@interface PNAppMessageInternalResponse : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 
 SWIFT_PROTOCOL("_TtP6Pushly29PNAppMessageLifecycleDelegate_")
 @protocol PNAppMessageLifecycleDelegate
 @optional
-- (BOOL)pushSDKWillPresentAppMessage:(PNAppMessage * _Nonnull)appMessage SWIFT_WARN_UNUSED_RESULT;
-- (void)pushSDKDidReceivePrePermissionResponse:(enum PNPrePermissionResponse)response fromAppMessage:(PNAppMessage * _Nonnull)appMessage;
-- (BOOL)pushSDKDidReceiveMessage:(PNAppMessageViewMessage * _Nonnull)message fromAppMessage:(PNAppMessage * _Nonnull)appMessage SWIFT_WARN_UNUSED_RESULT;
+- (void)pushSDKWillPresentAppMessage:(PNAppMessage * _Nonnull)appMessage;
+- (BOOL)pushSDKDidReceiveAppMessageInteraction:(PNAppMessageInteraction * _Nonnull)message fromAppMessage:(PNAppMessage * _Nonnull)appMessage SWIFT_WARN_UNUSED_RESULT;
 - (void)pushSDKDidFailToProcessMessage:(WKScriptMessage * _Nonnull)message fromAppMessage:(PNAppMessage * _Nonnull)appMessage;
 @end
 
@@ -1356,25 +1420,50 @@ typedef SWIFT_ENUM(NSInteger, PNAppMessageStyle, open) {
   PNAppMessageStyleFullscreen = 0,
   PNAppMessageStyleModal = 1,
   PNAppMessageStyleBanner = 2,
-  PNAppMessageStyleNative = 3,
 };
 
-@class WKWebView;
-@class WKNavigation;
+@class NSCoder;
 
-SWIFT_CLASS("_TtC6Pushly16PNAppMessageView")
-@interface PNAppMessageView : UIView <UIScrollViewDelegate, WKNavigationDelegate, WKUIDelegate>
+SWIFT_CLASS("_TtC6Pushly16PNAppMessageView") SWIFT_AVAILABILITY(ios_app_extension,unavailable)
+@interface PNAppMessageView : UIView <UIScrollViewDelegate, WKUIDelegate>
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-- (void)webView:(WKWebView * _Nonnull)webView didFinishNavigation:(WKNavigation * _Nonnull)navigation;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
+@class WKWebView;
+@class WKNavigation;
+@class WKNavigationAction;
+@class WKNavigationResponse;
 
-SWIFT_CLASS("_TtC6Pushly23PNAppMessageViewMessage")
-@interface PNAppMessageViewMessage : NSObject
-@property (nonatomic, readonly, strong) NSDictionary * _Nonnull raw;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+SWIFT_AVAILABILITY(ios_app_extension,unavailable)
+@interface PNAppMessageView (SWIFT_EXTENSION(Pushly)) <WKNavigationDelegate>
+- (void)webView:(WKWebView * _Nonnull)webView didFinishNavigation:(WKNavigation * _Nonnull)navigation;
+- (void)webView:(WKWebView * _Nonnull)webView didFailNavigation:(WKNavigation * _Null_unspecified)navigation withError:(NSError * _Nonnull)error;
+- (void)webView:(WKWebView * _Nonnull)webView didCommitNavigation:(WKNavigation * _Null_unspecified)navigation;
+- (void)webView:(WKWebView * _Nonnull)webView decidePolicyForNavigationAction:(WKNavigationAction * _Nonnull)navigationAction decisionHandler:(void (^ _Nonnull)(WKNavigationActionPolicy))decisionHandler;
+- (void)webView:(WKWebView * _Nonnull)webView decidePolicyForNavigationResponse:(WKNavigationResponse * _Nonnull)navigationResponse decisionHandler:(void (^ _Nonnull)(WKNavigationResponsePolicy))decisionHandler;
+@end
+
+@protocol UIViewControllerTransitionCoordinator;
+@class UIPanGestureRecognizer;
+@class UITapGestureRecognizer;
+@class NSBundle;
+
+SWIFT_CLASS("_TtC6Pushly26PNAppMessageViewController") SWIFT_AVAILABILITY(ios_app_extension,unavailable)
+@interface PNAppMessageViewController : UIViewController
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+- (void)viewDidLayoutSubviews;
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator> _Nonnull)coordinator;
+- (void)panGestureRecognizerDidMove:(UIPanGestureRecognizer * _Nonnull)sender;
+- (void)tapGestureRecognizerDidTap:(UITapGestureRecognizer * _Nonnull)sender;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
+@end
+
+
+
+SWIFT_AVAILABILITY(ios_app_extension,unavailable)
+@interface PNAppMessageViewController (SWIFT_EXTENSION(Pushly)) <WKScriptMessageHandler>
+- (void)userContentController:(WKUserContentController * _Nonnull)userContentController didReceiveScriptMessage:(WKScriptMessage * _Nonnull)message;
 @end
 
 @class UIApplication;
@@ -1391,6 +1480,7 @@ SWIFT_CLASS("_TtC6Pushly13PNApplication") SWIFT_AVAILABILITY(ios_app_extension,u
 
 @class NSDate;
 @class PNECommConfig;
+@class PNPrompt;
 
 SWIFT_CLASS("_TtC6Pushly19PNApplicationConfig")
 @interface PNApplicationConfig : NSObject
@@ -1403,6 +1493,8 @@ SWIFT_CLASS("_TtC6Pushly19PNApplicationConfig")
 @property (nonatomic, readonly) UNAuthorizationOptions authorizationOptions;
 @property (nonatomic, readonly, strong) PNAppFrequencyCaps * _Nullable frequencyCaps;
 @property (nonatomic, readonly, strong) PNECommConfig * _Nullable ecommConfig;
+@property (nonatomic, readonly, copy) NSArray<PNPrompt *> * _Nullable prompts;
+@property (nonatomic, readonly, strong) PNAppMessageConfig * _Nullable appMessages;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1415,6 +1507,11 @@ SWIFT_CLASS("_TtC6Pushly19PNApplicationConfig")
 @property (nonatomic, readonly) BOOL shouldDisplayNotificationsInForeground;
 @property (nonatomic, readonly) BOOL forceDebugLogsEnabled;
 @property (nonatomic, readonly) BOOL debugIdCopyDisabled;
+@property (nonatomic, readonly) BOOL appMessagesEnabled;
+@property (nonatomic, readonly) BOOL sdkDebugEventsEnabled;
+@property (nonatomic, readonly) BOOL sdkIamCloseEventEnabled;
+@property (nonatomic, readonly, strong) FrequencyCapWithOccurrenceLimit * _Nonnull appMessageFrequencyCap;
+@property (nonatomic, readonly, strong) PNPrompt * _Nullable notificationPermissionPrompt;
 @end
 
 enum PNECommItemType : NSInteger;
@@ -1435,6 +1532,7 @@ SWIFT_CLASS("_TtC6Pushly11PNECommItem")
 @property (nonatomic) NSInteger quantity;
 - (nonnull instancetype)initWithId:(NSString * _Nonnull)id quantity:(NSInteger)quantity OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithId:(NSString * _Nonnull)id OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, readonly, copy) NSString * _Nonnull description;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1575,6 +1673,21 @@ typedef SWIFT_ENUM(NSInteger, PNPrePermissionResponse, open) {
   PNPrePermissionResponseDismissed = 1,
 };
 
+enum PNPromptType : NSInteger;
+
+SWIFT_CLASS("_TtC6Pushly8PNPrompt")
+@interface PNPrompt : NSObject
+@property (nonatomic, readonly) NSInteger id;
+@property (nonatomic, readonly) enum PNPromptType type;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+typedef SWIFT_ENUM(NSInteger, PNPromptType, open) {
+  PNPromptTypeNotification = 0,
+  PNPromptTypeUnknown = 1,
+};
+
 enum PNSubscriberStatus : NSInteger;
 
 SWIFT_PROTOCOL("_TtP6Pushly26PNPushSDKLifecycleDelegate_")
@@ -1583,6 +1696,19 @@ SWIFT_PROTOCOL("_TtP6Pushly26PNPushSDKLifecycleDelegate_")
 - (void)pushSDKDidFinishLoading:(PNApplicationConfig * _Nonnull)configuration withNotificationSettings:(UNNotificationSettings * _Nonnull)settings;
 - (void)pushSDKDidExitWithSubscriberStatus:(enum PNSubscriberStatus)status withDeletedState:(BOOL)deleted;
 @end
+
+
+SWIFT_CLASS("_TtC6Pushly10PNSchedule")
+@interface PNSchedule : NSObject
+@property (nonatomic, readonly) NSInteger id;
+@property (nonatomic, copy) NSString * _Nonnull runTimezone;
+@property (nonatomic, readonly, copy) NSString * _Nonnull runWindow;
+@property (nonatomic, readonly, copy) NSDate * _Nonnull runStart;
+@property (nonatomic, readonly, copy) NSDate * _Nullable runEnd;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 
 typedef SWIFT_ENUM(NSInteger, PNSubscriberStatus, open) {
   PNSubscriberStatusSubscribed = 0,
@@ -1603,47 +1729,15 @@ SWIFT_CLASS("_TtC6Pushly24PNUserNotificationCenter") SWIFT_AVAILABILITY(ios_app_
 @end
 
 
+SWIFT_CLASS("_TtC6Pushly26PushNotificationsWkHandler") SWIFT_AVAILABILITY(ios_app_extension,unavailable)
+@interface PushNotificationsWkHandler : NSObject <WKScriptMessageHandler>
+- (void)userContentController:(WKUserContentController * _Nonnull)userContentController didReceiveScriptMessage:(WKScriptMessage * _Nonnull)message;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC6Pushly7PushSDK")
 @interface PushSDK : UIResponder <UIApplicationDelegate>
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_AVAILABILITY(ios_app_extension,unavailable)
-@interface PushSDK (SWIFT_EXTENSION(Pushly))
-@end
-
-
-SWIFT_CLASS_NAMED("PushNotifications")
-@interface PushSDKPushNotifications : NSObject
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isSubscribed;)
-+ (BOOL)isSubscribed SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isEligibleToPrompt;)
-+ (BOOL)isEligibleToPrompt SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isPaused;)
-+ (BOOL)isPaused SWIFT_WARN_UNUSED_RESULT;
-+ (void)pause;
-+ (void)resume;
-+ (void)showPermissionPrompt:(void (^ _Nonnull)(BOOL, UNNotificationSettings * _Nonnull, NSError * _Nullable))completion;
-+ (void)showPermissionPrompt:(void (^ _Nonnull)(BOOL, UNNotificationSettings * _Nonnull, NSError * _Nullable))completion skipConditionsEvaluation:(BOOL)skipConditions skipFrequencyCapEvaluation:(BOOL)skipFcap;
-+ (void)executeIfSubscribed:(void (^ _Nonnull)(void))action;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_AVAILABILITY(ios_app_extension,unavailable)
-@interface PushSDK (SWIFT_EXTENSION(Pushly))
-@end
-
-
-SWIFT_CLASS_NAMED("EComm")
-@interface PushSDKEComm : NSObject
-+ (void)addToCartWithItems:(NSArray<PNECommItem *> * _Nonnull)items;
-+ (void)updateCartWithItems:(NSArray<PNECommItem *> * _Nonnull)items;
-+ (void)clearCart;
-+ (void)trackPurchase;
-+ (void)trackPurchaseOf:(NSArray<PNECommItem *> * _Nonnull)items withPurchaseId:(NSString * _Nullable)purchaseId withPriceValue:(NSString * _Nullable)priceValue;
-+ (void)withECommConfig:(void (^ _Nonnull)(PNECommConfig * _Nonnull))block caller:(NSString * _Nonnull)caller;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -1712,11 +1806,29 @@ SWIFT_AVAILABILITY(ios_app_extension,unavailable)
 @end
 
 
+SWIFT_CLASS_NAMED("PushNotifications")
+@interface PushSDKPushNotifications : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isSubscribed;)
++ (BOOL)isSubscribed SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isEligibleToPrompt;)
++ (BOOL)isEligibleToPrompt SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isPaused;)
++ (BOOL)isPaused SWIFT_WARN_UNUSED_RESULT;
++ (void)pause;
++ (void)resume;
++ (void)showPermissionPrompt:(void (^ _Nonnull)(BOOL, UNNotificationSettings * _Nonnull, NSError * _Nullable))completion;
++ (void)executeIfSubscribed:(void (^ _Nonnull)(void))action;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_AVAILABILITY(ios_app_extension,unavailable)
+@interface PushSDK (SWIFT_EXTENSION(Pushly))
+@end
+
+
 SWIFT_CLASS_NAMED("AppMessages")
 @interface PushSDKAppMessages : NSObject
-/// Attempts to show a specified app message by id.
-/// By default the app message conditions and frequency cap will be evaluated.
-+ (void)show:(NSInteger)id skipConditionsEvaluation:(BOOL)skipConditions skipFrequencyCapEvaluation:(BOOL)skipFcap;
 /// Applies triggered condition to all applicable app messages.
 /// If applied trigger completes all conditions in an app message’s scope
 /// and the app message is set to auto show it will be displayed.
@@ -1725,6 +1837,24 @@ SWIFT_CLASS_NAMED("AppMessages")
 /// If applied triggers complete all conditions in an app message’s scope
 /// and the app message is set to auto show it will be displayed.
 + (void)triggerWithConditions:(NSDictionary<NSString *, NSString *> * _Nonnull)conditions;
++ (void)_platformBridgeProcessInteraction:(PNAppMessageInteraction * _Nonnull)interaction for:(PNAppMessage * _Nonnull)appMessage;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_AVAILABILITY(ios_app_extension,unavailable)
+@interface PushSDK (SWIFT_EXTENSION(Pushly))
+@end
+
+
+SWIFT_CLASS_NAMED("EComm")
+@interface PushSDKEComm : NSObject
++ (void)addToCartWithItems:(NSArray<PNECommItem *> * _Nonnull)items;
++ (void)updateCartWithItems:(NSArray<PNECommItem *> * _Nonnull)items;
++ (void)clearCart;
++ (void)trackPurchase;
++ (void)trackPurchaseOf:(NSArray<PNECommItem *> * _Nonnull)items withPurchaseId:(NSString * _Nullable)purchaseId withPriceValue:(NSString * _Nullable)priceValue;
++ (void)withECommConfig:(void (^ _Nonnull)(PNECommConfig * _Nonnull))block caller:(NSString * _Nonnull)caller;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -1756,7 +1886,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 + (void)getConfiguration:(void (^ _Nonnull)(PNApplicationConfig * _Nullable, NSError * _Nullable))completion;
 + (void)getNotificationPermissionStatus:(void (^ _Nonnull)(BOOL, UNNotificationSettings * _Nonnull))completion;
 + (void)showNativeNotificationPermissionPrompt:(void (^ _Nonnull)(BOOL, UNNotificationSettings * _Nonnull, NSError * _Nullable))completion;
-+ (void)showNativeNotificationPermissionPrompt:(void (^ _Nonnull)(BOOL, UNNotificationSettings * _Nonnull, NSError * _Nullable))completion skipConditionsEvaluation:(BOOL)skipConditions skipFrequencyCapEvaluation:(BOOL)skipFcap;
 + (void)setEventSourceApplication:(PNEventSourceApplication * _Nonnull)application;
 + (void)resetBadgeCount;
 + (void)clearNotifications;
@@ -1783,6 +1912,15 @@ SWIFT_CLASS("_TtC6Pushly12RelativeDate")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+
+
+
+
+SWIFT_CLASS("_TtC6Pushly20UserProfileWkHandler") SWIFT_AVAILABILITY(ios_app_extension,unavailable)
+@interface UserProfileWkHandler : NSObject <WKScriptMessageHandler>
+- (void)userContentController:(WKUserContentController * _Nonnull)userContentController didReceiveScriptMessage:(WKScriptMessage * _Nonnull)message;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
 
 #endif
 #if __has_attribute(external_source_symbol)
