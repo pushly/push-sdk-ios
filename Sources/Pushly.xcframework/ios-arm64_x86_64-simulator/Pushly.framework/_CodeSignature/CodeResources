@@ -18,7 +18,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		0BiXLbeZluXYFjBqgFlUqYy39Fw=
+		EaSPnqRkjO0t8mjEl/Yn2tFjry8=
 		</data>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -63,6 +63,10 @@
 		<key>Modules/module.modulemap</key>
 		<data>
 		rrB5JivRLVM+r22puI02swQbGek=
+		</data>
+		<key>PrivacyInfo.xcprivacy</key>
+		<data>
+		3Qc/OASGRwu5SWUWtuiOqZ0zG+c=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -163,6 +167,13 @@
 			<key>hash2</key>
 			<data>
 			+AfDUL4Bp9nYKDG3nJoRcSArBo5tPegPoAE5Wk0ptQY=
+			</data>
+		</dict>
+		<key>PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			5bl/MHuPnePgCS3ngEezNtHIJw1/D+4JPqebEzmnn7I=
 			</data>
 		</dict>
 	</dict>
