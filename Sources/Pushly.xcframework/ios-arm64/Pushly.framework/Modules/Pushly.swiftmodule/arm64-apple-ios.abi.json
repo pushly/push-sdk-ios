@@ -31868,21 +31868,21 @@
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 228,
+      "offset": 222,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 285,
+      "offset": 279,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 1459,
+      "offset": 1455,
       "length": 4,
       "value": "true"
     },
@@ -32260,42 +32260,42 @@
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNTrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 630,
+      "offset": 1013,
       "length": 10,
       "value": "\"event_id\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNTrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 665,
+      "offset": 1048,
       "length": 11,
       "value": "\"domain_id\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNTrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 705,
+      "offset": 1088,
       "length": 23,
       "value": "\"pushly_unique_user_id\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNTrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 630,
+      "offset": 1013,
       "length": 10,
       "value": "\"event_id\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNTrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 665,
+      "offset": 1048,
       "length": 11,
       "value": "\"domain_id\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNTrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 705,
+      "offset": 1088,
       "length": 23,
       "value": "\"pushly_unique_user_id\""
     },
