@@ -31868,21 +31868,21 @@
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 222,
+      "offset": 312,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 279,
+      "offset": 369,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNEventManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 1455,
+      "offset": 1660,
       "length": 4,
       "value": "true"
     },
