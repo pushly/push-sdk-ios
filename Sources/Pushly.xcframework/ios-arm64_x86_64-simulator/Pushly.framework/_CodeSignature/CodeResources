@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/Pushly-Swift.h</key>
 		<data>
-		GTCUg5GfVGCzf8y6EsU6E/rajDE=
+		sUnFsbwQam5VVOKKBIDlFS0HBuU=
 		</data>
 		<key>Headers/Pushly.h</key>
 		<data>
@@ -18,15 +18,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ZJHb0MXiuEjdNvsPCH6ejBinR5A=
+		7Z4WZcEdYZIKA6fBfUbXq8bbDU8=
 		</data>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		IeX4tLE1h5bz1LD4OhGj08w8kfM=
+		4e2iJ380oiuDzo6A7d4ruK6CSo8=
 		</data>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		mhjO/h9loRIZCNnrygMoCq4g1fQ=
+		s7U2RKXmnMDFXS11imI1iVz0Vew=
 		</data>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -34,19 +34,19 @@
 		</data>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		mhjO/h9loRIZCNnrygMoCq4g1fQ=
+		s7U2RKXmnMDFXS11imI1iVz0Vew=
 		</data>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		6kZ5Vp7EPS7djQL+4TdZtRD4s70=
+		R55ta+miVit6U1koBFmBVhGYfO8=
 		</data>
 		<key>Modules/Pushly.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		IeX4tLE1h5bz1LD4OhGj08w8kfM=
+		4e2iJ380oiuDzo6A7d4ruK6CSo8=
 		</data>
 		<key>Modules/Pushly.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		/m+jjWVts4JvDNmimY7KFPNoOwU=
+		B6iwucUqQJD3fk/as6yjYUjnFnY=
 		</data>
 		<key>Modules/Pushly.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -54,11 +54,11 @@
 		</data>
 		<key>Modules/Pushly.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		/m+jjWVts4JvDNmimY7KFPNoOwU=
+		B6iwucUqQJD3fk/as6yjYUjnFnY=
 		</data>
 		<key>Modules/Pushly.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		z8WmaOjTlhZCnn1j2HUElc6mVls=
+		4HwvjTGTeTGO6U1o7pPW5c2+Ccg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -82,7 +82,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			epdxoVH3xTPtghOifZO61/LmkC0aCxsdn+f4HMjW1h8=
+			8UoIMnlkLsjrX4CJrAtXhlHsssApeBLQQszi1HLo/xs=
 			</data>
 		</dict>
 		<key>Headers/Pushly.h</key>
@@ -96,14 +96,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4Z9nNZX+YSv6hXlWYiI/+rZBclMG8yIKd75+2vnUwYU=
+			jO+R/zLA8GQ9cpuPZdZ0KsjMpV5q3sieygofkbOLIRo=
 			</data>
 		</dict>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ESWOmXx2k6v1/1pbTs3nWktSXYXNDyYsO/ajMthbYtQ=
+			9nS20QwWrwoklzF+jr8+EEd2MiE11K9G6a8uPbtoMkM=
 			</data>
 		</dict>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -117,28 +117,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ESWOmXx2k6v1/1pbTs3nWktSXYXNDyYsO/ajMthbYtQ=
+			9nS20QwWrwoklzF+jr8+EEd2MiE11K9G6a8uPbtoMkM=
 			</data>
 		</dict>
 		<key>Modules/Pushly.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9x5zVymOgz3UEcHj35AGbSOY9yTHgX1bWtTtH7GkL7A=
+			uInJ6De51oUbqDK16pElsKVLtp0WxIQTpyQTGmQY1nI=
 			</data>
 		</dict>
 		<key>Modules/Pushly.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4Z9nNZX+YSv6hXlWYiI/+rZBclMG8yIKd75+2vnUwYU=
+			jO+R/zLA8GQ9cpuPZdZ0KsjMpV5q3sieygofkbOLIRo=
 			</data>
 		</dict>
 		<key>Modules/Pushly.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hyXM5OT/BiWGWMz6rvJiXbMsmdHtdDyRASNMGDk/1AQ=
+			1AaE0ux2bF4MpotXEEpucqS7X+j1B4Uh7nn4JX8JtJ0=
 			</data>
 		</dict>
 		<key>Modules/Pushly.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -152,14 +152,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hyXM5OT/BiWGWMz6rvJiXbMsmdHtdDyRASNMGDk/1AQ=
+			1AaE0ux2bF4MpotXEEpucqS7X+j1B4Uh7nn4JX8JtJ0=
 			</data>
 		</dict>
 		<key>Modules/Pushly.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mHFADzC5m2kXb2EIwhnwGxUF/bgd75jNO/JUNx/QTI0=
+			iIob8yiUMu714cgoPIAdZdcyu7X+v+9kYp6ERHK3/Lg=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

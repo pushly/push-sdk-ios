@@ -339,6 +339,16 @@ extension Pushly.PNSessionScope : Swift.Codable {
 extension Pushly.PNECommItem {
   public func toSimpleObject() -> [Swift.String : Any?]
 }
+@objc @objcMembers public class PNSessionConfig : ObjectiveC.NSObject, Swift.Codable {
+  @objc final public let sessionTimezone: Swift.String?
+  @objc public var sessionThreshold: Pushly.RelativeDate?
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+extension Pushly.PNSessionConfig {
+  public func toSimpleObject() -> [Swift.String : Any?]
+}
 @objc @objcMembers public class PNSchedule : ObjectiveC.NSObject, Swift.Codable {
   @objc final public let id: Swift.Int
   @objc public var runTimezone: Swift.String
@@ -983,6 +993,7 @@ extension Pushly.PNPrePermissionResponse {
   @objc final public let ecommConfig: Pushly.PNECommConfig?
   @objc final public let prompts: [Pushly.PNPrompt]?
   @objc final public let appMessages: Pushly.PNAppMessageConfig?
+  @objc final public let sessionConfig: Pushly.PNSessionConfig?
   public init(from decoder: any Swift.Decoder) throws
   @objc deinit
   final public func encode(to encoder: any Swift.Encoder) throws

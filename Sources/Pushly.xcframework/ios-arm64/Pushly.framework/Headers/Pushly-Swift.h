@@ -515,6 +515,7 @@ SWIFT_CLASS("_TtC6Pushly13PNApplication") SWIFT_AVAILABILITY(ios_app_extension,u
 @class NSDate;
 @class PNECommConfig;
 @class PNPrompt;
+@class PNSessionConfig;
 
 SWIFT_CLASS("_TtC6Pushly19PNApplicationConfig")
 @interface PNApplicationConfig : NSObject
@@ -529,11 +530,13 @@ SWIFT_CLASS("_TtC6Pushly19PNApplicationConfig")
 @property (nonatomic, readonly, strong) PNECommConfig * _Nullable ecommConfig;
 @property (nonatomic, readonly, copy) NSArray<PNPrompt *> * _Nullable prompts;
 @property (nonatomic, readonly, strong) PNAppMessageConfig * _Nullable appMessages;
+@property (nonatomic, readonly, strong) PNSessionConfig * _Nullable sessionConfig;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
+@class NSTimeZone;
 
 @interface PNApplicationConfig (SWIFT_EXTENSION(Pushly))
 @property (nonatomic, readonly) BOOL disableBadgeClearing;
@@ -544,6 +547,9 @@ SWIFT_CLASS("_TtC6Pushly19PNApplicationConfig")
 @property (nonatomic, readonly) BOOL appMessagesEnabled;
 @property (nonatomic, readonly) BOOL sdkDebugEventsEnabled;
 @property (nonatomic, readonly) BOOL sdkIamCloseEventEnabled;
+@property (nonatomic, readonly) BOOL subscriberSessionTrackingOnly;
+@property (nonatomic, readonly, copy) NSTimeZone * _Nonnull userSessionTimezone;
+@property (nonatomic, readonly) double userSessionThreshold;
 @property (nonatomic, readonly, strong) FrequencyCapWithOccurrenceLimit * _Nonnull appMessageFrequencyCap;
 @property (nonatomic, readonly, strong) PNPrompt * _Nullable notificationPermissionPrompt;
 @end
@@ -741,6 +747,14 @@ SWIFT_CLASS("_TtC6Pushly10PNSchedule")
 @property (nonatomic, readonly, copy) NSDate * _Nullable runEnd;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+
+SWIFT_CLASS("_TtC6Pushly15PNSessionConfig")
+@interface PNSessionConfig : NSObject
+@property (nonatomic, readonly, copy) NSString * _Nullable sessionTimezone;
+@property (nonatomic, strong) RelativeDate * _Nullable sessionThreshold;
 @end
 
 
