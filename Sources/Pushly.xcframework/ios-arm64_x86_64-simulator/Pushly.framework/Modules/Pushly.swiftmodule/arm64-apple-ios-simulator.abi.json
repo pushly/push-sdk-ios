@@ -2970,6 +2970,20 @@
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
+        "moduleName": "Pushly"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "Pushly"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
         "moduleName": "Pushly",
         "declAttributes": [
           "RawDocComment"
@@ -6067,6 +6081,116 @@
                 "declKind": "Accessor",
                 "usr": "s:6Pushly20PNAppMessageBehaviorC19dismissOnTapOutsideSbSgvM",
                 "mangledName": "$s6Pushly20PNAppMessageBehaviorC19dismissOnTapOutsideSbSgvM",
+                "moduleName": "Pushly",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "displayAnimations",
+            "printedName": "displayAnimations",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Pushly.PNDisplayAnimationBehavior?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PNDisplayAnimationBehavior",
+                    "printedName": "Pushly.PNDisplayAnimationBehavior",
+                    "usr": "s:6Pushly26PNDisplayAnimationBehaviorV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6Pushly20PNAppMessageBehaviorC17displayAnimationsAA018PNDisplayAnimationD0VSgvp",
+            "mangledName": "$s6Pushly20PNAppMessageBehaviorC17displayAnimationsAA018PNDisplayAnimationD0VSgvp",
+            "moduleName": "Pushly",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Pushly.PNDisplayAnimationBehavior?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PNDisplayAnimationBehavior",
+                        "printedName": "Pushly.PNDisplayAnimationBehavior",
+                        "usr": "s:6Pushly26PNDisplayAnimationBehaviorV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Pushly20PNAppMessageBehaviorC17displayAnimationsAA018PNDisplayAnimationD0VSgvg",
+                "mangledName": "$s6Pushly20PNAppMessageBehaviorC17displayAnimationsAA018PNDisplayAnimationD0VSgvg",
+                "moduleName": "Pushly",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Pushly.PNDisplayAnimationBehavior?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PNDisplayAnimationBehavior",
+                        "printedName": "Pushly.PNDisplayAnimationBehavior",
+                        "usr": "s:6Pushly26PNDisplayAnimationBehaviorV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Pushly20PNAppMessageBehaviorC17displayAnimationsAA018PNDisplayAnimationD0VSgvs",
+                "mangledName": "$s6Pushly20PNAppMessageBehaviorC17displayAnimationsAA018PNDisplayAnimationD0VSgvs",
+                "moduleName": "Pushly",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Pushly20PNAppMessageBehaviorC17displayAnimationsAA018PNDisplayAnimationD0VSgvM",
+                "mangledName": "$s6Pushly20PNAppMessageBehaviorC17displayAnimationsAA018PNDisplayAnimationD0VSgvM",
                 "moduleName": "Pushly",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -12848,6 +12972,16 @@
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
+        "moduleName": "Pushly",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
         "moduleName": "Pushly"
       },
       {
@@ -16557,6 +16691,612 @@
         "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "Pushly"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Pushly",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "AnimationType",
+        "printedName": "AnimationType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "cut",
+            "printedName": "cut",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Pushly.AnimationType.Type) -> Pushly.AnimationType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AnimationType",
+                    "printedName": "Pushly.AnimationType",
+                    "usr": "c:@M@Pushly@E@AnimationType"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "Pushly.AnimationType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnimationType",
+                        "printedName": "Pushly.AnimationType",
+                        "usr": "c:@M@Pushly@E@AnimationType"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@Pushly@E@AnimationType@AnimationTypeCut",
+            "mangledName": "$s6Pushly13AnimationTypeO3cutyA2CmF",
+            "moduleName": "Pushly",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "fade",
+            "printedName": "fade",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Pushly.AnimationType.Type) -> Pushly.AnimationType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AnimationType",
+                    "printedName": "Pushly.AnimationType",
+                    "usr": "c:@M@Pushly@E@AnimationType"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "Pushly.AnimationType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnimationType",
+                        "printedName": "Pushly.AnimationType",
+                        "usr": "c:@M@Pushly@E@AnimationType"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@Pushly@E@AnimationType@AnimationTypeFade",
+            "mangledName": "$s6Pushly13AnimationTypeO4fadeyA2CmF",
+            "moduleName": "Pushly",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Var",
+            "name": "zoomIn",
+            "printedName": "zoomIn",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Pushly.AnimationType.Type) -> Pushly.AnimationType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AnimationType",
+                    "printedName": "Pushly.AnimationType",
+                    "usr": "c:@M@Pushly@E@AnimationType"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "Pushly.AnimationType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnimationType",
+                        "printedName": "Pushly.AnimationType",
+                        "usr": "c:@M@Pushly@E@AnimationType"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@Pushly@E@AnimationType@AnimationTypeZoomIn",
+            "mangledName": "$s6Pushly13AnimationTypeO6zoomInyA2CmF",
+            "moduleName": "Pushly",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 2
+          },
+          {
+            "kind": "Var",
+            "name": "zoomOut",
+            "printedName": "zoomOut",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Pushly.AnimationType.Type) -> Pushly.AnimationType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AnimationType",
+                    "printedName": "Pushly.AnimationType",
+                    "usr": "c:@M@Pushly@E@AnimationType"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "Pushly.AnimationType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnimationType",
+                        "printedName": "Pushly.AnimationType",
+                        "usr": "c:@M@Pushly@E@AnimationType"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@Pushly@E@AnimationType@AnimationTypeZoomOut",
+            "mangledName": "$s6Pushly13AnimationTypeO7zoomOutyA2CmF",
+            "moduleName": "Pushly",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 3
+          },
+          {
+            "kind": "Var",
+            "name": "slideUp",
+            "printedName": "slideUp",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Pushly.AnimationType.Type) -> Pushly.AnimationType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AnimationType",
+                    "printedName": "Pushly.AnimationType",
+                    "usr": "c:@M@Pushly@E@AnimationType"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "Pushly.AnimationType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnimationType",
+                        "printedName": "Pushly.AnimationType",
+                        "usr": "c:@M@Pushly@E@AnimationType"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@Pushly@E@AnimationType@AnimationTypeSlideUp",
+            "mangledName": "$s6Pushly13AnimationTypeO7slideUpyA2CmF",
+            "moduleName": "Pushly",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 4
+          },
+          {
+            "kind": "Var",
+            "name": "slideDown",
+            "printedName": "slideDown",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Pushly.AnimationType.Type) -> Pushly.AnimationType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AnimationType",
+                    "printedName": "Pushly.AnimationType",
+                    "usr": "c:@M@Pushly@E@AnimationType"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "Pushly.AnimationType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnimationType",
+                        "printedName": "Pushly.AnimationType",
+                        "usr": "c:@M@Pushly@E@AnimationType"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@Pushly@E@AnimationType@AnimationTypeSlideDown",
+            "mangledName": "$s6Pushly13AnimationTypeO9slideDownyA2CmF",
+            "moduleName": "Pushly",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 5
+          },
+          {
+            "kind": "Var",
+            "name": "slideRight",
+            "printedName": "slideRight",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Pushly.AnimationType.Type) -> Pushly.AnimationType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AnimationType",
+                    "printedName": "Pushly.AnimationType",
+                    "usr": "c:@M@Pushly@E@AnimationType"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "Pushly.AnimationType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnimationType",
+                        "printedName": "Pushly.AnimationType",
+                        "usr": "c:@M@Pushly@E@AnimationType"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@Pushly@E@AnimationType@AnimationTypeSlideRight",
+            "mangledName": "$s6Pushly13AnimationTypeO10slideRightyA2CmF",
+            "moduleName": "Pushly",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 6
+          },
+          {
+            "kind": "Var",
+            "name": "slideLeft",
+            "printedName": "slideLeft",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Pushly.AnimationType.Type) -> Pushly.AnimationType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AnimationType",
+                    "printedName": "Pushly.AnimationType",
+                    "usr": "c:@M@Pushly@E@AnimationType"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "Pushly.AnimationType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnimationType",
+                        "printedName": "Pushly.AnimationType",
+                        "usr": "c:@M@Pushly@E@AnimationType"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@Pushly@E@AnimationType@AnimationTypeSlideLeft",
+            "mangledName": "$s6Pushly13AnimationTypeO9slideLeftyA2CmF",
+            "moduleName": "Pushly",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 7
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Pushly.AnimationType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AnimationType",
+                    "printedName": "Pushly.AnimationType",
+                    "usr": "c:@M@Pushly@E@AnimationType"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:6Pushly13AnimationTypeO8rawValueACSgSi_tcfc",
+            "mangledName": "$s6Pushly13AnimationTypeO8rawValueACSgSi_tcfc",
+            "moduleName": "Pushly",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6Pushly13AnimationTypeO8rawValueSivp",
+            "mangledName": "$s6Pushly13AnimationTypeO8rawValueSivp",
+            "moduleName": "Pushly",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Pushly13AnimationTypeO8rawValueSivg",
+                "mangledName": "$s6Pushly13AnimationTypeO8rawValueSivg",
+                "moduleName": "Pushly",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "stringValue",
+            "printedName": "stringValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6Pushly13AnimationTypeO11stringValueSSvp",
+            "mangledName": "$s6Pushly13AnimationTypeO11stringValueSSvp",
+            "moduleName": "Pushly",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Pushly13AnimationTypeO11stringValueSSvg",
+                "mangledName": "$s6Pushly13AnimationTypeO11stringValueSSvg",
+                "moduleName": "Pushly",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(stringValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AnimationType",
+                "printedName": "Pushly.AnimationType",
+                "usr": "c:@M@Pushly@E@AnimationType"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:6Pushly13AnimationTypeO11stringValueACSS_tKcfc",
+            "mangledName": "$s6Pushly13AnimationTypeO11stringValueACSS_tKcfc",
+            "moduleName": "Pushly",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AnimationType",
+                "printedName": "Pushly.AnimationType",
+                "usr": "c:@M@Pushly@E@AnimationType"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:6Pushly13AnimationTypeO4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s6Pushly13AnimationTypeO4fromACs7Decoder_p_tKcfc",
+            "moduleName": "Pushly",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Pushly13AnimationTypeO6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s6Pushly13AnimationTypeO6encode2toys7Encoder_p_tKF",
+            "moduleName": "Pushly",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "c:@M@Pushly@E@AnimationType",
+        "mangledName": "$s6Pushly13AnimationTypeO",
+        "moduleName": "Pushly",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
       },
       {
         "kind": "Import",
@@ -26031,6 +26771,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Pushly",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UserNotifications",
         "printedName": "UserNotifications",
         "declKind": "Import",
@@ -26527,6 +27277,97 @@
         "printedName": "UIKit",
         "declKind": "Import",
         "moduleName": "Pushly"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "Pushly",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PNDisplayAnimationBehavior",
+        "printedName": "PNDisplayAnimationBehavior",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PNDisplayAnimationBehavior",
+                "printedName": "Pushly.PNDisplayAnimationBehavior",
+                "usr": "s:6Pushly26PNDisplayAnimationBehaviorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:6Pushly26PNDisplayAnimationBehaviorV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s6Pushly26PNDisplayAnimationBehaviorV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "Pushly",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Pushly26PNDisplayAnimationBehaviorV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s6Pushly26PNDisplayAnimationBehaviorV6encode2toys7Encoder_p_tKF",
+            "moduleName": "Pushly",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:6Pushly26PNDisplayAnimationBehaviorV",
+        "mangledName": "$s6Pushly26PNDisplayAnimationBehaviorV",
+        "moduleName": "Pushly",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
       },
       {
         "kind": "Import",
@@ -30556,14 +31397,14 @@
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/AppMessages\/PNAppMessageController.swift",
       "kind": "BooleanLiteral",
-      "offset": 11000,
+      "offset": 11123,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/AppMessages\/PNAppMessageController.swift",
       "kind": "BooleanLiteral",
-      "offset": 11032,
+      "offset": 11155,
       "length": 4,
       "value": "true"
     },
@@ -30619,7 +31460,7 @@
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/AppMessages\/PNAppMessageViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 10295,
+      "offset": 10299,
       "length": 4,
       "value": "true"
     },
@@ -30668,72 +31509,86 @@
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNAppMessageBehavior.swift",
       "kind": "StringLiteral",
-      "offset": 545,
+      "offset": 607,
       "length": 18,
       "value": "\"max_display_time\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNAppMessageBehavior.swift",
       "kind": "StringLiteral",
-      "offset": 595,
+      "offset": 657,
       "length": 18,
       "value": "\"dismiss_gestures\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNAppMessageBehavior.swift",
       "kind": "StringLiteral",
-      "offset": 645,
+      "offset": 707,
       "length": 18,
       "value": "\"disable_gestures\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNAppMessageBehavior.swift",
       "kind": "StringLiteral",
-      "offset": 694,
+      "offset": 756,
       "length": 18,
       "value": "\"dismiss_on_swipe\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNAppMessageBehavior.swift",
       "kind": "StringLiteral",
-      "offset": 748,
+      "offset": 810,
       "length": 24,
       "value": "\"dismiss_on_tap_outside\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNAppMessageBehavior.swift",
       "kind": "StringLiteral",
-      "offset": 545,
+      "offset": 868,
+      "length": 20,
+      "value": "\"display_animations\""
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNAppMessageBehavior.swift",
+      "kind": "StringLiteral",
+      "offset": 607,
       "length": 18,
       "value": "\"max_display_time\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNAppMessageBehavior.swift",
       "kind": "StringLiteral",
-      "offset": 595,
+      "offset": 657,
       "length": 18,
       "value": "\"dismiss_gestures\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNAppMessageBehavior.swift",
       "kind": "StringLiteral",
-      "offset": 645,
+      "offset": 707,
       "length": 18,
       "value": "\"disable_gestures\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNAppMessageBehavior.swift",
       "kind": "StringLiteral",
-      "offset": 694,
+      "offset": 756,
       "length": 18,
       "value": "\"dismiss_on_swipe\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNAppMessageBehavior.swift",
       "kind": "StringLiteral",
-      "offset": 748,
+      "offset": 810,
       "length": 24,
       "value": "\"dismiss_on_tap_outside\""
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNAppMessageBehavior.swift",
+      "kind": "StringLiteral",
+      "offset": 868,
+      "length": 20,
+      "value": "\"display_animations\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNLogLevel.swift",
@@ -32395,6 +33250,34 @@
       "value": "\"library_version\""
     },
     {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNAnimationConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 86,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNAnimationConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 226,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNAnimationConfig.swift",
+      "kind": "StringLiteral",
+      "offset": 400,
+      "length": 23,
+      "value": "\"duration_milliseconds\""
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNAnimationConfig.swift",
+      "kind": "StringLiteral",
+      "offset": 400,
+      "length": 23,
+      "value": "\"duration_milliseconds\""
+    },
+    {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNAppMessageViewMessageType.swift",
       "kind": "IntegerLiteral",
       "offset": 196,
@@ -32547,6 +33430,104 @@
       "offset": 396,
       "length": 14,
       "value": "\"app_messages\""
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/AnimationType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 84,
+      "length": 4,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/AnimationType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 98,
+      "length": 6,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/AnimationType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 114,
+      "length": 7,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/AnimationType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 131,
+      "length": 7,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/AnimationType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 148,
+      "length": 9,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/AnimationType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 167,
+      "length": 10,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/AnimationType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 187,
+      "length": 9,
+      "value": "7"
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/AnimationType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 84,
+      "length": 4,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/AnimationType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 98,
+      "length": 6,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/AnimationType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 114,
+      "length": 7,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/AnimationType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 131,
+      "length": 7,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/AnimationType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 148,
+      "length": 9,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/AnimationType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 167,
+      "length": 10,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/AnimationType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 187,
+      "length": 9,
+      "value": "7"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNNotificationInteraction.swift",
@@ -33251,7 +34232,35 @@
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/AppMessages\/PNAppMessageView.swift",
       "kind": "BooleanLiteral",
-      "offset": 12988,
+      "offset": 904,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/AppMessages\/PNAppMessageView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1089,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/AppMessages\/PNAppMessageView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6857,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/AppMessages\/PNAppMessageView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 7549,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/AppMessages\/PNAppMessageView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 13546,
       "length": 4,
       "value": "true"
     },

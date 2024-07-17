@@ -311,6 +311,17 @@ SWIFT_CLASS("_TtC6Pushly15ActionVariation")
 @end
 
 
+typedef SWIFT_ENUM(NSInteger, AnimationType, open) {
+  AnimationTypeCut = 0,
+  AnimationTypeFade = 1,
+  AnimationTypeZoomIn = 2,
+  AnimationTypeZoomOut = 3,
+  AnimationTypeSlideUp = 4,
+  AnimationTypeSlideDown = 5,
+  AnimationTypeSlideRight = 6,
+  AnimationTypeSlideLeft = 7,
+};
+
 @class WKUserContentController;
 @class WKScriptMessage;
 
@@ -360,12 +371,12 @@ SWIFT_CLASS("_TtC6Pushly12PNAppMessage")
 
 
 
-
 @interface PNAppMessage (SWIFT_EXTENSION(Pushly))
 @property (nonatomic, readonly, copy) NSArray<NSString *> * _Nonnull conditionKeys;
 - (BOOL)hasConditionKey:(NSString * _Nonnull)key SWIFT_WARN_UNUSED_RESULT;
 - (BOOL)meetsConditions:(NSDictionary<NSString *, NSString *> * _Nonnull)checkConditions SWIFT_WARN_UNUSED_RESULT;
 @end
+
 
 @class RelativeDate;
 
@@ -488,6 +499,7 @@ SWIFT_CLASS("_TtC6Pushly26PNAppMessageViewController") SWIFT_AVAILABILITY(ios_ap
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 - (void)viewDidLayoutSubviews;
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator> _Nonnull)coordinator;
+- (void)viewWillAppear:(BOOL)animated;
 - (void)panGestureRecognizerDidMove:(UIPanGestureRecognizer * _Nonnull)sender;
 - (void)tapGestureRecognizerDidTap:(UITapGestureRecognizer * _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
@@ -790,19 +802,6 @@ SWIFT_CLASS("_TtC6Pushly7PushSDK")
 @end
 
 
-SWIFT_AVAILABILITY(ios_app_extension,introduced=16.1)
-@interface PushSDK (SWIFT_EXTENSION(Pushly))
-@end
-
-
-SWIFT_CLASS_NAMED("LiveActivities")
-@interface PushSDKLiveActivities : NSObject
-+ (void)registerWithToken:(NSString * _Nonnull)token forActivity:(NSString * _Nonnull)activity;
-+ (void)track:(enum PNLiveActivityEvent)activityEvent forActivity:(NSString * _Nonnull)activity;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
 SWIFT_AVAILABILITY(ios_app_extension,unavailable)
 @interface PushSDK (SWIFT_EXTENSION(Pushly))
 @end
@@ -875,6 +874,23 @@ SWIFT_AVAILABILITY(ios_app_extension,unavailable)
 @end
 
 
+SWIFT_CLASS_NAMED("EComm")
+@interface PushSDKEComm : NSObject
++ (void)addToCartWithItems:(NSArray<PNECommItem *> * _Nonnull)items;
++ (void)updateCartWithItems:(NSArray<PNECommItem *> * _Nonnull)items;
++ (void)clearCart;
++ (void)trackPurchase;
++ (void)trackPurchaseOf:(NSArray<PNECommItem *> * _Nonnull)items withPurchaseId:(NSString * _Nullable)purchaseId withPriceValue:(NSString * _Nullable)priceValue;
++ (void)withECommConfig:(void (^ _Nonnull)(PNECommConfig * _Nonnull))block caller:(NSString * _Nonnull)caller;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_AVAILABILITY(ios_app_extension,unavailable)
+@interface PushSDK (SWIFT_EXTENSION(Pushly))
+@end
+
+
 SWIFT_CLASS_NAMED("AppMessages")
 @interface PushSDKAppMessages : NSObject
 /// Applies triggered condition to all applicable app messages.
@@ -890,21 +906,18 @@ SWIFT_CLASS_NAMED("AppMessages")
 @end
 
 
-SWIFT_AVAILABILITY(ios_app_extension,unavailable)
+SWIFT_AVAILABILITY(ios_app_extension,introduced=16.1)
 @interface PushSDK (SWIFT_EXTENSION(Pushly))
 @end
 
 
-SWIFT_CLASS_NAMED("EComm")
-@interface PushSDKEComm : NSObject
-+ (void)addToCartWithItems:(NSArray<PNECommItem *> * _Nonnull)items;
-+ (void)updateCartWithItems:(NSArray<PNECommItem *> * _Nonnull)items;
-+ (void)clearCart;
-+ (void)trackPurchase;
-+ (void)trackPurchaseOf:(NSArray<PNECommItem *> * _Nonnull)items withPurchaseId:(NSString * _Nullable)purchaseId withPriceValue:(NSString * _Nullable)priceValue;
-+ (void)withECommConfig:(void (^ _Nonnull)(PNECommConfig * _Nonnull))block caller:(NSString * _Nonnull)caller;
+SWIFT_CLASS_NAMED("LiveActivities")
+@interface PushSDKLiveActivities : NSObject
++ (void)registerWithToken:(NSString * _Nonnull)token forActivity:(NSString * _Nonnull)activity;
++ (void)track:(enum PNLiveActivityEvent)activityEvent forActivity:(NSString * _Nonnull)activity;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 
 @interface PushSDK (SWIFT_EXTENSION(Pushly))
@@ -912,7 +925,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) enum PNLogLevel logLevel;)
 + (enum PNLogLevel)logLevel SWIFT_WARN_UNUSED_RESULT;
 + (void)setLogLevel:(enum PNLogLevel)newValue;
 @end
-
 
 
 
@@ -1291,6 +1303,17 @@ SWIFT_CLASS("_TtC6Pushly15ActionVariation")
 @end
 
 
+typedef SWIFT_ENUM(NSInteger, AnimationType, open) {
+  AnimationTypeCut = 0,
+  AnimationTypeFade = 1,
+  AnimationTypeZoomIn = 2,
+  AnimationTypeZoomOut = 3,
+  AnimationTypeSlideUp = 4,
+  AnimationTypeSlideDown = 5,
+  AnimationTypeSlideRight = 6,
+  AnimationTypeSlideLeft = 7,
+};
+
 @class WKUserContentController;
 @class WKScriptMessage;
 
@@ -1340,12 +1363,12 @@ SWIFT_CLASS("_TtC6Pushly12PNAppMessage")
 
 
 
-
 @interface PNAppMessage (SWIFT_EXTENSION(Pushly))
 @property (nonatomic, readonly, copy) NSArray<NSString *> * _Nonnull conditionKeys;
 - (BOOL)hasConditionKey:(NSString * _Nonnull)key SWIFT_WARN_UNUSED_RESULT;
 - (BOOL)meetsConditions:(NSDictionary<NSString *, NSString *> * _Nonnull)checkConditions SWIFT_WARN_UNUSED_RESULT;
 @end
+
 
 @class RelativeDate;
 
@@ -1468,6 +1491,7 @@ SWIFT_CLASS("_TtC6Pushly26PNAppMessageViewController") SWIFT_AVAILABILITY(ios_ap
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 - (void)viewDidLayoutSubviews;
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator> _Nonnull)coordinator;
+- (void)viewWillAppear:(BOOL)animated;
 - (void)panGestureRecognizerDidMove:(UIPanGestureRecognizer * _Nonnull)sender;
 - (void)tapGestureRecognizerDidTap:(UITapGestureRecognizer * _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
@@ -1770,19 +1794,6 @@ SWIFT_CLASS("_TtC6Pushly7PushSDK")
 @end
 
 
-SWIFT_AVAILABILITY(ios_app_extension,introduced=16.1)
-@interface PushSDK (SWIFT_EXTENSION(Pushly))
-@end
-
-
-SWIFT_CLASS_NAMED("LiveActivities")
-@interface PushSDKLiveActivities : NSObject
-+ (void)registerWithToken:(NSString * _Nonnull)token forActivity:(NSString * _Nonnull)activity;
-+ (void)track:(enum PNLiveActivityEvent)activityEvent forActivity:(NSString * _Nonnull)activity;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
 SWIFT_AVAILABILITY(ios_app_extension,unavailable)
 @interface PushSDK (SWIFT_EXTENSION(Pushly))
 @end
@@ -1855,6 +1866,23 @@ SWIFT_AVAILABILITY(ios_app_extension,unavailable)
 @end
 
 
+SWIFT_CLASS_NAMED("EComm")
+@interface PushSDKEComm : NSObject
++ (void)addToCartWithItems:(NSArray<PNECommItem *> * _Nonnull)items;
++ (void)updateCartWithItems:(NSArray<PNECommItem *> * _Nonnull)items;
++ (void)clearCart;
++ (void)trackPurchase;
++ (void)trackPurchaseOf:(NSArray<PNECommItem *> * _Nonnull)items withPurchaseId:(NSString * _Nullable)purchaseId withPriceValue:(NSString * _Nullable)priceValue;
++ (void)withECommConfig:(void (^ _Nonnull)(PNECommConfig * _Nonnull))block caller:(NSString * _Nonnull)caller;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_AVAILABILITY(ios_app_extension,unavailable)
+@interface PushSDK (SWIFT_EXTENSION(Pushly))
+@end
+
+
 SWIFT_CLASS_NAMED("AppMessages")
 @interface PushSDKAppMessages : NSObject
 /// Applies triggered condition to all applicable app messages.
@@ -1870,21 +1898,18 @@ SWIFT_CLASS_NAMED("AppMessages")
 @end
 
 
-SWIFT_AVAILABILITY(ios_app_extension,unavailable)
+SWIFT_AVAILABILITY(ios_app_extension,introduced=16.1)
 @interface PushSDK (SWIFT_EXTENSION(Pushly))
 @end
 
 
-SWIFT_CLASS_NAMED("EComm")
-@interface PushSDKEComm : NSObject
-+ (void)addToCartWithItems:(NSArray<PNECommItem *> * _Nonnull)items;
-+ (void)updateCartWithItems:(NSArray<PNECommItem *> * _Nonnull)items;
-+ (void)clearCart;
-+ (void)trackPurchase;
-+ (void)trackPurchaseOf:(NSArray<PNECommItem *> * _Nonnull)items withPurchaseId:(NSString * _Nullable)purchaseId withPriceValue:(NSString * _Nullable)priceValue;
-+ (void)withECommConfig:(void (^ _Nonnull)(PNECommConfig * _Nonnull))block caller:(NSString * _Nonnull)caller;
+SWIFT_CLASS_NAMED("LiveActivities")
+@interface PushSDKLiveActivities : NSObject
++ (void)registerWithToken:(NSString * _Nonnull)token forActivity:(NSString * _Nonnull)activity;
++ (void)track:(enum PNLiveActivityEvent)activityEvent forActivity:(NSString * _Nonnull)activity;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 
 @interface PushSDK (SWIFT_EXTENSION(Pushly))
@@ -1892,7 +1917,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) enum PNLogLevel logLevel;)
 + (enum PNLogLevel)logLevel SWIFT_WARN_UNUSED_RESULT;
 + (void)setLogLevel:(enum PNLogLevel)newValue;
 @end
-
 
 
 

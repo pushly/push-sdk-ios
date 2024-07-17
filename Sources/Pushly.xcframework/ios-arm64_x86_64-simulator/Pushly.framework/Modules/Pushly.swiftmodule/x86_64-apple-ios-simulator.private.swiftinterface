@@ -263,6 +263,7 @@ extension Pushly.RelativeDate {
   public var disableGestures: Swift.Bool?
   public var dismissOnSwipe: Swift.Bool?
   public var dismissOnTapOutside: Swift.Bool?
+  public var displayAnimations: Pushly.PNDisplayAnimationBehavior?
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
@@ -631,6 +632,31 @@ extension Pushly.PushSDK {
     @objc deinit
   }
 }
+@objc public enum AnimationType : Swift.Int {
+  case cut
+  case fade
+  case zoomIn
+  case zoomOut
+  case slideUp
+  case slideDown
+  case slideRight
+  case slideLeft
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension Pushly.AnimationType {
+  public var stringValue: Swift.String {
+    get
+  }
+  public init(stringValue value: Swift.String) throws
+}
+extension Pushly.AnimationType : Swift.Codable {
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
 @_hasMissingDesignatedInitializers public class PNAppMessagePositionConfig : Swift.Codable {
   public var mobile: Pushly.PNAppMessagePosition?
   public var tablet: Pushly.PNAppMessagePosition?
@@ -924,6 +950,10 @@ extension Pushly.PNSubscriberStatus : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
 }
+public struct PNDisplayAnimationBehavior : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
 @_inheritsConvenienceInitializers @available(iOSApplicationExtension, unavailable)
 @objc public class PNNotificationOpenedProcessor : ObjectiveC.NSObject {
   @objc(processInteraction:withDestination:) public static func processInteractionDestination(_ pnInteraction: Pushly.PNNotificationInteraction, destination: Swift.String)
@@ -1078,6 +1108,9 @@ extension Pushly.PNAppMessageActionIdentifier : Swift.Hashable {}
 extension Pushly.PNAppMessageActionIdentifier : Swift.RawRepresentable {}
 extension Pushly.PNNotificationInteractionType : Swift.Equatable {}
 extension Pushly.PNNotificationInteractionType : Swift.Hashable {}
+extension Pushly.AnimationType : Swift.Equatable {}
+extension Pushly.AnimationType : Swift.Hashable {}
+extension Pushly.AnimationType : Swift.RawRepresentable {}
 extension Pushly.PNAppMessageType : Swift.Equatable {}
 extension Pushly.PNAppMessageType : Swift.Hashable {}
 extension Pushly.PNAppMessageType : Swift.RawRepresentable {}
