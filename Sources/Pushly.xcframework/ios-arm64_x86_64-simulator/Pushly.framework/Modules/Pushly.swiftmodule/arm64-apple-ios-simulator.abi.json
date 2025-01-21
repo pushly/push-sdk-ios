@@ -2925,6 +2925,13 @@
       },
       {
         "kind": "Import",
+        "name": "ActivityKit",
+        "printedName": "ActivityKit",
+        "declKind": "Import",
+        "moduleName": "Pushly"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -4841,6 +4848,204 @@
                   "Override"
                 ],
                 "init_kind": "Designated"
+              },
+              {
+                "kind": "Function",
+                "name": "register",
+                "printedName": "register(_:activityHandler:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ActivityKit.Activity<τ_0_0>.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Activity",
+                        "printedName": "ActivityKit.Activity<τ_0_0>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_0"
+                          }
+                        ],
+                        "usr": "s:11ActivityKit0A0C"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(ActivityKit.Activity<τ_0_0>) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Activity",
+                        "printedName": "ActivityKit.Activity<τ_0_0>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_0"
+                          }
+                        ],
+                        "usr": "s:11ActivityKit0A0C"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:6Pushly7PushSDKC14LiveActivitiesC8register_15activityHandlery11ActivityKit0I0CyxGm_yAKYbctAH0I10AttributesRzlFZ",
+                "mangledName": "$s6Pushly7PushSDKC14LiveActivitiesC8register_15activityHandlery11ActivityKit0I0CyxGm_yAKYbctAH0I10AttributesRzlFZ",
+                "moduleName": "Pushly",
+                "genericSig": "<τ_0_0 where τ_0_0 : ActivityKit.ActivityAttributes>",
+                "sugared_genericSig": "<Attributes where Attributes : ActivityKit.ActivityAttributes>",
+                "static": true,
+                "declAttributes": [
+                  "Final",
+                  "AccessControl"
+                ],
+                "isFromExtension": true,
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
+                "name": "register",
+                "printedName": "register(_:withId:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Activity",
+                    "printedName": "ActivityKit.Activity<τ_0_0>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:11ActivityKit0A0C"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:6Pushly7PushSDKC14LiveActivitiesC8register_6withIdy11ActivityKit0I0CyxG_SStAH0I10AttributesRzlFZ",
+                "mangledName": "$s6Pushly7PushSDKC14LiveActivitiesC8register_6withIdy11ActivityKit0I0CyxG_SStAH0I10AttributesRzlFZ",
+                "moduleName": "Pushly",
+                "genericSig": "<τ_0_0 where τ_0_0 : ActivityKit.ActivityAttributes>",
+                "sugared_genericSig": "<Attributes where Attributes : ActivityKit.ActivityAttributes>",
+                "static": true,
+                "declAttributes": [
+                  "Final",
+                  "AccessControl"
+                ],
+                "isFromExtension": true,
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
+                "name": "register",
+                "printedName": "register(_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ActivityKit.Activity<τ_0_0>.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Activity",
+                        "printedName": "ActivityKit.Activity<τ_0_0>",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GenericTypeParam",
+                            "printedName": "τ_0_0"
+                          }
+                        ],
+                        "usr": "s:11ActivityKit0A0C"
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:6Pushly7PushSDKC14LiveActivitiesC8registeryy11ActivityKit0G0CyxGmAA20PNActivityAttributesRzlFZ",
+                "mangledName": "$s6Pushly7PushSDKC14LiveActivitiesC8registeryy11ActivityKit0G0CyxGmAA20PNActivityAttributesRzlFZ",
+                "moduleName": "Pushly",
+                "genericSig": "<τ_0_0 where τ_0_0 : Pushly.PNActivityAttributes>",
+                "sugared_genericSig": "<Attributes where Attributes : Pushly.PNActivityAttributes>",
+                "static": true,
+                "declAttributes": [
+                  "Final",
+                  "AccessControl",
+                  "RawDocComment"
+                ],
+                "isFromExtension": true,
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Function",
+                "name": "register",
+                "printedName": "register(_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Activity",
+                    "printedName": "ActivityKit.Activity<τ_0_0>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:11ActivityKit0A0C"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:6Pushly7PushSDKC14LiveActivitiesC8registeryy11ActivityKit0G0CyxGAA20PNActivityAttributesRzlFZ",
+                "mangledName": "$s6Pushly7PushSDKC14LiveActivitiesC8registeryy11ActivityKit0G0CyxGAA20PNActivityAttributesRzlFZ",
+                "moduleName": "Pushly",
+                "genericSig": "<τ_0_0 where τ_0_0 : Pushly.PNActivityAttributes>",
+                "sugared_genericSig": "<Attributes where Attributes : Pushly.PNActivityAttributes>",
+                "static": true,
+                "declAttributes": [
+                  "Final",
+                  "AccessControl"
+                ],
+                "isFromExtension": true,
+                "funcSelfKind": "NonMutating"
               }
             ],
             "declKind": "Class",
@@ -8478,6 +8683,110 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "ActivityKit",
+        "printedName": "ActivityKit",
+        "declKind": "Import",
+        "moduleName": "Pushly"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PNActivityAttributes",
+        "printedName": "PNActivityAttributes",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "pnActivityId",
+            "printedName": "pnActivityId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6Pushly20PNActivityAttributesP12pnActivityIdSSvp",
+            "mangledName": "$s6Pushly20PNActivityAttributesP12pnActivityIdSSvp",
+            "moduleName": "Pushly",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Pushly20PNActivityAttributesP12pnActivityIdSSvg",
+                "mangledName": "$s6Pushly20PNActivityAttributesP12pnActivityIdSSvg",
+                "moduleName": "Pushly",
+                "genericSig": "<τ_0_0 where τ_0_0 : Pushly.PNActivityAttributes>",
+                "sugared_genericSig": "<Self where Self : Pushly.PNActivityAttributes>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:6Pushly20PNActivityAttributesP",
+        "mangledName": "$s6Pushly20PNActivityAttributesP",
+        "moduleName": "Pushly",
+        "genericSig": "<τ_0_0 : ActivityKit.ActivityAttributes>",
+        "sugared_genericSig": "<Self : ActivityKit.ActivityAttributes>",
+        "intro_iOS": "16.1",
+        "declAttributes": [
+          "AccessControl",
+          "Available"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ActivityAttributes",
+            "printedName": "ActivityAttributes",
+            "usr": "s:11ActivityKit0A10AttributesP",
+            "mangledName": "$s11ActivityKit0A10AttributesP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
           }
         ]
       },
@@ -14476,7 +14785,7 @@
                     "kind": "TypeNominal",
                     "name": "PNNotificationInteractionType",
                     "printedName": "Pushly.PNNotificationInteractionType",
-                    "usr": "s:6Pushly29PNNotificationInteractionTypeO"
+                    "usr": "c:@M@Pushly@E@PNNotificationInteractionType"
                   },
                   {
                     "kind": "TypeNominal",
@@ -14487,7 +14796,7 @@
                         "kind": "TypeNominal",
                         "name": "PNNotificationInteractionType",
                         "printedName": "Pushly.PNNotificationInteractionType",
-                        "usr": "s:6Pushly29PNNotificationInteractionTypeO"
+                        "usr": "c:@M@Pushly@E@PNNotificationInteractionType"
                       }
                     ]
                   }
@@ -14495,9 +14804,13 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:6Pushly29PNNotificationInteractionTypeO13defaultActionyA2CmF",
+            "usr": "c:@M@Pushly@E@PNNotificationInteractionType@PNNotificationInteractionTypeDefaultAction",
             "mangledName": "$s6Pushly29PNNotificationInteractionTypeO13defaultActionyA2CmF",
-            "moduleName": "Pushly"
+            "moduleName": "Pushly",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
           },
           {
             "kind": "Var",
@@ -14513,7 +14826,7 @@
                     "kind": "TypeNominal",
                     "name": "PNNotificationInteractionType",
                     "printedName": "Pushly.PNNotificationInteractionType",
-                    "usr": "s:6Pushly29PNNotificationInteractionTypeO"
+                    "usr": "c:@M@Pushly@E@PNNotificationInteractionType"
                   },
                   {
                     "kind": "TypeNominal",
@@ -14524,7 +14837,7 @@
                         "kind": "TypeNominal",
                         "name": "PNNotificationInteractionType",
                         "printedName": "Pushly.PNNotificationInteractionType",
-                        "usr": "s:6Pushly29PNNotificationInteractionTypeO"
+                        "usr": "c:@M@Pushly@E@PNNotificationInteractionType"
                       }
                     ]
                   }
@@ -14532,9 +14845,13 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:6Pushly29PNNotificationInteractionTypeO13dismissActionyA2CmF",
+            "usr": "c:@M@Pushly@E@PNNotificationInteractionType@PNNotificationInteractionTypeDismissAction",
             "mangledName": "$s6Pushly29PNNotificationInteractionTypeO13dismissActionyA2CmF",
-            "moduleName": "Pushly"
+            "moduleName": "Pushly",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
           },
           {
             "kind": "Var",
@@ -14550,7 +14867,7 @@
                     "kind": "TypeNominal",
                     "name": "PNNotificationInteractionType",
                     "printedName": "Pushly.PNNotificationInteractionType",
-                    "usr": "s:6Pushly29PNNotificationInteractionTypeO"
+                    "usr": "c:@M@Pushly@E@PNNotificationInteractionType"
                   },
                   {
                     "kind": "TypeNominal",
@@ -14561,7 +14878,7 @@
                         "kind": "TypeNominal",
                         "name": "PNNotificationInteractionType",
                         "printedName": "Pushly.PNNotificationInteractionType",
-                        "usr": "s:6Pushly29PNNotificationInteractionTypeO"
+                        "usr": "c:@M@Pushly@E@PNNotificationInteractionType"
                       }
                     ]
                   }
@@ -14569,46 +14886,51 @@
               }
             ],
             "declKind": "EnumElement",
-            "usr": "s:6Pushly29PNNotificationInteractionTypeO12customActionyA2CmF",
+            "usr": "c:@M@Pushly@E@PNNotificationInteractionType@PNNotificationInteractionTypeCustomAction",
             "mangledName": "$s6Pushly29PNNotificationInteractionTypeO12customActionyA2CmF",
-            "moduleName": "Pushly"
+            "moduleName": "Pushly",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 2
           },
           {
-            "kind": "Function",
-            "name": "==",
-            "printedName": "==(_:_:)",
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
+                "name": "Optional",
+                "printedName": "Pushly.PNNotificationInteractionType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PNNotificationInteractionType",
+                    "printedName": "Pushly.PNNotificationInteractionType",
+                    "usr": "c:@M@Pushly@E@PNNotificationInteractionType"
+                  }
+                ],
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
-                "name": "PNNotificationInteractionType",
-                "printedName": "Pushly.PNNotificationInteractionType",
-                "usr": "s:6Pushly29PNNotificationInteractionTypeO"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "PNNotificationInteractionType",
-                "printedName": "Pushly.PNNotificationInteractionType",
-                "usr": "s:6Pushly29PNNotificationInteractionTypeO"
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
               }
             ],
-            "declKind": "Func",
-            "usr": "s:6Pushly29PNNotificationInteractionTypeO2eeoiySbAC_ACtFZ",
-            "mangledName": "$s6Pushly29PNNotificationInteractionTypeO2eeoiySbAC_ACtFZ",
+            "declKind": "Constructor",
+            "usr": "s:6Pushly29PNNotificationInteractionTypeO8rawValueACSgSi_tcfc",
+            "mangledName": "$s6Pushly29PNNotificationInteractionTypeO8rawValueACSgSi_tcfc",
             "moduleName": "Pushly",
-            "static": true,
             "implicit": true,
-            "funcSelfKind": "NonMutating"
+            "init_kind": "Designated"
           },
           {
             "kind": "Var",
-            "name": "hashValue",
-            "printedName": "hashValue",
+            "name": "rawValue",
+            "printedName": "rawValue",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -14618,8 +14940,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6Pushly29PNNotificationInteractionTypeO9hashValueSivp",
-            "mangledName": "$s6Pushly29PNNotificationInteractionTypeO9hashValueSivp",
+            "usr": "s:6Pushly29PNNotificationInteractionTypeO8rawValueSivp",
+            "mangledName": "$s6Pushly29PNNotificationInteractionTypeO8rawValueSivp",
             "moduleName": "Pushly",
             "implicit": true,
             "accessors": [
@@ -14636,38 +14958,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly29PNNotificationInteractionTypeO9hashValueSivg",
-                "mangledName": "$s6Pushly29PNNotificationInteractionTypeO9hashValueSivg",
+                "usr": "s:6Pushly29PNNotificationInteractionTypeO8rawValueSivg",
+                "mangledName": "$s6Pushly29PNNotificationInteractionTypeO8rawValueSivg",
                 "moduleName": "Pushly",
                 "implicit": true,
                 "accessorKind": "get"
               }
             ]
-          },
-          {
-            "kind": "Function",
-            "name": "hash",
-            "printedName": "hash(into:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Hasher",
-                "printedName": "Swift.Hasher",
-                "paramValueOwnership": "InOut",
-                "usr": "s:s6HasherV"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:6Pushly29PNNotificationInteractionTypeO4hash4intoys6HasherVz_tF",
-            "mangledName": "$s6Pushly29PNNotificationInteractionTypeO4hash4intoys6HasherVz_tF",
-            "moduleName": "Pushly",
-            "implicit": true,
-            "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Var",
@@ -14713,12 +15010,14 @@
           }
         ],
         "declKind": "Enum",
-        "usr": "s:6Pushly29PNNotificationInteractionTypeO",
+        "usr": "c:@M@Pushly@E@PNNotificationInteractionType",
         "mangledName": "$s6Pushly29PNNotificationInteractionTypeO",
         "moduleName": "Pushly",
         "declAttributes": [
-          "AccessControl"
+          "AccessControl",
+          "ObjC"
         ],
+        "enumRawTypeName": "Int",
         "conformances": [
           {
             "kind": "Conformance",
@@ -14747,6 +15046,28 @@
             "printedName": "Hashable",
             "usr": "s:SH",
             "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
           }
         ]
       },
@@ -17272,8 +17593,8 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
+        "name": "ActivityKit",
+        "printedName": "ActivityKit",
         "declKind": "Import",
         "moduleName": "Pushly"
       },
@@ -18310,17 +18631,18 @@
                 "kind": "TypeNominal",
                 "name": "PNNotificationInteractionType",
                 "printedName": "Pushly.PNNotificationInteractionType",
-                "usr": "s:6Pushly29PNNotificationInteractionTypeO"
+                "usr": "c:@M@Pushly@E@PNNotificationInteractionType"
               }
             ],
             "declKind": "Var",
-            "usr": "s:6Pushly25PNNotificationInteractionC4typeAA0bC4TypeOvp",
+            "usr": "c:@M@Pushly@objc(cs)PNNotificationInteraction(py)type",
             "mangledName": "$s6Pushly25PNNotificationInteractionC4typeAA0bC4TypeOvp",
             "moduleName": "Pushly",
             "declAttributes": [
               "Final",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "isLet": true,
             "hasStorage": true,
@@ -18334,16 +18656,17 @@
                     "kind": "TypeNominal",
                     "name": "PNNotificationInteractionType",
                     "printedName": "Pushly.PNNotificationInteractionType",
-                    "usr": "s:6Pushly29PNNotificationInteractionTypeO"
+                    "usr": "c:@M@Pushly@E@PNNotificationInteractionType"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly25PNNotificationInteractionC4typeAA0bC4TypeOvg",
+                "usr": "c:@M@Pushly@objc(cs)PNNotificationInteraction(im)type",
                 "mangledName": "$s6Pushly25PNNotificationInteractionC4typeAA0bC4TypeOvg",
                 "moduleName": "Pushly",
                 "implicit": true,
                 "declAttributes": [
-                  "Final"
+                  "Final",
+                  "ObjC"
                 ],
                 "accessorKind": "get"
               }
@@ -18362,13 +18685,14 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6Pushly25PNNotificationInteractionC16actionIdentifierSSvp",
+            "usr": "c:@M@Pushly@objc(cs)PNNotificationInteraction(py)actionIdentifier",
             "mangledName": "$s6Pushly25PNNotificationInteractionC16actionIdentifierSSvp",
             "moduleName": "Pushly",
             "declAttributes": [
               "Final",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "isLet": true,
             "hasStorage": true,
@@ -18386,12 +18710,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly25PNNotificationInteractionC16actionIdentifierSSvg",
+                "usr": "c:@M@Pushly@objc(cs)PNNotificationInteraction(im)actionIdentifier",
                 "mangledName": "$s6Pushly25PNNotificationInteractionC16actionIdentifierSSvg",
                 "moduleName": "Pushly",
                 "implicit": true,
                 "declAttributes": [
-                  "Final"
+                  "Final",
+                  "ObjC"
                 ],
                 "accessorKind": "get"
               }
@@ -18410,12 +18735,13 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6Pushly25PNNotificationInteractionC12notificationAA0B0Cvp",
+            "usr": "c:@M@Pushly@objc(cs)PNNotificationInteraction(py)notification",
             "mangledName": "$s6Pushly25PNNotificationInteractionC12notificationAA0B0Cvp",
             "moduleName": "Pushly",
             "declAttributes": [
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -18432,10 +18758,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly25PNNotificationInteractionC12notificationAA0B0Cvg",
+                "usr": "c:@M@Pushly@objc(cs)PNNotificationInteraction(im)notification",
                 "mangledName": "$s6Pushly25PNNotificationInteractionC12notificationAA0B0Cvg",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -18456,10 +18785,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly25PNNotificationInteractionC12notificationAA0B0Cvs",
+                "usr": "c:@M@Pushly@objc(cs)PNNotificationInteraction(im)setNotification:",
                 "mangledName": "$s6Pushly25PNNotificationInteractionC12notificationAA0B0Cvs",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -18501,11 +18833,12 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:6Pushly25PNNotificationInteractionC4fromACSo22UNNotificationResponseC_tcfc",
+            "usr": "c:@M@Pushly@objc(cs)PNNotificationInteraction(im)initFrom:",
             "mangledName": "$s6Pushly25PNNotificationInteractionC4fromACSo22UNNotificationResponseC_tcfc",
             "moduleName": "Pushly",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "init_kind": "Designated"
           },
@@ -18530,11 +18863,12 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6Pushly25PNNotificationInteractionC6actionAA0B6ActionCSgvp",
+            "usr": "c:@M@Pushly@objc(cs)PNNotificationInteraction(py)action",
             "mangledName": "$s6Pushly25PNNotificationInteractionC6actionAA0B6ActionCSgvp",
             "moduleName": "Pushly",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "accessors": [
               {
@@ -18558,9 +18892,12 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly25PNNotificationInteractionC6actionAA0B6ActionCSgvg",
+                "usr": "c:@M@Pushly@objc(cs)PNNotificationInteraction(im)action",
                 "mangledName": "$s6Pushly25PNNotificationInteractionC6actionAA0B6ActionCSgvg",
                 "moduleName": "Pushly",
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               }
             ]
@@ -18641,6 +18978,7 @@
         "moduleName": "Pushly",
         "declAttributes": [
           "AccessControl",
+          "ObjCMembers",
           "ObjC"
         ],
         "superclassUsr": "c:objc(cs)NSObject",
@@ -21825,6 +22163,13 @@
       },
       {
         "kind": "Import",
+        "name": "ActivityKit",
+        "printedName": "ActivityKit",
+        "declKind": "Import",
+        "moduleName": "Pushly"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -21876,14 +22221,15 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6Pushly14PNNotificationC5titleSSSgvp",
+            "usr": "c:@M@Pushly@objc(cs)PNNotification(py)title",
             "mangledName": "$s6Pushly14PNNotificationC5titleSSSgvp",
             "moduleName": "Pushly",
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
               "AccessControl",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -21908,10 +22254,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC5titleSSSgvg",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)title",
                 "mangledName": "$s6Pushly14PNNotificationC5titleSSSgvg",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -21940,10 +22289,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC5titleSSSgvs",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)setTitle:",
                 "mangledName": "$s6Pushly14PNNotificationC5titleSSSgvs",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -21987,13 +22339,14 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6Pushly14PNNotificationC11titleLocKeySSSgvp",
+            "usr": "c:@M@Pushly@objc(cs)PNNotification(py)titleLocKey",
             "mangledName": "$s6Pushly14PNNotificationC11titleLocKeySSSgvp",
             "moduleName": "Pushly",
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -22018,10 +22371,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC11titleLocKeySSSgvg",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)titleLocKey",
                 "mangledName": "$s6Pushly14PNNotificationC11titleLocKeySSSgvg",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -22050,10 +22406,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC11titleLocKeySSSgvs",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)setTitleLocKey:",
                 "mangledName": "$s6Pushly14PNNotificationC11titleLocKeySSSgvs",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -22105,13 +22464,14 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6Pushly14PNNotificationC12titleLocArgsSaySSGSgvp",
+            "usr": "c:@M@Pushly@objc(cs)PNNotification(py)titleLocArgs",
             "mangledName": "$s6Pushly14PNNotificationC12titleLocArgsSaySSGSgvp",
             "moduleName": "Pushly",
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -22144,10 +22504,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC12titleLocArgsSaySSGSgvg",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)titleLocArgs",
                 "mangledName": "$s6Pushly14PNNotificationC12titleLocArgsSaySSGSgvg",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -22184,10 +22547,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC12titleLocArgsSaySSGSgvs",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)setTitleLocArgs:",
                 "mangledName": "$s6Pushly14PNNotificationC12titleLocArgsSaySSGSgvs",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -22231,13 +22597,14 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6Pushly14PNNotificationC8subtitleSSSgvp",
+            "usr": "c:@M@Pushly@objc(cs)PNNotification(py)subtitle",
             "mangledName": "$s6Pushly14PNNotificationC8subtitleSSSgvp",
             "moduleName": "Pushly",
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -22262,10 +22629,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC8subtitleSSSgvg",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)subtitle",
                 "mangledName": "$s6Pushly14PNNotificationC8subtitleSSSgvg",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -22294,10 +22664,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC8subtitleSSSgvs",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)setSubtitle:",
                 "mangledName": "$s6Pushly14PNNotificationC8subtitleSSSgvs",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -22341,13 +22714,14 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6Pushly14PNNotificationC14subtitleLocKeySSSgvp",
+            "usr": "c:@M@Pushly@objc(cs)PNNotification(py)subtitleLocKey",
             "mangledName": "$s6Pushly14PNNotificationC14subtitleLocKeySSSgvp",
             "moduleName": "Pushly",
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -22372,10 +22746,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC14subtitleLocKeySSSgvg",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)subtitleLocKey",
                 "mangledName": "$s6Pushly14PNNotificationC14subtitleLocKeySSSgvg",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -22404,10 +22781,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC14subtitleLocKeySSSgvs",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)setSubtitleLocKey:",
                 "mangledName": "$s6Pushly14PNNotificationC14subtitleLocKeySSSgvs",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -22459,13 +22839,14 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6Pushly14PNNotificationC15subtitleLocArgsSaySSGSgvp",
+            "usr": "c:@M@Pushly@objc(cs)PNNotification(py)subtitleLocArgs",
             "mangledName": "$s6Pushly14PNNotificationC15subtitleLocArgsSaySSGSgvp",
             "moduleName": "Pushly",
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -22498,10 +22879,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC15subtitleLocArgsSaySSGSgvg",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)subtitleLocArgs",
                 "mangledName": "$s6Pushly14PNNotificationC15subtitleLocArgsSaySSGSgvg",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -22538,10 +22922,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC15subtitleLocArgsSaySSGSgvs",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)setSubtitleLocArgs:",
                 "mangledName": "$s6Pushly14PNNotificationC15subtitleLocArgsSaySSGSgvs",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -22585,13 +22972,14 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6Pushly14PNNotificationC4bodySSSgvp",
+            "usr": "c:@M@Pushly@objc(cs)PNNotification(py)body",
             "mangledName": "$s6Pushly14PNNotificationC4bodySSSgvp",
             "moduleName": "Pushly",
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -22616,10 +23004,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC4bodySSSgvg",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)body",
                 "mangledName": "$s6Pushly14PNNotificationC4bodySSSgvg",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -22648,10 +23039,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC4bodySSSgvs",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)setBody:",
                 "mangledName": "$s6Pushly14PNNotificationC4bodySSSgvs",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -22695,13 +23089,14 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6Pushly14PNNotificationC6locKeySSSgvp",
+            "usr": "c:@M@Pushly@objc(cs)PNNotification(py)locKey",
             "mangledName": "$s6Pushly14PNNotificationC6locKeySSSgvp",
             "moduleName": "Pushly",
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -22726,10 +23121,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC6locKeySSSgvg",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)locKey",
                 "mangledName": "$s6Pushly14PNNotificationC6locKeySSSgvg",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -22758,10 +23156,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC6locKeySSSgvs",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)setLocKey:",
                 "mangledName": "$s6Pushly14PNNotificationC6locKeySSSgvs",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -22813,13 +23214,14 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6Pushly14PNNotificationC7locArgsSaySSGSgvp",
+            "usr": "c:@M@Pushly@objc(cs)PNNotification(py)locArgs",
             "mangledName": "$s6Pushly14PNNotificationC7locArgsSaySSGSgvp",
             "moduleName": "Pushly",
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -22852,10 +23254,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC7locArgsSaySSGSgvg",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)locArgs",
                 "mangledName": "$s6Pushly14PNNotificationC7locArgsSaySSGSgvg",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -22892,10 +23297,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC7locArgsSaySSGSgvs",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)setLocArgs:",
                 "mangledName": "$s6Pushly14PNNotificationC7locArgsSaySSGSgvs",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -22939,13 +23347,14 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6Pushly14PNNotificationC11launchImageSSSgvp",
+            "usr": "c:@M@Pushly@objc(cs)PNNotification(py)launchImage",
             "mangledName": "$s6Pushly14PNNotificationC11launchImageSSSgvp",
             "moduleName": "Pushly",
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -22970,10 +23379,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC11launchImageSSSgvg",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)launchImage",
                 "mangledName": "$s6Pushly14PNNotificationC11launchImageSSSgvg",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -23002,10 +23414,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC11launchImageSSSgvs",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)setLaunchImage:",
                 "mangledName": "$s6Pushly14PNNotificationC11launchImageSSSgvs",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -23049,14 +23464,15 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6Pushly14PNNotificationC8categorySSSgvp",
+            "usr": "c:@M@Pushly@objc(cs)PNNotification(py)category",
             "mangledName": "$s6Pushly14PNNotificationC8categorySSSgvp",
             "moduleName": "Pushly",
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
               "AccessControl",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -23081,10 +23497,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC8categorySSSgvg",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)category",
                 "mangledName": "$s6Pushly14PNNotificationC8categorySSSgvg",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -23113,10 +23532,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC8categorySSSgvs",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)setCategory:",
                 "mangledName": "$s6Pushly14PNNotificationC8categorySSSgvs",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -23270,13 +23692,14 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6Pushly14PNNotificationC5soundSSSgvp",
+            "usr": "c:@M@Pushly@objc(cs)PNNotification(py)sound",
             "mangledName": "$s6Pushly14PNNotificationC5soundSSSgvp",
             "moduleName": "Pushly",
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -23301,10 +23724,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC5soundSSSgvg",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)sound",
                 "mangledName": "$s6Pushly14PNNotificationC5soundSSSgvg",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -23333,10 +23759,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC5soundSSSgvs",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)setSound:",
                 "mangledName": "$s6Pushly14PNNotificationC5soundSSSgvs",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -23380,13 +23809,14 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6Pushly14PNNotificationC8threadIdSSSgvp",
+            "usr": "c:@M@Pushly@objc(cs)PNNotification(py)threadId",
             "mangledName": "$s6Pushly14PNNotificationC8threadIdSSSgvp",
             "moduleName": "Pushly",
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -23411,10 +23841,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC8threadIdSSSgvg",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)threadId",
                 "mangledName": "$s6Pushly14PNNotificationC8threadIdSSSgvg",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -23443,10 +23876,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC8threadIdSSSgvs",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)setThreadId:",
                 "mangledName": "$s6Pushly14PNNotificationC8threadIdSSSgvs",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -23482,13 +23918,14 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6Pushly14PNNotificationC16contentAvailableSbvp",
+            "usr": "c:@M@Pushly@objc(cs)PNNotification(py)contentAvailable",
             "mangledName": "$s6Pushly14PNNotificationC16contentAvailableSbvp",
             "moduleName": "Pushly",
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -23505,10 +23942,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC16contentAvailableSbvg",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)contentAvailable",
                 "mangledName": "$s6Pushly14PNNotificationC16contentAvailableSbvg",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -23529,10 +23969,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC16contentAvailableSbvs",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)setContentAvailable:",
                 "mangledName": "$s6Pushly14PNNotificationC16contentAvailableSbvs",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -23568,13 +24011,14 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6Pushly14PNNotificationC14mutableContentSbvp",
+            "usr": "c:@M@Pushly@objc(cs)PNNotification(py)mutableContent",
             "mangledName": "$s6Pushly14PNNotificationC14mutableContentSbvp",
             "moduleName": "Pushly",
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -23591,10 +24035,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC14mutableContentSbvg",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)mutableContent",
                 "mangledName": "$s6Pushly14PNNotificationC14mutableContentSbvg",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -23615,10 +24062,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC14mutableContentSbvs",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)setMutableContent:",
                 "mangledName": "$s6Pushly14PNNotificationC14mutableContentSbvs",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -23662,13 +24112,14 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6Pushly14PNNotificationC15targetContentIdSSSgvp",
+            "usr": "c:@M@Pushly@objc(cs)PNNotification(py)targetContentId",
             "mangledName": "$s6Pushly14PNNotificationC15targetContentIdSSSgvp",
             "moduleName": "Pushly",
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -23693,10 +24144,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC15targetContentIdSSSgvg",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)targetContentId",
                 "mangledName": "$s6Pushly14PNNotificationC15targetContentIdSSSgvg",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -23725,10 +24179,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC15targetContentIdSSSgvs",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)setTargetContentId:",
                 "mangledName": "$s6Pushly14PNNotificationC15targetContentIdSSSgvs",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -23772,13 +24229,14 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6Pushly14PNNotificationC17interruptionLevelSSSgvp",
+            "usr": "c:@M@Pushly@objc(cs)PNNotification(py)interruptionLevel",
             "mangledName": "$s6Pushly14PNNotificationC17interruptionLevelSSSgvp",
             "moduleName": "Pushly",
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -23803,10 +24261,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC17interruptionLevelSSSgvg",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)interruptionLevel",
                 "mangledName": "$s6Pushly14PNNotificationC17interruptionLevelSSSgvg",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -23835,10 +24296,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC17interruptionLevelSSSgvs",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)setInterruptionLevel:",
                 "mangledName": "$s6Pushly14PNNotificationC17interruptionLevelSSSgvs",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -23993,13 +24457,14 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6Pushly14PNNotificationC14filterCriteriaSSSgvp",
+            "usr": "c:@M@Pushly@objc(cs)PNNotification(py)filterCriteria",
             "mangledName": "$s6Pushly14PNNotificationC14filterCriteriaSSSgvp",
             "moduleName": "Pushly",
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -24024,10 +24489,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC14filterCriteriaSSSgvg",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)filterCriteria",
                 "mangledName": "$s6Pushly14PNNotificationC14filterCriteriaSSSgvg",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -24056,10 +24524,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC14filterCriteriaSSSgvs",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)setFilterCriteria:",
                 "mangledName": "$s6Pushly14PNNotificationC14filterCriteriaSSSgvs",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -24095,14 +24566,15 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6Pushly14PNNotificationC2idSivp",
+            "usr": "c:@M@Pushly@objc(cs)PNNotification(py)id",
             "mangledName": "$s6Pushly14PNNotificationC2idSivp",
             "moduleName": "Pushly",
             "declAttributes": [
               "Final",
               "HasStorage",
               "AccessControl",
-              "RawDocComment"
+              "RawDocComment",
+              "ObjC"
             ],
             "isLet": true,
             "hasStorage": true,
@@ -24120,12 +24592,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC2idSivg",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)id",
                 "mangledName": "$s6Pushly14PNNotificationC2idSivg",
                 "moduleName": "Pushly",
                 "implicit": true,
                 "declAttributes": [
-                  "Final"
+                  "Final",
+                  "ObjC"
                 ],
                 "accessorKind": "get"
               }
@@ -24144,13 +24617,14 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6Pushly14PNNotificationC4piidSSvp",
+            "usr": "c:@M@Pushly@objc(cs)PNNotification(py)piid",
             "mangledName": "$s6Pushly14PNNotificationC4piidSSvp",
             "moduleName": "Pushly",
             "declAttributes": [
               "Final",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "isLet": true,
             "hasStorage": true,
@@ -24168,12 +24642,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC4piidSSvg",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)piid",
                 "mangledName": "$s6Pushly14PNNotificationC4piidSSvg",
                 "moduleName": "Pushly",
                 "implicit": true,
                 "declAttributes": [
-                  "Final"
+                  "Final",
+                  "ObjC"
                 ],
                 "accessorKind": "get"
               }
@@ -24192,13 +24667,14 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6Pushly14PNNotificationC10landingURLSSvp",
+            "usr": "c:@M@Pushly@objc(cs)PNNotification(py)landingURL",
             "mangledName": "$s6Pushly14PNNotificationC10landingURLSSvp",
             "moduleName": "Pushly",
             "declAttributes": [
               "Final",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "isLet": true,
             "hasStorage": true,
@@ -24216,12 +24692,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC10landingURLSSvg",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)landingURL",
                 "mangledName": "$s6Pushly14PNNotificationC10landingURLSSvg",
                 "moduleName": "Pushly",
                 "implicit": true,
                 "declAttributes": [
-                  "Final"
+                  "Final",
+                  "ObjC"
                 ],
                 "accessorKind": "get"
               }
@@ -24248,13 +24725,14 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6Pushly14PNNotificationC8imageURLSSSgvp",
+            "usr": "c:@M@Pushly@objc(cs)PNNotification(py)imageURL",
             "mangledName": "$s6Pushly14PNNotificationC8imageURLSSSgvp",
             "moduleName": "Pushly",
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -24279,10 +24757,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC8imageURLSSSgvg",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)imageURL",
                 "mangledName": "$s6Pushly14PNNotificationC8imageURLSSSgvg",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -24311,10 +24792,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC8imageURLSSSgvs",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)setImageURL:",
                 "mangledName": "$s6Pushly14PNNotificationC8imageURLSSSgvs",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -24358,13 +24842,14 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6Pushly14PNNotificationC17contentWebhookURLSSSgvp",
+            "usr": "c:@M@Pushly@objc(cs)PNNotification(py)contentWebhookURL",
             "mangledName": "$s6Pushly14PNNotificationC17contentWebhookURLSSSgvp",
             "moduleName": "Pushly",
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -24389,10 +24874,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC17contentWebhookURLSSSgvg",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)contentWebhookURL",
                 "mangledName": "$s6Pushly14PNNotificationC17contentWebhookURLSSSgvg",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -24421,10 +24909,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC17contentWebhookURLSSSgvs",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)setContentWebhookURL:",
                 "mangledName": "$s6Pushly14PNNotificationC17contentWebhookURLSSSgvs",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -24468,12 +24959,13 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6Pushly14PNNotificationC7actionsSayAA0B6ActionCGvp",
+            "usr": "c:@M@Pushly@objc(cs)PNNotification(py)actions",
             "mangledName": "$s6Pushly14PNNotificationC7actionsSayAA0B6ActionCGvp",
             "moduleName": "Pushly",
             "declAttributes": [
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -24498,10 +24990,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC7actionsSayAA0B6ActionCGvg",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)actions",
                 "mangledName": "$s6Pushly14PNNotificationC7actionsSayAA0B6ActionCGvg",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -24530,10 +25025,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC7actionsSayAA0B6ActionCGvs",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)setActions:",
                 "mangledName": "$s6Pushly14PNNotificationC7actionsSayAA0B6ActionCGvs",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -24789,13 +25287,14 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6Pushly14PNNotificationC14impressionTypeSSvp",
+            "usr": "c:@M@Pushly@objc(cs)PNNotification(py)impressionType",
             "mangledName": "$s6Pushly14PNNotificationC14impressionTypeSSvp",
             "moduleName": "Pushly",
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -24812,10 +25311,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC14impressionTypeSSvg",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)impressionType",
                 "mangledName": "$s6Pushly14PNNotificationC14impressionTypeSSvg",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -24836,10 +25338,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC14impressionTypeSSvs",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)setImpressionType:",
                 "mangledName": "$s6Pushly14PNNotificationC14impressionTypeSSvs",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -24870,40 +25375,27 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "[Swift.String : Pushly.PNMetaValue]?",
+                "printedName": "Pushly.PNNotificationMeta?",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Dictionary",
-                    "printedName": "[Swift.String : Pushly.PNMetaValue]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "PNMetaValue",
-                        "printedName": "Pushly.PNMetaValue",
-                        "usr": "s:6Pushly11PNMetaValueO"
-                      }
-                    ],
-                    "usr": "s:SD"
+                    "name": "PNNotificationMeta",
+                    "printedName": "Pushly.PNNotificationMeta",
+                    "usr": "c:@M@Pushly@objc(cs)PNNotificationMeta"
                   }
                 ],
                 "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "s:6Pushly14PNNotificationC4metaSDySSAA11PNMetaValueOGSgvp",
-            "mangledName": "$s6Pushly14PNNotificationC4metaSDySSAA11PNMetaValueOGSgvp",
+            "usr": "c:@M@Pushly@objc(cs)PNNotification(py)meta",
+            "mangledName": "$s6Pushly14PNNotificationC4metaAA0B4MetaCSgvp",
             "moduleName": "Pushly",
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -24915,37 +25407,26 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "[Swift.String : Pushly.PNMetaValue]?",
+                    "printedName": "Pushly.PNNotificationMeta?",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "Dictionary",
-                        "printedName": "[Swift.String : Pushly.PNMetaValue]",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "PNMetaValue",
-                            "printedName": "Pushly.PNMetaValue",
-                            "usr": "s:6Pushly11PNMetaValueO"
-                          }
-                        ],
-                        "usr": "s:SD"
+                        "name": "PNNotificationMeta",
+                        "printedName": "Pushly.PNNotificationMeta",
+                        "usr": "c:@M@Pushly@objc(cs)PNNotificationMeta"
                       }
                     ],
                     "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC4metaSDySSAA11PNMetaValueOGSgvg",
-                "mangledName": "$s6Pushly14PNNotificationC4metaSDySSAA11PNMetaValueOGSgvg",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)meta",
+                "mangledName": "$s6Pushly14PNNotificationC4metaAA0B4MetaCSgvg",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -24961,37 +25442,26 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "[Swift.String : Pushly.PNMetaValue]?",
+                    "printedName": "Pushly.PNNotificationMeta?",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "Dictionary",
-                        "printedName": "[Swift.String : Pushly.PNMetaValue]",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "PNMetaValue",
-                            "printedName": "Pushly.PNMetaValue",
-                            "usr": "s:6Pushly11PNMetaValueO"
-                          }
-                        ],
-                        "usr": "s:SD"
+                        "name": "PNNotificationMeta",
+                        "printedName": "Pushly.PNNotificationMeta",
+                        "usr": "c:@M@Pushly@objc(cs)PNNotificationMeta"
                       }
                     ],
                     "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC4metaSDySSAA11PNMetaValueOGSgvs",
-                "mangledName": "$s6Pushly14PNNotificationC4metaSDySSAA11PNMetaValueOGSgvs",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)setMeta:",
+                "mangledName": "$s6Pushly14PNNotificationC4metaAA0B4MetaCSgvs",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -25006,8 +25476,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC4metaSDySSAA11PNMetaValueOGSgvM",
-                "mangledName": "$s6Pushly14PNNotificationC4metaSDySSAA11PNMetaValueOGSgvM",
+                "usr": "s:6Pushly14PNNotificationC4metaAA0B4MetaCSgvM",
+                "mangledName": "$s6Pushly14PNNotificationC4metaAA0B4MetaCSgvM",
                 "moduleName": "Pushly",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -25027,13 +25497,14 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6Pushly14PNNotificationC19viaServiceExtensionSbvp",
+            "usr": "c:@M@Pushly@objc(cs)PNNotification(py)viaServiceExtension",
             "mangledName": "$s6Pushly14PNNotificationC19viaServiceExtensionSbvp",
             "moduleName": "Pushly",
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -25050,10 +25521,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC19viaServiceExtensionSbvg",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)viaServiceExtension",
                 "mangledName": "$s6Pushly14PNNotificationC19viaServiceExtensionSbvg",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -25074,10 +25548,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC19viaServiceExtensionSbvs",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)setViaServiceExtension:",
                 "mangledName": "$s6Pushly14PNNotificationC19viaServiceExtensionSbvs",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -25113,13 +25590,14 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6Pushly14PNNotificationC15hasRequiredKeysSbvp",
+            "usr": "c:@M@Pushly@objc(cs)PNNotification(py)hasRequiredKeys",
             "mangledName": "$s6Pushly14PNNotificationC15hasRequiredKeysSbvp",
             "moduleName": "Pushly",
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "hasStorage": true,
             "accessors": [
@@ -25136,10 +25614,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC15hasRequiredKeysSbvg",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)hasRequiredKeys",
                 "mangledName": "$s6Pushly14PNNotificationC15hasRequiredKeysSbvg",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -25160,10 +25641,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6Pushly14PNNotificationC15hasRequiredKeysSbvs",
+                "usr": "c:@M@Pushly@objc(cs)PNNotification(im)setHasRequiredKeys:",
                 "mangledName": "$s6Pushly14PNNotificationC15hasRequiredKeysSbvs",
                 "moduleName": "Pushly",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -25205,12 +25689,13 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:6Pushly14PNNotificationC4fromACSo14UNNotificationC_tcfc",
+            "usr": "c:@M@Pushly@objc(cs)PNNotification(im)initFrom:",
             "mangledName": "$s6Pushly14PNNotificationC4fromACSo14UNNotificationC_tcfc",
             "moduleName": "Pushly",
             "declAttributes": [
               "Convenience",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "init_kind": "Convenience"
           },
@@ -25246,11 +25731,13 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:6Pushly14PNNotificationC4fromACSDys11AnyHashableVypG_tcfc",
+            "usr": "c:@M@Pushly@objc(cs)PNNotification(im)initFromUserInfo:",
             "mangledName": "$s6Pushly14PNNotificationC4fromACSDys11AnyHashableVypG_tcfc",
             "moduleName": "Pushly",
+            "objc_name": "initFromUserInfo:",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "init_kind": "Designated"
           },
@@ -25281,60 +25768,6 @@
             "init_kind": "Designated"
           },
           {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(from:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "PNNotification",
-                "printedName": "Pushly.PNNotification",
-                "usr": "c:@M@Pushly@objc(cs)PNNotification"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Decoder",
-                "printedName": "any Swift.Decoder",
-                "usr": "s:s7DecoderP"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:6Pushly14PNNotificationC4fromACs7Decoder_p_tKcfc",
-            "mangledName": "$s6Pushly14PNNotificationC4fromACs7Decoder_p_tKcfc",
-            "moduleName": "Pushly",
-            "implicit": true,
-            "declAttributes": [
-              "Required"
-            ],
-            "throwing": true,
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Function",
-            "name": "encode",
-            "printedName": "encode(to:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Encoder",
-                "printedName": "any Swift.Encoder",
-                "usr": "s:s7EncoderP"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:6Pushly14PNNotificationC6encode2toys7Encoder_p_tKF",
-            "mangledName": "$s6Pushly14PNNotificationC6encode2toys7Encoder_p_tKF",
-            "moduleName": "Pushly",
-            "implicit": true,
-            "throwing": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
             "kind": "Function",
             "name": "isPNNotificationPayload",
             "printedName": "isPNNotificationPayload(_:)",
@@ -25353,13 +25786,14 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Pushly14PNNotificationC02isB7PayloadySbSo14UNNotificationCFZ",
+            "usr": "c:@CM@Pushly@objc(cs)PNNotification(cm)isPNNotificationPayload:",
             "mangledName": "$s6Pushly14PNNotificationC02isB7PayloadySbSo14UNNotificationCFZ",
             "moduleName": "Pushly",
             "static": true,
             "declAttributes": [
               "Final",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -25396,13 +25830,15 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Pushly14PNNotificationC02isB7PayloadySbSDys11AnyHashableVypGFZ",
+            "usr": "c:@CM@Pushly@objc(cs)PNNotification(cm)isPNNotificationPayloadDictionary:",
             "mangledName": "$s6Pushly14PNNotificationC02isB7PayloadySbSDys11AnyHashableVypGFZ",
             "moduleName": "Pushly",
             "static": true,
+            "objc_name": "isPNNotificationPayloadDictionary:",
             "declAttributes": [
               "Final",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -25457,6 +25893,7 @@
         "moduleName": "Pushly",
         "declAttributes": [
           "AccessControl",
+          "ObjCMembers",
           "ObjC"
         ],
         "superclassUsr": "c:objc(cs)NSObject",
@@ -25464,20 +25901,6 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Decodable",
-            "printedName": "Decodable",
-            "usr": "s:Se",
-            "mangledName": "$sSe"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Encodable",
-            "printedName": "Encodable",
-            "usr": "s:SE",
-            "mangledName": "$sSE"
-          },
           {
             "kind": "Conformance",
             "name": "Copyable",
@@ -28859,13 +29282,10 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
+        "name": "ActivityKit",
+        "printedName": "ActivityKit",
         "declKind": "Import",
-        "moduleName": "Pushly",
-        "declAttributes": [
-          "RawDocComment"
-        ]
+        "moduleName": "Pushly"
       },
       {
         "kind": "Import",
@@ -30336,6 +30756,230 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "PNNotificationMetaError",
+        "printedName": "PNNotificationMetaError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "valueTypeUnsupported",
+            "printedName": "valueTypeUnsupported",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Pushly.PNNotificationMetaError.Type) -> (Any?) -> Pushly.PNNotificationMetaError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Any?) -> Pushly.PNNotificationMetaError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PNNotificationMetaError",
+                        "printedName": "Pushly.PNNotificationMetaError",
+                        "usr": "s:6Pushly23PNNotificationMetaErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Any?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "Pushly.PNNotificationMetaError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PNNotificationMetaError",
+                        "printedName": "Pushly.PNNotificationMetaError",
+                        "usr": "s:6Pushly23PNNotificationMetaErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:6Pushly23PNNotificationMetaErrorO20valueTypeUnsupportedyACypSgcACmF",
+            "mangledName": "$s6Pushly23PNNotificationMetaErrorO20valueTypeUnsupportedyACypSgcACmF",
+            "moduleName": "Pushly"
+          },
+          {
+            "kind": "Var",
+            "name": "valueTypeMismatch",
+            "printedName": "valueTypeMismatch",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Pushly.PNNotificationMetaError.Type) -> (Swift.String) -> Pushly.PNNotificationMetaError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> Pushly.PNNotificationMetaError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PNNotificationMetaError",
+                        "printedName": "Pushly.PNNotificationMetaError",
+                        "usr": "s:6Pushly23PNNotificationMetaErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(forKey: Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "Pushly.PNNotificationMetaError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PNNotificationMetaError",
+                        "printedName": "Pushly.PNNotificationMetaError",
+                        "usr": "s:6Pushly23PNNotificationMetaErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:6Pushly23PNNotificationMetaErrorO17valueTypeMismatchyACSS_tcACmF",
+            "mangledName": "$s6Pushly23PNNotificationMetaErrorO17valueTypeMismatchyACSS_tcACmF",
+            "moduleName": "Pushly"
+          },
+          {
+            "kind": "Var",
+            "name": "errorDescription",
+            "printedName": "errorDescription",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:6Pushly23PNNotificationMetaErrorO16errorDescriptionSSSgvp",
+            "mangledName": "$s6Pushly23PNNotificationMetaErrorO16errorDescriptionSSSgvp",
+            "moduleName": "Pushly",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Pushly23PNNotificationMetaErrorO16errorDescriptionSSSgvg",
+                "mangledName": "$s6Pushly23PNNotificationMetaErrorO16errorDescriptionSSSgvg",
+                "moduleName": "Pushly",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:6Pushly23PNNotificationMetaErrorO",
+        "mangledName": "$s6Pushly23PNNotificationMetaErrorO",
+        "moduleName": "Pushly",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "LocalizedError",
+            "printedName": "LocalizedError",
+            "usr": "s:10Foundation14LocalizedErrorP",
+            "mangledName": "$s10Foundation14LocalizedErrorP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "PNMetaValue",
         "printedName": "PNMetaValue",
         "children": [
@@ -30552,34 +31196,6 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "Decoder",
-                "printedName": "any Swift.Decoder",
-                "usr": "s:s7DecoderP"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:6Pushly11PNMetaValueO4fromACs7Decoder_p_tKcfc",
-            "mangledName": "$s6Pushly11PNMetaValueO4fromACs7Decoder_p_tKcfc",
-            "moduleName": "Pushly",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "throwing": true,
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(from:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "PNMetaValue",
-                "printedName": "Pushly.PNMetaValue",
-                "usr": "s:6Pushly11PNMetaValueO"
-              },
-              {
-                "kind": "TypeNominal",
                 "name": "ProtocolComposition",
                 "printedName": "Any"
               }
@@ -30596,27 +31212,22 @@
           },
           {
             "kind": "Function",
-            "name": "encode",
-            "printedName": "encode(to:)",
+            "name": "toValue",
+            "printedName": "toValue()",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Encoder",
-                "printedName": "any Swift.Encoder",
-                "usr": "s:s7EncoderP"
+                "name": "ProtocolComposition",
+                "printedName": "Any"
               }
             ],
             "declKind": "Func",
-            "usr": "s:6Pushly11PNMetaValueO6encode2toys7Encoder_p_tKF",
-            "mangledName": "$s6Pushly11PNMetaValueO6encode2toys7Encoder_p_tKF",
+            "usr": "s:6Pushly11PNMetaValueO02toC0ypyF",
+            "mangledName": "$s6Pushly11PNMetaValueO02toC0ypyF",
             "moduleName": "Pushly",
-            "implicit": true,
-            "throwing": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
             "funcSelfKind": "NonMutating"
           }
         ],
@@ -30625,7 +31236,447 @@
         "mangledName": "$s6Pushly11PNMetaValueO",
         "moduleName": "Pushly",
         "declAttributes": [
-          "AccessControl"
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PNNotificationMeta",
+        "printedName": "PNNotificationMeta",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PNNotificationMeta",
+                "printedName": "Pushly.PNNotificationMeta",
+                "usr": "c:@M@Pushly@objc(cs)PNNotificationMeta"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@Pushly@objc(cs)PNNotificationMeta(im)init",
+            "mangledName": "$s6Pushly18PNNotificationMetaCACycfc",
+            "moduleName": "Pushly",
+            "overriding": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Convenience",
+              "Override",
+              "AccessControl"
+            ],
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PNNotificationMeta",
+                "printedName": "Pushly.PNNotificationMeta",
+                "usr": "c:@M@Pushly@objc(cs)PNNotificationMeta"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Swift.AnyHashable]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Swift.AnyHashable]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "AnyHashable",
+                        "printedName": "Swift.AnyHashable",
+                        "usr": "s:s11AnyHashableV"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@Pushly@objc(cs)PNNotificationMeta(im)initFrom:",
+            "mangledName": "$s6Pushly18PNNotificationMetaC4fromACSDySSs11AnyHashableVGSg_tcfc",
+            "moduleName": "Pushly",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "has",
+            "printedName": "has(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@Pushly@objc(cs)PNNotificationMeta(im)has:",
+            "mangledName": "$s6Pushly18PNNotificationMetaC3hasySbSSF",
+            "moduleName": "Pushly",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Subscript",
+            "name": "subscript",
+            "printedName": "subscript(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Pushly.PNMetaValue?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PNMetaValue",
+                    "printedName": "Pushly.PNMetaValue",
+                    "usr": "s:6Pushly11PNMetaValueO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Subscript",
+            "usr": "s:6Pushly18PNNotificationMetaCyAA11PNMetaValueOSgSScip",
+            "mangledName": "$s6Pushly18PNNotificationMetaCyAA11PNMetaValueOSgSScip",
+            "moduleName": "Pushly",
+            "deprecated": true,
+            "declAttributes": [
+              "AccessControl",
+              "Available"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Pushly.PNMetaValue?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PNMetaValue",
+                        "printedName": "Pushly.PNMetaValue",
+                        "usr": "s:6Pushly11PNMetaValueO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6Pushly18PNNotificationMetaCyAA11PNMetaValueOSgSScig",
+                "mangledName": "$s6Pushly18PNNotificationMetaCyAA11PNMetaValueOSgSScig",
+                "moduleName": "Pushly",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "getValue",
+            "printedName": "getValue(forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Any?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@Pushly@objc(cs)PNNotificationMeta(im)getValueForKey:",
+            "mangledName": "$s6Pushly18PNNotificationMetaC8getValue6forKeyypSgSS_tF",
+            "moduleName": "Pushly",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getBool",
+            "printedName": "getBool(forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Pushly18PNNotificationMetaC7getBool6forKeySbSS_tKF",
+            "mangledName": "$s6Pushly18PNNotificationMetaC7getBool6forKeySbSS_tKF",
+            "moduleName": "Pushly",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getString",
+            "printedName": "getString(forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@Pushly@objc(cs)PNNotificationMeta(im)getStringForKey:error:",
+            "mangledName": "$s6Pushly18PNNotificationMetaC9getString6forKeyS2S_tKF",
+            "moduleName": "Pushly",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getInt",
+            "printedName": "getInt(forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int64",
+                "printedName": "Swift.Int64",
+                "usr": "s:s5Int64V"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Pushly18PNNotificationMetaC6getInt6forKeys5Int64VSS_tKF",
+            "mangledName": "$s6Pushly18PNNotificationMetaC6getInt6forKeys5Int64VSS_tKF",
+            "moduleName": "Pushly",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getDouble",
+            "printedName": "getDouble(forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Pushly18PNNotificationMetaC9getDouble6forKeySdSS_tKF",
+            "mangledName": "$s6Pushly18PNNotificationMetaC9getDouble6forKeySdSS_tKF",
+            "moduleName": "Pushly",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "toDict",
+            "printedName": "toDict()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@Pushly@objc(cs)PNNotificationMeta(im)toDict",
+            "mangledName": "$s6Pushly18PNNotificationMetaC6toDictSDySSypGyF",
+            "moduleName": "Pushly",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "toSimpleObject",
+            "printedName": "toSimpleObject()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any?]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Any?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Pushly18PNNotificationMetaC14toSimpleObjectSDySSypSgGyF",
+            "mangledName": "$s6Pushly18PNNotificationMetaC14toSimpleObjectSDySSypSgGyF",
+            "moduleName": "Pushly",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@Pushly@objc(cs)PNNotificationMeta",
+        "mangledName": "$s6Pushly18PNNotificationMetaC",
+        "moduleName": "Pushly",
+        "declAttributes": [
+          "AccessControl",
+          "ObjCMembers",
+          "RawDocComment",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
         ],
         "conformances": [
           {
@@ -30644,17 +31695,52 @@
           },
           {
             "kind": "Conformance",
-            "name": "Decodable",
-            "printedName": "Decodable",
-            "usr": "s:Se",
-            "mangledName": "$sSe"
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
           },
           {
             "kind": "Conformance",
-            "name": "Encodable",
-            "printedName": "Encodable",
-            "usr": "s:SE",
-            "mangledName": "$sSE"
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
         ]
       },
@@ -31959,6 +33045,180 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "Activity",
+        "printedName": "Activity",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "pushSDKRegisterActivityType",
+            "printedName": "pushSDKRegisterActivityType(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ActivityKit.Activity<τ_0_0>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Activity",
+                    "printedName": "ActivityKit.Activity<τ_0_0>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GenericTypeParam",
+                        "printedName": "τ_0_0"
+                      }
+                    ],
+                    "usr": "s:11ActivityKit0A0C"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11ActivityKit0A0C6PushlyE015pushSDKRegisterA4TypeyyyACyxGYbcFZ",
+            "mangledName": "$s11ActivityKit0A0C6PushlyE015pushSDKRegisterA4TypeyyyACyxGYbcFZ",
+            "moduleName": "Pushly",
+            "genericSig": "<τ_0_0 where τ_0_0 : ActivityKit.ActivityAttributes>",
+            "sugared_genericSig": "<Attributes where Attributes : ActivityKit.ActivityAttributes>",
+            "static": true,
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pushSDKRegisterActivity",
+            "printedName": "pushSDKRegisterActivity(withId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11ActivityKit0A0C6PushlyE015pushSDKRegisterA06withIdySS_tF",
+            "mangledName": "$s11ActivityKit0A0C6PushlyE015pushSDKRegisterA06withIdySS_tF",
+            "moduleName": "Pushly",
+            "genericSig": "<τ_0_0 where τ_0_0 : ActivityKit.ActivityAttributes>",
+            "sugared_genericSig": "<Attributes where Attributes : ActivityKit.ActivityAttributes>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pushSDKRegisterActivityType",
+            "printedName": "pushSDKRegisterActivityType()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11ActivityKit0A0C6PushlyAD20PNActivityAttributesRzrlE015pushSDKRegisterA4TypeyyFZ",
+            "mangledName": "$s11ActivityKit0A0C6PushlyAD20PNActivityAttributesRzrlE015pushSDKRegisterA4TypeyyFZ",
+            "moduleName": "Pushly",
+            "genericSig": "<τ_0_0 where τ_0_0 : Pushly.PNActivityAttributes>",
+            "sugared_genericSig": "<Attributes where Attributes : Pushly.PNActivityAttributes>",
+            "static": true,
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "pushSDKRegisterActivity",
+            "printedName": "pushSDKRegisterActivity()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11ActivityKit0A0C6PushlyAD20PNActivityAttributesRzrlE015pushSDKRegisterA0yyF",
+            "mangledName": "$s11ActivityKit0A0C6PushlyAD20PNActivityAttributesRzrlE015pushSDKRegisterA0yyF",
+            "moduleName": "Pushly",
+            "genericSig": "<τ_0_0 where τ_0_0 : Pushly.PNActivityAttributes>",
+            "sugared_genericSig": "<Attributes where Attributes : Pushly.PNActivityAttributes>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:11ActivityKit0A0C",
+        "mangledName": "$s11ActivityKit0A0C",
+        "moduleName": "ActivityKit",
+        "genericSig": "<τ_0_0 where τ_0_0 : ActivityKit.ActivityAttributes>",
+        "sugared_genericSig": "<Attributes where Attributes : ActivityKit.ActivityAttributes>",
+        "intro_iOS": "16.1",
+        "declAttributes": [
+          "Available",
+          "Available",
+          "Available",
+          "Available",
+          "Available"
+        ],
+        "isExternal": true,
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Identifiable",
+            "printedName": "Identifiable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ID",
+                "printedName": "ID",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12IdentifiableP",
+            "mangledName": "$ss12IdentifiableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "URLRequest",
         "printedName": "URLRequest",
         "children": [
@@ -32474,14 +33734,14 @@
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "Dictionary",
-      "offset": 3794,
+      "offset": 3773,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "StringLiteral",
-      "offset": 15946,
+      "offset": 15925,
       "length": 2,
       "value": "\"\""
     },
@@ -33076,21 +34336,28 @@
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNTrackedEventAction.swift",
       "kind": "StringLiteral",
-      "offset": 1874,
+      "offset": 1890,
+      "length": 17,
+      "value": "\"la_register_pts\""
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNTrackedEventAction.swift",
+      "kind": "StringLiteral",
+      "offset": 1935,
       "length": 8,
       "value": "\"la_end\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNTrackedEventAction.swift",
       "kind": "StringLiteral",
-      "offset": 1927,
+      "offset": 1988,
       "length": 15,
       "value": "\"session_start\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNTrackedEventAction.swift",
       "kind": "StringLiteral",
-      "offset": 1971,
+      "offset": 2032,
       "length": 19,
       "value": "\"session_heartbeat\""
     },
@@ -33956,6 +35223,20 @@
       "value": "true"
     },
     {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNNotificationInteractionType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 195,
+      "length": 13,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNNotificationInteractionType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 218,
+      "length": 12,
+      "value": "2"
+    },
+    {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNAppMessage.swift",
       "kind": "IntegerLiteral",
       "offset": 241,
@@ -34413,35 +35694,35 @@
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNNotification.swift",
       "kind": "BooleanLiteral",
-      "offset": 720,
+      "offset": 718,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNNotification.swift",
       "kind": "BooleanLiteral",
-      "offset": 764,
+      "offset": 762,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNNotification.swift",
       "kind": "StringLiteral",
-      "offset": 1352,
+      "offset": 1350,
       "length": 24,
       "value": "\"publisher_notification\""
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNNotification.swift",
       "kind": "BooleanLiteral",
-      "offset": 1465,
+      "offset": 1460,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/ahay\/seaworld\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNNotification.swift",
       "kind": "BooleanLiteral",
-      "offset": 1510,
+      "offset": 1505,
       "length": 5,
       "value": "false"
     },

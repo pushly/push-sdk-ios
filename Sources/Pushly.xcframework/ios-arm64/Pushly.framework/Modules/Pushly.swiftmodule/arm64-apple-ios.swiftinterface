@@ -2,6 +2,7 @@
 // swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name Pushly
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface
+import ActivityKit
 import Combine
 import CommonCrypto
 import DeveloperToolsSupport
@@ -341,6 +342,10 @@ extension Pushly.PNSessionScope : Swift.Codable {
 extension Pushly.PNECommItem {
   public func toSimpleObject() -> [Swift.String : Any?]
 }
+@available(iOS 16.1, *)
+public protocol PNActivityAttributes : ActivityKit.ActivityAttributes {
+  var pnActivityId: Swift.String { get }
+}
 @objc @objcMembers public class PNSessionConfig : ObjectiveC.NSObject, Swift.Codable {
   @objc final public let sessionTimezone: Swift.String?
   @objc public var sessionThreshold: Pushly.RelativeDate?
@@ -520,13 +525,13 @@ public class PNAppMessageMargins : Swift.Codable {
   @objc(pushSDKDidReceiveNotification:) optional func pushSDK(didReceiveNotification notification: Pushly.PNNotification)
   @objc(pushSDKDidReceiveNotificationDestination:withInteraction:) optional func pushSDK(didReceiveNotificationDestination destination: Swift.String, withInteraction interaction: Pushly.PNNotificationInteraction) -> Swift.Bool
 }
-public enum PNNotificationInteractionType {
+@objc public enum PNNotificationInteractionType : Swift.Int {
   case defaultAction
   case dismissAction
   case customAction
-  public static func == (a: Pushly.PNNotificationInteractionType, b: Pushly.PNNotificationInteractionType) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
     get
   }
 }
@@ -624,14 +629,21 @@ extension Pushly.PNAppMessage {
 extension Pushly.PNAppFrequencyCaps {
   public func toSimpleObject() -> [Swift.String : Any?]
 }
-@available(iOSApplicationExtension 16.1, *)
+@available(iOS 16.1, *)
 extension Pushly.PushSDK {
   @_inheritsConvenienceInitializers @objc(PushSDKLiveActivities) @objcMembers public class LiveActivities : ObjectiveC.NSObject {
-    @objc public static func register(token: Swift.String, forActivity activity: Swift.String)
-    @objc public static func track(_ activityEvent: Pushly.PNLiveActivityEvent, forActivity activity: Swift.String)
+    @objc public static func register(token: Swift.String, forActivity activityId: Swift.String)
+    @objc public static func track(_ activityEvent: Pushly.PNLiveActivityEvent, forActivity activityId: Swift.String)
     @objc override dynamic public init()
     @objc deinit
   }
+}
+@available(iOS 16.1, *)
+extension Pushly.PushSDK.LiveActivities {
+  public static func register<Attributes>(_ activityType: ActivityKit.Activity<Attributes>.Type, activityHandler: @escaping @Sendable (ActivityKit.Activity<Attributes>) -> Swift.Void) where Attributes : ActivityKit.ActivityAttributes
+  public static func register<Attributes>(_ activity: ActivityKit.Activity<Attributes>, withId activityId: Swift.String) where Attributes : ActivityKit.ActivityAttributes
+  public static func register<Attributes>(_ activityType: ActivityKit.Activity<Attributes>.Type) where Attributes : Pushly.PNActivityAttributes
+  public static func register<Attributes>(_ activity: ActivityKit.Activity<Attributes>) where Attributes : Pushly.PNActivityAttributes
 }
 @objc public enum AnimationType : Swift.Int {
   case cut
@@ -668,13 +680,13 @@ extension Pushly.AnimationType : Swift.Codable {
 extension Pushly.PNAppMessagePositionConfig {
   public func toSimpleObject() -> [Swift.String : Any?]
 }
-@objc public class PNNotificationInteraction : ObjectiveC.NSObject {
-  final public let type: Pushly.PNNotificationInteractionType
-  final public let actionIdentifier: Swift.String
-  public var notification: Pushly.PNNotification
-  public init(from response: UserNotifications.UNNotificationResponse)
-  public var action: Pushly.PNNotificationAction? {
-    get
+@objc @objcMembers public class PNNotificationInteraction : ObjectiveC.NSObject {
+  @objc final public let type: Pushly.PNNotificationInteractionType
+  @objc final public let actionIdentifier: Swift.String
+  @objc public var notification: Pushly.PNNotification
+  @objc public init(from response: UserNotifications.UNNotificationResponse)
+  @objc public var action: Pushly.PNNotificationAction? {
+    @objc get
   }
   @objc deinit
 }
@@ -805,51 +817,59 @@ public class PNAppMessageAutoCloseConfig : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
 }
+@available(iOS 16.1, *)
+extension ActivityKit.Activity {
+  public class func pushSDKRegisterActivityType(_ activityHandler: @escaping @Sendable (ActivityKit.Activity<Attributes>) -> Swift.Void)
+  public func pushSDKRegisterActivity(withId activityId: Swift.String)
+}
+@available(iOS 16.1, *)
+extension ActivityKit.Activity where Attributes : Pushly.PNActivityAttributes {
+  public class func pushSDKRegisterActivityType()
+  public func pushSDKRegisterActivity()
+}
 extension Foundation.URLRequest {
   public func cURL(pretty: Swift.Bool = false) -> Swift.String
 }
-@objc public class PNNotification : ObjectiveC.NSObject, Swift.Codable {
-  public var title: Swift.String?
-  public var titleLocKey: Swift.String?
-  public var titleLocArgs: [Swift.String]?
-  public var subtitle: Swift.String?
-  public var subtitleLocKey: Swift.String?
-  public var subtitleLocArgs: [Swift.String]?
-  public var body: Swift.String?
-  public var locKey: Swift.String?
-  public var locArgs: [Swift.String]?
-  public var launchImage: Swift.String?
-  public var category: Swift.String?
+@objc @objcMembers public class PNNotification : ObjectiveC.NSObject {
+  @objc public var title: Swift.String?
+  @objc public var titleLocKey: Swift.String?
+  @objc public var titleLocArgs: [Swift.String]?
+  @objc public var subtitle: Swift.String?
+  @objc public var subtitleLocKey: Swift.String?
+  @objc public var subtitleLocArgs: [Swift.String]?
+  @objc public var body: Swift.String?
+  @objc public var locKey: Swift.String?
+  @objc public var locArgs: [Swift.String]?
+  @objc public var launchImage: Swift.String?
+  @objc public var category: Swift.String?
   public var badge: Swift.Int?
-  public var sound: Swift.String?
-  public var threadId: Swift.String?
-  public var contentAvailable: Swift.Bool
-  public var mutableContent: Swift.Bool
-  public var targetContentId: Swift.String?
-  public var interruptionLevel: Swift.String?
+  @objc public var sound: Swift.String?
+  @objc public var threadId: Swift.String?
+  @objc public var contentAvailable: Swift.Bool
+  @objc public var mutableContent: Swift.Bool
+  @objc public var targetContentId: Swift.String?
+  @objc public var interruptionLevel: Swift.String?
   public var relevanceScore: Swift.Int?
-  public var filterCriteria: Swift.String?
-  final public let id: Swift.Int
-  final public let piid: Swift.String
-  final public let landingURL: Swift.String
-  public var imageURL: Swift.String?
-  public var contentWebhookURL: Swift.String?
-  public var actions: [Pushly.PNNotificationAction]
+  @objc public var filterCriteria: Swift.String?
+  @objc final public let id: Swift.Int
+  @objc final public let piid: Swift.String
+  @objc final public let landingURL: Swift.String
+  @objc public var imageURL: Swift.String?
+  @objc public var contentWebhookURL: Swift.String?
+  @objc public var actions: [Pushly.PNNotificationAction]
   public var badgeBehavior: Pushly.PNNotificationBadgeBehavior?
   public var badgeConfig: Pushly.PNBadgeConfig?
-  public var impressionType: Swift.String
-  public var meta: [Swift.String : Pushly.PNMetaValue]?
-  public var viaServiceExtension: Swift.Bool
-  public var hasRequiredKeys: Swift.Bool
-  convenience public init(from notification: UserNotifications.UNNotification)
-  public init(from userInfo: [Swift.AnyHashable : Any])
+  @objc public var impressionType: Swift.String
+  @objc public var meta: Pushly.PNNotificationMeta?
+  @objc public var viaServiceExtension: Swift.Bool
+  @objc public var hasRequiredKeys: Swift.Bool
+  @objc convenience public init(from notification: UserNotifications.UNNotification)
+  @objc(initFromUserInfo:) public init(from userInfo: [Swift.AnyHashable : Any])
   @objc deinit
-  public func encode(to encoder: any Swift.Encoder) throws
-  required public init(from decoder: any Swift.Decoder) throws
 }
 extension Pushly.PNNotification {
-  public static func isPNNotificationPayload(_ payload: UserNotifications.UNNotification) -> Swift.Bool
-  public static func isPNNotificationPayload(_ payload: [Swift.AnyHashable : Any]) -> Swift.Bool
+  @objc public static func isPNNotificationPayload(_ payload: UserNotifications.UNNotification) -> Swift.Bool
+  @objc(isPNNotificationPayloadDictionary:) public static func isPNNotificationPayload(_ payload: [Swift.AnyHashable : Any]) -> Swift.Bool
 }
 extension Pushly.PNNotification {
   public func toSimpleObject() -> [Swift.String : Any?]
@@ -1033,14 +1053,47 @@ extension Pushly.PNPrePermissionResponse {
 extension Pushly.PNApplicationConfig {
   final public func toSimpleObject() -> [Swift.String : Any?]
 }
-public enum PNMetaValue : Swift.Codable {
+public enum PNNotificationMetaError : Swift.Error {
+  case valueTypeUnsupported(_: Any?)
+  case valueTypeMismatch(forKey: Swift.String)
+}
+extension Pushly.PNNotificationMetaError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+public enum PNMetaValue {
   case int(Swift.Int64)
   case string(Swift.String)
   case bool(Swift.Bool)
   case double(Swift.Double)
-  public init(from decoder: any Swift.Decoder) throws
   public init(from any: Any) throws
-  public func encode(to encoder: any Swift.Encoder) throws
+  public func toValue() -> Any
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class PNNotificationMeta : ObjectiveC.NSObject {
+  @objc override convenience dynamic public init()
+  @objc public init(from data: [Swift.String : Swift.AnyHashable]?)
+  @objc public func has(_ key: Swift.String) -> Swift.Bool
+  @available(*, deprecated, message: "Use getValue(forKey:) instead")
+  public subscript(key: Swift.String) -> Pushly.PNMetaValue? {
+    get
+  }
+  @objc public func getValue(forKey key: Swift.String) -> Any?
+  public func getBool(forKey key: Swift.String) throws -> Swift.Bool
+  @objc public func getString(forKey key: Swift.String) throws -> Swift.String
+  public func getInt(forKey key: Swift.String) throws -> Swift.Int64
+  public func getDouble(forKey key: Swift.String) throws -> Swift.Double
+  @objc public func toDict() -> [Swift.String : Any]
+  @objc deinit
+}
+@available(swift, obsoleted: 1.0)
+@objc extension Pushly.PNNotificationMeta {
+  @objc dynamic public func getBoolForKey(_ key: Swift.String) throws -> Foundation.NSNumber
+  @objc dynamic public func getIntForKey(_ key: Swift.String) throws -> Foundation.NSNumber
+  @objc dynamic public func getDoubleForKey(_ key: Swift.String) throws -> Foundation.NSNumber
+}
+extension Pushly.PNNotificationMeta {
+  public func toSimpleObject() -> [Swift.String : Any?]
 }
 public enum DisplayCondition : Swift.Int {
   case enabled
@@ -1119,6 +1172,7 @@ extension Pushly.PNAppMessageActionIdentifier : Swift.Hashable {}
 extension Pushly.PNAppMessageActionIdentifier : Swift.RawRepresentable {}
 extension Pushly.PNNotificationInteractionType : Swift.Equatable {}
 extension Pushly.PNNotificationInteractionType : Swift.Hashable {}
+extension Pushly.PNNotificationInteractionType : Swift.RawRepresentable {}
 extension Pushly.AnimationType : Swift.Equatable {}
 extension Pushly.AnimationType : Swift.Hashable {}
 extension Pushly.AnimationType : Swift.RawRepresentable {}

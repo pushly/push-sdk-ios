@@ -348,6 +348,7 @@ SWIFT_CLASS("_TtC6Pushly31FrequencyCapWithOccurrenceLimit")
 
 
 
+
 SWIFT_CLASS("_TtC6Pushly18PNAppFrequencyCaps")
 @interface PNAppFrequencyCaps : NSObject
 @property (nonatomic, readonly, strong) FrequencyCapWithOccurrenceLimit * _Nullable prompts;
@@ -375,12 +376,12 @@ SWIFT_CLASS("_TtC6Pushly12PNAppMessage")
 
 
 
+
 @interface PNAppMessage (SWIFT_EXTENSION(Pushly))
 @property (nonatomic, readonly, copy) NSArray<NSString *> * _Nonnull conditionKeys;
 - (BOOL)hasConditionKey:(NSString * _Nonnull)key SWIFT_WARN_UNUSED_RESULT;
 - (BOOL)meetsConditions:(NSDictionary<NSString *, NSString *> * _Nonnull)checkConditions SWIFT_WARN_UNUSED_RESULT;
 @end
-
 
 @class RelativeDate;
 
@@ -638,14 +639,52 @@ SWIFT_CLASS("_TtC6Pushly8PNLogger")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+@class PNNotificationAction;
+@class PNNotificationMeta;
+@class UNNotification;
 
 SWIFT_CLASS("_TtC6Pushly14PNNotification")
 @interface PNNotification : NSObject
+@property (nonatomic, copy) NSString * _Nullable title;
+@property (nonatomic, copy) NSString * _Nullable titleLocKey;
+@property (nonatomic, copy) NSArray<NSString *> * _Nullable titleLocArgs;
+@property (nonatomic, copy) NSString * _Nullable subtitle;
+@property (nonatomic, copy) NSString * _Nullable subtitleLocKey;
+@property (nonatomic, copy) NSArray<NSString *> * _Nullable subtitleLocArgs;
+@property (nonatomic, copy) NSString * _Nullable body;
+@property (nonatomic, copy) NSString * _Nullable locKey;
+@property (nonatomic, copy) NSArray<NSString *> * _Nullable locArgs;
+@property (nonatomic, copy) NSString * _Nullable launchImage;
+@property (nonatomic, copy) NSString * _Nullable category;
+@property (nonatomic, copy) NSString * _Nullable sound;
+@property (nonatomic, copy) NSString * _Nullable threadId;
+@property (nonatomic) BOOL contentAvailable;
+@property (nonatomic) BOOL mutableContent;
+@property (nonatomic, copy) NSString * _Nullable targetContentId;
+@property (nonatomic, copy) NSString * _Nullable interruptionLevel;
+@property (nonatomic, copy) NSString * _Nullable filterCriteria;
+@property (nonatomic, readonly) NSInteger id;
+@property (nonatomic, readonly, copy) NSString * _Nonnull piid;
+@property (nonatomic, readonly, copy) NSString * _Nonnull landingURL;
+@property (nonatomic, copy) NSString * _Nullable imageURL;
+@property (nonatomic, copy) NSString * _Nullable contentWebhookURL;
+@property (nonatomic, copy) NSArray<PNNotificationAction *> * _Nonnull actions;
+@property (nonatomic, copy) NSString * _Nonnull impressionType;
+@property (nonatomic, strong) PNNotificationMeta * _Nullable meta;
+@property (nonatomic) BOOL viaServiceExtension;
+@property (nonatomic) BOOL hasRequiredKeys;
+- (nonnull instancetype)initFrom:(UNNotification * _Nonnull)notification;
+- (nonnull instancetype)initFromUserInfo:(NSDictionary * _Nonnull)userInfo OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
+
+@interface PNNotification (SWIFT_EXTENSION(Pushly))
++ (BOOL)isPNNotificationPayload:(UNNotification * _Nonnull)payload SWIFT_WARN_UNUSED_RESULT;
++ (BOOL)isPNNotificationPayloadDictionary:(NSDictionary * _Nonnull)payload SWIFT_WARN_UNUSED_RESULT;
+@end
 
 enum PNNotificationActionType : NSInteger;
 
@@ -668,13 +707,26 @@ typedef SWIFT_ENUM(NSInteger, PNNotificationActionType, open) {
   PNNotificationActionTypeDismiss = 1,
 };
 
+enum PNNotificationInteractionType : NSInteger;
+@class UNNotificationResponse;
 
 SWIFT_CLASS("_TtC6Pushly25PNNotificationInteraction")
 @interface PNNotificationInteraction : NSObject
+@property (nonatomic, readonly) enum PNNotificationInteractionType type;
+@property (nonatomic, readonly, copy) NSString * _Nonnull actionIdentifier;
+@property (nonatomic, strong) PNNotification * _Nonnull notification;
+- (nonnull instancetype)initFrom:(UNNotificationResponse * _Nonnull)response OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, readonly, strong) PNNotificationAction * _Nullable action;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+
+typedef SWIFT_ENUM(NSInteger, PNNotificationInteractionType, open) {
+  PNNotificationInteractionTypeDefaultAction = 0,
+  PNNotificationInteractionTypeDismissAction = 1,
+  PNNotificationInteractionTypeCustomAction = 2,
+};
 
 
 SWIFT_PROTOCOL("_TtP6Pushly31PNNotificationLifecycleDelegate_")
@@ -684,6 +736,26 @@ SWIFT_PROTOCOL("_TtP6Pushly31PNNotificationLifecycleDelegate_")
 /// FALSE:   the destination was not handled and is available for processing
 /// TRUE:    the client handled the event and it should not be processed
 - (BOOL)pushSDKDidReceiveNotificationDestination:(NSString * _Nonnull)destination withInteraction:(PNNotificationInteraction * _Nonnull)interaction SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+SWIFT_CLASS("_TtC6Pushly18PNNotificationMeta")
+@interface PNNotificationMeta : NSObject
+- (nonnull instancetype)init;
+- (nonnull instancetype)initFrom:(NSDictionary<NSString *, NSObject *> * _Nullable)data OBJC_DESIGNATED_INITIALIZER;
+- (BOOL)has:(NSString * _Nonnull)key SWIFT_WARN_UNUSED_RESULT;
+- (id _Nullable)getValueForKey:(NSString * _Nonnull)key SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nullable)getStringForKey:(NSString * _Nonnull)key error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+- (NSDictionary<NSString *, id> * _Nonnull)toDict SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+@class NSNumber;
+
+@interface PNNotificationMeta (SWIFT_EXTENSION(Pushly))
+- (NSNumber * _Nullable)getBoolForKey:(NSString * _Nonnull)key error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+- (NSNumber * _Nullable)getIntForKey:(NSString * _Nonnull)key error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+- (NSNumber * _Nullable)getDoubleForKey:(NSString * _Nonnull)key error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
@@ -782,8 +854,6 @@ typedef SWIFT_ENUM(NSInteger, PNSubscriberStatus, open) {
 };
 
 @class UNUserNotificationCenter;
-@class UNNotification;
-@class UNNotificationResponse;
 
 SWIFT_CLASS("_TtC6Pushly24PNUserNotificationCenter") SWIFT_AVAILABILITY(ios_app_extension,unavailable)
 @interface PNUserNotificationCenter : NSObject <UNUserNotificationCenterDelegate>
@@ -802,6 +872,39 @@ SWIFT_CLASS("_TtC6Pushly26PushNotificationsWkHandler") SWIFT_AVAILABILITY(ios_ap
 
 SWIFT_CLASS("_TtC6Pushly7PushSDK")
 @interface PushSDK : UIResponder <UIApplicationDelegate>
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_AVAILABILITY(ios_app_extension,unavailable)
+@interface PushSDK (SWIFT_EXTENSION(Pushly))
+@end
+
+
+SWIFT_CLASS_NAMED("AppMessages")
+@interface PushSDKAppMessages : NSObject
+/// Applies triggered condition to all applicable app messages.
+/// If applied trigger completes all conditions in an app message’s scope
+/// and the app message is set to auto show it will be displayed.
++ (void)triggerWithCondition:(NSString * _Nonnull)condition withValue:(NSString * _Nonnull)value;
+/// Applies triggered conditions to all applicable app messages.
+/// If applied triggers complete all conditions in an app message’s scope
+/// and the app message is set to auto show it will be displayed.
++ (void)triggerWithConditions:(NSDictionary<NSString *, NSString *> * _Nonnull)conditions;
++ (void)_platformBridgeProcessInteraction:(PNAppMessageInteraction * _Nonnull)interaction for:(PNAppMessage * _Nonnull)appMessage;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_AVAILABILITY(ios,introduced=16.1)
+@interface PushSDK (SWIFT_EXTENSION(Pushly))
+@end
+
+
+SWIFT_CLASS_NAMED("LiveActivities")
+@interface PushSDKLiveActivities : NSObject
++ (void)registerWithToken:(NSString * _Nonnull)token forActivity:(NSString * _Nonnull)activityId;
++ (void)track:(enum PNLiveActivityEvent)activityEvent forActivity:(NSString * _Nonnull)activityId;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -857,27 +960,6 @@ SWIFT_AVAILABILITY(ios_app_extension,unavailable)
 @end
 
 
-SWIFT_CLASS_NAMED("PushNotifications")
-@interface PushSDKPushNotifications : NSObject
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isSubscribed;)
-+ (BOOL)isSubscribed SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isEligibleToPrompt;)
-+ (BOOL)isEligibleToPrompt SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isPaused;)
-+ (BOOL)isPaused SWIFT_WARN_UNUSED_RESULT;
-+ (void)pause;
-+ (void)resume;
-+ (void)showPermissionPrompt:(void (^ _Nonnull)(BOOL, UNNotificationSettings * _Nonnull, NSError * _Nullable))completion;
-+ (void)executeIfSubscribed:(void (^ _Nonnull)(void))action;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_AVAILABILITY(ios_app_extension,unavailable)
-@interface PushSDK (SWIFT_EXTENSION(Pushly))
-@end
-
-
 SWIFT_CLASS_NAMED("EComm")
 @interface PushSDKEComm : NSObject
 + (void)addToCartWithItems:(NSArray<PNECommItem *> * _Nonnull)items;
@@ -895,33 +977,20 @@ SWIFT_AVAILABILITY(ios_app_extension,unavailable)
 @end
 
 
-SWIFT_CLASS_NAMED("AppMessages")
-@interface PushSDKAppMessages : NSObject
-/// Applies triggered condition to all applicable app messages.
-/// If applied trigger completes all conditions in an app message’s scope
-/// and the app message is set to auto show it will be displayed.
-+ (void)triggerWithCondition:(NSString * _Nonnull)condition withValue:(NSString * _Nonnull)value;
-/// Applies triggered conditions to all applicable app messages.
-/// If applied triggers complete all conditions in an app message’s scope
-/// and the app message is set to auto show it will be displayed.
-+ (void)triggerWithConditions:(NSDictionary<NSString *, NSString *> * _Nonnull)conditions;
-+ (void)_platformBridgeProcessInteraction:(PNAppMessageInteraction * _Nonnull)interaction for:(PNAppMessage * _Nonnull)appMessage;
+SWIFT_CLASS_NAMED("PushNotifications")
+@interface PushSDKPushNotifications : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isSubscribed;)
++ (BOOL)isSubscribed SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isEligibleToPrompt;)
++ (BOOL)isEligibleToPrompt SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isPaused;)
++ (BOOL)isPaused SWIFT_WARN_UNUSED_RESULT;
++ (void)pause;
++ (void)resume;
++ (void)showPermissionPrompt:(void (^ _Nonnull)(BOOL, UNNotificationSettings * _Nonnull, NSError * _Nullable))completion;
++ (void)executeIfSubscribed:(void (^ _Nonnull)(void))action;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
-
-
-SWIFT_AVAILABILITY(ios_app_extension,introduced=16.1)
-@interface PushSDK (SWIFT_EXTENSION(Pushly))
-@end
-
-
-SWIFT_CLASS_NAMED("LiveActivities")
-@interface PushSDKLiveActivities : NSObject
-+ (void)registerWithToken:(NSString * _Nonnull)token forActivity:(NSString * _Nonnull)activity;
-+ (void)track:(enum PNLiveActivityEvent)activityEvent forActivity:(NSString * _Nonnull)activity;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
 
 
 @interface PushSDK (SWIFT_EXTENSION(Pushly))
@@ -929,6 +998,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) enum PNLogLevel logLevel;)
 + (enum PNLogLevel)logLevel SWIFT_WARN_UNUSED_RESULT;
 + (void)setLogLevel:(enum PNLogLevel)newValue;
 @end
+
 
 
 
@@ -1344,6 +1414,7 @@ SWIFT_CLASS("_TtC6Pushly31FrequencyCapWithOccurrenceLimit")
 
 
 
+
 SWIFT_CLASS("_TtC6Pushly18PNAppFrequencyCaps")
 @interface PNAppFrequencyCaps : NSObject
 @property (nonatomic, readonly, strong) FrequencyCapWithOccurrenceLimit * _Nullable prompts;
@@ -1371,12 +1442,12 @@ SWIFT_CLASS("_TtC6Pushly12PNAppMessage")
 
 
 
+
 @interface PNAppMessage (SWIFT_EXTENSION(Pushly))
 @property (nonatomic, readonly, copy) NSArray<NSString *> * _Nonnull conditionKeys;
 - (BOOL)hasConditionKey:(NSString * _Nonnull)key SWIFT_WARN_UNUSED_RESULT;
 - (BOOL)meetsConditions:(NSDictionary<NSString *, NSString *> * _Nonnull)checkConditions SWIFT_WARN_UNUSED_RESULT;
 @end
-
 
 @class RelativeDate;
 
@@ -1634,14 +1705,52 @@ SWIFT_CLASS("_TtC6Pushly8PNLogger")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+@class PNNotificationAction;
+@class PNNotificationMeta;
+@class UNNotification;
 
 SWIFT_CLASS("_TtC6Pushly14PNNotification")
 @interface PNNotification : NSObject
+@property (nonatomic, copy) NSString * _Nullable title;
+@property (nonatomic, copy) NSString * _Nullable titleLocKey;
+@property (nonatomic, copy) NSArray<NSString *> * _Nullable titleLocArgs;
+@property (nonatomic, copy) NSString * _Nullable subtitle;
+@property (nonatomic, copy) NSString * _Nullable subtitleLocKey;
+@property (nonatomic, copy) NSArray<NSString *> * _Nullable subtitleLocArgs;
+@property (nonatomic, copy) NSString * _Nullable body;
+@property (nonatomic, copy) NSString * _Nullable locKey;
+@property (nonatomic, copy) NSArray<NSString *> * _Nullable locArgs;
+@property (nonatomic, copy) NSString * _Nullable launchImage;
+@property (nonatomic, copy) NSString * _Nullable category;
+@property (nonatomic, copy) NSString * _Nullable sound;
+@property (nonatomic, copy) NSString * _Nullable threadId;
+@property (nonatomic) BOOL contentAvailable;
+@property (nonatomic) BOOL mutableContent;
+@property (nonatomic, copy) NSString * _Nullable targetContentId;
+@property (nonatomic, copy) NSString * _Nullable interruptionLevel;
+@property (nonatomic, copy) NSString * _Nullable filterCriteria;
+@property (nonatomic, readonly) NSInteger id;
+@property (nonatomic, readonly, copy) NSString * _Nonnull piid;
+@property (nonatomic, readonly, copy) NSString * _Nonnull landingURL;
+@property (nonatomic, copy) NSString * _Nullable imageURL;
+@property (nonatomic, copy) NSString * _Nullable contentWebhookURL;
+@property (nonatomic, copy) NSArray<PNNotificationAction *> * _Nonnull actions;
+@property (nonatomic, copy) NSString * _Nonnull impressionType;
+@property (nonatomic, strong) PNNotificationMeta * _Nullable meta;
+@property (nonatomic) BOOL viaServiceExtension;
+@property (nonatomic) BOOL hasRequiredKeys;
+- (nonnull instancetype)initFrom:(UNNotification * _Nonnull)notification;
+- (nonnull instancetype)initFromUserInfo:(NSDictionary * _Nonnull)userInfo OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
+
+@interface PNNotification (SWIFT_EXTENSION(Pushly))
++ (BOOL)isPNNotificationPayload:(UNNotification * _Nonnull)payload SWIFT_WARN_UNUSED_RESULT;
++ (BOOL)isPNNotificationPayloadDictionary:(NSDictionary * _Nonnull)payload SWIFT_WARN_UNUSED_RESULT;
+@end
 
 enum PNNotificationActionType : NSInteger;
 
@@ -1664,13 +1773,26 @@ typedef SWIFT_ENUM(NSInteger, PNNotificationActionType, open) {
   PNNotificationActionTypeDismiss = 1,
 };
 
+enum PNNotificationInteractionType : NSInteger;
+@class UNNotificationResponse;
 
 SWIFT_CLASS("_TtC6Pushly25PNNotificationInteraction")
 @interface PNNotificationInteraction : NSObject
+@property (nonatomic, readonly) enum PNNotificationInteractionType type;
+@property (nonatomic, readonly, copy) NSString * _Nonnull actionIdentifier;
+@property (nonatomic, strong) PNNotification * _Nonnull notification;
+- (nonnull instancetype)initFrom:(UNNotificationResponse * _Nonnull)response OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, readonly, strong) PNNotificationAction * _Nullable action;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+
+typedef SWIFT_ENUM(NSInteger, PNNotificationInteractionType, open) {
+  PNNotificationInteractionTypeDefaultAction = 0,
+  PNNotificationInteractionTypeDismissAction = 1,
+  PNNotificationInteractionTypeCustomAction = 2,
+};
 
 
 SWIFT_PROTOCOL("_TtP6Pushly31PNNotificationLifecycleDelegate_")
@@ -1680,6 +1802,26 @@ SWIFT_PROTOCOL("_TtP6Pushly31PNNotificationLifecycleDelegate_")
 /// FALSE:   the destination was not handled and is available for processing
 /// TRUE:    the client handled the event and it should not be processed
 - (BOOL)pushSDKDidReceiveNotificationDestination:(NSString * _Nonnull)destination withInteraction:(PNNotificationInteraction * _Nonnull)interaction SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+SWIFT_CLASS("_TtC6Pushly18PNNotificationMeta")
+@interface PNNotificationMeta : NSObject
+- (nonnull instancetype)init;
+- (nonnull instancetype)initFrom:(NSDictionary<NSString *, NSObject *> * _Nullable)data OBJC_DESIGNATED_INITIALIZER;
+- (BOOL)has:(NSString * _Nonnull)key SWIFT_WARN_UNUSED_RESULT;
+- (id _Nullable)getValueForKey:(NSString * _Nonnull)key SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nullable)getStringForKey:(NSString * _Nonnull)key error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+- (NSDictionary<NSString *, id> * _Nonnull)toDict SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+@class NSNumber;
+
+@interface PNNotificationMeta (SWIFT_EXTENSION(Pushly))
+- (NSNumber * _Nullable)getBoolForKey:(NSString * _Nonnull)key error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+- (NSNumber * _Nullable)getIntForKey:(NSString * _Nonnull)key error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+- (NSNumber * _Nullable)getDoubleForKey:(NSString * _Nonnull)key error:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
@@ -1778,8 +1920,6 @@ typedef SWIFT_ENUM(NSInteger, PNSubscriberStatus, open) {
 };
 
 @class UNUserNotificationCenter;
-@class UNNotification;
-@class UNNotificationResponse;
 
 SWIFT_CLASS("_TtC6Pushly24PNUserNotificationCenter") SWIFT_AVAILABILITY(ios_app_extension,unavailable)
 @interface PNUserNotificationCenter : NSObject <UNUserNotificationCenterDelegate>
@@ -1798,6 +1938,39 @@ SWIFT_CLASS("_TtC6Pushly26PushNotificationsWkHandler") SWIFT_AVAILABILITY(ios_ap
 
 SWIFT_CLASS("_TtC6Pushly7PushSDK")
 @interface PushSDK : UIResponder <UIApplicationDelegate>
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_AVAILABILITY(ios_app_extension,unavailable)
+@interface PushSDK (SWIFT_EXTENSION(Pushly))
+@end
+
+
+SWIFT_CLASS_NAMED("AppMessages")
+@interface PushSDKAppMessages : NSObject
+/// Applies triggered condition to all applicable app messages.
+/// If applied trigger completes all conditions in an app message’s scope
+/// and the app message is set to auto show it will be displayed.
++ (void)triggerWithCondition:(NSString * _Nonnull)condition withValue:(NSString * _Nonnull)value;
+/// Applies triggered conditions to all applicable app messages.
+/// If applied triggers complete all conditions in an app message’s scope
+/// and the app message is set to auto show it will be displayed.
++ (void)triggerWithConditions:(NSDictionary<NSString *, NSString *> * _Nonnull)conditions;
++ (void)_platformBridgeProcessInteraction:(PNAppMessageInteraction * _Nonnull)interaction for:(PNAppMessage * _Nonnull)appMessage;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_AVAILABILITY(ios,introduced=16.1)
+@interface PushSDK (SWIFT_EXTENSION(Pushly))
+@end
+
+
+SWIFT_CLASS_NAMED("LiveActivities")
+@interface PushSDKLiveActivities : NSObject
++ (void)registerWithToken:(NSString * _Nonnull)token forActivity:(NSString * _Nonnull)activityId;
++ (void)track:(enum PNLiveActivityEvent)activityEvent forActivity:(NSString * _Nonnull)activityId;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -1853,27 +2026,6 @@ SWIFT_AVAILABILITY(ios_app_extension,unavailable)
 @end
 
 
-SWIFT_CLASS_NAMED("PushNotifications")
-@interface PushSDKPushNotifications : NSObject
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isSubscribed;)
-+ (BOOL)isSubscribed SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isEligibleToPrompt;)
-+ (BOOL)isEligibleToPrompt SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isPaused;)
-+ (BOOL)isPaused SWIFT_WARN_UNUSED_RESULT;
-+ (void)pause;
-+ (void)resume;
-+ (void)showPermissionPrompt:(void (^ _Nonnull)(BOOL, UNNotificationSettings * _Nonnull, NSError * _Nullable))completion;
-+ (void)executeIfSubscribed:(void (^ _Nonnull)(void))action;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_AVAILABILITY(ios_app_extension,unavailable)
-@interface PushSDK (SWIFT_EXTENSION(Pushly))
-@end
-
-
 SWIFT_CLASS_NAMED("EComm")
 @interface PushSDKEComm : NSObject
 + (void)addToCartWithItems:(NSArray<PNECommItem *> * _Nonnull)items;
@@ -1891,33 +2043,20 @@ SWIFT_AVAILABILITY(ios_app_extension,unavailable)
 @end
 
 
-SWIFT_CLASS_NAMED("AppMessages")
-@interface PushSDKAppMessages : NSObject
-/// Applies triggered condition to all applicable app messages.
-/// If applied trigger completes all conditions in an app message’s scope
-/// and the app message is set to auto show it will be displayed.
-+ (void)triggerWithCondition:(NSString * _Nonnull)condition withValue:(NSString * _Nonnull)value;
-/// Applies triggered conditions to all applicable app messages.
-/// If applied triggers complete all conditions in an app message’s scope
-/// and the app message is set to auto show it will be displayed.
-+ (void)triggerWithConditions:(NSDictionary<NSString *, NSString *> * _Nonnull)conditions;
-+ (void)_platformBridgeProcessInteraction:(PNAppMessageInteraction * _Nonnull)interaction for:(PNAppMessage * _Nonnull)appMessage;
+SWIFT_CLASS_NAMED("PushNotifications")
+@interface PushSDKPushNotifications : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isSubscribed;)
++ (BOOL)isSubscribed SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isEligibleToPrompt;)
++ (BOOL)isEligibleToPrompt SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isPaused;)
++ (BOOL)isPaused SWIFT_WARN_UNUSED_RESULT;
++ (void)pause;
++ (void)resume;
++ (void)showPermissionPrompt:(void (^ _Nonnull)(BOOL, UNNotificationSettings * _Nonnull, NSError * _Nullable))completion;
++ (void)executeIfSubscribed:(void (^ _Nonnull)(void))action;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
-
-
-SWIFT_AVAILABILITY(ios_app_extension,introduced=16.1)
-@interface PushSDK (SWIFT_EXTENSION(Pushly))
-@end
-
-
-SWIFT_CLASS_NAMED("LiveActivities")
-@interface PushSDKLiveActivities : NSObject
-+ (void)registerWithToken:(NSString * _Nonnull)token forActivity:(NSString * _Nonnull)activity;
-+ (void)track:(enum PNLiveActivityEvent)activityEvent forActivity:(NSString * _Nonnull)activity;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
 
 
 @interface PushSDK (SWIFT_EXTENSION(Pushly))
@@ -1925,6 +2064,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) enum PNLogLevel logLevel;)
 + (enum PNLogLevel)logLevel SWIFT_WARN_UNUSED_RESULT;
 + (void)setLogLevel:(enum PNLogLevel)newValue;
 @end
+
 
 
 
