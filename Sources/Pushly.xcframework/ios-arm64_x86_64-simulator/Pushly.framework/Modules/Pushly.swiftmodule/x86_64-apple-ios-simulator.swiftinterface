@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
-// swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name Pushly
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name Pushly
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
 import ActivityKit
 import Combine
 import CommonCrypto
@@ -241,6 +241,14 @@ extension Pushly.PushSDK {
   @objc(resetBadgeCount) @_Concurrency.MainActor @preconcurrency public static func resetBadgeCount()
   @objc(clearNotifications) @_Concurrency.MainActor @preconcurrency public static func clearNotifications()
 }
+@available(iOSApplicationExtension, unavailable)
+extension Pushly.PushSDK : Pushly.PNPermissionsLifecycleDelegate {
+  @objc(pushSDKDidReceivePermissionResponse:withSettings:) @_Concurrency.MainActor @preconcurrency final public func pushSDK(didReceivePermissionResponse granted: Swift.Bool, withSettings settings: UserNotifications.UNNotificationSettings)
+  @objc(pushSDKDidReceivePermissionResponse:withSettings:withError:) @_Concurrency.MainActor @preconcurrency final public func pushSDK(didReceivePermissionResponse granted: Swift.Bool, withSettings settings: UserNotifications.UNNotificationSettings, withError error: any Swift.Error)
+  @objc(pushSDKDidReceivePermissionStatusChange:withSettings:) @_Concurrency.MainActor @preconcurrency final public func pushSDK(didReceivePermissionStatusChange status: UserNotifications.UNAuthorizationStatus, withSettings settings: UserNotifications.UNNotificationSettings)
+  @objc(pushSDKDidRegisterForRemoteNotificationsWithDeviceToken:) @_Concurrency.MainActor @preconcurrency final public func pushSDK(didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Swift.String)
+  @objc(pushSDKDidFailToRegisterForRemoteNotificationsWithError:) @_Concurrency.MainActor @preconcurrency final public func pushSDK(didFailToRegisterForRemoteNotificationsWithError error: any Swift.Error)
+}
 @objc @_inheritsConvenienceInitializers open class PNNotificationServiceExtension : UserNotifications.UNNotificationServiceExtension {
   @objc override dynamic public func didReceive(_ request: UserNotifications.UNNotificationRequest, withContentHandler contentHandler: @escaping (UserNotifications.UNNotificationContent) -> Swift.Void)
   @objc override dynamic public func serviceExtensionTimeWillExpire()
@@ -315,6 +323,7 @@ extension Pushly.PNLogLevel {
   @objc(pushSDKDidFailToProcessMessage:fromAppMessage:) optional func pushSDK(didFailToProcessMessage message: WebKit.WKScriptMessage, fromAppMessage appMessage: Pushly.PNAppMessage)
 }
 public enum PNSessionScope : Swift.String {
+  case immediate
   case lifetimeInApp
   case sessionStart
   case sessionInApp
