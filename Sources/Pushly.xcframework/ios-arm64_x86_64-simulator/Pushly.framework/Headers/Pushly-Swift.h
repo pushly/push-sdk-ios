@@ -548,15 +548,9 @@ SWIFT_CLASS("_TtC6Pushly13PNECommConfig")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-SWIFT_CLASS("_TtC6Pushly11PNECommItem")
-@interface PNECommItem : NSObject
+SWIFT_PROTOCOL("_TtP6Pushly11PNECommItem_")
+@protocol PNECommItem
 @property (nonatomic, readonly, copy) NSString * _Nonnull id;
-@property (nonatomic) NSInteger quantity;
-- (nonnull instancetype)initWithId:(NSString * _Nonnull)id quantity:(NSInteger)quantity OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithId:(NSString * _Nonnull)id OBJC_DESIGNATED_INITIALIZER;
-@property (nonatomic, readonly, copy) NSString * _Nonnull description;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 typedef SWIFT_ENUM(NSInteger, PNECommItemType, open) {
@@ -564,6 +558,15 @@ typedef SWIFT_ENUM(NSInteger, PNECommItemType, open) {
   PNECommItemTypeProduct = 1,
   PNECommItemTypeUnknown = 2,
 };
+
+SWIFT_CLASS("_TtC6Pushly26PNECommItemWithoutQuantity")
+@interface PNECommItemWithoutQuantity : NSObject <PNECommItem>
+@property (nonatomic, readonly, copy) NSString * _Nonnull id;
+- (nonnull instancetype)initWithId:(NSString * _Nonnull)id OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, readonly, copy) NSString * _Nonnull description;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
 
 SWIFT_CLASS("_TtC6Pushly24PNEventSourceApplication")
 @interface PNEventSourceApplication : NSObject
@@ -910,11 +913,13 @@ SWIFT_AVAILABILITY(ios_app_extension,unavailable)
 
 SWIFT_CLASS_NAMED("EComm")
 @interface PushSDKEComm : NSObject
-+ (void)addToCartWithItems:(NSArray<PNECommItem *> * _Nonnull)items;
-+ (void)updateCartWithItems:(NSArray<PNECommItem *> * _Nonnull)items;
++ (void)saveItemWithItem:(PNECommItemWithoutQuantity * _Nonnull)item;
++ (void)saveItemsWithItems:(NSArray<PNECommItemWithoutQuantity *> * _Nonnull)items;
++ (void)viewItemWithItem:(PNECommItemWithoutQuantity * _Nonnull)item;
++ (void)viewItemsWithItems:(NSArray<PNECommItemWithoutQuantity *> * _Nonnull)items;
 + (void)clearCart;
 + (void)trackPurchase;
-+ (void)trackPurchaseOf:(NSArray<PNECommItem *> * _Nonnull)items withPurchaseId:(NSString * _Nullable)purchaseId withPriceValue:(NSString * _Nullable)priceValue;
++ (void)trackPurchaseOf:(NSArray<id <PNECommItem>> * _Nonnull)items withPurchaseId:(NSString * _Nullable)purchaseId withPriceValue:(NSString * _Nullable)priceValue;
 + (void)withECommConfig:(void (^ _Nonnull)(PNECommConfig * _Nonnull))block caller:(NSString * _Nonnull)caller;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -1539,15 +1544,9 @@ SWIFT_CLASS("_TtC6Pushly13PNECommConfig")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-SWIFT_CLASS("_TtC6Pushly11PNECommItem")
-@interface PNECommItem : NSObject
+SWIFT_PROTOCOL("_TtP6Pushly11PNECommItem_")
+@protocol PNECommItem
 @property (nonatomic, readonly, copy) NSString * _Nonnull id;
-@property (nonatomic) NSInteger quantity;
-- (nonnull instancetype)initWithId:(NSString * _Nonnull)id quantity:(NSInteger)quantity OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)initWithId:(NSString * _Nonnull)id OBJC_DESIGNATED_INITIALIZER;
-@property (nonatomic, readonly, copy) NSString * _Nonnull description;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 typedef SWIFT_ENUM(NSInteger, PNECommItemType, open) {
@@ -1555,6 +1554,15 @@ typedef SWIFT_ENUM(NSInteger, PNECommItemType, open) {
   PNECommItemTypeProduct = 1,
   PNECommItemTypeUnknown = 2,
 };
+
+SWIFT_CLASS("_TtC6Pushly26PNECommItemWithoutQuantity")
+@interface PNECommItemWithoutQuantity : NSObject <PNECommItem>
+@property (nonatomic, readonly, copy) NSString * _Nonnull id;
+- (nonnull instancetype)initWithId:(NSString * _Nonnull)id OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, readonly, copy) NSString * _Nonnull description;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
 
 SWIFT_CLASS("_TtC6Pushly24PNEventSourceApplication")
 @interface PNEventSourceApplication : NSObject
@@ -1901,11 +1909,13 @@ SWIFT_AVAILABILITY(ios_app_extension,unavailable)
 
 SWIFT_CLASS_NAMED("EComm")
 @interface PushSDKEComm : NSObject
-+ (void)addToCartWithItems:(NSArray<PNECommItem *> * _Nonnull)items;
-+ (void)updateCartWithItems:(NSArray<PNECommItem *> * _Nonnull)items;
++ (void)saveItemWithItem:(PNECommItemWithoutQuantity * _Nonnull)item;
++ (void)saveItemsWithItems:(NSArray<PNECommItemWithoutQuantity *> * _Nonnull)items;
++ (void)viewItemWithItem:(PNECommItemWithoutQuantity * _Nonnull)item;
++ (void)viewItemsWithItems:(NSArray<PNECommItemWithoutQuantity *> * _Nonnull)items;
 + (void)clearCart;
 + (void)trackPurchase;
-+ (void)trackPurchaseOf:(NSArray<PNECommItem *> * _Nonnull)items withPurchaseId:(NSString * _Nullable)purchaseId withPriceValue:(NSString * _Nullable)priceValue;
++ (void)trackPurchaseOf:(NSArray<id <PNECommItem>> * _Nonnull)items withPurchaseId:(NSString * _Nullable)purchaseId withPriceValue:(NSString * _Nullable)priceValue;
 + (void)withECommConfig:(void (^ _Nonnull)(PNECommConfig * _Nonnull))block caller:(NSString * _Nonnull)caller;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end

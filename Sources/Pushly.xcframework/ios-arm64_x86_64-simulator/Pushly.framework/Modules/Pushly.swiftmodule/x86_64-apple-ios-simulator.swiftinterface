@@ -128,11 +128,16 @@ extension Pushly.PNNotificationActionType : Swift.Codable {
 @available(iOSApplicationExtension, unavailable)
 extension Pushly.PushSDK {
   @_inheritsConvenienceInitializers @objc(PushSDKEComm) @objcMembers public class EComm : ObjectiveC.NSObject {
-    @objc public static func addToCart(items: [Pushly.PNECommItem])
-    @objc public static func updateCart(withItems items: [Pushly.PNECommItem])
+    @objc public static func saveItem(item: Pushly.PNECommItemWithoutQuantity)
+    @objc public static func saveItems(items: [Pushly.PNECommItemWithoutQuantity])
+    @objc public static func viewItem(item: Pushly.PNECommItemWithoutQuantity)
+    @objc public static func viewItems(items: [Pushly.PNECommItemWithoutQuantity])
+    public static func addToCart(item: Pushly.PNECommItemWithQuantity)
+    public static func addToCart(items: [Pushly.PNECommItemWithQuantity])
+    public static func updateCart(withItems items: [Pushly.PNECommItemWithQuantity])
     @objc public static func clearCart()
     @objc public static func trackPurchase()
-    @objc public static func trackPurchase(of items: [Pushly.PNECommItem], withPurchaseId purchaseId: Swift.String? = nil, withPriceValue priceValue: Swift.String? = nil)
+    @objc public static func trackPurchase(of items: [any Pushly.PNECommItem], withPurchaseId purchaseId: Swift.String? = nil, withPriceValue priceValue: Swift.String? = nil)
     @objc override dynamic public init()
     @objc deinit
   }
@@ -338,18 +343,27 @@ extension Pushly.PNSessionScope : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
 }
-@objc @objcMembers public class PNECommItem : ObjectiveC.NSObject {
+@objc public protocol PNECommItem {
+  @objc var id: Swift.String { get }
+}
+@objc @objcMembers public class PNECommItemWithoutQuantity : ObjectiveC.NSObject, Pushly.PNECommItem {
   @objc final public let id: Swift.String
-  @objc public var quantity: Swift.Int
-  @objc public init(id: Swift.String, quantity: Swift.Int)
   @objc public init(id: Swift.String)
   @objc override dynamic public var description: Swift.String {
     @objc get
   }
+  public func toSimpleObject() -> [Swift.String : Any?]
   @objc deinit
 }
-extension Pushly.PNECommItem {
-  public func toSimpleObject() -> [Swift.String : Any?]
+@objcMembers final public class PNECommItemWithQuantity : Pushly.PNECommItem {
+  @objc final public let id: Swift.String
+  @objc final public let quantity: Swift.Int
+  @objc public init(id: Swift.String, quantity: Swift.Int)
+  @objc final public var description: Swift.String {
+    @objc get
+  }
+  final public func toSimpleObject() -> [Swift.String : Any?]
+  @objc deinit
 }
 @available(iOS 16.1, *)
 public protocol PNActivityAttributes : ActivityKit.ActivityAttributes {
