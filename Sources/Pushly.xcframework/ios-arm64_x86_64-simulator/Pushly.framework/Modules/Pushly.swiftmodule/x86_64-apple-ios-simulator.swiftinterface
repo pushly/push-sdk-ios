@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-compiler-version: Apple Swift version 6.2.3 effective-5.10 (swiftlang-6.2.3.3.21 clang-1700.6.3.2)
 // swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name Pushly
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
 import ActivityKit
 import Combine
 import CommonCrypto
@@ -25,7 +25,9 @@ import os
   case fullscreen
   case modal
   case banner
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -44,7 +46,9 @@ extension Pushly.PNAppMessageStyle : Swift.Codable {
 public enum HTTPMethod : Swift.String {
   case GET
   case POST
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -61,7 +65,9 @@ extension UserNotifications.UNAuthorizationOptions : Swift.Codable {
   required public init(from decoder: any Swift.Decoder) throws
 }
 extension Pushly.ActionVariation {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func toSimpleObject() -> [Swift.String : Any?]
+  #endif
 }
 @objc public class PNAppMessageInteraction : ObjectiveC.NSObject {
   final public let actionIdentifier: Pushly.PNAppMessageActionIdentifier
@@ -69,15 +75,21 @@ extension Pushly.ActionVariation {
   final public let appMessageId: Swift.Int
   final public let appMessageScheduleId: Swift.Int
   final public let data: Foundation.NSDictionary
+  #if compiler(>=5.3) && $NonescapableTypes
   public func get<T>(_ type: T.Type, forKeyPath keyPath: Swift.String) -> T?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public var landingURL: Swift.String? {
     get
   }
+  #endif
   public init(fromData input: Foundation.Data, appMessage: Pushly.PNAppMessage)
   @objc deinit
 }
 extension Pushly.PNAppMessageInteraction {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func toSimpleObject() -> [Swift.String : Any?]
+  #endif
 }
 @objc @objcMembers public class PNAppMessageDisplayConditions : ObjectiveC.NSObject, Swift.Codable {
   final public let phone: Pushly.DisplayCondition
@@ -87,7 +99,9 @@ extension Pushly.PNAppMessageInteraction {
   required public init(from decoder: any Swift.Decoder) throws
 }
 extension Pushly.PNAppMessageDisplayConditions {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func toSimpleObject() -> [Swift.String : Any?]
+  #endif
 }
 @objc @objcMembers public class PNPrompt : ObjectiveC.NSObject, Swift.Codable {
   @objc final public let id: Swift.Int
@@ -104,12 +118,16 @@ extension Pushly.PNAppMessageDisplayConditions {
   required public init(from decoder: any Swift.Decoder) throws
 }
 extension Pushly.PNAppMessageDismissGestures {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func toSimpleObject() -> [Swift.String : Any?]
+  #endif
 }
 @objc public enum PNNotificationActionType : Swift.Int {
   case openURL
   case dismiss
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -137,7 +155,9 @@ extension Pushly.PushSDK {
     public static func updateCart(withItems items: [Pushly.PNECommItemWithQuantity])
     @objc public static func clearCart()
     @objc public static func trackPurchase()
+    #if compiler(>=5.3) && $NonescapableTypes
     @objc public static func trackPurchase(of items: [any Pushly.PNECommItem], withPurchaseId purchaseId: Swift.String? = nil, withPriceValue priceValue: Swift.String? = nil)
+    #endif
     @objc override dynamic public init()
     @objc deinit
   }
@@ -147,7 +167,9 @@ public struct PNBadgeConfig : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 extension Pushly.PNBadgeConfig {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func toSimpleObject() -> [Swift.String : Any?]
+  #endif
 }
 @_hasMissingDesignatedInitializers public class PNNotificationCategory : Swift.Codable {
   @objc final public let id: Swift.UInt32
@@ -164,12 +186,16 @@ extension Pushly.PNNotificationCategory {
   public func toUNNotificationCategory() -> UserNotifications.UNNotificationCategory
 }
 extension Pushly.PNNotificationCategory {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func toSimpleObject() -> [Swift.String : Any?]
+  #endif
 }
 public enum DeviceOrientation : Swift.String, Swift.Codable {
   case portrait
   case landscape
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -184,12 +210,16 @@ public enum DeviceOrientation : Swift.String, Swift.Codable {
   required public init(from decoder: any Swift.Decoder) throws
 }
 extension Pushly.FrequencyCapWithOccurrenceLimit {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func toSimpleObject() -> [Swift.String : Any?]
+  #endif
 }
 @objc public enum PNPromptType : Swift.Int {
   case notification
   case unknown
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -211,8 +241,12 @@ extension Pushly.PNPromptType : Swift.Codable {
 }
 @available(iOSApplicationExtension, unavailable)
 extension Pushly.PushSDK {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc(setConfigurationAppKey:withLaunchOptions:) @_Concurrency.MainActor @preconcurrency public static func setConfiguration(appKey: Swift.String, withLaunchOptions launchOptions: [UIKit.UIApplication.LaunchOptionsKey : Any]?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc(setConfigurationWithLaunchOptions:) @_Concurrency.MainActor @preconcurrency public static func setConfiguration(withLaunchOptions launchOptions: [UIKit.UIApplication.LaunchOptionsKey : Any]?)
+  #endif
   @objc @_Concurrency.MainActor @preconcurrency public static func disableMethodSwizzling()
   @objc @_Concurrency.MainActor @preconcurrency public static func setSDKLifecycleDelegate(_ delegate: any Pushly.PNPushSDKLifecycleDelegate)
   @objc @_Concurrency.MainActor @preconcurrency public static func setPermissionsLifecycleDelegate(_ delegate: any Pushly.PNPermissionsLifecycleDelegate)
@@ -239,9 +273,13 @@ extension Pushly.PushSDK {
   @objc @_Concurrency.MainActor @preconcurrency public static var appKey: Swift.String {
     @objc get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc @_Concurrency.MainActor @preconcurrency public static func getConfiguration(_ completion: @escaping (Pushly.PNApplicationConfig?, (any Swift.Error)?) -> Swift.Void)
+  #endif
   @objc @_Concurrency.MainActor @preconcurrency public static func getNotificationPermissionStatus(_ completion: @escaping (Swift.Bool, UserNotifications.UNNotificationSettings) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc @_Concurrency.MainActor @preconcurrency public static func showNativeNotificationPermissionPrompt(_ completion: @escaping (Swift.Bool, UserNotifications.UNNotificationSettings, (any Swift.Error)?) -> Swift.Void)
+  #endif
   @objc(setEventSourceApplication:) @_Concurrency.MainActor @preconcurrency public static func setEventSourceApplication(_ application: Pushly.PNEventSourceApplication)
   @objc(resetBadgeCount) @_Concurrency.MainActor @preconcurrency public static func resetBadgeCount()
   @objc(clearNotifications) @_Concurrency.MainActor @preconcurrency public static func clearNotifications()
@@ -269,7 +307,9 @@ extension Pushly.PushSDK : Pushly.PNPermissionsLifecycleDelegate {
   required public init(from decoder: any Swift.Decoder) throws
 }
 extension Pushly.RelativeDate {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func toSimpleObject() -> [Swift.String : Any?]
+  #endif
 }
 @_hasMissingDesignatedInitializers @objcMembers public class PNAppMessageBehavior : Swift.Codable {
   public var redisplay: Pushly.PNAppMessageRedisplayBehavior
@@ -284,11 +324,15 @@ extension Pushly.RelativeDate {
   required public init(from decoder: any Swift.Decoder) throws
 }
 extension Pushly.PNAppMessageBehavior {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func toSimpleObject() -> [Swift.String : Any?]
+  #endif
 }
 @objc public enum PNLiveActivityEvent : Swift.Int {
   case end
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -297,7 +341,9 @@ extension Pushly.PNAppMessageBehavior {
 public enum PNNotificationBadgeBehavior : Swift.String, Swift.Codable {
   case set
   case increment
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -311,7 +357,9 @@ public enum PNNotificationBadgeBehavior : Swift.String, Swift.Codable {
   case error
   case critical
   case none
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -333,7 +381,9 @@ public enum PNSessionScope : Swift.String {
   case sessionStart
   case sessionInApp
   case custom
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -352,7 +402,9 @@ extension Pushly.PNSessionScope : Swift.Codable {
   @objc override dynamic public var description: Swift.String {
     @objc get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public func toSimpleObject() -> [Swift.String : Any?]
+  #endif
   @objc deinit
 }
 @objcMembers final public class PNECommItemWithQuantity : Pushly.PNECommItem {
@@ -362,7 +414,9 @@ extension Pushly.PNSessionScope : Swift.Codable {
   @objc final public var description: Swift.String {
     @objc get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func toSimpleObject() -> [Swift.String : Any?]
+  #endif
   @objc deinit
 }
 @available(iOS 16.1, *)
@@ -377,7 +431,9 @@ public protocol PNActivityAttributes : ActivityKit.ActivityAttributes {
   required public init(from decoder: any Swift.Decoder) throws
 }
 extension Pushly.PNSessionConfig {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func toSimpleObject() -> [Swift.String : Any?]
+  #endif
 }
 @objc @objcMembers public class PNSchedule : ObjectiveC.NSObject, Swift.Codable {
   @objc final public let id: Swift.Int
@@ -392,7 +448,9 @@ extension Pushly.PNSessionConfig {
   public func encode(to encoder: any Swift.Encoder) throws
 }
 extension Pushly.PNSchedule {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func toSimpleObject() -> [Swift.String : Any?]
+  #endif
 }
 @objc public protocol PNPushSDKLifecycleDelegate {
   @objc(pushSDKDidFinishLoading:withNotificationSettings:) optional func pushSDK(didFinishLoading configuration: Pushly.PNApplicationConfig, withNotificationSettings settings: UserNotifications.UNNotificationSettings)
@@ -414,9 +472,11 @@ public enum PNError : Swift.Error {
   case notAvailable
 }
 extension Pushly.PNError : Foundation.LocalizedError {
+  #if compiler(>=5.3) && $NonescapableTypes
   public var errorDescription: Swift.String? {
     get
   }
+  #endif
 }
 @objcMembers public class PNCornerRadius : Swift.Codable {
   @objc public var topLeft: Swift.Int
@@ -428,14 +488,18 @@ extension Pushly.PNError : Foundation.LocalizedError {
   required public init(from decoder: any Swift.Decoder) throws
 }
 extension Pushly.PNCornerRadius {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func toSimpleObject() -> [Swift.String : Any?]
+  #endif
 }
 public enum RelativeDateDisplayMetric : Swift.Int {
   case seconds
   case minutes
   case hours
   case days
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -465,7 +529,9 @@ extension Pushly.PushSDK {
     }
     @objc public static func pause()
     @objc public static func resume()
+    #if compiler(>=5.3) && $NonescapableTypes
     @objc public static func showPermissionPrompt(_ completion: @escaping (Swift.Bool, UserNotifications.UNNotificationSettings, (any Swift.Error)?) -> Swift.Void)
+    #endif
     @objc override dynamic public init()
     @objc deinit
   }
@@ -498,7 +564,9 @@ extension Pushly.PushSDK {
     get
   }
   public init(stringValue value: Swift.String) throws
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -518,7 +586,9 @@ extension Pushly.PNAppMessageInteractionType : Swift.Codable {
   required public init(from decoder: any Swift.Decoder) throws
 }
 extension Pushly.PNAppMessageGroupConditions {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func toSimpleObject() -> [Swift.String : Any?]
+  #endif
 }
 public class PNAppMessageMargins : Swift.Codable {
   public var top: Swift.Int
@@ -538,7 +608,9 @@ public class PNAppMessageMargins : Swift.Codable {
     get
   }
   public init(stringValue value: Swift.String) throws
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -552,7 +624,9 @@ public class PNAppMessageMargins : Swift.Codable {
   case defaultAction
   case dismissAction
   case customAction
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -573,7 +647,9 @@ extension Pushly.PNNotificationInteractionType {
   @objc public var templateHTML: Swift.String?
   @objc public var templateUrl: Swift.String?
   @objc public var hasDisplayed: Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public init(id: Swift.Int, name: Swift.String? = nil, style: Pushly.PNAppMessageStyle)
+  #endif
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
@@ -633,7 +709,9 @@ extension Pushly.PNAppMessage {
   @objc dynamic public func meetsConditions(_ checkConditions: [Swift.String : Swift.String]) -> Swift.Bool
 }
 extension Pushly.PNAppMessage {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func toSimpleObject() -> [Swift.String : Any?]
+  #endif
 }
 @objc public protocol PNPermissionsLifecycleDelegate {
   @objc(pushSDKDidReceivePermissionResponse:withSettings:) optional func pushSDK(didReceivePermissionResponse granted: Swift.Bool, withSettings settings: UserNotifications.UNNotificationSettings)
@@ -650,7 +728,9 @@ extension Pushly.PNAppMessage {
   required public init(from decoder: any Swift.Decoder) throws
 }
 extension Pushly.PNAppFrequencyCaps {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func toSimpleObject() -> [Swift.String : Any?]
+  #endif
 }
 @available(iOS 16.1, *)
 extension Pushly.PushSDK {
@@ -677,7 +757,9 @@ extension Pushly.PushSDK.LiveActivities {
   case slideDown
   case slideRight
   case slideLeft
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -701,20 +783,27 @@ extension Pushly.AnimationType : Swift.Codable {
   required public init(from decoder: any Swift.Decoder) throws
 }
 extension Pushly.PNAppMessagePositionConfig {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func toSimpleObject() -> [Swift.String : Any?]
+  #endif
 }
 @objc @objcMembers public class PNNotificationInteraction : ObjectiveC.NSObject {
   @objc final public let type: Pushly.PNNotificationInteractionType
   @objc final public let actionIdentifier: Swift.String
   @objc public var notification: Pushly.PNNotification
   @objc public init(from response: UserNotifications.UNNotificationResponse)
+  @objc public init(defaultOpenWith notification: Pushly.PNNotification)
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var action: Pushly.PNNotificationAction? {
     @objc get
   }
+  #endif
   @objc deinit
 }
 extension Pushly.PNNotificationInteraction {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func toSimpleObject() -> [Swift.String : Any?]
+  #endif
 }
 public struct PNAppMessageConditions : Swift.Codable {
   public let type: Pushly.PNSessionScope
@@ -731,12 +820,16 @@ extension Pushly.PNAppMessageConditions {
   public func check(key: Swift.String, value: Swift.String) -> Swift.Bool
 }
 extension Pushly.PNAppMessageConditions {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func toSimpleObject() -> [Swift.String : Any?]
+  #endif
 }
 public enum PNAppMessageType : Swift.String, Swift.Codable {
   case message
   case prompt
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -758,13 +851,21 @@ public enum PNAppMessageType : Swift.String, Swift.Codable {
     case displayAsCard
     case hideShade
     case showCloseAction
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(stringValue: Swift.String)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(intValue: Swift.Int)
+    #endif
     public typealias RawValue = Swift.String
+    #if compiler(>=5.3) && $NonescapableTypes
     public var intValue: Swift.Int? {
       get
     }
+    #endif
     public var rawValue: Swift.String {
       get
     }
@@ -777,7 +878,9 @@ public enum PNAppMessageType : Swift.String, Swift.Codable {
   required public init(from decoder: any Swift.Decoder) throws
 }
 extension Pushly.PNAppMessageTheme {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func toSimpleObject() -> [Swift.String : Any?]
+  #endif
 }
 @available(iOSApplicationExtension, unavailable)
 extension Pushly.PushSDK {
@@ -785,13 +888,17 @@ extension Pushly.PushSDK {
     @objc public static var anonymousId: Swift.String {
       @objc get
     }
+    #if compiler(>=5.3) && $NonescapableTypes
     @objc public static var token: Swift.String? {
       @objc get
     }
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
     @objc public static var externalId: Swift.String? {
       @objc get
       @objc set
     }
+    #endif
     @objc public static var subscriberStatus: Pushly.PNSubscriberStatus {
       @objc get
     }
@@ -827,7 +934,9 @@ public enum PNConditionTriggerQualifier : Swift.String, Swift.Codable {
   case eq
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -895,7 +1004,9 @@ extension Pushly.PNNotification {
   @objc(isPNNotificationPayloadDictionary:) public static func isPNNotificationPayload(_ payload: [Swift.AnyHashable : Any]) -> Swift.Bool
 }
 extension Pushly.PNNotification {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func toSimpleObject() -> [Swift.String : Any?]
+  #endif
 }
 @objc public class PNNotificationAction : ObjectiveC.NSObject, Swift.Codable {
   @objc final public let action: Swift.UInt32
@@ -922,14 +1033,18 @@ extension Pushly.PNNotificationAction {
   public func toUNNotificationAction() -> UserNotifications.UNNotificationAction
 }
 extension Pushly.PNNotificationAction {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func toSimpleObject() -> [Swift.String : Any?]
+  #endif
 }
 public enum PNAppMessagePosition : Swift.String {
   case top
   case bottom
   case center
   case fullscreen
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -941,7 +1056,9 @@ extension Pushly.PNAppMessagePosition : Swift.Codable {
 }
 public protocol RelativeDateable {
   var intervalSeconds: Swift.Double { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   var displayMetric: Pushly.RelativeDateDisplayMetric? { get }
+  #endif
 }
 @objc final public class PNEventSourceApplication : ObjectiveC.NSObject {
   final public let name: Swift.String
@@ -954,14 +1071,18 @@ public struct Triggers : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 extension Pushly.Triggers {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func toSimpleObject() -> [Swift.String : Any?]
+  #endif
 }
 public struct OrTrigger : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
 }
 extension Pushly.OrTrigger {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func toSimpleObject() -> [Swift.String : Any?]
+  #endif
 }
 @_hasMissingDesignatedInitializers @objcMembers public class PNAppMessageRedisplayBehavior : Swift.Codable {
   @objc final public let enabled: Swift.Bool
@@ -971,14 +1092,18 @@ extension Pushly.OrTrigger {
   required public init(from decoder: any Swift.Decoder) throws
 }
 extension Pushly.PNAppMessageRedisplayBehavior {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func toSimpleObject() -> [Swift.String : Any?]
+  #endif
 }
 @objc public enum PNSubscriberStatus : Swift.Int {
   case subscribed
   case dismissed
   case denied
   case notDetermined
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -988,7 +1113,9 @@ extension Pushly.PNSubscriberStatus {
   public var stringValue: Swift.String {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(from value: UserNotifications.UNAuthorizationStatus?, withDimissedStatus dismissed: Swift.Bool)
+  #endif
   public init(stringValue value: Swift.String)
 }
 extension Pushly.PNSubscriberStatus : Swift.Codable {
@@ -1009,7 +1136,9 @@ public struct PNDisplayAnimationBehavior : Swift.Codable {
   case event
   case product
   case unknown
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -1043,7 +1172,9 @@ extension Pushly.PushSDK {
 @objc public enum PNPrePermissionResponse : Swift.Int {
   case accepted
   case dismissed
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -1074,16 +1205,20 @@ extension Pushly.PNPrePermissionResponse {
   final public func encode(to encoder: any Swift.Encoder) throws
 }
 extension Pushly.PNApplicationConfig {
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func toSimpleObject() -> [Swift.String : Any?]
+  #endif
 }
 public enum PNNotificationMetaError : Swift.Error {
   case valueTypeUnsupported(_: Any?)
   case valueTypeMismatch(forKey: Swift.String)
 }
 extension Pushly.PNNotificationMetaError : Foundation.LocalizedError {
+  #if compiler(>=5.3) && $NonescapableTypes
   public var errorDescription: Swift.String? {
     get
   }
+  #endif
 }
 public enum PNMetaValue {
   case int(Swift.Int64)
@@ -1095,13 +1230,19 @@ public enum PNMetaValue {
 }
 @objc @_inheritsConvenienceInitializers @objcMembers public class PNNotificationMeta : ObjectiveC.NSObject {
   @objc override convenience dynamic public init()
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public init(from data: [Swift.String : Swift.AnyHashable]?)
+  #endif
   @objc public func has(_ key: Swift.String) -> Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
   @available(*, deprecated, message: "Use getValue(forKey:) instead")
   public subscript(key: Swift.String) -> Pushly.PNMetaValue? {
     get
   }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public func getValue(forKey key: Swift.String) -> Any?
+  #endif
   public func getBool(forKey key: Swift.String) throws -> Swift.Bool
   @objc public func getString(forKey key: Swift.String) throws -> Swift.String
   public func getInt(forKey key: Swift.String) throws -> Swift.Int64
@@ -1116,13 +1257,17 @@ public enum PNMetaValue {
   @objc dynamic public func getDoubleForKey(_ key: Swift.String) throws -> Foundation.NSNumber
 }
 extension Pushly.PNNotificationMeta {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func toSimpleObject() -> [Swift.String : Any?]
+  #endif
 }
 public enum DisplayCondition : Swift.Int {
   case enabled
   case pass
   case disabled
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -1145,7 +1290,9 @@ extension Pushly.DisplayCondition : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
 }
 extension Pushly.PNAppMessageConfig {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func toSimpleObject() -> [Swift.String : Any?]
+  #endif
 }
 @objc @objcMembers public class PNECommConfig : ObjectiveC.NSObject, Swift.Codable {
   @objc final public let itemType: Pushly.PNECommItemType
@@ -1155,7 +1302,9 @@ extension Pushly.PNAppMessageConfig {
   public func encode(to encoder: any Swift.Encoder) throws
 }
 extension Pushly.PNECommConfig {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func toSimpleObject() -> [Swift.String : Any?]
+  #endif
 }
 extension Pushly.PNAppMessageStyle : Swift.Equatable {}
 extension Pushly.PNAppMessageStyle : Swift.Hashable {}
