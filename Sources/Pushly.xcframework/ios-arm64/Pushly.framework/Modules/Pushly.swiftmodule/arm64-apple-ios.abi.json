@@ -34194,14 +34194,14 @@
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/AppMessages\/PNAppMessageController.swift",
       "kind": "BooleanLiteral",
-      "offset": 12274,
+      "offset": 12369,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/AppMessages\/PNAppMessageController.swift",
       "kind": "BooleanLiteral",
-      "offset": 12306,
+      "offset": 12401,
       "length": 4,
       "value": "true"
     },
