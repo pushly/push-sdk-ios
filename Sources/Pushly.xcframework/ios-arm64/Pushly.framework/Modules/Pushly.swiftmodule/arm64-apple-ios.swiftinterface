@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2.3 effective-5.10 (swiftlang-6.2.3.3.21 clang-1700.6.3.2)
+// swift-compiler-version: Apple Swift version 6.2.4 effective-5.10 (swiftlang-6.2.4.1.4 clang-1700.6.4.2)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name Pushly
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.4
 import ActivityKit
 import Combine
 import CommonCrypto
@@ -143,24 +143,20 @@ extension Pushly.PNNotificationActionType : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
 }
-@available(iOSApplicationExtension, unavailable)
-extension Pushly.PushSDK {
-  @_inheritsConvenienceInitializers @objc(PushSDKEComm) @objcMembers public class EComm : ObjectiveC.NSObject {
-    @objc public static func saveItem(item: Pushly.PNECommItemWithoutQuantity)
-    @objc public static func saveItems(items: [Pushly.PNECommItemWithoutQuantity])
-    @objc public static func viewItem(item: Pushly.PNECommItemWithoutQuantity)
-    @objc public static func viewItems(items: [Pushly.PNECommItemWithoutQuantity])
-    public static func addToCart(item: Pushly.PNECommItemWithQuantity)
-    public static func addToCart(items: [Pushly.PNECommItemWithQuantity])
-    public static func updateCart(withItems items: [Pushly.PNECommItemWithQuantity])
-    @objc public static func clearCart()
-    @objc public static func trackPurchase()
-    #if compiler(>=5.3) && $NonescapableTypes
-    @objc public static func trackPurchase(of items: [any Pushly.PNECommItem], withPurchaseId purchaseId: Swift.String? = nil, withPriceValue priceValue: Swift.String? = nil)
-    #endif
-    @objc override dynamic public init()
-    @objc deinit
+@objc @objcMembers final public class CatalogItem : ObjectiveC.NSObject {
+  @objc final public let id: Swift.String
+  @objc final public let quantity: Foundation.NSNumber?
+  @objc final public let rating: Foundation.NSNumber?
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public init(id: Swift.String, quantity: Foundation.NSNumber? = nil, rating: Foundation.NSNumber? = nil)
+  #endif
+  @objc override final public var description: Swift.String {
+    @objc get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func toSimpleObject() -> [Swift.String : Any?]
+  #endif
+  @objc deinit
 }
 public struct PNBadgeConfig : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
@@ -392,32 +388,6 @@ public enum PNSessionScope : Swift.String {
 extension Pushly.PNSessionScope : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
-}
-@objc public protocol PNECommItem {
-  @objc var id: Swift.String { get }
-}
-@objc @objcMembers public class PNECommItemWithoutQuantity : ObjectiveC.NSObject, Pushly.PNECommItem {
-  @objc final public let id: Swift.String
-  @objc public init(id: Swift.String)
-  @objc override dynamic public var description: Swift.String {
-    @objc get
-  }
-  #if compiler(>=5.3) && $NonescapableTypes
-  public func toSimpleObject() -> [Swift.String : Any?]
-  #endif
-  @objc deinit
-}
-@objcMembers final public class PNECommItemWithQuantity : Pushly.PNECommItem {
-  @objc final public let id: Swift.String
-  @objc final public let quantity: Swift.Int
-  @objc public init(id: Swift.String, quantity: Swift.Int)
-  @objc final public var description: Swift.String {
-    @objc get
-  }
-  #if compiler(>=5.3) && $NonescapableTypes
-  final public func toSimpleObject() -> [Swift.String : Any?]
-  #endif
-  @objc deinit
 }
 @available(iOS 16.1, *)
 public protocol PNActivityAttributes : ActivityKit.ActivityAttributes {
@@ -922,6 +892,20 @@ extension Pushly.PushSDK {
     @objc public static func remove(_ values: [Any], from key: Swift.String)
     @objc public static func trackActivity(name: Swift.String)
     @objc public static func trackActivity(name: Swift.String, withTags tags: [Swift.String])
+    @objc public static func saveItem(item: Pushly.CatalogItem)
+    @objc public static func unsaveItem(item: Pushly.CatalogItem)
+    @objc public static func completeItem(item: Pushly.CatalogItem)
+    @objc public static func uncompleteItem(item: Pushly.CatalogItem)
+    @objc public static func rateItem(item: Pushly.CatalogItem)
+    @objc public static func unrateItem(item: Pushly.CatalogItem)
+    @objc public static func viewItem(item: Pushly.CatalogItem)
+    @objc public static func addToCart(items: [Pushly.CatalogItem])
+    @objc public static func updateCart(withItems items: [Pushly.CatalogItem])
+    @objc public static func clearCart()
+    @objc public static func trackPurchase()
+    #if compiler(>=5.3) && $NonescapableTypes
+    @objc public static func trackPurchase(of items: [Pushly.CatalogItem], withPurchaseId purchaseId: Swift.String? = nil, withPriceValue priceValue: Swift.String? = nil)
+    #endif
     @objc override dynamic public init()
     @objc deinit
   }
@@ -1135,6 +1119,7 @@ public struct PNDisplayAnimationBehavior : Swift.Codable {
 @objc public enum PNECommItemType : Swift.Int {
   case event
   case product
+  case recipe
   case unknown
   #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)

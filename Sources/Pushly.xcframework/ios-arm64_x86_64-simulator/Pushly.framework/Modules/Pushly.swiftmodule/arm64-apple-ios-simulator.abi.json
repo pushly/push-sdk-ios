@@ -2918,9 +2918,452 @@
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
+        "moduleName": "Pushly"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CatalogItem",
+        "printedName": "CatalogItem",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "id",
+            "printedName": "id",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@Pushly@objc(cs)CatalogItem(py)id",
+            "mangledName": "$s6Pushly11CatalogItemC2idSSvp",
+            "moduleName": "Pushly",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@Pushly@objc(cs)CatalogItem(im)id",
+                "mangledName": "$s6Pushly11CatalogItemC2idSSvg",
+                "moduleName": "Pushly",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "quantity",
+            "printedName": "quantity",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.NSNumber?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSNumber",
+                    "printedName": "Foundation.NSNumber",
+                    "usr": "c:objc(cs)NSNumber"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@Pushly@objc(cs)CatalogItem(py)quantity",
+            "mangledName": "$s6Pushly11CatalogItemC8quantitySo8NSNumberCSgvp",
+            "moduleName": "Pushly",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.NSNumber?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NSNumber",
+                        "printedName": "Foundation.NSNumber",
+                        "usr": "c:objc(cs)NSNumber"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@Pushly@objc(cs)CatalogItem(im)quantity",
+                "mangledName": "$s6Pushly11CatalogItemC8quantitySo8NSNumberCSgvg",
+                "moduleName": "Pushly",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "rating",
+            "printedName": "rating",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.NSNumber?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSNumber",
+                    "printedName": "Foundation.NSNumber",
+                    "usr": "c:objc(cs)NSNumber"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@Pushly@objc(cs)CatalogItem(py)rating",
+            "mangledName": "$s6Pushly11CatalogItemC6ratingSo8NSNumberCSgvp",
+            "moduleName": "Pushly",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.NSNumber?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NSNumber",
+                        "printedName": "Foundation.NSNumber",
+                        "usr": "c:objc(cs)NSNumber"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@Pushly@objc(cs)CatalogItem(im)rating",
+                "mangledName": "$s6Pushly11CatalogItemC6ratingSo8NSNumberCSgvg",
+                "moduleName": "Pushly",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(id:quantity:rating:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CatalogItem",
+                "printedName": "Pushly.CatalogItem",
+                "usr": "c:@M@Pushly@objc(cs)CatalogItem"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.NSNumber?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSNumber",
+                    "printedName": "Foundation.NSNumber",
+                    "usr": "c:objc(cs)NSNumber"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.NSNumber?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSNumber",
+                    "printedName": "Foundation.NSNumber",
+                    "usr": "c:objc(cs)NSNumber"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@Pushly@objc(cs)CatalogItem(im)initWithId:quantity:rating:",
+            "mangledName": "$s6Pushly11CatalogItemC2id8quantity6ratingACSS_So8NSNumberCSgAItcfc",
+            "moduleName": "Pushly",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "description",
+            "printedName": "description",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@Pushly@objc(cs)CatalogItem(py)description",
+            "mangledName": "$s6Pushly11CatalogItemC11descriptionSSvp",
+            "moduleName": "Pushly",
+            "overriding": true,
+            "objc_name": "description",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "Override",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@Pushly@objc(cs)CatalogItem(im)description",
+                "mangledName": "$s6Pushly11CatalogItemC11descriptionSSvg",
+                "moduleName": "Pushly",
+                "overriding": true,
+                "objc_name": "description",
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "toSimpleObject",
+            "printedName": "toSimpleObject()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any?]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Any?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6Pushly11CatalogItemC14toSimpleObjectSDySSypSgGyF",
+            "mangledName": "$s6Pushly11CatalogItemC14toSimpleObjectSDySSypSgGyF",
+            "moduleName": "Pushly",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CatalogItem",
+                "printedName": "Pushly.CatalogItem",
+                "usr": "c:@M@Pushly@objc(cs)CatalogItem"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@Pushly@objc(cs)CatalogItem(im)init",
+            "mangledName": "$s6Pushly11CatalogItemCACycfc",
+            "moduleName": "Pushly",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@Pushly@objc(cs)CatalogItem",
+        "mangledName": "$s6Pushly11CatalogItemC",
         "moduleName": "Pushly",
         "declAttributes": [
-          "RawDocComment"
+          "Final",
+          "AccessControl",
+          "ObjCMembers",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
         ]
       },
       {
@@ -8308,652 +8751,6 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "Pushly",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "PNECommItem",
-        "printedName": "PNECommItem",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "id",
-            "printedName": "id",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@Pushly@objc(pl)PNECommItem(py)id",
-            "mangledName": "$s6Pushly11PNECommItemP2idSSvp",
-            "moduleName": "Pushly",
-            "protocolReq": true,
-            "declAttributes": [
-              "ObjC"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@Pushly@objc(pl)PNECommItem(im)id",
-                "mangledName": "$s6Pushly11PNECommItemP2idSSvg",
-                "moduleName": "Pushly",
-                "genericSig": "<τ_0_0 where τ_0_0 : Pushly.PNECommItem>",
-                "sugared_genericSig": "<Self where Self : Pushly.PNECommItem>",
-                "protocolReq": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "reqNewWitnessTableEntry": true,
-                "accessorKind": "get"
-              }
-            ]
-          }
-        ],
-        "declKind": "Protocol",
-        "usr": "c:@M@Pushly@objc(pl)PNECommItem",
-        "mangledName": "$s6Pushly11PNECommItemP",
-        "moduleName": "Pushly",
-        "genericSig": "<τ_0_0 : AnyObject>",
-        "sugared_genericSig": "<Self : AnyObject>",
-        "declAttributes": [
-          "AccessControl",
-          "ObjC"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "PNECommItemWithoutQuantity",
-        "printedName": "PNECommItemWithoutQuantity",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "id",
-            "printedName": "id",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@Pushly@objc(cs)PNECommItemWithoutQuantity(py)id",
-            "mangledName": "$s6Pushly26PNECommItemWithoutQuantityC2idSSvp",
-            "moduleName": "Pushly",
-            "objc_name": "id",
-            "declAttributes": [
-              "Final",
-              "ObjC",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@Pushly@objc(cs)PNECommItemWithoutQuantity(im)id",
-                "mangledName": "$s6Pushly26PNECommItemWithoutQuantityC2idSSvg",
-                "moduleName": "Pushly",
-                "implicit": true,
-                "objc_name": "id",
-                "declAttributes": [
-                  "Final",
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(id:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "PNECommItemWithoutQuantity",
-                "printedName": "Pushly.PNECommItemWithoutQuantity",
-                "usr": "c:@M@Pushly@objc(cs)PNECommItemWithoutQuantity"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "c:@M@Pushly@objc(cs)PNECommItemWithoutQuantity(im)initWithId:",
-            "mangledName": "$s6Pushly26PNECommItemWithoutQuantityC2idACSS_tcfc",
-            "moduleName": "Pushly",
-            "declAttributes": [
-              "AccessControl",
-              "ObjC"
-            ],
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Var",
-            "name": "description",
-            "printedName": "description",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@Pushly@objc(cs)PNECommItemWithoutQuantity(py)description",
-            "mangledName": "$s6Pushly26PNECommItemWithoutQuantityC11descriptionSSvp",
-            "moduleName": "Pushly",
-            "overriding": true,
-            "objc_name": "description",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "Override",
-              "AccessControl"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@Pushly@objc(cs)PNECommItemWithoutQuantity(im)description",
-                "mangledName": "$s6Pushly26PNECommItemWithoutQuantityC11descriptionSSvg",
-                "moduleName": "Pushly",
-                "overriding": true,
-                "objc_name": "description",
-                "declAttributes": [
-                  "Dynamic",
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Function",
-            "name": "toSimpleObject",
-            "printedName": "toSimpleObject()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Dictionary",
-                "printedName": "[Swift.String : Any?]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Any?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "ProtocolComposition",
-                        "printedName": "Any"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "usr": "s:SD"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:6Pushly26PNECommItemWithoutQuantityC14toSimpleObjectSDySSypSgGyF",
-            "mangledName": "$s6Pushly26PNECommItemWithoutQuantityC14toSimpleObjectSDySSypSgGyF",
-            "moduleName": "Pushly",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "PNECommItemWithoutQuantity",
-                "printedName": "Pushly.PNECommItemWithoutQuantity",
-                "usr": "c:@M@Pushly@objc(cs)PNECommItemWithoutQuantity"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "c:@M@Pushly@objc(cs)PNECommItemWithoutQuantity(im)init",
-            "mangledName": "$s6Pushly26PNECommItemWithoutQuantityCACycfc",
-            "moduleName": "Pushly",
-            "overriding": true,
-            "implicit": true,
-            "objc_name": "init",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "Override"
-            ],
-            "init_kind": "Designated"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "c:@M@Pushly@objc(cs)PNECommItemWithoutQuantity",
-        "mangledName": "$s6Pushly26PNECommItemWithoutQuantityC",
-        "moduleName": "Pushly",
-        "declAttributes": [
-          "AccessControl",
-          "ObjCMembers",
-          "ObjC"
-        ],
-        "superclassUsr": "c:objc(cs)NSObject",
-        "superclassNames": [
-          "ObjectiveC.NSObject"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "PNECommItem",
-            "printedName": "PNECommItem",
-            "usr": "c:@M@Pushly@objc(pl)PNECommItem",
-            "mangledName": "$s6Pushly11PNECommItemP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "PNECommItemWithQuantity",
-        "printedName": "PNECommItemWithQuantity",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "id",
-            "printedName": "id",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:6Pushly23PNECommItemWithQuantityC2idSSvp",
-            "mangledName": "$s6Pushly23PNECommItemWithQuantityC2idSSvp",
-            "moduleName": "Pushly",
-            "objc_name": "id",
-            "declAttributes": [
-              "Final",
-              "ObjC",
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:6Pushly23PNECommItemWithQuantityC2idSSvg",
-                "mangledName": "$s6Pushly23PNECommItemWithQuantityC2idSSvg",
-                "moduleName": "Pushly",
-                "implicit": true,
-                "objc_name": "id",
-                "declAttributes": [
-                  "Final",
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "quantity",
-            "printedName": "quantity",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:6Pushly23PNECommItemWithQuantityC8quantitySivp",
-            "mangledName": "$s6Pushly23PNECommItemWithQuantityC8quantitySivp",
-            "moduleName": "Pushly",
-            "declAttributes": [
-              "Final",
-              "HasStorage",
-              "AccessControl",
-              "ObjC"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:6Pushly23PNECommItemWithQuantityC8quantitySivg",
-                "mangledName": "$s6Pushly23PNECommItemWithQuantityC8quantitySivg",
-                "moduleName": "Pushly",
-                "implicit": true,
-                "declAttributes": [
-                  "Final",
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(id:quantity:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "PNECommItemWithQuantity",
-                "printedName": "Pushly.PNECommItemWithQuantity",
-                "usr": "s:6Pushly23PNECommItemWithQuantityC"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:6Pushly23PNECommItemWithQuantityC2id8quantityACSS_Sitcfc",
-            "mangledName": "$s6Pushly23PNECommItemWithQuantityC2id8quantityACSS_Sitcfc",
-            "moduleName": "Pushly",
-            "declAttributes": [
-              "AccessControl",
-              "ObjC"
-            ],
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Var",
-            "name": "description",
-            "printedName": "description",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:6Pushly23PNECommItemWithQuantityC11descriptionSSvp",
-            "mangledName": "$s6Pushly23PNECommItemWithQuantityC11descriptionSSvp",
-            "moduleName": "Pushly",
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "ObjC"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:6Pushly23PNECommItemWithQuantityC11descriptionSSvg",
-                "mangledName": "$s6Pushly23PNECommItemWithQuantityC11descriptionSSvg",
-                "moduleName": "Pushly",
-                "declAttributes": [
-                  "Final",
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Function",
-            "name": "toSimpleObject",
-            "printedName": "toSimpleObject()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Dictionary",
-                "printedName": "[Swift.String : Any?]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Any?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "ProtocolComposition",
-                        "printedName": "Any"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "usr": "s:SD"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:6Pushly23PNECommItemWithQuantityC14toSimpleObjectSDySSypSgGyF",
-            "mangledName": "$s6Pushly23PNECommItemWithQuantityC14toSimpleObjectSDySSypSgGyF",
-            "moduleName": "Pushly",
-            "declAttributes": [
-              "Final",
-              "AccessControl"
-            ],
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "s:6Pushly23PNECommItemWithQuantityC",
-        "mangledName": "$s6Pushly23PNECommItemWithQuantityC",
-        "moduleName": "Pushly",
-        "declAttributes": [
-          "Final",
-          "AccessControl",
-          "ObjCMembers"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "PNECommItem",
-            "printedName": "PNECommItem",
-            "usr": "c:@M@Pushly@objc(pl)PNECommItem",
-            "mangledName": "$s6Pushly11PNECommItemP"
           }
         ]
       },
@@ -29226,6 +29023,47 @@
           },
           {
             "kind": "Var",
+            "name": "recipe",
+            "printedName": "recipe",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Pushly.PNECommItemType.Type) -> Pushly.PNECommItemType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PNECommItemType",
+                    "printedName": "Pushly.PNECommItemType",
+                    "usr": "c:@M@Pushly@E@PNECommItemType"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "Pushly.PNECommItemType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PNECommItemType",
+                        "printedName": "Pushly.PNECommItemType",
+                        "usr": "c:@M@Pushly@E@PNECommItemType"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@Pushly@E@PNECommItemType@PNECommItemTypeRecipe",
+            "mangledName": "$s6Pushly15PNECommItemTypeO6recipeyA2CmF",
+            "moduleName": "Pushly",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 2
+          },
+          {
+            "kind": "Var",
             "name": "unknown",
             "printedName": "unknown",
             "children": [
@@ -29263,7 +29101,7 @@
             "declAttributes": [
               "ObjC"
             ],
-            "fixedbinaryorder": 2
+            "fixedbinaryorder": 3
           },
           {
             "kind": "Constructor",
@@ -33772,6 +33610,34 @@
       "value": "1"
     },
     {
+      "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/CatalogItem.swift",
+      "kind": "StringLiteral",
+      "offset": 421,
+      "length": 95,
+      "value": "\"[id: \""
+    },
+    {
+      "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/CatalogItem.swift",
+      "kind": "StringLiteral",
+      "offset": 432,
+      "length": 1,
+      "value": "\", quantity: \""
+    },
+    {
+      "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/CatalogItem.swift",
+      "kind": "StringLiteral",
+      "offset": 475,
+      "length": 1,
+      "value": "\", rating: \""
+    },
+    {
+      "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/CatalogItem.swift",
+      "kind": "StringLiteral",
+      "offset": 514,
+      "length": 1,
+      "value": "\"]\""
+    },
+    {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Session\/SessionKeys.swift",
       "kind": "StringLiteral",
       "offset": 132,
@@ -34395,41 +34261,6 @@
       "value": "\"CUSTOM\""
     },
     {
-      "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNECommItem.swift",
-      "kind": "StringLiteral",
-      "offset": 411,
-      "length": 13,
-      "value": "\"[id: \""
-    },
-    {
-      "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNECommItem.swift",
-      "kind": "StringLiteral",
-      "offset": 422,
-      "length": 1,
-      "value": "\"]\""
-    },
-    {
-      "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNECommItem.swift",
-      "kind": "StringLiteral",
-      "offset": 814,
-      "length": 36,
-      "value": "\"[id: \""
-    },
-    {
-      "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNECommItem.swift",
-      "kind": "StringLiteral",
-      "offset": 825,
-      "length": 1,
-      "value": "\", quantity: \""
-    },
-    {
-      "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNECommItem.swift",
-      "kind": "StringLiteral",
-      "offset": 848,
-      "length": 1,
-      "value": "\"]\""
-    },
-    {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNSessionConfig.swift",
       "kind": "StringLiteral",
       "offset": 325,
@@ -34509,224 +34340,259 @@
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNTrackedEventAction.swift",
       "kind": "StringLiteral",
-      "offset": 553,
+      "offset": 555,
+      "length": 13,
+      "value": "\"unsave_item\""
+    },
+    {
+      "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNTrackedEventAction.swift",
+      "kind": "StringLiteral",
+      "offset": 593,
+      "length": 15,
+      "value": "\"complete_item\""
+    },
+    {
+      "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNTrackedEventAction.swift",
+      "kind": "StringLiteral",
+      "offset": 635,
+      "length": 17,
+      "value": "\"uncomplete_item\""
+    },
+    {
+      "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNTrackedEventAction.swift",
+      "kind": "StringLiteral",
+      "offset": 673,
+      "length": 11,
+      "value": "\"rate_item\""
+    },
+    {
+      "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNTrackedEventAction.swift",
+      "kind": "StringLiteral",
+      "offset": 707,
+      "length": 13,
+      "value": "\"unrate_item\""
+    },
+    {
+      "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNTrackedEventAction.swift",
+      "kind": "StringLiteral",
+      "offset": 741,
       "length": 11,
       "value": "\"view_item\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNTrackedEventAction.swift",
       "kind": "StringLiteral",
-      "offset": 586,
+      "offset": 774,
       "length": 13,
       "value": "\"add_to_cart\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNTrackedEventAction.swift",
       "kind": "StringLiteral",
-      "offset": 622,
+      "offset": 810,
       "length": 13,
       "value": "\"update_cart\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNTrackedEventAction.swift",
       "kind": "StringLiteral",
-      "offset": 656,
+      "offset": 844,
       "length": 10,
       "value": "\"purchase\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNTrackedEventAction.swift",
       "kind": "StringLiteral",
-      "offset": 731,
+      "offset": 919,
       "length": 14,
       "value": "\"prompt_shown\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNTrackedEventAction.swift",
       "kind": "StringLiteral",
-      "offset": 772,
+      "offset": 960,
       "length": 14,
       "value": "\"prompt_allow\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNTrackedEventAction.swift",
       "kind": "StringLiteral",
-      "offset": 814,
+      "offset": 1002,
       "length": 18,
       "value": "\"prompt_dismissed\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNTrackedEventAction.swift",
       "kind": "StringLiteral",
-      "offset": 858,
+      "offset": 1046,
       "length": 18,
       "value": "\"prompt_not_shown\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNTrackedEventAction.swift",
       "kind": "StringLiteral",
-      "offset": 923,
+      "offset": 1111,
       "length": 21,
       "value": "\"permission_prompted\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNTrackedEventAction.swift",
       "kind": "StringLiteral",
-      "offset": 975,
+      "offset": 1163,
       "length": 21,
       "value": "\"permission_accepted\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNTrackedEventAction.swift",
       "kind": "StringLiteral",
-      "offset": 1028,
+      "offset": 1216,
       "length": 22,
       "value": "\"permission_dismissed\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNTrackedEventAction.swift",
       "kind": "StringLiteral",
-      "offset": 1079,
+      "offset": 1267,
       "length": 19,
       "value": "\"permission_denied\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNTrackedEventAction.swift",
       "kind": "StringLiteral",
-      "offset": 1128,
+      "offset": 1316,
       "length": 20,
       "value": "\"permission_changed\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNTrackedEventAction.swift",
       "kind": "StringLiteral",
-      "offset": 1199,
+      "offset": 1387,
       "length": 16,
       "value": "\"iam_impression\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNTrackedEventAction.swift",
       "kind": "StringLiteral",
-      "offset": 1236,
+      "offset": 1424,
       "length": 11,
       "value": "\"iam_click\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNTrackedEventAction.swift",
       "kind": "StringLiteral",
-      "offset": 1272,
+      "offset": 1460,
       "length": 15,
       "value": "\"iam_subscribe\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNTrackedEventAction.swift",
       "kind": "StringLiteral",
-      "offset": 1308,
+      "offset": 1496,
       "length": 11,
       "value": "\"iam_close\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNTrackedEventAction.swift",
       "kind": "StringLiteral",
-      "offset": 1343,
+      "offset": 1531,
       "length": 15,
       "value": "\"iam_not_shown\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNTrackedEventAction.swift",
       "kind": "StringLiteral",
-      "offset": 1413,
+      "offset": 1601,
       "length": 12,
       "value": "\"subscribed\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNTrackedEventAction.swift",
       "kind": "StringLiteral",
-      "offset": 1452,
+      "offset": 1640,
       "length": 22,
       "value": "\"subscription_changed\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNTrackedEventAction.swift",
       "kind": "StringLiteral",
-      "offset": 1499,
+      "offset": 1687,
       "length": 14,
       "value": "\"unsubscribed\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNTrackedEventAction.swift",
       "kind": "StringLiteral",
-      "offset": 1544,
+      "offset": 1732,
       "length": 21,
       "value": "\"manual_unsubscribed\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNTrackedEventAction.swift",
       "kind": "StringLiteral",
-      "offset": 1593,
+      "offset": 1781,
       "length": 18,
       "value": "\"soft_unsubscribe\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNTrackedEventAction.swift",
       "kind": "StringLiteral",
-      "offset": 1639,
+      "offset": 1827,
       "length": 18,
       "value": "\"soft_resubscribe\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNTrackedEventAction.swift",
       "kind": "StringLiteral",
-      "offset": 1713,
+      "offset": 1901,
       "length": 25,
       "value": "\"notification_impression\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNTrackedEventAction.swift",
       "kind": "StringLiteral",
-      "offset": 1768,
+      "offset": 1956,
       "length": 20,
       "value": "\"notification_click\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNTrackedEventAction.swift",
       "kind": "StringLiteral",
-      "offset": 1818,
+      "offset": 2006,
       "length": 20,
       "value": "\"notification_close\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNTrackedEventAction.swift",
       "kind": "StringLiteral",
-      "offset": 1897,
+      "offset": 2085,
       "length": 13,
       "value": "\"la_register\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNTrackedEventAction.swift",
       "kind": "StringLiteral",
-      "offset": 1954,
+      "offset": 2142,
       "length": 17,
       "value": "\"la_register_pts\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNTrackedEventAction.swift",
       "kind": "StringLiteral",
-      "offset": 1999,
+      "offset": 2187,
       "length": 8,
       "value": "\"la_end\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNTrackedEventAction.swift",
       "kind": "StringLiteral",
-      "offset": 2052,
+      "offset": 2240,
       "length": 15,
       "value": "\"session_start\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNTrackedEventAction.swift",
       "kind": "StringLiteral",
-      "offset": 2096,
+      "offset": 2284,
       "length": 19,
       "value": "\"session_heartbeat\""
     },
@@ -36204,8 +36070,15 @@
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNEcommItemType.swift",
       "kind": "IntegerLiteral",
       "offset": 185,
-      "length": 7,
+      "length": 6,
       "value": "2"
+    },
+    {
+      "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNEcommItemType.swift",
+      "kind": "IntegerLiteral",
+      "offset": 201,
+      "length": 7,
+      "value": "3"
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNTrackedEventSource.swift",
