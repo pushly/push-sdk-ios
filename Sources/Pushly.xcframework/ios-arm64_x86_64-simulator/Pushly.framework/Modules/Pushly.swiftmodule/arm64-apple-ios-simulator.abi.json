@@ -2531,20 +2531,6 @@
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
-        "moduleName": "Pushly"
-      },
-      {
-        "kind": "Import",
-        "name": "WebKit",
-        "printedName": "WebKit",
-        "declKind": "Import",
-        "moduleName": "Pushly"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
         "moduleName": "Pushly",
         "declAttributes": [
           "RawDocComment"
@@ -34123,7 +34109,7 @@
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/AppMessages\/PNAppMessageViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 10299,
+      "offset": 10236,
       "length": 4,
       "value": "true"
     },
@@ -34970,168 +34956,161 @@
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 3254,
-      "length": 7,
-      "value": "\"EComm\""
-    },
-    {
-      "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
-      "kind": "StringLiteral",
-      "offset": 3310,
+      "offset": 3259,
       "length": 25,
       "value": "\"_pnGetMessageMetaData()\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "FloatLiteral",
-      "offset": 3370,
+      "offset": 3319,
       "length": 4,
       "value": "10.0"
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "FloatLiteral",
-      "offset": 3423,
+      "offset": 3372,
       "length": 5,
       "value": "300.0"
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "IntegerLiteral",
-      "offset": 3480,
+      "offset": 3429,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 3526,
+      "offset": 3475,
       "length": 22,
       "value": "\"APP_MESSAGE_FCAP_MET\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 3592,
+      "offset": 3541,
       "length": 19,
       "value": "\"[Push SDK: %@] %@\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 3657,
+      "offset": 3606,
       "length": 55,
       "value": "\"https:\/\/\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 3711,
+      "offset": 3660,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 3744,
+      "offset": 3693,
       "length": 31,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 3761,
+      "offset": 3710,
       "length": 1,
       "value": "\"\/event-stream\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 3806,
+      "offset": 3755,
       "length": 24,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 3823,
+      "offset": 3772,
       "length": 1,
       "value": "\"\/allow\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 3859,
+      "offset": 3808,
       "length": 54,
       "value": "\"https:\/\/\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 3912,
+      "offset": 3861,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 3953,
+      "offset": 3902,
       "length": 33,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 3969,
+      "offset": 3918,
       "length": 1,
       "value": "\"\/domain-settings\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 4015,
+      "offset": 3964,
       "length": 54,
       "value": "\"https:\/\/\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 4068,
+      "offset": 4017,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 4106,
+      "offset": 4055,
       "length": 41,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 4122,
+      "offset": 4071,
       "length": 1,
       "value": "\"\/app-messages\/subscriber\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "FloatLiteral",
-      "offset": 4205,
+      "offset": 4154,
       "length": 3,
       "value": "0.1"
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "FloatLiteral",
-      "offset": 4265,
+      "offset": 4214,
       "length": 3,
       "value": "0.3"
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "FloatLiteral",
-      "offset": 4319,
+      "offset": 4268,
       "length": 3,
       "value": "0.2"
     },
@@ -36167,21 +36146,21 @@
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/AppMessages\/PNAppMessageView.swift",
       "kind": "BooleanLiteral",
-      "offset": 6857,
+      "offset": 6558,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/AppMessages\/PNAppMessageView.swift",
       "kind": "BooleanLiteral",
-      "offset": 7549,
+      "offset": 7250,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/AppMessages\/PNAppMessageView.swift",
       "kind": "BooleanLiteral",
-      "offset": 13546,
+      "offset": 13247,
       "length": 4,
       "value": "true"
     },

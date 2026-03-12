@@ -338,14 +338,6 @@ SWIFT_CLASS("_TtC6Pushly11CatalogItem")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-@class WKUserContentController;
-@class WKScriptMessage;
-SWIFT_CLASS("_TtC6Pushly14ECommWkHandler") SWIFT_AVAILABILITY(ios_app_extension,unavailable)
-@interface ECommWkHandler : NSObject <WKScriptMessageHandler>
-- (void)userContentController:(WKUserContentController * _Nonnull)userContentController didReceiveScriptMessage:(WKScriptMessage * _Nonnull)message;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
 SWIFT_CLASS("_TtC6Pushly31FrequencyCapWithOccurrenceLimit")
 @interface FrequencyCapWithOccurrenceLimit : NSObject
 @property (nonatomic, readonly) NSInteger occurrences;
@@ -447,6 +439,7 @@ SWIFT_CLASS("_TtC6Pushly28PNAppMessageInternalResponse")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+@class WKScriptMessage;
 SWIFT_PROTOCOL("_TtP6Pushly29PNAppMessageLifecycleDelegate_")
 @protocol PNAppMessageLifecycleDelegate
 @optional
@@ -496,6 +489,7 @@ SWIFT_CLASS("_TtC6Pushly26PNAppMessageViewController") SWIFT_AVAILABILITY(ios_ap
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
+@class WKUserContentController;
 SWIFT_AVAILABILITY(ios_app_extension,unavailable)
 @interface PNAppMessageViewController (SWIFT_EXTENSION(Pushly)) <WKScriptMessageHandler>
 - (void)userContentController:(WKUserContentController * _Nonnull)userContentController didReceiveScriptMessage:(WKScriptMessage * _Nonnull)message;
@@ -1330,14 +1324,6 @@ SWIFT_CLASS("_TtC6Pushly11CatalogItem")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-@class WKUserContentController;
-@class WKScriptMessage;
-SWIFT_CLASS("_TtC6Pushly14ECommWkHandler") SWIFT_AVAILABILITY(ios_app_extension,unavailable)
-@interface ECommWkHandler : NSObject <WKScriptMessageHandler>
-- (void)userContentController:(WKUserContentController * _Nonnull)userContentController didReceiveScriptMessage:(WKScriptMessage * _Nonnull)message;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
 SWIFT_CLASS("_TtC6Pushly31FrequencyCapWithOccurrenceLimit")
 @interface FrequencyCapWithOccurrenceLimit : NSObject
 @property (nonatomic, readonly) NSInteger occurrences;
@@ -1439,6 +1425,7 @@ SWIFT_CLASS("_TtC6Pushly28PNAppMessageInternalResponse")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+@class WKScriptMessage;
 SWIFT_PROTOCOL("_TtP6Pushly29PNAppMessageLifecycleDelegate_")
 @protocol PNAppMessageLifecycleDelegate
 @optional
@@ -1488,6 +1475,7 @@ SWIFT_CLASS("_TtC6Pushly26PNAppMessageViewController") SWIFT_AVAILABILITY(ios_ap
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
+@class WKUserContentController;
 SWIFT_AVAILABILITY(ios_app_extension,unavailable)
 @interface PNAppMessageViewController (SWIFT_EXTENSION(Pushly)) <WKScriptMessageHandler>
 - (void)userContentController:(WKUserContentController * _Nonnull)userContentController didReceiveScriptMessage:(WKScriptMessage * _Nonnull)message;
