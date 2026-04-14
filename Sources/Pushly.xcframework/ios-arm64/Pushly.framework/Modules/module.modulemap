@@ -7,5 +7,4 @@ framework module Pushly {
 
 module Pushly.Swift {
   header "Pushly-Swift.h"
-  requires objc
 }
