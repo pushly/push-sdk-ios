@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.3 effective-5.10 (swiftlang-6.3.0.123.5 clang-2100.0.123.102)
+// swift-compiler-version: Apple Swift version 6.3.1 effective-5.10 (swiftlang-6.3.1.1.2 clang-2100.0.123.102)
 // swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name Pushly
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.1
 import ActivityKit
 import Combine
 import CommonCrypto
@@ -448,16 +448,28 @@ extension Pushly.PushSDK {
   @objc override dynamic public init()
   @objc deinit
 }
+@objc public enum PNLogPrivacy : Swift.Int {
+  case `public`
+  case `private`
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
 @objc public class PNLogger : ObjectiveC.NSObject {
   @objc final public let name: Swift.String
-  @objc required public init(name: Swift.String)
-  @objc public var logLevel: Pushly.PNLogLevel
-  @objc public func verbose(_ message: Swift.String)
-  @objc public func debug(_ message: Swift.String)
-  @objc public func info(_ message: Swift.String)
-  @objc public func warn(_ message: Swift.String)
-  @objc public func error(_ message: Swift.String)
-  @objc public func critical(_ message: Swift.String)
+  @objc public var logLevel: Pushly.PNLogLevel {
+    @objc get
+    @objc set
+  }
+  @objc public init(name: Swift.String)
+  @objc public func verbose(_ message: Swift.String, privacy: Pushly.PNLogPrivacy = .public)
+  @objc public func debug(_ message: Swift.String, privacy: Pushly.PNLogPrivacy = .public)
+  @objc public func info(_ message: Swift.String, privacy: Pushly.PNLogPrivacy = .public)
+  @objc public func warn(_ message: Swift.String, privacy: Pushly.PNLogPrivacy = .public)
+  @objc public func error(_ message: Swift.String, privacy: Pushly.PNLogPrivacy = .public)
+  @objc public func critical(_ message: Swift.String, privacy: Pushly.PNLogPrivacy = .public)
   @objc public func loggingLevelEnabled(for level: Pushly.PNLogLevel) -> Swift.Bool
   @objc deinit
 }
@@ -1173,6 +1185,9 @@ extension Pushly.PNSessionScope : Swift.RawRepresentable {}
 extension Pushly.RelativeDateDisplayMetric : Swift.Equatable {}
 extension Pushly.RelativeDateDisplayMetric : Swift.Hashable {}
 extension Pushly.RelativeDateDisplayMetric : Swift.RawRepresentable {}
+extension Pushly.PNLogPrivacy : Swift.Equatable {}
+extension Pushly.PNLogPrivacy : Swift.Hashable {}
+extension Pushly.PNLogPrivacy : Swift.RawRepresentable {}
 extension Pushly.PNAppMessageInteractionType : Swift.Equatable {}
 extension Pushly.PNAppMessageInteractionType : Swift.Hashable {}
 extension Pushly.PNAppMessageInteractionType : Swift.RawRepresentable {}
