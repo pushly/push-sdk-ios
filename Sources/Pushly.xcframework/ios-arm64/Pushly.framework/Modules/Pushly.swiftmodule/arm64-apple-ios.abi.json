@@ -35532,15 +35532,22 @@
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNDebugManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 800,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNDebugManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 791,
+      "offset": 845,
       "length": 2,
       "value": "20"
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNDebugManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 814,
+      "offset": 868,
       "length": 1,
       "value": "4"
     },
@@ -36646,14 +36653,14 @@
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNApplicationObserver.swift",
       "kind": "StringLiteral",
-      "offset": 645,
+      "offset": 1187,
       "length": 32,
       "value": "\"PushSDK ID copied to clipboard\""
     },
     {
       "filePath": "\/Users\/kristijanjurkovic\/Developer\/Redox\/projects\/clients\/Pushly\/mobile\/iOS\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNApplicationObserver.swift",
       "kind": "StringLiteral",
-      "offset": 735,
+      "offset": 1277,
       "length": 48,
       "value": "\"PushSDK ID copy to clipboard has been disabled\""
     },
