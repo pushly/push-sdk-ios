@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                    = "Pushly"
-  s.version                 = "1.6.3"
+  s.version                 = "1.6.4"
   s.summary                 = "The official PushSDK Framework for iOS native app notifications"
 
   s.homepage                = "https://pushly.com"
