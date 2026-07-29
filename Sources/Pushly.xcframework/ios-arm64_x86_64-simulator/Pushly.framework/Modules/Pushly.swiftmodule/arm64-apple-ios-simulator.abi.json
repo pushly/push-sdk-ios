@@ -12118,7 +12118,8 @@
             "declAttributes": [
               "Final",
               "AccessControl",
-              "ObjC"
+              "ObjC",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -29087,6 +29088,13 @@
       },
       {
         "kind": "Import",
+        "name": "Security",
+        "printedName": "Security",
+        "declKind": "Import",
+        "moduleName": "Pushly"
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -34221,72 +34229,100 @@
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNSettingsKey.swift",
       "kind": "StringLiteral",
-      "offset": 540,
+      "offset": 534,
+      "length": 15,
+      "value": "\"_pnSeqCounter\""
+    },
+    {
+      "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNSettingsKey.swift",
+      "kind": "StringLiteral",
+      "offset": 578,
       "length": 21,
       "value": "\"_pnSubscriberLocale\""
     },
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNSettingsKey.swift",
       "kind": "StringLiteral",
-      "offset": 585,
+      "offset": 623,
       "length": 16,
       "value": "\"_pnIsDismissed\""
     },
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNSettingsKey.swift",
       "kind": "StringLiteral",
-      "offset": 626,
+      "offset": 664,
       "length": 17,
       "value": "\"_pnSubscriberTZ\""
     },
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNSettingsKey.swift",
       "kind": "StringLiteral",
-      "offset": 661,
+      "offset": 699,
       "length": 10,
       "value": "\"_pnToken\""
     },
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNSettingsKey.swift",
       "kind": "StringLiteral",
-      "offset": 701,
+      "offset": 739,
       "length": 22,
       "value": "\"_pnTrackedEventQueue\""
     },
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNSettingsKey.swift",
       "kind": "StringLiteral",
-      "offset": 745,
+      "offset": 783,
       "length": 8,
       "value": "\"_pnUDR\""
     },
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNSettingsKey.swift",
       "kind": "StringLiteral",
-      "offset": 787,
+      "offset": 825,
       "length": 20,
       "value": "\"_pnSoftUnsubscribe\""
     },
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNSettingsKey.swift",
       "kind": "StringLiteral",
-      "offset": 832,
+      "offset": 870,
       "length": 17,
       "value": "\"_pnIAMSubscribe\""
     },
     {
+      "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNSettingsKey.swift",
+      "kind": "StringLiteral",
+      "offset": 939,
+      "length": 30,
+      "value": "\"_pnNotifDestDeferredToClient\""
+    },
+    {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNTrackedEventApplication.swift",
       "kind": "StringLiteral",
-      "offset": 315,
+      "offset": 411,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNTrackedEventApplication.swift",
       "kind": "StringLiteral",
-      "offset": 382,
+      "offset": 478,
       "length": 2,
       "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNTrackedEventApplication.swift",
+      "kind": "StringLiteral",
+      "offset": 563,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNTrackedEventApplication.swift",
+      "kind": "StringLiteral",
+      "offset": 804,
+      "length": 20,
+      "value": "\"minimum_os_version\""
     },
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/FrequencyCapWithOccurrenceLimit.swift",
@@ -34361,21 +34397,21 @@
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "Array",
-      "offset": 1110,
+      "offset": 1797,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "Dictionary",
-      "offset": 3830,
+      "offset": 7835,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PushSDK.swift",
       "kind": "StringLiteral",
-      "offset": 17696,
+      "offset": 21826,
       "length": 2,
       "value": "\"\""
     },
@@ -34480,21 +34516,21 @@
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/AppMessages\/PNAppMessageController.swift",
       "kind": "BooleanLiteral",
-      "offset": 7934,
+      "offset": 8968,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/AppMessages\/PNAppMessageController.swift",
       "kind": "BooleanLiteral",
-      "offset": 15372,
+      "offset": 16406,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/AppMessages\/PNAppMessageController.swift",
       "kind": "BooleanLiteral",
-      "offset": 15404,
+      "offset": 16438,
       "length": 4,
       "value": "true"
     },
@@ -35431,127 +35467,141 @@
     },
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3647,
+      "length": 2,
+      "value": "-1"
+    },
+    {
+      "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 3462,
+      "offset": 3697,
+      "length": 16,
+      "value": "\"local-template\""
+    },
+    {
+      "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
+      "kind": "StringLiteral",
+      "offset": 3757,
       "length": 19,
       "value": "\"[Push SDK: %@] %@\""
     },
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 3527,
+      "offset": 3822,
       "length": 55,
       "value": "\"https:\/\/\""
     },
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 3581,
+      "offset": 3876,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 3614,
+      "offset": 3909,
       "length": 31,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 3631,
+      "offset": 3926,
       "length": 1,
       "value": "\"\/event-stream\""
     },
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 3676,
+      "offset": 3971,
       "length": 24,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 3693,
+      "offset": 3988,
       "length": 1,
       "value": "\"\/allow\""
     },
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 3729,
+      "offset": 4024,
       "length": 54,
       "value": "\"https:\/\/\""
     },
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 3782,
+      "offset": 4077,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 3823,
+      "offset": 4118,
       "length": 33,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 3839,
+      "offset": 4134,
       "length": 1,
       "value": "\"\/domain-settings\""
     },
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 3885,
+      "offset": 4180,
       "length": 54,
       "value": "\"https:\/\/\""
     },
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 3938,
+      "offset": 4233,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 3976,
+      "offset": 4271,
       "length": 41,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "StringLiteral",
-      "offset": 3992,
+      "offset": 4287,
       "length": 1,
       "value": "\"\/app-messages\/subscriber\""
     },
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "FloatLiteral",
-      "offset": 4075,
+      "offset": 4370,
       "length": 3,
       "value": "0.1"
     },
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "FloatLiteral",
-      "offset": 4135,
+      "offset": 4430,
       "length": 3,
       "value": "0.3"
     },
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNCommon.swift",
       "kind": "FloatLiteral",
-      "offset": 4189,
+      "offset": 4484,
       "length": 3,
       "value": "0.2"
     },
@@ -35757,6 +35807,13 @@
       "offset": 312,
       "length": 2,
       "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/ServiceExtensions\/PNNotificationServiceExtensionHandler.swift",
+      "kind": "IntegerLiteral",
+      "offset": 772,
+      "length": 2,
+      "value": "10"
     },
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Session\/ManagedSession.swift",
@@ -36321,56 +36378,91 @@
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNTrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 1026,
+      "offset": 1745,
       "length": 10,
       "value": "\"event_id\""
     },
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNTrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 1061,
+      "offset": 1782,
+      "length": 13,
+      "value": "\"occurred_at\""
+    },
+    {
+      "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNTrackedEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 1818,
+      "length": 9,
+      "value": "\"sent_at\""
+    },
+    {
+      "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNTrackedEvent.swift",
+      "kind": "StringLiteral",
+      "offset": 1852,
       "length": 11,
       "value": "\"domain_id\""
     },
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNTrackedEvent.swift",
       "kind": "StringLiteral",
-      "offset": 1101,
+      "offset": 1892,
       "length": 23,
       "value": "\"pushly_unique_user_id\""
     },
     {
+      "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Models\/PNTrackedEvent.swift",
+      "kind": "Array",
+      "offset": 6981,
+      "length": 10,
+      "value": "[408, 429]"
+    },
+    {
+      "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
+      "kind": "Array",
+      "offset": 484,
+      "length": 20,
+      "value": "[200, 202, 204, 304]"
+    },
+    {
+      "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
+      "kind": "Array",
+      "offset": 655,
+      "length": 10,
+      "value": "[204, 304]"
+    },
+    {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "Dictionary",
-      "offset": 428,
+      "offset": 962,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "Dictionary",
-      "offset": 879,
+      "offset": 1413,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "Dictionary",
-      "offset": 920,
+      "offset": 1454,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "BooleanLiteral",
-      "offset": 955,
+      "offset": 1489,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNRequest.swift",
       "kind": "BooleanLiteral",
-      "offset": 7901,
+      "offset": 11046,
       "length": 5,
       "value": "false"
     },
@@ -36489,23 +36581,37 @@
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "StringLiteral",
-      "offset": 129,
+      "offset": 145,
       "length": 54,
       "value": "\"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ\""
     },
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "IntegerLiteral",
-      "offset": 2914,
+      "offset": 3128,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
       "kind": "IntegerLiteral",
-      "offset": 4355,
+      "offset": 4313,
+      "length": 4,
+      "value": "1000"
+    },
+    {
+      "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNHelpers.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7517,
       "length": 1,
       "value": "0"
+    },
+    {
+      "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/PNNotificationOpenedProcessor.swift",
+      "kind": "IntegerLiteral",
+      "offset": 518,
+      "length": 2,
+      "value": "10"
     },
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/Enums\/PNEcommItemType.swift",
@@ -36615,21 +36721,21 @@
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/AppMessages\/PNAppMessageView.swift",
       "kind": "BooleanLiteral",
-      "offset": 6576,
+      "offset": 6848,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/AppMessages\/PNAppMessageView.swift",
       "kind": "BooleanLiteral",
-      "offset": 7268,
+      "offset": 7540,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/cj\/Sites\/pushly-sdk-ios-xcframework\/PushSDK\/pushly-sdk-ios\/Sources\/PushSDK\/AppMessages\/PNAppMessageView.swift",
       "kind": "BooleanLiteral",
-      "offset": 13778,
+      "offset": 14050,
       "length": 4,
       "value": "true"
     },

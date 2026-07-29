@@ -799,6 +799,12 @@ SWIFT_CLASS("_TtC6Pushly30PNNotificationServiceExtension")
 SWIFT_CLASS("_TtC6Pushly37PNNotificationServiceExtensionHandler")
 @interface PNNotificationServiceExtensionHandler : NSObject
 + (void)didReceiveExtensionRequest:(UNNotificationRequest * _Nonnull)request content:(UNMutableNotificationContent * _Nonnull)bestAttemptContent withContentHandler:(void (^ _Nonnull)(UNNotificationContent * _Nonnull))contentHandler;
+/// Delivers the best attempt at modified content as the extension runs out of time.
+/// This method owns the call to <code>contentHandler</code> on the expiry path: callers — including
+/// <code>PNNotificationServiceExtension</code> and any host driving the handler from its own
+/// <code>UNNotificationServiceExtension</code> subclass — must not call it themselves as well.
+/// <code>UNNotificationServiceExtension</code> treats a second call to its content handler as API
+/// misuse.
 + (void)didRecieveExtensionTimeWillExpire:(UNMutableNotificationContent * _Nonnull)bestAttemptContent withContentHandler:(void (^ _Nonnull)(UNNotificationContent * _Nonnull))contentHandler;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -898,6 +904,12 @@ SWIFT_CLASS_NAMED("AppMessages")
 /// If applied triggers complete all conditions in an app message’s scope
 /// and the app message is set to auto show it will be displayed.
 + (void)triggerWithConditions:(NSDictionary<NSString *, NSString *> * _Nonnull)conditions;
+/// Displays an app message built from caller-supplied template markup, taking the same
+/// presentation path a server-delivered app message takes. No app message record from the
+/// platform API is involved.
+/// Returns whether the message was presented. A request made while another app message is
+/// displayed, or before app messages are active, is declined.
++ (BOOL)showFromTemplateHtml:(NSString * _Nonnull)templateHtml style:(enum PNAppMessageStyle)style;
 + (void)_platformBridgeProcessInteraction:(PNAppMessageInteraction * _Nonnull)interaction for:(PNAppMessage * _Nonnull)appMessage;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -1034,6 +1046,17 @@ SWIFT_AVAILABILITY(ios_app_extension,unavailable)
 + (void)disableMethodSwizzling;
 + (void)setSDKLifecycleDelegate:(id <PNPushSDKLifecycleDelegate> _Nonnull)delegate;
 + (void)setPermissionsLifecycleDelegate:(id <PNPermissionsLifecycleDelegate> _Nonnull)delegate;
+/// Registers <code>delegate</code> to receive notification lifecycle events.
+/// Pass <code>handlesNotificationDestinations: true</code> when the host routes notification destinations
+/// itself — that is, when its <code>pushSDK(didReceiveNotificationDestination:withInteraction:)</code> returns
+/// true. It is persisted, so a tap that launches the app before the delegate is registered knows to
+/// hand the destination to it rather than opening it externally with no chance to intercept. Leave
+/// it false to let the SDK open destinations, which is the default behavior.
+/// The delegate protocol’s methods are optional, so the SDK cannot tell from <code>delegate</code> alone
+/// whether the host routes destinations; only the host knows.
++ (void)setNotificationLifecycleDelegate:(id <PNNotificationLifecycleDelegate> _Nonnull)delegate handlesNotificationDestinations:(BOOL)handlesNotificationDestinations;
+/// Registers <code>delegate</code> without declaring destination handling. Equivalent to passing
+/// <code>handlesNotificationDestinations: false</code>: the SDK opens notification destinations itself.
 + (void)setNotificationLifecycleDelegate:(id <PNNotificationLifecycleDelegate> _Nonnull)delegate;
 + (void)setAppMessageLifecycleDelegate:(id <PNAppMessageLifecycleDelegate> _Nonnull)delegate;
 - (void)subscriberStateEvaluationTimerDidAdvance;
