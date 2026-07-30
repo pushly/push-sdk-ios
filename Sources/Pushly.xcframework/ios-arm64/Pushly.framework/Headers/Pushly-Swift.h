@@ -904,12 +904,6 @@ SWIFT_CLASS_NAMED("AppMessages")
 /// If applied triggers complete all conditions in an app message’s scope
 /// and the app message is set to auto show it will be displayed.
 + (void)triggerWithConditions:(NSDictionary<NSString *, NSString *> * _Nonnull)conditions;
-/// Displays an app message built from caller-supplied template markup, taking the same
-/// presentation path a server-delivered app message takes. No app message record from the
-/// platform API is involved.
-/// Returns whether the message was presented. A request made while another app message is
-/// displayed, or before app messages are active, is declined.
-+ (BOOL)showFromTemplateHtml:(NSString * _Nonnull)templateHtml style:(enum PNAppMessageStyle)style;
 + (void)_platformBridgeProcessInteraction:(PNAppMessageInteraction * _Nonnull)interaction for:(PNAppMessage * _Nonnull)appMessage;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end

@@ -1035,8 +1035,6 @@ extension Pushly.PushSDK {
   @_inheritsConvenienceInitializers @objc(PushSDKAppMessages) @objcMembers public class AppMessages : ObjectiveC.NSObject {
     @objc public static func trigger(condition: Swift.String, withValue value: Swift.String)
     @objc public static func trigger(conditions: [Swift.String : Swift.String])
-    @objc @discardableResult
-    public static func showFromTemplateHtml(_ templateHtml: Swift.String, style: Pushly.PNAppMessageStyle = .modal) -> Swift.Bool
     @objc public static func _platformBridgeProcessInteraction(_ interaction: Pushly.PNAppMessageInteraction, for appMessage: Pushly.PNAppMessage)
     @objc override dynamic public init()
     @objc deinit
